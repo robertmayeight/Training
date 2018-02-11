@@ -1,13 +1,9 @@
 var htmlBody = document.getElementsByTagName("BODY")[0];
-// myDraggable=Draggable.create("#showWindow", {zIndexBoost:false, type:"x,y", edgeResistance:0.65});
-editorDrag = Draggable.create("#editor", {zIndexBoost:false, type:"x,y", edgeResistance:0.65});
-var gArray = document.getElementsByTagName("g");
-var tArray = document.getElementsByTagName("text");
-var imageArray = document.getElementsByTagName("image");
-var pathArray = document.getElementsByTagName("path");
-var rectArray = document.getElementsByTagName("rect");
-var objectArray=[];
-var idArray = [];
+showWindowDrag=Draggable.create("#showWindow", {zIndexBoost:false, type:"x,y", edgeResistance:0.65});
+
+
+
+
 
 var editorHidden = false;
 window.oncontextmenu = function (e){
@@ -19,19 +15,8 @@ window.oncontextmenu = function (e){
         }
     }
 
-//Create Text Nodes
-for(i=0; i<1000; i++){
-	var para = document.createElement("span");
-    para.id="text"+ (i);
-    para.innerHTML=para.id;
-    para.className = "textDrag";
-    para.oncontextmenu = function(e) {e.stopPropagation(); e.preventDefault(); this.setAttribute("contenteditable", "false");};
-    para.onmousedown = function(){selectedText = this.id; editorChange("editText");};
-    para.onmouseup = function(){this.className=changeClass.value; editorChange("editText");};
-    para.ondblclick = function(event){this.setAttribute("contenteditable", "true");};
-    document.getElementById("showWindow").appendChild(para)
-    paraDrag=Draggable.create(para, {zIndexBoost:false, type:"x,y", edgeResistance:0.65});
-}
+
+
 
 //Create Group Evventlistener
 
@@ -72,18 +57,7 @@ window.onkeydown = function(e) {
         e.preventDefault();
         mainTl.reverse();
         break;
-         case 90:
-        e.preventDefault();
-        if (e.ctrlKey) {
-			if(editorHidden === false){
-				editorHidden = true;
-				TweenMax.to(editor, .1, {autoAlpha:1})
-			}else{
-				TweenMax.to(editor, .1, {autoAlpha:0})
-				editorHidden = false;
-			}
-		}
-        break;
+         
         case 40:
          e.preventDefault();
         if(editor.className === "editorHidden"){
@@ -103,7 +77,7 @@ window.onkeydown = function(e) {
 
 //Show Window Zoom
 var scaleUp = 1;
-// showWindow.addEventListener ("DOMMouseScroll", zoomHandler, false);
+showWindow.addEventListener ("DOMMouseScroll", zoomHandler, false);
 function zoomHandler(event){
 	console.log("zoomHandler:" + event)
 	scaleUp = this._gsTransform.scaleY;
@@ -140,7 +114,8 @@ function updateLineNumber(slideNumber, lineNumber){
 showWindow.addEventListener ("DOMMouseScroll", zoomHandler2, false);
 scaleUp = 1;
 function zoomHandler2(event){
-	target=document.getElementById(selectTarget.value)
+	console.log(spTarget.value)
+	target=spTarget.value;
 	event.preventDefault();
 	switch(event.detail>0) {
 		case true:
@@ -165,7 +140,6 @@ function copyToClipboard() {
 	 document.execCommand("copy");
 	 document.body.removeChild(aux);
 	 codeText.innerHTML = "Copied!";
-	 idArray=[];
 	idText.innerHTML=";"
 }
 

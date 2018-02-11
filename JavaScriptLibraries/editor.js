@@ -32,7 +32,7 @@ var drawSVGArray = [];
 function traceLines(target){
 	if(drawDirection.value === "drawForward"){
 	var aux = document.createElement("input");
-	aux.setAttribute("value", ".set([" + codeText.innerHTML + "], {stroke:" + tdStrokeColor.value + "})<br>.staggerFromTo([" + codeText.innerHTML + "], .7, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone},.7)");
+	aux.setAttribute("value", ".set([" + codeText.innerHTML + "], {stroke:" + tdStrokeColor.value + "}).staggerFromTo([" + codeText.innerHTML + "], .7, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone},.7)");
 	 document.body.appendChild(aux);
 	 aux.select();
 	 document.execCommand("copy");
@@ -106,9 +106,9 @@ var point10XPos = point10.getBBox().x + point10.getBBox().width/2;
 var point10YPos = point10.getBBox().y + point10.getBBox().width/2;
 
 point1.onmouseover = function(){this.style.cursor="default"}
-point1.onmousedown = function(){myDraggable[0].disable();};
+point1.onmousedown = function(){showWindowDrag[0].disable();};
 point1.onmouseup = function(){
-  myDraggable[0].enable();
+  showWindowDrag[0].enable();
   var aux = document.createElement("input");
    document.body.appendChild(aux);
    aux.select();
@@ -117,9 +117,9 @@ point1.onmouseup = function(){
 };
 
 point2.onmouseover = function(){this.style.cursor="default"}
-point2.onmousedown = function(){myDraggable[0].disable();};
+point2.onmousedown = function(){showWindowDrag[0].disable();};
 point2.onmouseup = function(){
-  myDraggable[0].enable();
+  showWindowDrag[0].enable();
   var aux = document.createElement("input");
    document.body.appendChild(aux);
    aux.select();
@@ -128,9 +128,9 @@ point2.onmouseup = function(){
 };
 
 point3.onmouseover = function(){this.style.cursor="default"}
-point3.onmousedown = function(){myDraggable[0].disable();};
+point3.onmousedown = function(){showWindowDrag[0].disable();};
 point3.onmouseup = function(){
-  myDraggable[0].enable();
+  showWindowDrag[0].enable();
   var aux = document.createElement("input");
    document.body.appendChild(aux);
    aux.select();
@@ -139,9 +139,9 @@ point3.onmouseup = function(){
 };
 
 point4.onmouseover = function(){this.style.cursor="default"}
-point4.onmousedown = function(){myDraggable[0].disable();};
+point4.onmousedown = function(){showWindowDrag[0].disable();};
 point4.onmouseup = function(){
-  myDraggable[0].enable();
+  showWindowDrag[0].enable();
   var aux = document.createElement("input");
    document.body.appendChild(aux);
    aux.select();
@@ -150,9 +150,9 @@ point4.onmouseup = function(){
 };
 
 point5.onmouseover = function(){this.style.cursor="default"}
-point5.onmousedown = function(){myDraggable[0].disable();};
+point5.onmousedown = function(){showWindowDrag[0].disable();};
 point5.onmouseup = function(){
-  myDraggable[0].enable();
+  showWindowDrag[0].enable();
   var aux = document.createElement("input");
    document.body.appendChild(aux);
    aux.select();
@@ -161,9 +161,9 @@ point5.onmouseup = function(){
 };
 
 point6.onmouseover = function(){this.style.cursor="default"}
-point6.onmousedown = function(){myDraggable[0].disable();};
+point6.onmousedown = function(){showWindowDrag[0].disable();};
 point6.onmouseup = function(){
-  myDraggable[0].enable();
+  showWindowDrag[0].enable();
   var aux = document.createElement("input");
    document.body.appendChild(aux);
    aux.select();
@@ -172,9 +172,9 @@ point6.onmouseup = function(){
 };
 
 point7.onmouseover = function(){this.style.cursor="default"}
-point7.onmousedown = function(){myDraggable[0].disable();};
+point7.onmousedown = function(){showWindowDrag[0].disable();};
 point7.onmouseup = function(){
-  myDraggable[0].enable();
+  showWindowDrag[0].enable();
   var aux = document.createElement("input");
    document.body.appendChild(aux);
    aux.select();
@@ -183,9 +183,9 @@ point7.onmouseup = function(){
 };
 
 point8.onmouseover = function(){this.style.cursor="default"}
-point8.onmousedown = function(){myDraggable[0].disable();};
+point8.onmousedown = function(){showWindowDrag[0].disable();};
 point8.onmouseup = function(){
-  myDraggable[0].enable();
+  showWindowDrag[0].enable();
   var aux = document.createElement("input");
    document.body.appendChild(aux);
    aux.select();
@@ -194,9 +194,9 @@ point8.onmouseup = function(){
 };
 
 point9.onmouseover = function(){this.style.cursor="default"}
-point9.onmousedown = function(){myDraggable[0].disable();};
+point9.onmousedown = function(){showWindowDrag[0].disable();};
 point9.onmouseup = function(){
-  myDraggable[0].enable();
+  showWindowDrag[0].enable();
   var aux = document.createElement("input");
    document.body.appendChild(aux);
    aux.select();
@@ -205,9 +205,9 @@ point9.onmouseup = function(){
 };
 
 point10.onmouseover = function(){this.style.cursor="default"}
-point10.onmousedown = function(){myDraggable[0].disable();};
+point10.onmousedown = function(){showWindowDrag[0].disable();};
 point10.onmouseup = function(){
-  myDraggable[0].enable();
+  showWindowDrag[0].enable();
   var aux = document.createElement("input");
    document.body.appendChild(aux);
    aux.select();
@@ -273,29 +273,18 @@ function addTextBox(){
 	currentProgess=mainTl.progress();
 	mainTl.progress(1);
 	textArrays=showWindow.getElementsByTagName("span");
+	console.log(textArrays.length)
 	for(i=0; i<textArrays.length; i++){
-		console.log(textArrays[i].id)
+		console.log(textArrays[i].className)
 		if(textArrays[i].className == "textDrag"){
 			TweenMax.to(textArrays[i], 1, {className:changeClass.value});
+			TweenMax.to(textArrays[i], .001, {autoAlpha:1});
 			// TweenLite.to(textArrays[i], 1, {className:"h1 blackBg"});
 			break;
 		}
 	}
 	mainTl.progress(currentProgess)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function getLineCode() {
 	myPath = "path" + pathNumber.value;
@@ -348,7 +337,7 @@ function moveMeterLeads(){
 
 
 
-var selectedText = "";
+
 
 
 
@@ -367,16 +356,43 @@ function getCoordinates(){
 	 codeText.innerHTML = aux.getAttribute("value");
 }
 
+var selectedText = "";
 function getTextCode() {
 	var myText = document.getElementById(selectedText)
+	console.log("fired" + myText.innerHTML)
 	var aux = document.createElement("input");
-	aux.setAttribute("value", '.set(' + selectedText + ', {text:"' + myText.innerHTML + '", className:"' + changeClass.value + '", x:' + myText._gsTransform.x + ', y:' + myText._gsTransform.y + '})');
+	aux.setAttribute("value", '.set(' + selectedText + ', {text:"' + myText.innerHTML + '", className:"' + changeClass.value + '", x:' + myText._gsTransform.x + ', y:' + myText._gsTransform.y + '}).to(['+ selectedText +'],1, {autoAlpha:1})');
+	
+
+
+
 	 document.body.appendChild(aux);
 	 aux.select();
 	 document.execCommand("copy");
 	 document.body.removeChild(aux);
 	 codeText.innerHTML = aux.getAttribute("value");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function selectTargetFunction(e){
@@ -406,19 +422,3 @@ function createDraggable(){
 	newDraggable = new Draggable(target);
 	// target.addEventListener ("DOMMouseScroll", zoomHandler2, false);
 }
-
-
-// var newDraggable=[]
-// // var scrollTargets=[showWindow];
-// function createDraggable(){
-// 	try{newDraggable.kill();}catch(err){};
-
-// 	// showWindow.removeEventListener ("DOMMouseScroll", zoomHandler, false);
-// 	scrollTargets=[];
-
-// 	var target = document.getElementById(selectTarget.value);
-// 	newDraggable = new Draggable(target);
-// 	scrollTargets.push(target)
-// 	ssDiagram.addEventListener ("DOMMouseScroll", zoomHandler, false);
-// 	console.log(scrollTargets[0])
-// }

@@ -5,7 +5,7 @@ html {
 body{
   height: 93.5%;
   overflow: hidden;
-  background-color: #003B71;
+  /*background-color: #003B71;*/
   border: solid white;
     border-width: medium;
 }
