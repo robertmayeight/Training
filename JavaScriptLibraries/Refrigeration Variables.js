@@ -22,6 +22,7 @@ var violet = "violet"
 var grey = "#979a9a";
 var white = "white"
 var tan = "#D2B48C";
+var brown = "#A52A2A";
 
 
 

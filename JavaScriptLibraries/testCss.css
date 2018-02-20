@@ -179,27 +179,79 @@ body{
     padding: 5px;
 }
 
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
 #showWindow{
   margin: auto;
-    /*width: 90%;*/
-    border: 3px solid green;
-    padding: 10px;
+  width: 100%;
 }
 
+.hidden{
+  position: fixed;
+  top:-500px;
+  display: block;
+}
 
+.greenBox{
+  background-color:green;
+  color: red;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;    
+}
 
-.green{
-  fill: green
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;          /* Likely future */     
+.blueBox{
+  background-color:blue;
+  color: red;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;    
+}
+
+.yellowBox{
+  background-color:yellow;
+  color: red;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;    
+}
+
+.redBox{
+  background-color:red;
+  color: red;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;    
+}
+
+.orangeBox{
+  background-color:orange;
+  color: red;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;    
+}
+
+.blackBox{
+  background-color:black;
+  color: red;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;    
+}
+
+.brownBox{
+  background-color:brown;
+  color: red;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;    
 }
 
 .center {
   display: block;
-    margin: auto;
-    width: 90%;
-    border: 3px solid #73AD21;
-    padding: 10px;
+  margin: auto;
+  width: 100%;
 }
