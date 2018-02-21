@@ -197,6 +197,7 @@ body{
 .greenBox{
   background-color:green;
   color: red;
+  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;    
@@ -205,6 +206,7 @@ body{
 .blueBox{
   background-color:blue;
   color: red;
+  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;    
@@ -213,6 +215,7 @@ body{
 .yellowBox{
   background-color:yellow;
   color: red;
+  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;    
@@ -221,6 +224,7 @@ body{
 .redBox{
   background-color:red;
   color: red;
+  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;    
@@ -229,6 +233,7 @@ body{
 .orangeBox{
   background-color:orange;
   color: red;
+  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;    
@@ -237,6 +242,7 @@ body{
 .blackBox{
   background-color:black;
   color: red;
+  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;    
@@ -245,6 +251,7 @@ body{
 .brownBox{
   background-color:brown;
   color: red;
+  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;    
