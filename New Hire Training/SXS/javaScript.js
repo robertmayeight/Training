@@ -150,6 +150,7 @@ highLimitSwitch.setAttribute('onclick','changeHighLimitSwitch();');
 highLimitSwitch.setAttribute('onmouseover','this.style.cursor = "pointer";');
 
 function changeHighLimitSwitch(){
+	console.log("fired")
 	if(highLimitSwitchRotated === false){
 		TweenMax.to(path3549,1,{rotation:33})
 		highLimitSwitchRotated=true;
@@ -160,10 +161,11 @@ function changeHighLimitSwitch(){
 }
 
 var highLimit2SwitchRotated=false;
-highLimitSwitch2.setAttribute('onclick','changeHighLimitSwitch();');
+highLimitSwitch2.setAttribute('onclick','changeHighLimitSwitch2();');
 highLimitSwitch2.setAttribute('onmouseover','this.style.cursor = "pointer";');
 
-function changeHighLimitSwitch(){
+function changeHighLimitSwitch2(){
+	console.log("high limit 2 fired")
 	if(highLimit2SwitchRotated === false){
 		TweenMax.to(path3768,1,{rotation:33})
 		highLimit2SwitchRotated=true;
