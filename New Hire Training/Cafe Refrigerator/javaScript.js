@@ -5,16 +5,27 @@ xhr.send("");
 var schematic = document.getElementById("showWindow").appendChild(xhr.responseXML.documentElement);
 schematic.classList.add("center");
 mainSvg.setAttribute("stroke", "red")
-var bezierWeight = 0.675;
 
-// var path = document.getElementsByTagName("path")
-
-// for(i=0; i<path.length; i++){
-// 	rectIdSplit = path[i].id.split("_")
-// 	if(rectIdSplit[1] === "hide"){
-// 		path[i].style.display="none";
-// 	}
-// }
+//Show Window Zoom
+var scaleUp = 1;
+showWindow.addEventListener ("DOMMouseScroll", zoomHandler, false);
+function zoomHandler(event){
+	console.log("zoomHandler:" + event)
+	scaleUp = this._gsTransform.scaleY;
+	event.preventDefault();
+	switch(event.detail>0) {
+		case true:
+		if(scaleUp > .5 ){
+			scaleUp = scaleUp - .01;
+			TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+		}
+		break;
+		case false:
+		scaleUp = scaleUp + .01;
+    	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+        break;
+    }
+}
 
 try{
 	document.getElementById("layer1").style.display="inline";
@@ -38,7 +49,7 @@ try{
 var object1 = document.getElementById("schematic").getElementsByTagName("path").length
 var numPaths = document.getElementById("schematic").getElementsByTagName("path")
 for(i=0; i<object1; i++){
-	numPaths[i].style.stroke=black;
+	// numPaths[i].style.stroke=black;
 		numPaths[i].setAttribute('onclick','wireClicked(this);');
 		numPaths[i].setAttribute('onmouseover','this.style.cursor = "default";TweenMax.to([this], .001, {strokeWidth:2})');
 		numPaths[i].setAttribute('onmouseout','this.style.cursor = "default";TweenMax.to([this], .001, {strokeWidth:.75})');
