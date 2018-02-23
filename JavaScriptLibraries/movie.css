@@ -5,9 +5,6 @@ html {
 body{
   height: 93.5%;
   overflow: hidden;
-  /*background-color: #003B71;*/
-  border: solid white;
-    border-width: medium;
 }
 
 #sliderContainer {
@@ -182,7 +179,6 @@ body{
 #showWindow{
   margin: auto;
     /*width: 90%;*/
-    border: 3px solid green;
     padding: 10px;
 }
 

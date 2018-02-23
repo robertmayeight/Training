@@ -50,9 +50,10 @@ var object1 = document.getElementById("schematic").getElementsByTagName("path").
 var numPaths = document.getElementById("schematic").getElementsByTagName("path")
 for(i=0; i<object1; i++){
 	// numPaths[i].style.stroke=black;
+	TweenMax.to([numPaths[i]], .001, {strokeWidth:2});
 		numPaths[i].setAttribute('onclick','wireClicked(this);');
-		numPaths[i].setAttribute('onmouseover','this.style.cursor = "default";TweenMax.to([this], .001, {strokeWidth:2})');
-		numPaths[i].setAttribute('onmouseout','this.style.cursor = "default";TweenMax.to([this], .001, {strokeWidth:.75})');
+		numPaths[i].setAttribute('onmouseover','this.style.cursor = "default";TweenMax.to([this], .001, {strokeWidth:3.5})');
+		numPaths[i].setAttribute('onmouseout','this.style.cursor = "default";TweenMax.to([this], .001, {strokeWidth:2})');
 			
 }
 
