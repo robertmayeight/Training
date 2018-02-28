@@ -7,14 +7,9 @@ schematic.classList.add("center");
 mainSvg.setAttribute("stroke", "red")
 var bezierWeight = 0.675;
 
-// var path = document.getElementsByTagName("path")
+var object1 = document.getElementById("schematic").getElementsByTagName("path").length
+var numPaths = document.getElementById("schematic").getElementsByTagName("path")
 
-// for(i=0; i<path.length; i++){
-// 	rectIdSplit = path[i].id.split("_")
-// 	if(rectIdSplit[1] === "hide"){
-// 		path[i].style.display="none";
-// 	}
-// }
 
 try{
 	document.getElementById("layer1").style.display="inline";
@@ -38,7 +33,7 @@ try{
 var object1 = document.getElementById("schematic").getElementsByTagName("path").length
 var numPaths = document.getElementById("schematic").getElementsByTagName("path")
 for(i=0; i<object1; i++){
-	numPaths[i].style.stroke=black;
+	TweenMax.to([numPaths[i]], .001, {strokeWidth:1});
 		numPaths[i].setAttribute('onclick','wireClicked(this);');
 		numPaths[i].setAttribute('onmouseover','this.style.cursor = "default";TweenMax.to([this], .001, {strokeWidth:2})');
 		numPaths[i].setAttribute('onmouseout','this.style.cursor = "default";TweenMax.to([this], .001, {strokeWidth:.75})');
