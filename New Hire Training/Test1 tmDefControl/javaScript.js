@@ -24,20 +24,6 @@ for(i=0; i<noPathsLength; i++){
 		path.style["stroke-width"]= 10;	
 }
 
-var textFields = document.getElementById("mainSvg").getElementsByTagName("text")
-console.log(textFields)
-for(i=0; i<textFields.lenght; i++){
-	textFields[i].setAttribute('style', '-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;');
-}
-
-
-
-
-
-
-
-
-
 
 
 var schematicDrag = Draggable.create(schematic, {zIndexBoost:false});
