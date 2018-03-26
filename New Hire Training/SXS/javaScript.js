@@ -1,4 +1,3 @@
-
 xhr = new XMLHttpRequest();
 xhr.open("GET","schematic.svg",false);
 xhr.overrideMimeType("image/svg+xml");
@@ -15,7 +14,7 @@ for(i=0; i<noPathsLength; i++){
 		path.setAttribute('opacity',0);
 		path.setAttribute('id',noPaths[i].id + 'copy');
 		path.setAttribute('onclick','wireClicked(this);');
-		path.setAttribute('onmouseover','this.style.cursor = "default";overWire(this); console.log(this.id)');
+		path.setAttribute('onmouseover','this.style.cursor = "default"; overWire(this);');
 		path.setAttribute('onmouseout','outWire(this);');
 		path.style['stroke-width']=1;
 		path.style['stroke-linecap']="round";
@@ -25,37 +24,26 @@ for(i=0; i<noPathsLength; i++){
 		path.style["stroke-width"]= 3;	
 }
 
+var schematicDrag = Draggable.create(showWindow, {zIndexBoost:false});
+showWindow.addEventListener("DOMMouseScroll", function(e){zoomSchematic(e)}, false)
 
 
-var schematicDrag = Draggable.create(schematic, {zIndexBoost:false});
-schematic.addEventListener("DOMMouseScroll", function(e){zoomSchematic(e)}, false)
-schematic.onmouseover = function(){
-	this.style.cursor="grab";
-	showWindow.removeEventListener ("DOMMouseScroll", zoomHandler, false)
-	scaleUp = this._gsTransform.scaleX;
-};
-schematic.onmousedown = function(){showWindowDrag[0].disable();};
-schematic.onmouseup = function(){
-	showWindowDrag[0].enable();
-};
-schematic.onmouseout = function(){showWindow.addEventListener ("DOMMouseScroll", zoomHandler, false);};
-
+var scaleUp = 1;
 function zoomSchematic(e){
 	e.preventDefault();
 	switch(e.detail>0) {
 		case true:
 		if(scaleUp > .5 ){
 			scaleUp = scaleUp - .1;
-			TweenMax.to(schematic, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+			TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
 		}
 		break;
 		case false:
 		scaleUp = scaleUp + .1;
-    	TweenMax.to(schematic, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+    	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
         break;
     }
 }
-
 
 function wireClicked(wire){
 	nameSplit = wire.id.split("copy")
@@ -65,23 +53,59 @@ function wireClicked(wire){
 
 function overWire(wire){
 	nameSplit = wire.id.split("copy")
-	document.getElementById(nameSplit[0]).setAttribute("opacity", ".25"); 
+	// document.getElementById(nameSplit[0]).setAttribute("opacity", ".25"); 
+	wire.setAttribute("opacity", ".5"); 
 }
 
 function outWire(wire){
 nameSplit = wire.id.split("copy")
-	document.getElementById(nameSplit[0]).setAttribute("opacity", "1");
+	// document.getElementById(nameSplit[0]).setAttribute("opacity", "1");
+	wire.setAttribute("opacity", "0");
 }
 
-
-var highlightColor=myColorPicker.value;
+var highlightColor=black;
 function changeColors(myColor){
-	console.log("Change Color: " + myColor)
+	redBox.style.border = "none";
+	blueBox.style.border = "none";
+	orangeBox.style.border = "none";
+	yellowBox.style.border = "none";
+	purpleBox.style.border = "none";
+	greenBox.style.border = "none";
+	greyBox.style.border = "none";
+	blackBox.style.border = "none";
+	brownBox.style.border = "none";
 	highlightColor=myColor;
+
 	switch(myColor) {
-    case red:
-        TweenMax.to(rbID,1,{width:100})
-        break;
+    case "red":
+    redBox.style.border = "medium solid #000000";
+    break;
+    case "blue":
+    blueBox.style.border = "medium solid #000000";
+    break;
+    case "orange":
+    orangeBox.style.border = "medium solid #000000";
+    break;
+    case "yellow":
+    yellowBox.style.border = "medium solid #000000";
+    break;
+    case "purple":
+    purpleBox.style.border = "medium solid #000000";
+    break;
+    case "green":
+    greenBox.style.border = "medium solid #000000";
+    break;
+    case "grey":
+    greyBox.style.border = "medium solid #000000";
+    highlightColor="#A9A9A9";
+    break;
+    case "brown":
+    brownBox.style.border = "medium solid #000000";
+    highlightColor=brown;
+    break;
+    case "black":
+    blackBox.style.border = "medium solid #000000";
+    break;
 }
 }
 
@@ -95,12 +119,13 @@ highLimitSwitch.setAttribute('onclick','changeHighLimitSwitch();');
 highLimitSwitch.setAttribute('onmouseover','this.style.cursor = "pointer";');
 
 function changeHighLimitSwitch(){
-	console.log("fired")
 	if(highLimitSwitchRotated === false){
 		TweenMax.to(path3549,1,{rotation:33})
+		TweenMax.to(path3549copy,1,{rotation:33})
 		highLimitSwitchRotated=true;
 	}else{
 		TweenMax.to(path3549,1,{rotation:0})
+		TweenMax.to(path3549copy,1,{rotation:0})
 		highLimitSwitchRotated=false;
 	}
 }
@@ -110,28 +135,16 @@ highLimitSwitch2.setAttribute('onclick','changeHighLimitSwitch2();');
 highLimitSwitch2.setAttribute('onmouseover','this.style.cursor = "pointer";');
 
 function changeHighLimitSwitch2(){
-	console.log("high limit 2 fired")
 	if(highLimit2SwitchRotated === false){
 		TweenMax.to(path3768,1,{rotation:33})
+		TweenMax.to(path3768copy,1,{rotation:33})
 		highLimit2SwitchRotated=true;
 	}else{
 		TweenMax.to(path3768,1,{rotation:0})
+		TweenMax.to(path3768copy,1,{rotation:0})
 		highLimit2SwitchRotated=false;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 var ffDoorSwitchRotated=false;
 ffDoorSwitch.setAttribute('onclick','changeffDoorSwitch();');
@@ -140,9 +153,11 @@ ffDoorSwitch.setAttribute('onmouseover','this.style.cursor = "pointer";');
 function changeffDoorSwitch(){
 	if(ffDoorSwitchRotated === false){
 		TweenMax.to(path3551,1,{rotation:-33})
+		TweenMax.to(path3551copy,1,{rotation:-33})
 		ffDoorSwitchRotated=true;
 	}else{
 		TweenMax.to(path3551,1,{rotation:0})
+		TweenMax.to(path3551copy,1,{rotation:0})
 		ffDoorSwitchRotated=false;
 	}
 }
@@ -154,56 +169,96 @@ fzDoorSwitch.setAttribute('onmouseover','this.style.cursor = "pointer";');
 function changeFzDoorSwitch(){
 	if(fzDoorSwitchRotated === false){
 		TweenMax.to(path3348,1,{rotation:55, transformOrigin: '0% 100%'})
+		TweenMax.to(path3348copy,1,{rotation:55, transformOrigin: '0% 100%'})
 		fzDoorSwitchRotated=true;
 	}else{
 		TweenMax.to(path3348,1,{rotation:0})
+		TweenMax.to(path3348copy,1,{rotation:0})
 		fzDoorSwitchRotated=false;
 	}
 }
 
-// //Door Switch Rotation
-// var doorSwitchRotated=false;
-// doorSwitch.setAttribute('onclick','changeDoorSwitch();');
-// doorSwitch.setAttribute('onmouseover','this.style.cursor = "pointer";');
+//Compressor Relay
+var compressorRelayRotated=false;
+compressorRelay.setAttribute('onclick','changecompressorRelay();');
+compressorRelay.setAttribute('onmouseover','this.style.cursor = "pointer";');
 
-// function changeDoorSwitch(){
-// 	if(doorSwitchRotated === false){
-// 		TweenMax.to(path200,1,{rotation:-26})
-// 		doorSwitchRotated=true;
-// 	}else{
-// 		TweenMax.to(path200,1,{rotation:0})
-// 		doorSwitchRotated=false;
-// 	}
-// }
+function changecompressorRelay(){
+	if(compressorRelayRotated === false){
+		TweenMax.to(path2239,1,{rotation:33, transformOrigin: '100% 0%'})
+		TweenMax.to(path2239copy,1,{rotation:33, transformOrigin: '100% 0%'})
+		compressorRelayRotated=true;
+	}else{
+		TweenMax.to(path2239,1,{rotation:0})
+		TweenMax.to(path2239copy,1,{rotation:0})
+		compressorRelayRotated=false;
+	}
+}
 
-// //Defrost Thermostat Switch Rotation
-// var defrostThermostatRotated=false;
-// defrostThermostat.setAttribute('onclick','changeDefrostThermostatSwitch();');
-// defrostThermostat.setAttribute('onmouseover','this.style.cursor = "pointer";');
-// function changeDefrostThermostatSwitch(){
-// 	if(defrostThermostatRotated === false){
-// 		TweenMax.to(path334,1,{rotation:30});
-// 		TweenMax.to(path324,1,{y:3});
-// 		defrostThermostatRotated=true;
-// 	}else{
-// 		TweenMax.to(path334,1,{rotation:0})
-// 		TweenMax.to(path324,1,{y:0});
-// 		defrostThermostatRotated=false;
-// 	}
-// }
+//Compressor Relay
+var compressorRelayRotated=false;
+compressorRelay.setAttribute('onclick','changecompressorRelay();');
+compressorRelay.setAttribute('onmouseover','this.style.cursor = "pointer";');
 
-// //Defrost Thermostat Switch Rotation
-// var ccSwitchRotated=false;
-// ccSwitch.setAttribute('onclick','changeccSwitch();');
-// ccSwitch.setAttribute('onmouseover','this.style.cursor = "pointer";');
-// function changeccSwitch(){
-// 	if(ccSwitchRotated === false){
-// 		TweenMax.to(tcBlade,1,{rotation:-30});
-// 		TweenMax.to(g3942,1,{y:-4.5});
-// 		ccSwitchRotated=true;
-// 	}else{
-// 		TweenMax.to(tcBlade,1,{rotation:0})
-// 		TweenMax.to(g3942,1,{y:0});
-// 		ccSwitchRotated=false;
-// 	}
-// }
+function changecompressorRelay(){
+	if(compressorRelayRotated === false){
+		TweenMax.to(path2239,1,{rotation:33, transformOrigin: '100% 0%'})
+		TweenMax.to(path2239copy,1,{rotation:33, transformOrigin: '100% 0%'})
+		compressorRelayRotated=true;
+	}else{
+		TweenMax.to(path2239,1,{rotation:0})
+		TweenMax.to(path2239copy,1,{rotation:0})
+		compressorRelayRotated=false;
+	}
+}
+
+//Heater Relay
+var heaterRelayRotated=false;
+heaterRelay.setAttribute('onclick','changeheaterRelay();');
+heaterRelay.setAttribute('onmouseover','this.style.cursor = "pointer";');
+
+function changeheaterRelay(){
+	if(heaterRelayRotated === false){
+		TweenMax.to(path2243,1,{rotation:33, transformOrigin: '0% 0%'})
+		TweenMax.to(path2243copy,1,{rotation:33, transformOrigin: '0% 0%'})
+		heaterRelayRotated=true;
+	}else{
+		TweenMax.to(path2243,1,{rotation:0})
+		TweenMax.to(path2243copy,1,{rotation:0})
+		heaterRelayRotated=false;
+	}
+}
+
+//Cube Relay
+var cubeRelayRotated=false;
+cubeRelay.setAttribute('onclick','changecubeRelay();');
+cubeRelay.setAttribute('onmouseover','this.style.cursor = "pointer";');
+
+function changecubeRelay(){
+	if(cubeRelayRotated === false){
+		TweenMax.to(path2130,1,{rotation:-33, transformOrigin: '0% 0%'})
+		TweenMax.to(path2130copy,1,{rotation:-31, transformOrigin: '100% 0%'})
+		cubeRelayRotated=true;
+	}else{
+		TweenMax.to(path2130,1,{rotation:0})
+		TweenMax.to(path2130copy,1,{rotation:0})
+		cubeRelayRotated=false;
+	}
+}
+
+//Cube Relay
+var augerRelayRotated=false;
+augerRelay.setAttribute('onclick','changeaugerRelay();');
+augerRelay.setAttribute('onmouseover','this.style.cursor = "pointer";');
+
+function changeaugerRelay(){
+	if(augerRelayRotated === false){
+		TweenMax.to(path2132,1,{rotation:-30, transformOrigin: '0% 0%'})
+		TweenMax.to(path2132copy,1,{rotation:-30, transformOrigin: '100% 0%'})
+		augerRelayRotated=true;
+	}else{
+		TweenMax.to(path2132,1,{rotation:0})
+		TweenMax.to(path2132copy,1,{rotation:0})
+		augerRelayRotated=false;
+	}
+}

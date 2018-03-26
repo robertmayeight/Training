@@ -5,16 +5,40 @@
   <meta charset="UTF-8">
   <!DOCTYPE html>
   <link rel="stylesheet" href="../../JavaScriptLibraries/testCss.css">
+  <style type="text/css">
+    .noSelect{
+      color: white;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  </style>
 </head>
 
 <body>
   <div id="showWindow"></div>
   <div id="showWindow"></div>
   <div class="questions">
-    <center>
-    <span>Color Picker</span><br>
-    <input type="Color" name="colorPicker" id="myColorPicker" onchange="highlightColor=this.value">
-  </center>
+<span>Selected Color</span>
+
+<span id="redBox" onclick="changeColors('red')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:brown";><center>Red</center></span>
+
+<span id="blueBox" onclick="changeColors('blue')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:blue";><center>Blue</center></span>
+
+<span id="orangeBox" onclick="changeColors('orange')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:orange";><center>Orange</center></span>
+
+<span id="yellowBox" onclick="changeColors('yellow')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:yellow";><center>Yellow</center></span>
+
+<span id="purpleBox" onclick="changeColors('purple')"class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:purple";><center>Purple</center></span>
+
+<span id="greenBox" onclick="changeColors('green')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:green";><center>Green</center></span>
+
+<span id="greyBox" onclick="changeColors('grey')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:grey";><center>Grey</center></span>
+
+<span id="brownBox" onclick="changeColors('brown')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:brown";><center>Brown</center></span>
+
+<span id="blackBox" onclick="changeColors('black')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:black";><center>Black</center></span>
 </div>
 
 </body>
@@ -24,7 +48,6 @@
 <script src="../../JavaScriptLibraries/jquery-3.2.1.min.js"></script>
 <script src="../../JavaScriptLibraries/MorphSVGPlugin.js"></script>
 <script src="../../JavaScriptLibraries/TextPlugin.min.js"></script>
-<script src="../../JavaScriptLibraries/coreScript.js"></script>
 <script src="../../JavaScriptLibraries/Refrigeration Variables.js"></script>
 <script src="javaScript.js"></script>
 </html>
