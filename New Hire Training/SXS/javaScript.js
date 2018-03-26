@@ -1,4 +1,4 @@
-console.log("Test")
+console.log("New")
 xhr = new XMLHttpRequest();
 xhr.open("GET","schematic.svg",false);
 xhr.overrideMimeType("image/svg+xml");
