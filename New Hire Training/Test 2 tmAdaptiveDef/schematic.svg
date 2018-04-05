@@ -65,9 +65,9 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="1.2092551"
-     inkscape:cx="321.94267"
-     inkscape:cy="671.29847"
-     inkscape:current-layer="layer2" /><g
+     inkscape:cx="290.05524"
+     inkscape:cy="1031.3974"
+     inkscape:current-layer="g10" /><g
      id="g10"
      inkscape:groupmode="layer"
      inkscape:label="31-51777-3 adaptive defrost"
@@ -2591,18 +2591,6 @@
            x="24.86989"
            y="-531.56964"
            style="font-size:10px;fill:#000000;stroke:none;stroke-width:0.14114854">Defrost Switch First </tspan></text>
-<text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.14114854;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-         x="232.12883"
-         y="-542.95837"
-         id="text1440"
-         transform="scale(1,-1)"><tspan
-           sodipodi:role="line"
-           id="tspan1438"
-           x="232.12883"
-           y="-542.95837"
-           style="fill:#ff0000;stroke:none;stroke-width:0.14114854">Electronic Defrost Control</tspan></text>
 </g><g
        inkscape:groupmode="layer"
        id="layer2"
