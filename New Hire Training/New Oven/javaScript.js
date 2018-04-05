@@ -109,6 +109,32 @@ function changeColors(myColor){
 }
 }
 
+function clickZoomUP(){
+	scaleUp = scaleUp + .05;
+	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+}
+
+function clickZoomDown(){
+	scaleUp = scaleUp - .05;
+	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+}
+
+function zoomSchematic(e){
+	e.preventDefault();
+	switch(e.detail>0) {
+		case true:
+		if(scaleUp > .5 ){
+			scaleUp = scaleUp - .25;
+			TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+		}
+		break;
+		case false:
+		scaleUp = scaleUp + .25;
+    	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+        break;
+    }
+}
+
 
 // showWindow.addEventListener("DOMMouseScroll", function(e){zoomSchematic(e)}, false)
 if (showWindow.addEventListener) {
