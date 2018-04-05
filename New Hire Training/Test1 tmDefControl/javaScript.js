@@ -109,6 +109,31 @@ function changeColors(myColor){
 }
 }
 
+
+
+window.addEventListener("keydown", keyBoardZoom, false);
+function keyBoardZoom(e) {
+	console.log(e.keyCode)
+    if (e.keyCode == 38) {
+       scaleUp = scaleUp + .05;
+	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+   }else if (e.keyCode == 40) {
+       scaleUp = scaleUp - .05;
+	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+   }
+}
+
+
+function clickZoomUP(){
+	scaleUp = scaleUp + .05;
+	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+}
+
+function clickZoomDown(){
+	scaleUp = scaleUp - .05;
+	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+}
+
 var ccSwitchRotated=false;
 ccSwitch.setAttribute('onclick','changeccSwitch();');
 ccSwitch.setAttribute('onmouseover','this.style.cursor = "pointer";');

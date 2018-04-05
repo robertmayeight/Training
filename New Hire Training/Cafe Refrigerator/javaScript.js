@@ -25,7 +25,17 @@ for(i=0; i<noPathsLength; i++){
 }
 
 var schematicDrag = Draggable.create(showWindow, {zIndexBoost:false});
-showWindow.addEventListener("DOMMouseScroll", function(e){zoomSchematic(e)}, false)
+
+window.addEventListener("keydown", keyBoardZoom, false);
+function keyBoardZoom(e) {
+    if (e.keyCode == 38) {
+       scaleUp = scaleUp + .1;
+	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+   }else if (e.keyCode == 40) {
+       scaleUp = scaleUp - .1;
+	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+   }
+}
 
 
 var scaleUp = 1;
@@ -109,6 +119,14 @@ function changeColors(myColor){
 }
 }
 
+function clickZoomUP(){
+	scaleUp = scaleUp + .05;
+	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+}
 
+function clickZoomDown(){
+	scaleUp = scaleUp - .05;
+	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+}
 
 
