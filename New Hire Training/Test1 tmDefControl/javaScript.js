@@ -15,13 +15,15 @@ for(i=0; i<noPathsLength; i++){
 		path.setAttribute('id',noPaths[i].id + 'copy');
 		path.setAttribute('onclick','wireClicked(this);');
 		path.setAttribute('onmouseover','this.style.cursor = "default"; overWire(this);');
+
 		path.setAttribute('onmouseout','outWire(this);');
 		path.style['stroke-width']=1;
 		path.style['stroke-linecap']="round";
 		noPaths[i].style['stroke-linecap']="round";
 		path.setAttribute("d", noPaths[i].getAttribute("d"))
 		diagram1.appendChild(path);	
-		path.style["stroke-width"]= 3;	
+		path.style["stroke-width"]= 3;
+		path.setAttribute('touchmove','wireClicked(this);');	
 }
 
 var schematicDrag = Draggable.create(showWindow, {zIndexBoost:false});
