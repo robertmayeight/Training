@@ -65,6 +65,8 @@ nameSplit = wire.id.split("copy")
 	wire.setAttribute("opacity", "0");
 }
 
+
+
 var highlightColor=black;
 function changeColors(myColor){
 	redBox.style.border = "none";
@@ -110,8 +112,6 @@ function changeColors(myColor){
     break;
 }
 }
-
-
 
 window.addEventListener("keydown", keyBoardZoom, false);
 function keyBoardZoom(e) {
