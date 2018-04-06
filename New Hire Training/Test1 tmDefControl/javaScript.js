@@ -25,8 +25,8 @@ for(i=0; i<noPathsLength; i++){
 	path.setAttribute('touchmove','wireClicked(this);');	
 }
 
-var schematicDrag = Draggable.create(showWindow, {zIndexBoost:false});
-showWindow.addEventListener("DOMMouseScroll", function(e){zoomSchematic(e)}, false);
+var schematicDrag = Draggable.create(schematic, {zIndexBoost:false});
+schematic.addEventListener("DOMMouseScroll", function(e){zoomSchematic(e)}, false);
 
 var scaleUp = 1;
 function zoomSchematic(e){
