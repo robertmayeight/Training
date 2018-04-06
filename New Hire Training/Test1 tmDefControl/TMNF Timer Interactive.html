@@ -15,7 +15,7 @@
     }
     .zoomSliderClass {
       z-index: 1000;
-    width: 90%;
+    width: 100%;
 }
   </style>
 </head>
@@ -25,28 +25,30 @@
   <div id="showWindow"></div>
 
   <div class="questions">
-  <center><input type="range" min="1" max="5" value="1" step="0.01" class="zoomSliderClass" id="zoomSlider"></center>
+    <center>Zoom</center>
+  <input type="range" min="1" max="5" value="0" step="0.01" id="zoomSlider">
     <!-- <button onclick="clickZoomUP()" style="width: 100px">+</button>
     <br>
     <button onclick="clickZoomDown()" style="width: 100px">-</button> -->
-<br><br>
-<div id="redBox" onclick="changeColors('red')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:brown";><center>Red</center></div>
+<br>
+<center>Highlight Colors</center>
+<div id="redBox" onclick="changeColors('red')" class="noSelect" style="cursor:pointer;display:block; width:100%; background-color:brown";><center>Red</center></div>
 
-<div id="blueBox" onclick="changeColors('blue')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:blue";><center>Blue</center></div>
+<div id="blueBox" onclick="changeColors('blue')" class="noSelect" style="cursor:pointer;display:block; width:100%; background-color:blue";><center>Blue</center></div>
 
-<div id="orangeBox" onclick="changeColors('orange')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:orange";><center>Orange</center></div>
+<div id="orangeBox" onclick="changeColors('orange')" class="noSelect" style="cursor:pointer;display:block; width:100%; background-color:orange";><center>Orange</center></div>
 
-<div id="yellowBox" onclick="changeColors('yellow')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:yellow";><center>Yellow</center></div>
+<div id="yellowBox" onclick="changeColors('yellow')" class="noSelect" style="cursor:pointer;display:block; width:100%; background-color:yellow";><center>Yellow</center></div>
 
-<div id="purpleBox" onclick="changeColors('purple')"class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:purple";><center>Purple</center></div>
+<div id="purpleBox" onclick="changeColors('purple')"class="noSelect" style="cursor:pointer;display:block; width:100%; background-color:purple";><center>Purple</center></div>
 
-<div id="greenBox" onclick="changeColors('green')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:green";><center>Green</center></div>
+<div id="greenBox" onclick="changeColors('green')" class="noSelect" style="cursor:pointer;display:block; width:100%; background-color:green";><center>Green</center></div>
 
-<div id="greyBox" onclick="changeColors('grey')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:grey";><center>Grey</center></div>
+<div id="greyBox" onclick="changeColors('grey')" class="noSelect" style="cursor:pointer;display:block; width:100%; background-color:grey";><center>Grey</center></div>
 
-<div id="brownBox" onclick="changeColors('brown')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:brown";><center>Brown</center></div>
+<div id="brownBox" onclick="changeColors('brown')" class="noSelect" style="cursor:pointer;display:block; width:100%; background-color:brown";><center>Brown</center></div>
 
-<div id="blackBox" onclick="changeColors('black')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:black";><center>Black</center></div>
+<div id="blackBox" onclick="changeColors('black')" class="noSelect" style="cursor:pointer;display:block; width:100%; background-color:black";><center>Black</center></div>
 </div>
 
 </body>
