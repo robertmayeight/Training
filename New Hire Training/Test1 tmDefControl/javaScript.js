@@ -35,14 +35,19 @@ function zoomSchematic(e){
 		case true:
 		if(scaleUp > .5 ){
 			scaleUp = scaleUp - .25;
-			TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+			TweenMax.to(schematic, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
 		}
 		break;
 		case false:
 		scaleUp = scaleUp + .25;
-    	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+    	TweenMax.to(schematic, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
         break;
     }
+}
+
+zoomSlider.addEventListener("input", update);
+function update(){
+	TweenMax.set(schematic, {scaleX:zoomSlider.value, scaleY:zoomSlider.value, transformOrigin: "50% 50%", ease: Power0.easeNone});
 }
 
 function wireClicked(wire){
@@ -104,11 +109,6 @@ function changeColors(myColor){
     blackBox.style.border = "medium solid #000000";
     break;
 	}
-}
-
-zoomSlider.addEventListener("input", update);
-function update(){
-	TweenMax.set(showWindow, {scaleX:zoomSlider.value, scaleY:zoomSlider.value, transformOrigin: "50% 50%", ease: Power0.easeNone});
 }
 
 // -----------------------------------------------------------------------------------------------------------------------------
