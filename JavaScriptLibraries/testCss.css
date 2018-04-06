@@ -170,8 +170,8 @@ body{
 }
 
 .questions{
-  background-color: grey;
-  position: absolute;
+  position:fixed;
+    top:0;
   top: 5px;
   left: 5px;
 }
