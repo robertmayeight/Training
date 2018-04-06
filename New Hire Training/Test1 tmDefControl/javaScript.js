@@ -113,6 +113,13 @@ function changeColors(myColor){
 }
 }
 
+// zoomSlider.value = "0";
+zoomSlider.addEventListener("input", update);
+function update(){
+	console.log(zoomSlider.value)
+	TweenMax.set(showWindow, {scaleX:zoomSlider.value, scaleY:zoomSlider.value, transformOrigin: "50% 50%", ease: Power0.easeNone});
+}
+
 window.addEventListener("keydown", keyBoardZoom, false);
 function keyBoardZoom(e) {
     if (e.keyCode == 38) {
