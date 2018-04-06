@@ -27,10 +27,25 @@ for(i=0; i<noPathsLength; i++){
 }
 
 var schematicDrag = Draggable.create(showWindow, {zIndexBoost:false});
+showWindow.addEventListener("DOMMouseScroll", function(e){zoomSchematic(e)}, false)
 
 
-
-
+var scaleUp = 1;
+function zoomSchematic(e){
+	e.preventDefault();
+	switch(e.detail>0) {
+		case true:
+		if(scaleUp > .5 ){
+			scaleUp = scaleUp - .25;
+			TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+		}
+		break;
+		case false:
+		scaleUp = scaleUp + .25;
+    	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+        break;
+    }
+}
 
 function wireClicked(wire){
 	nameSplit = wire.id.split("copy")
@@ -102,7 +117,7 @@ function changeColors(myColor){
 zoomSlider.addEventListener("input", update);
 function update(){
 	console.log(zoomSlider.value)
-	TweenMax.set(schematic, {scaleX:zoomSlider.value, scaleY:zoomSlider.value, transformOrigin: "50% 50%", ease: Power0.easeNone});
+	TweenMax.set(showWindow, {scaleX:zoomSlider.value, scaleY:zoomSlider.value, transformOrigin: "50% 50%", ease: Power0.easeNone});
 }
 
 
