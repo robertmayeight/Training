@@ -258,3 +258,27 @@ body{
   margin: auto;
   width: 100%;
 }
+
+.slider {
+      position: fixed;
+      width: 90%;
+      height: 25px;
+      padding: 0;
+      z-index: 10000;
+      background: #d3d3d3;
+      bottom: 10px;
+    }
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 50px;
+      height: 50px;
+      background: #4CAF50;
+      cursor: pointer;
+    }
+    .slider::-moz-range-thumb {
+      width: 50px;
+      height: 50px;
+      background: #4CAF50;
+      cursor: pointer;
+    }

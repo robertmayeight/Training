@@ -5,53 +5,24 @@
   <meta charset="UTF-8">
   <!DOCTYPE html>
   <link rel="stylesheet" href="../../JavaScriptLibraries/testCss.css">
-  <style type="text/css">
-    .noSelect{
-      color: white;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-  </style>
 </head>
-
 <body>
+  <input type="range" min="1" max="5" value="0" step="0.01" id="zoomSlider" class="slider">
   <div id="showWindow"></div>
   <div class="questions">
-    <button onclick="clickZoomUP()" style="width: 100px">ZOOM IN</button>
-    <br>
-    <button onclick="clickZoomDown()" style="width: 100px">ZOOM OUT</button>
-<br><br>
-<span id="redBox" onclick="changeColors('red')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:brown";><center>Red</center></span>
-
-<span id="blueBox" onclick="changeColors('blue')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:blue";><center>Blue</center></span>
-
-<span id="orangeBox" onclick="changeColors('orange')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:orange";><center>Orange</center></span>
-
-<span id="yellowBox" onclick="changeColors('yellow')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:yellow";><center>Yellow</center></span>
-
-<span id="purpleBox" onclick="changeColors('purple')"class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:purple";><center>Purple</center></span>
-
-<span id="greenBox" onclick="changeColors('green')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:green";><center>Green</center></span>
-
-<span id="greyBox" onclick="changeColors('grey')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:grey";><center>Grey</center></span>
-
-<span id="brownBox" onclick="changeColors('brown')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:brown";><center>Brown</center></span>
-
-<span id="blackBox" onclick="changeColors('black')" class="noSelect" style="cursor:pointer;display:block; width:100px;width:100px; background-color:black";><center>Black</center></span>
+    <div id="redBox" onclick="changeColors('red')" style="cursor:pointer;display:block; width:100px; background-color:brown; color:white";><center>Red</center></div>
+    <div id="blueBox" onclick="changeColors('blue')" style="cursor:pointer;display:block; width:100%; background-color:blue; color:white";><center>Blue</center></div>
+    <div id="orangeBox" onclick="changeColors('orange')" style="cursor:pointer;display:block; width:100%; background-color:orange; color:black";><center>Orange</center></div>
+    <div id="yellowBox" onclick="changeColors('yellow')" style="cursor:pointer;display:block; width:100%; background-color:yellow";><center>Yellow</center></div>
+    <div id="purpleBox" onclick="changeColors('purple')" style="cursor:pointer;display:block; width:100%; background-color:purple; color:white";><center>Purple</center></div>
+    <div id="greenBox" onclick="changeColors('green')" style="cursor:pointer;display:block; width:100%; background-color:green";><center>Green</center></div>
+    <div id="greyBox" onclick="changeColors('grey')" style="cursor:pointer;display:block; width:100%; background-color:grey";><center>Grey</center></div>
+    <div id="brownBox" onclick="changeColors('brown')" style="cursor:pointer;display:block; width:100%; background-color:brown";><center>Brown</center></div>
+    <div id="blackBox" onclick="changeColors('black')" style="cursor:pointer;display:block; width:100%; background-color:black; color:white";><center>Black</center></div>
 </div>
-<div id="sliderContainer"></div>
-
 </body>
 <script src="../../JavaScriptLibraries/TweenMax.min.js"></script>
 <script src="../../JavaScriptLibraries/draggable.js"></script>
-<script src="../../JavaScriptLibraries/DrawSVGPlugin.min.js"></script>
-<script src="../../JavaScriptLibraries/jquery-3.2.1.min.js"></script>
-<script src="../../JavaScriptLibraries/MorphSVGPlugin.js"></script>
-<script src="../../JavaScriptLibraries/TextPlugin.min.js"></script>
-<script src="../../JavaScriptLibraries/coreScript.js"></script>
 <script src="../../JavaScriptLibraries/Refrigeration Variables.js"></script>
-<!-- <script src="../../JavaScriptLibraries/Progress Bar.js"></script> -->
 <script src="javaScript.js"></script>
 </html>
