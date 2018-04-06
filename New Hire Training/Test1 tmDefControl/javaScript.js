@@ -27,25 +27,10 @@ for(i=0; i<noPathsLength; i++){
 }
 
 var schematicDrag = Draggable.create(showWindow, {zIndexBoost:false});
-showWindow.addEventListener("DOMMouseScroll", function(e){zoomSchematic(e)}, false)
 
 
-var scaleUp = 1;
-function zoomSchematic(e){
-	e.preventDefault();
-	switch(e.detail>0) {
-		case true:
-		if(scaleUp > .5 ){
-			scaleUp = scaleUp - .25;
-			TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
-		}
-		break;
-		case false:
-		scaleUp = scaleUp + .25;
-    	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
-        break;
-    }
-}
+
+
 
 function wireClicked(wire){
 	nameSplit = wire.id.split("copy")
@@ -120,37 +105,7 @@ function update(){
 	TweenMax.set(showWindow, {scaleX:zoomSlider.value, scaleY:zoomSlider.value, transformOrigin: "50% 50%", ease: Power0.easeNone});
 }
 
-window.addEventListener("keydown", keyBoardZoom, false);
-function keyBoardZoom(e) {
-    if (e.keyCode == 38) {
-       scaleUp = scaleUp + .05;
-	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
-   }else if (e.keyCode == 40) {
-       scaleUp = scaleUp - .05;
-	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
-   }
-}
 
-
-function clickZoomUP(){
-	scaleUp = scaleUp + .05;
-	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
-}
-
-function clickZoomDown(){
-	scaleUp = scaleUp - .05;
-	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
-}
-
-showWindow.addEventListener('gestureend', function(e) {
-    if (e.scale < 1.0) {
-        scaleUp = scaleUp + .1;
-	TweenMax.to(showWindow, .00, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
-    } else if (e.scale > 1.0) {
-        scaleUp = scaleUp - .1;
-	TweenMax.to(showWindow, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
-    }
-}, false);
 
 var ccSwitchRotated=false;
 ccSwitch.setAttribute('onclick','changeccSwitch();');
