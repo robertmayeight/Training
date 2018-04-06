@@ -102,7 +102,7 @@ function changeColors(myColor){
 zoomSlider.addEventListener("input", update);
 function update(){
 	console.log(zoomSlider.value)
-	TweenMax.set(showWindow, {scaleX:zoomSlider.value, scaleY:zoomSlider.value, transformOrigin: "50% 50%", ease: Power0.easeNone});
+	TweenMax.set(schematic, {scaleX:zoomSlider.value, scaleY:zoomSlider.value, transformOrigin: "50% 50%", ease: Power0.easeNone});
 }
 
 
