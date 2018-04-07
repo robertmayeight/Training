@@ -111,6 +111,166 @@ function changeColors(myColor){
 	}
 }
 
-TweenMax.set(schematic, {y:-500});
+// TweenMax.set(schematic, {y:-500});
 
 // -----------------------------------------------------------------------------------------------------------------------------
+
+var leftDoorSwitchRotated=false;
+leftDoorSwitch.setAttribute('onclick','changeTimerSwitch();');
+leftDoorSwitch.setAttribute('onmouseover','this.style.cursor = "pointer";');
+
+function changeTimerSwitch(){
+	if(leftDoorSwitchRotated === false){
+		TweenMax.to(path8166,1,{rotation:28, transformOrigin: "100% 0%"});
+		TweenMax.to(path8166copy,1,{rotation:28, transformOrigin: "100% 0%"});
+		leftDoorSwitchRotated=true;
+	}else{
+		TweenMax.to(path8166,1,{rotation:0});
+		TweenMax.to(path8166copy,1,{rotation:0});
+		leftDoorSwitchRotated=false;
+	}
+}
+
+var rightDoorSwitchRotated=false;
+rightDoorSwitch.setAttribute('onclick','changerightDoorSwitch();');
+rightDoorSwitch.setAttribute('onmouseover','this.style.cursor = "pointer";');
+
+function changerightDoorSwitch(){
+	if(rightDoorSwitchRotated === false){
+		TweenMax.to(path10622,1,{rotation:-25, transformOrigin: "0% 0%"});
+		TweenMax.to(path10622copy,1,{rotation:-25, transformOrigin: "0% 0%"});
+		rightDoorSwitchRotated=true;
+	}else{
+		TweenMax.to(path10622,1,{rotation:0});
+		TweenMax.to(path10622copy,1,{rotation:0});
+		rightDoorSwitchRotated=false;
+	}
+}
+
+var ffBimetalRotated=false;
+ffBimetal.setAttribute('onclick','changeffBimetal();');
+ffBimetal.setAttribute('onmouseover','this.style.cursor = "pointer";');
+
+function changeffBimetal(){
+	if(ffBimetalRotated === false){
+		TweenMax.to(path9510,1,{rotation:25, transformOrigin: "0% 0%"});
+		TweenMax.to(path9510copy,1,{rotation:25, transformOrigin: "0% 0%"});
+		ffBimetalRotated=true;
+	}else{
+		TweenMax.to(path9510,1,{rotation:0});
+		TweenMax.to(path9510copy,1,{rotation:0});
+		ffBimetalRotated=false;
+	}
+}
+
+var fzBimetalRotated=false;
+fzBimetal.setAttribute('onclick','changefzBimetal();');
+fzBimetal.setAttribute('onmouseover','this.style.cursor = "pointer";');
+
+function changefzBimetal(){
+	if(fzBimetalRotated === false){
+		TweenMax.to(path9430,1,{rotation:25, transformOrigin: "0% 0%"});
+		TweenMax.to(path9430copy,1,{rotation:25, transformOrigin: "0% 0%"});
+		fzBimetalRotated=true;
+	}else{
+		TweenMax.to(path9430,1,{rotation:0});
+		TweenMax.to(path9430copy,1,{rotation:0});
+		fzBimetalRotated=false;
+	}
+}
+
+var fzDoorSwitchRotated=false;
+fzDoorSwitch.setAttribute('onclick','changefzDoorSwitch();');
+fzDoorSwitch.setAttribute('onmouseover','this.style.cursor = "pointer";');
+
+function changefzDoorSwitch(){
+	if(fzDoorSwitchRotated === false){
+		TweenMax.to(path10626,1,{rotation:25, transformOrigin: "0% 0%"});
+		TweenMax.to(path10626copy,1,{rotation:25, transformOrigin: "0% 0%"});
+		fzDoorSwitchRotated=true;
+	}else{
+		TweenMax.to(path10626,1,{rotation:0});
+		TweenMax.to(path10626copy,1,{rotation:0});
+		fzDoorSwitchRotated=false;
+	}
+}
+
+var cupSwitchRotated=false;
+cupSwitch.setAttribute('onclick','changecupSwitch();');
+cupSwitch.setAttribute('onmouseover','this.style.cursor = "pointer";');
+
+function changecupSwitch(){
+	if(cupSwitchRotated === false){
+		TweenMax.to(path11098,1,{rotation:-25, transformOrigin: "0% 0%"});
+		TweenMax.to(path11098copy,1,{rotation:-25, transformOrigin: "0% 0%"});
+		cupSwitchRotated=true;
+	}else{
+		TweenMax.to(path11098,1,{rotation:0});
+		TweenMax.to(path11098copy,1,{rotation:0});
+		cupSwitchRotated=false;
+	}
+}
+
+var fzImBimetalRotated=false;
+fzImBimetal.setAttribute('onclick','changefzImBimetal();');
+fzImBimetal.setAttribute('onmouseover','this.style.cursor = "pointer";');
+
+function changefzImBimetal(){
+	if(fzImBimetalRotated === false){
+		TweenMax.to(path5397,1,{rotation:25, transformOrigin: "0% 0%"});
+		TweenMax.to(path5397copy,1,{rotation:25, transformOrigin: "0% 0%"});
+		fzImBimetalRotated=true;
+	}else{
+		TweenMax.to(path5397,1,{rotation:0});
+		TweenMax.to(path5397copy,1,{rotation:0});
+		fzImBimetalRotated=false;
+	}
+}
+
+var brewModPresentRotated=false;
+brewModPresent.setAttribute('onclick','changebrewModPresent();');
+brewModPresent.setAttribute('onmouseover','this.style.cursor = "pointer";');
+
+function changebrewModPresent(){
+	if(brewModPresentRotated === false){
+		TweenMax.to(path5403,1,{rotation:-25, transformOrigin: "100% 0%"});
+		TweenMax.to(path5403copy,1,{rotation:-25, transformOrigin: "100% 0%"});
+		brewModPresentRotated=true;
+	}else{
+		TweenMax.to(path5403,1,{rotation:0});
+		TweenMax.to(path5403copy,1,{rotation:0});
+		brewModPresentRotated=false;
+	}
+}
+
+var nozzlePosSwitchRotated=false;
+nozzlePosSwitch.setAttribute('onclick','changenozzlePosSwitch();');
+nozzlePosSwitch.setAttribute('onmouseover','this.style.cursor = "pointer";');
+
+function changenozzlePosSwitch(){
+	if(nozzlePosSwitchRotated === false){
+		TweenMax.to(path5409,1,{rotation:23, transformOrigin: "100% 0%"});
+		TweenMax.to(path5409copy,1,{rotation:23, transformOrigin: "100% 0%"});
+		nozzlePosSwitchRotated=true;
+	}else{
+		TweenMax.to(path5409,1,{rotation:0});
+		TweenMax.to(path5409copy,1,{rotation:0});
+		nozzlePosSwitchRotated=false;
+	}
+}
+
+var pladdleSwitchRotated=false;
+pladdleSwitch.setAttribute('onclick','changepladdleSwitch();');
+pladdleSwitch.setAttribute('onmouseover','this.style.cursor = "pointer";');
+
+function changepladdleSwitch(){
+	if(pladdleSwitchRotated === false){
+		TweenMax.to(path67358,1,{rotation:80, transformOrigin: "100% 0%"});
+		TweenMax.to(path67358copy,1,{rotation:80, transformOrigin: "100% 0%"});
+		pladdleSwitchRotated=true;
+	}else{
+		TweenMax.to(path67358,1,{rotation:0});
+		TweenMax.to(path67358copy,1,{rotation:0});
+		pladdleSwitchRotated=false;
+	}
+}
