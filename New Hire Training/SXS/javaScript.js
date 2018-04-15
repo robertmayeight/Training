@@ -4,6 +4,7 @@ xhr.overrideMimeType("image/svg+xml");
 xhr.send("");
 var schematic = document.getElementById("showWindow").appendChild(xhr.responseXML.documentElement);
 schematic.classList.add("center");
+zoomSlider.value=0;
 
 var noPaths = document.getElementById("diagram1").getElementsByTagName("path");
 var noPathsLength = noPaths.length;

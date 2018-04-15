@@ -5,7 +5,6 @@ xhr.send("");
 var schematic = document.getElementById("showWindow").appendChild(xhr.responseXML.documentElement);
 schematic.classList.add("center");
 zoomSlider.value=0;
-//czlider changed
 
 var noPaths = document.getElementById("diagram1").getElementsByTagName("path");
 var noPathsLength = noPaths.length;
