@@ -35,12 +35,12 @@ function zoomSchematic(e){
 	switch(e.detail>0) {
 		case true:
 		if(scaleUp > .5 ){
-			scaleUp = scaleUp - .25;
+			scaleUp = scaleUp - .1;
 			TweenMax.to(schematic, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
 		}
 		break;
 		case false:
-		scaleUp = scaleUp + .25;
+		scaleUp = scaleUp + .1;
     	TweenMax.to(schematic, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
         break;
     }
