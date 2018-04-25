@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TMNF Timer Defrost Interactive Schematic</title>
+  <meta charset="UTF-8">
+  <!DOCTYPE html>
+  <!-- <link rel="stylesheet" href="../../JavaScriptLibraries/testCss.css"> -->
+  <style type="text/css">
+  .playerControls{
+  	/*background-color: grey;*/
+  		width: 95%;
+  		position : fixed;
+  		bottom : 10px;
+  		left: 1%;
+  		z-index: 10000;
+  		margin: auto;
+  		
+  }
+
+
+  .zoomSliderVisible {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+
+    position: absolute;
+     margin: auto;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+}
+  }
+  	.zoomSliderVisible {
+  		width: 5000px;
+  	}
+  	.zoomSliderHidden {
+  		display: none;
+  	}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+	<div class="playerControls">
+  <input type="range" min="1" max="5" value="0" step="0.01" id="zoomSlider" class="zoomSliderHidden">
+  <button id='btn1' onclick = pause()>PLAY</button>
+  <!-- <input type="range" min="0" max="1" value="0" step="0.001" id="progressSlider" class="zoomSliderVisible"> -->
+  </div>
+  <div id="showWindow"></div>
+  <!-- <div class="questions">
+    <div id="redBox" onclick="changeColors('red')" style="cursor:pointer;display:block; width:100px; background-color:brown; color:white";><center>Red</center></div>
+    <div id="blueBox" onclick="changeColors('blue')" style="cursor:pointer;display:block; width:100%; background-color:blue; color:white";><center>Blue</center></div>
+    <div id="orangeBox" onclick="changeColors('orange')" style="cursor:pointer;display:block; width:100%; background-color:orange; color:black";><center>Orange</center></div>
+    <div id="yellowBox" onclick="changeColors('yellow')" style="cursor:pointer;display:block; width:100%; background-color:yellow";><center>Yellow</center></div>
+    <div id="purpleBox" onclick="changeColors('purple')" style="cursor:pointer;display:block; width:100%; background-color:purple; color:white";><center>Purple</center></div>
+    <div id="greenBox" onclick="changeColors('green')" style="cursor:pointer;display:block; width:100%; background-color:green";><center>Green</center></div>
+    <div id="greyBox" onclick="changeColors('grey')" style="cursor:pointer;display:block; width:100%; background-color:grey";><center>Grey</center></div>
+    <div id="brownBox" onclick="changeColors('brown')" style="cursor:pointer;display:block; width:100%; background-color:brown";><center>Brown</center></div>
+    <div id="blackBox" onclick="changeColors('black')" style="cursor:pointer;display:block; width:100%; background-color:black; color:white";><center>Black</center></div>
+</div> -->
+</body>
+<script src="../../JavaScriptLibraries/TweenMax.min.js"></script>
+<script src="../../JavaScriptLibraries/draggable.js"></script>
+<script src="../../JavaScriptLibraries/Refrigeration Variables.js"></script>
+<script src="javaScript.js"></script>
+</html>
