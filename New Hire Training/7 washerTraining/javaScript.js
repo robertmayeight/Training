@@ -32,6 +32,7 @@ schematic.addEventListener("DOMMouseScroll", function(e){zoomSchematic(e)}, fals
 var scaleUp = 1;
 function zoomSchematic(e){
 	e.preventDefault();
+	e.stopPropagation();
 	switch(e.detail>0) {
 		case true:
 		if(scaleUp > .5 ){
