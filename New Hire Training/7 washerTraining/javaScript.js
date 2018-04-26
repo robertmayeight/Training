@@ -32,13 +32,10 @@ schematic.addEventListener("DOMMouseScroll", function(e){zoomSchematic(e)}, fals
 var scaleUp = 1;
 function zoomSchematic(e){
 	e.preventDefault();
-	e.stopPropagation();
 	switch(e.detail>0) {
 		case true:
-		if(scaleUp > .5 ){
 			scaleUp = scaleUp - .1;
 			TweenMax.to(schematic, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
-		}
 		break;
 		case false:
 		scaleUp = scaleUp + .1;
