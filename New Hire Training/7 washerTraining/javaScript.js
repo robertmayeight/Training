@@ -35,11 +35,11 @@ function zoomSchematic(e){
 	switch(e.detail>0) {
 		case true:
 			scaleUp = scaleUp - .1;
-			TweenMax.to(schematic, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+			TweenMax.to(schematic, 0, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
 		break;
 		case false:
 		scaleUp = scaleUp + .1;
-    	TweenMax.to(schematic, .5, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
+    	TweenMax.to(schematic, 0, {scaleX:scaleUp, scaleY:scaleUp, transformOrigin: "50% 50%", ease: Power0.easeNone});
         break;
     }
 }
