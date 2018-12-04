@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Manual Training</title>
+  <meta charset="UTF-8">
+  <!DOCTYPE html>
+  <style type="text/css">
+  .slidecontainer {
+    width: 100%;
+  }
+
+.slider {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+  #headerWindow{
+      position: absolute;
+      background-color: grey;
+      color: #ffffff;
+      font-size: 150%;
+      top: 0px;
+      width: 100%;
+      height: 10%;
+      display: block;
+      text-align: center;
+    }
+  	#mainWindow{
+      position: absolute;
+  		background-color: white;
+      top: 10%;
+  		width: 75%;
+      height: 100%;
+      left: 25%;
+      display: block;
+      /*text-align: center;*/
+    }
+    #sideWindow{
+      position: absolute;
+      background-color: red;
+      top: 10%;
+      width: 25%;
+      height: 100%;
+      display: block;
+      /*text-align: center;*/
+    }
+    #sliderContainer{
+      position: absolute;
+      background-color: grey;
+      bottom: 0%;
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body style="overflow: hidden">
+  
+  <div id="mainWindow"></div>
+  <div id="sideWindow">dasdfsdf</div>
+  <div id="headerWindow">Basic Electricity</div>
+  <div id="sliderContainer">
+    <button id='btn1' class='btn' onclick = pause()>PLAY</button>
+     &nbsp;&nbsp;&nbsp;&nbsp;
+     <input id="progressSlider"  type="range" min="0" max="1" value="0" step="0.001" width="100%" />
+   </div>
+</body>
+<script src="../../JavaScriptLibraries/TweenMax.min.js"></script>
+<script src="../../JavaScriptLibraries/draggable.js"></script>
+<script src="../../JavaScriptLibraries/DrawSVGPlugin.min.js"></script>
+<script src="../../JavaScriptLibraries/jquery-3.2.1.min.js"></script>
+<script src="../../JavaScriptLibraries/MorphSVGPlugin.js"></script>
+<script src="../../JavaScriptLibraries/TextPlugin.min.js"></script>
+<!-- <script src="../../JavaScriptLibraries/coreScript.js"></script> -->
+<script src="../../JavaScriptLibraries/Refrigeration Variables.js"></script>
+<script src="../../JavaScriptLibraries/Progress Bar.js"></script>
+<script src="javaScript.js"></script>
+<!-- <script src="../../JavaScriptLibraries/Multimeter.js"></script> -->
+<!-- <script src="../../JavaScriptLibraries/editor.js"></script> -->
+</html>

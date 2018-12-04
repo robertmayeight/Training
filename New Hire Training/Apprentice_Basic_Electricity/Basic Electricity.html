@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apprentice - Basic Electricity</title>
+  <meta charset="UTF-8">
+  <!DOCTYPE html>
+  <style type="text/css">
+  .mainWindow {
+    position: fixed;
+    top: 0;
+    left: 21.7%;
+    width: 76%;
+    height:100vh;
+    border-left: 3px solid grey;
+    word-wrap: break-word;
+}
+
+.hidden {
+  position: fixed;
+  left: -50000px;
+}
+
+.navWindow {
+  position: fixed;
+    top: 0;
+    left: 0%;
+    width: 20%;
+    height:95vh;
+    word-wrap: break-word;
+    margin: 0px;
+    padding: 10px;
+}
+.playerControls {
+  display: inline;
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  bottom: 0%;
+  width: 100%;
+}
+
+#backButton {
+  bottom: 2%;
+  left: 1%;
+  width: 8%;
+  height: 4.6%;
+  position: fixed;
+  font-size: 1vw;
+}
+#nextButton {
+  bottom: 2%;
+  left: 12%;
+  width: 8%;
+  height: 4.6%;
+  position: fixed;
+  font-size: 1vw;
+}
+
+
+
+
+  </style>
+</head>
+
+<body bgcolor="#D3D3D3">
+  <div id="main" class="mainWindow" style="align-content: center;">
+    <div id="hiddenWindow" class="hidden"></div>
+    <audio id='music' controls='controls' class="playerControls">
+      <source src='audioTracks/slide1.ogg' type='audio/ogg' />
+    </audio>
+    
+  </div>
+  <div class="navWindow">
+<button id="backButton">NEXT</button>
+    <button id="nextButton">BACK</button>
+    
+</div>
+</body>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="../../JavaScriptLibraries/TweenMax.min.js"></script>
+<script src="../../JavaScriptLibraries/draggable.js"></script>
+<script src="../../JavaScriptLibraries/DrawSVGPlugin.min.js"></script>
+<script src="../../JavaScriptLibraries/jquery-3.2.1.min.js"></script>
+<script src="../../JavaScriptLibraries/MorphSVGPlugin.js"></script>
+<script src="../../JavaScriptLibraries/Refrigeration Variables.js"></script>
+<script src="basicElectricityjavaScript.js"></script>
+</html>

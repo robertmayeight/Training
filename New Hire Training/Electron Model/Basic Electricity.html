@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Low End Refrigerator Schematic</title>
+  <meta charset="UTF-8">
+  <!DOCTYPE html>
+  <style type="text/css">
+ body{
+  overflow: hidden;
+  background-color: haierBlue;
+}
+ body.redBg{
+  overflow: hidden;
+  background-color: red;
+}
+body.blackBg{
+  overflow: hidden;
+  background-color: black;
+}
+body.yellowBg{
+  overflow: hidden;
+  background-color: yellow;
+}
+body.greenBg{
+  overflow: hidden;
+  background-color: green;
+}
+
+.visibleSlide{
+  position: fixed;
+  z-index: -1;
+  top: 0px;
+}
+
+.schematicClass{
+  left: 0px
+  margin: 0 auto;
+  max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+}
+
+
+#sliderContainer {
+  padding: 5px;
+  background-color: #003B71;
+  width: 100%;
+	position : fixed;
+  bottom : 0px;
+  left: 50px;
+	z-index: 10000;
+  margin: auto;
+}
+.slider {
+  width: 800px;
+  height: 20px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  margin: auto;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-moz-range-thumb {
+    width: 10px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.btn {
+  position: relative;
+  cursor: pointer;
+  width: 100px;
+  height: 25px;
+  bottom : 5px;
+  left: 5px;
+  z-index: 10000;
+}
+.hidden{
+  stroke: #ccc;
+}
+
+.line{
+  stroke: #ccc;
+  stroke-width: 2;
+  stroke-dasharray: 16,8;
+  stroke-dashoffset: 0;
+}
+
+.line-css{
+  animation: strokeAnim .01s linear infinite forwards;
+}
+
+@keyframes strokeAnim {
+  to{
+    stroke-dashoffset: -24px;
+  }
+}
+
+#editor{
+  position : fixed;
+  background-color: tan;
+  top: 10px;
+  left: 88%;
+  width: 60%;
+  padding: 10px;
+  z-index: 10000;
+}
+
+.editor {
+    border: 4px solid black;
+    padding: 20px 15px;
+}
+
+.editorHidden{
+  top: 10000px;
+  left: 88%;
+}
+
+#slideNumberContainer{
+  color: white;
+  position : fixed;
+  left: 18px;
+  bottom: 12px;
+  width: 50px;
+  z-index: 100;
+}
+
+#codeText{
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+}
+select{
+  margin: 5px;
+}
+</style>
+</head>
+
+<body bgcolor="#003B71">
+  <audio id='music' controls='controls'>
+  <source src='Media1.m4a' type='audio/mp3' />
+</audio>
+
+<div class='item one'>1</div>
+<div class='item two'>2</div>
+  <div id="slideNumberContainer">1</div>
+  <!-- editor -->
+  <div id='editor' class="editorHidden">
+    <div border-style="solid">Code Line: <span id="codeLineText" style="color: red">--</span></div>
+    <div border-style="solid">id:<br><span id="idText">--</span></div>
+    <div border-style="solid">type: <span id="objectTypeText">--</span></div>
+    <div border-style="solid">content: <span id="objectContentText">--</span></div>
+    <div border-style="solid">x: <span id="xText">--</span></div>
+    <div border-style="solid">y: <span id="yText">--</span></div>
+    <div border-style="solid">scaleX: <span id="scaleXText">--</span></div>
+    <div border-style="solid">scaleY: <span id="scaleYText">--</span></div>
+    <hr>
+    Parent
+    <select name="Parent" id="tweenParent">
+      <option value="">No Prefix</option>
+      <option value="TweenMax">TweenMax</option>
+      <option value="mainTl">mainTl</option>
+      <option value="tl1">tl1</option>
+      <option value="tl2">tl2</option>
+      <option value="tl3">tl2</option>
+      <option value="tl4">tl2</option>
+      <option value="tl5">tl2</option>
+    </select>
+    Type
+    <select name="Type" id="tweenType">
+      <option value="to">to</option>
+      <option value="from">from</option>
+      <option value="fromTo">fromTo</option>
+    </select>
+    
+   <br> Opacity
+    <select name="Opacity" id="opacityChangeText">
+      <option value="0">0</option>
+      <option value=".25">.25</option>
+      <option value=".5">.5</option>
+      <option value=".75">.75</option>
+      <option value="1">1</option>
+    </select>
+    Stroke Width
+    <select name="strokeWidth" id="autoAlphaChangeText">
+      <option value="nStroke">nStroke</option>
+      <option value="hStroke">hStroke</option>
+      <option value=".5">.5</option>
+      <option value=".75">.75</option>
+      <option value="1">1</option>
+    </select>
+    Stroke Color
+    <select name="strokeColor" id="opacityChangeText">
+      <option value="brown">brown</option>
+      <option value="blue">blue</option>
+      <option value="grteen">green</option>
+      <option value="orange">orange</option>
+      <option value="red">red</option>
+      <option value="yellow">yellow</option>
+    </select>
+    Fill Color
+    <select name="fillColor" id="opacityChangeText">
+      <option value="brown">brown</option>
+      <option value="blue">blue</option>
+      <option value="grteen">green</option>
+      <option value="orange">orange</option>
+      <option value="red">red</option>
+      <option value="yellow">yellow</option>
+    </select>
+    Duration
+    <select name="Duration" id="tweenDuration">
+      <option value="instant">Instant</option>
+      <option value="textFade">Text Fade</option>
+      <option value=".25">.25</option>
+      <option value=".5">.5</option>
+      <option value=".75">.75</option>
+      <option value="1">1</option>
+    </select>
+    
+    <br>onComplete
+      <select name="onComplete" id="onCompleteSelect">
+        <option value="pause">Pause Timeline</option>
+        <option value="updateLineNumber">Don't Pause Timeline</option>
+      </select>
+      delay
+      <select name="delay" id="delayChangeText">
+        <option value="-=0">None</option>
+        <option value="-=instant">- Instant</option>
+        <option value="-=textFade">- Text Fade</option>
+        <option value="-=.25">- .25</option>
+        <option value="-=.5">- .5</option>
+        <option value="-=.75">- .75</option>
+        <option value="-=.75">- 1</option>
+      </select>
+      <br>
+    <button onclick = tweenScale()>Size/Position</button>
+    <button onclick = tweenautoAlpha()>Tween Opacity</button>
+    <button onclick = tweenOpacity()>Tween {Stoke}</button>
+    <button onclick = tweenOpacity()>Tween {Fill}</button>
+    <button onclick = tweenOpacity()>Tween Rotation</button><br>
+    <button onclick = copyToClipboard()>Copy code</button><br>
+    <div id="codeText" border-style="solid">_drag object not selected.</div>
+  </div>
+  <!-- editor -->
+  
+  <div id="schematic" class="schematicClass"></div>
+  <div id="slides" class="visibleSlide">
+    <!-- <img src="Refrigeration part 1/Slide33.png"> -->
+  </div>
+      <div id="sliderContainer">
+        <button id='btn1' class='btn' onclick = pause()>PLAY</button>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="progressSlider" class="slider" type="range" min="0" max="1" value="0" step="0.001"/>
+      </div>
+    </div>
+</body>
+<script src="../../JavaScriptLibraries/TweenMax.min.js"></script>
+<script src="../../JavaScriptLibraries/draggable.js"></script>
+<script src="../../JavaScriptLibraries/DrawSVGPlugin.min.js"></script>
+<script src="../../JavaScriptLibraries/jquery-3.2.1.min.js"></script>
+<script src="../../JavaScriptLibraries/MorphSVGPlugin.js"></script>
+<script src="../../JavaScriptLibraries/editor.js"></script>
+<script src="../../JavaScriptLibraries/Refrigeration Variables.js"></script>
+
+
+<script src="javaScript.js"></script>
+</html>

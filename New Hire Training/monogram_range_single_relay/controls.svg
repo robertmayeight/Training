@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="172.1246mm"
+   width="174.26779mm"
    height="14.822347mm"
-   viewBox="0 0 172.12463 14.822347"
+   viewBox="0 0 174.26782 14.822347"
    version="1.1"
    id="svg4657"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="441.28344"
-     inkscape:cy="4.3598517"
+     inkscape:cx="567.55252"
+     inkscape:cy="-3.2162897"
      inkscape:document-units="mm"
      inkscape:current-layer="g5335"
      showgrid="false"
@@ -289,7 +289,7 @@
         <g
            id="cleanStep1"
            inkscape:label="#g1122"
-           transform="translate(-3.0885239)">
+           transform="translate(35.171866,-3.4867286)">
           <rect
              ry="26.494814"
              rx="1.4385841"
@@ -312,10 +312,10 @@
                y="-823.81653"
                x="-762.25427"
                id="tspan87508"
-               sodipodi:role="line">Clean Step 1</tspan></text>
+               sodipodi:role="line">Door Lock</tspan></text>
         </g>
         <g
-           transform="translate(-3.0885239,-148.6734)"
+           transform="translate(-2.8578097,-3.4867286)"
            id="cleanStep2"
            inkscape:label="#g1122">
           <rect
@@ -340,7 +340,87 @@
                y="-823.81653"
                x="-762.25427"
                id="tspan87508-7"
-               sodipodi:role="line">Clean Step 2</tspan></text>
+               sodipodi:role="line">K1 Energized</tspan></text>
+        </g>
+        <g
+           transform="translate(35.171866,-160.05147)"
+           id="cleanStep3"
+           inkscape:label="#g1122">
+          <rect
+             ry="26.494814"
+             rx="1.4385841"
+             transform="matrix(0,-1,-1,0,0,0)"
+             y="-843.16058"
+             x="-832.48126"
+             height="26.792435"
+             width="137.43616"
+             id="rect1079-7-6"
+             style="opacity:1;vector-effect:none;fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:1.70348835;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:100;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+          <text
+             inkscape:label="#text87510"
+             transform="matrix(0,-1,-1,0,0,0)"
+             id="text1-4-9"
+             y="-823.81653"
+             x="-762.25427"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.45752335px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.40465713;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:100;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.47451401px;font-family:Arial;-inkscape-font-specification:Arial;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:1.40465724"
+               y="-823.81653"
+               x="-762.25427"
+               id="tspan87508-7-7"
+               sodipodi:role="line">Clean Timer</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.72876167px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.54512298;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:100;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+             x="-753.83075"
+             y="-832.36713"
+             id="text882"
+             transform="matrix(0,-1,-1,0,0,0)"><tspan
+               sodipodi:role="line"
+               id="tspan880"
+               x="-753.83075"
+               y="-815.49713"
+               style="stroke-width:1.54512298"></tspan></text>
+        </g>
+        <g
+           transform="translate(-2.8578097,-159.34202)"
+           id="cleanStep4"
+           inkscape:label="#g1122">
+          <rect
+             ry="26.494814"
+             rx="1.4385841"
+             transform="matrix(0,-1,-1,0,0,0)"
+             y="-843.16058"
+             x="-832.48126"
+             height="26.792435"
+             width="137.43616"
+             id="rect1079-7-6-9"
+             style="opacity:1;vector-effect:none;fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:1.70348835;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:100;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+          <text
+             inkscape:label="#text87510"
+             transform="matrix(0,-1,-1,0,0,0)"
+             id="text1-4-9-7"
+             y="-823.81653"
+             x="-762.25427"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.45752335px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.40465713;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:100;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.47451401px;font-family:Arial;-inkscape-font-specification:Arial;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:1.40465724"
+               y="-823.81653"
+               x="-762.25427"
+               id="tspan87508-7-7-2"
+               sodipodi:role="line">Door Unlock</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.72876167px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.54512298;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:100;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+             x="-753.83075"
+             y="-832.36713"
+             id="text882-8"
+             transform="matrix(0,-1,-1,0,0,0)"><tspan
+               sodipodi:role="line"
+               id="tspan880-7"
+               x="-753.83075"
+               y="-815.49713"
+               style="stroke-width:1.54512298" /></text>
         </g>
       </g>
     </g>
