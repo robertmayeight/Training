@@ -8,11 +8,12 @@
   .mainWindow {
     position: fixed;
     top: 0;
-    left: 21.7%;
-    width: 76%;
+    left: 0%;
+    margin: auto;
+  width: 100%;
     height:100vh;
-    border-left: 3px solid grey;
-    word-wrap: break-word;
+    overflow: hidden;
+
 }
 
 .hidden {
@@ -20,43 +21,50 @@
   left: -50000px;
 }
 
-.navWindow {
+
+.playerControls {
+  position: fixed;
+  padding: 1px;
+  bottom: 0;
+  margin: auto;
+  width: 98%;
+}
+
+
+
+#menu{
   position: fixed;
     top: 0;
+    left: 0%;
+    width: 8%;
+    padding: 1px;
+}
+
+.menuItemsHidden{
+  position: fixed;
+    top: 0%;
+    left: -5000px;
+    width: 20%;
+    height:95vh;
+    word-wrap: break-word;
+    margin: 0px;
+    padding: 10px;
+    background-color: #B8B8B8;
+}
+
+.menuItemsVisible{
+  position: fixed;
+    top: 5%;
     left: 0%;
     width: 20%;
     height:95vh;
     word-wrap: break-word;
     margin: 0px;
     padding: 10px;
+    background-color: #B8B8B8;
+    border-style: solid;
+  border-width: 2px;
 }
-.playerControls {
-  display: inline;
-  position: absolute;
-  top: 10%;
-  left: 1%;
-  bottom: 0;
-  width: 100%;
-}
-
-#backButton {
-  bottom: 2%;
-  left: 1%;
-  width: 8%;
-  height: 4.6%;
-  position: fixed;
-  font-size: 1vw;
-}
-#nextButton {
-  bottom: 2%;
-  left: 12%;
-  width: 8%;
-  height: 4.6%;
-  position: fixed;
-  font-size: 1vw;
-}
-
-
 
 
   </style>
@@ -64,19 +72,47 @@
 
 <body bgcolor="#D3D3D3">
   <div id="main" class="mainWindow" style="align-content: center;">
-    <div id="hiddenWindow" class="hidden"></div>
-    <audio id='music' controls='controls' class="playerControls">
-      <source src='audioTracks/slide1.ogg' type='audio/ogg' />
-    </audio>
-    
   </div>
-  <div class="navWindow">
-<button id="backButton">NEXT</button>
-    <button id="nextButton">BACK</button>
+  <div id="hiddenWindow" class="hidden">
+  </div>
+  <audio id='music' controls='controls' class="playerControls">
+    <source src='audioTracks/slide1.ogg' type='audio/ogg' />
+  </audio>
     
-</div>
-</body>
+  
+    <div id="menu"><img src="Menu Icon.png" width="30%" onclick="toggleMenu()"> </div>
+    <div id="menuItems" class="menuItemsHidden">
+      <br>
+    <button id="backButton">NEXT</button>
+    <button id="nextButton">BACK</button>
+    <br><br>
+    <a href="#" onclick="alert('hello')">Module 1 - The Atom</a><br><br>
+    <a href="#" onclick="alert('hello')">Module 2 - The Atom</a><br><br>
+    <a href="#" onclick="alert('hello')">Module 3 - The Atom</a><br><br>
+    <a href="#" onclick="alert('hello')">Module 4 - The Atom</a><br><br>
+    <a href="#" onclick="alert('hello')">Module 5 - The Atom</a><br><br>
+    <a href="#" onclick="alert('hello')">Module 6 - The Atom</a><br><br>
+    <a href="#" onclick="alert('hello')">Module 7 - The Atom</a><br><br>
+    <a href="#" onclick="alert('hello')">Module 8 - The Atom</a><br><br>
+    <a href="#" onclick="alert('hello')">Module 9 - The Atom</a>
+  </div>
 
+  
+    
+
+</body>
+<script type="text/javascript">
+  function toggleMenu(){
+   var state=document.getElementById("menuItems").classList;
+   console.log(state)
+   if(state == "menuItemsHidden"){
+    document.getElementById("menuItems").className="menuItemsVisible";
+  }else{
+    document.getElementById("menuItems").className="menuItemsHidden";
+    
+  }
+  }
+</script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="../../JavaScriptLibraries/TweenMax.min.js"></script>
 <script src="../../JavaScriptLibraries/draggable.js"></script>

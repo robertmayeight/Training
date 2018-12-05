@@ -13,6 +13,12 @@ slide1.overrideMimeType("image/svg+xml");
 slide1.send("");
 var slide1= document.getElementById("hiddenWindow").appendChild(slide1.responseXML.documentElement);
 
+slide2 = new XMLHttpRequest();
+slide2.open("GET","slide2.svg",false);
+slide2.overrideMimeType("image/svg+xml");
+slide2.send("");
+var slide2= document.getElementById("hiddenWindow").appendChild(slide2.responseXML.documentElement);
+
 var svgWindow = document.getElementById("main");
 var svg = d3.select(introSlide);
 function redraw(){
