@@ -11,17 +11,17 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   id="svg2"
+   id="slide1"
    xml:space="preserve"
    width="1000"
    height="638.37402"
    viewBox="0 0 1000 638.37402"
    sodipodi:docname="slide1.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   enable-background="new"><metadata
+   style="enable-background:new"><metadata
      id="metadata8"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs6"><radialGradient
        spreadMethod="pad"
        fr="0"
@@ -43,115 +43,125 @@
          id="stop3681"
          style="stop-color:#393a24;stop-opacity:0.96862745" /></radialGradient><marker
        inkscape:isstock="true"
-       style="overflow:visible;"
+       style="overflow:visible"
        id="marker7234"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="Arrow1Mend"><path
-         transform="scale(0.4) rotate(180) translate(10,0)"
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         id="path7232" /></marker><marker
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path7232"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:isstock="true"
-       style="overflow:visible;"
+       style="overflow:visible"
        id="marker7068"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="Arrow1Mend"><path
-         transform="scale(0.4) rotate(180) translate(10,0)"
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         id="path7066" /></marker><marker
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path7066"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:isstock="true"
-       style="overflow:visible;"
+       style="overflow:visible"
        id="marker6179"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="Arrow1Mend"><path
-         transform="scale(0.4) rotate(180) translate(10,0)"
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         id="path6177" /></marker><marker
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path6177"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:isstock="true"
-       style="overflow:visible;"
+       style="overflow:visible"
        id="marker6025"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="Arrow1Mend"><path
-         transform="scale(0.4) rotate(180) translate(10,0)"
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         id="path6023" /></marker><marker
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path6023"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:isstock="true"
-       style="overflow:visible;"
+       style="overflow:visible"
        id="marker5877"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="Arrow1Mend"><path
-         transform="scale(0.4) rotate(180) translate(10,0)"
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         id="path5875" /></marker><marker
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path5875"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:isstock="true"
-       style="overflow:visible;"
+       style="overflow:visible"
        id="marker5729"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="Arrow1Mend"><path
-         transform="scale(0.4) rotate(180) translate(10,0)"
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         id="path5727" /></marker><marker
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path5727"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:isstock="true"
-       style="overflow:visible;"
+       style="overflow:visible"
        id="marker5467"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="Arrow1Mend"><path
-         transform="scale(0.4) rotate(180) translate(10,0)"
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         id="path5465" /></marker><marker
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path5465"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:isstock="true"
-       style="overflow:visible;"
+       style="overflow:visible"
        id="marker5220"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="Arrow1Mend"><path
-         transform="scale(0.4) rotate(180) translate(10,0)"
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         id="path5218" /></marker><marker
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path5218"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:stockid="Arrow2Lend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow2Lend"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true"><path
          id="path3566"
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#ffffff;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(1.1) rotate(180) translate(1,0)" /></marker><marker
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:stockid="Arrow1Mend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker3808"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true"><path
          id="path3554"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         transform="scale(0.4) rotate(180) translate(10,0)" /></marker><linearGradient
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" /></marker><linearGradient
        inkscape:collect="always"
        id="linearGradient4201"><stop
          style="stop-color:#8f746a;stop-opacity:1"
@@ -162,59 +172,64 @@
          id="stop4199" /></linearGradient><marker
        inkscape:stockid="Arrow1Mend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker3109"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true"><path
          id="path2774"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         transform="scale(0.4) rotate(180) translate(10,0)" /></marker><marker
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker3028"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true"><path
          id="path2780"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" /></marker><marker
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Send"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true"><path
          id="path10602"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         transform="scale(0.2) rotate(180) translate(6,0)" /></marker><marker
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:stockid="Arrow1Mend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker10907"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true"><path
          id="path10596"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         transform="scale(0.4) rotate(180) translate(10,0)" /></marker><marker
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker10850"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true"><path
          id="path10590"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         transform="scale(0.8) rotate(180) translate(12.5,0)" /></marker><inkscape:perspective
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" /></marker><inkscape:perspective
        sodipodi:type="inkscape:persp3d"
        inkscape:vp_x="-1165.9328 : 128.37165 : 1"
        inkscape:vp_y="0 : 796.60447 : 0"
@@ -223,48 +238,52 @@
        id="perspective1940" /><marker
        inkscape:stockid="Arrow1Mend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Mend"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true"><path
          id="path3317"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         transform="scale(0.4) rotate(180) translate(10,0)" /></marker><marker
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker4454"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true"><path
          id="path4452"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         transform="scale(0.8) rotate(180) translate(12.5,0)" /></marker><marker
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker3571"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true"><path
          id="path3311"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#00ef00;stroke-width:1pt;stroke-opacity:1;fill:#00ef00;fill-opacity:1"
-         transform="scale(0.8) rotate(180) translate(12.5,0)" /></marker><marker
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#00ef00;fill-opacity:1;fill-rule:evenodd;stroke:#00ef00;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker13811"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true"><path
          id="path13551"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
-         transform="scale(0.8) rotate(180) translate(12.5,0)" /></marker><marker
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
        refY="0"
@@ -4021,9 +4040,9 @@
          stop-opacity=".96907"
          stop-color="#f80000" /></radialGradient><radialGradient
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1 0 0 .86618 -.56314 2.5439)"
-       r="7.9074"
-       cy="20.106"
+       gradientTransform="matrix(1,0,0,0.86618,-0.56314,2.5439)"
+       r="7.9074001"
+       cy="20.106001"
        cx="12.698"
        id="a"><stop
          id="stop7"
@@ -10719,8 +10738,8 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter4716"
-       x="-0.0068985478"
-       width="1.0137971"
+       x="-0.006898548"
+       width="1.013797"
        y="-0.046064645"
        height="1.0921293"><feGaussianBlur
          inkscape:collect="always"
@@ -11667,12 +11686,12 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.52186765"
-     inkscape:cx="-176.7387"
-     inkscape:cy="430.57147"
+     inkscape:cx="-324.28566"
+     inkscape:cy="491.8897"
      inkscape:window-x="1909"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer5"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -11712,7 +11731,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="layer1"
-     style="display:none"
+     style="display:inline"
      transform="translate(-2.1475864e-7,-1.2918574)"><text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
@@ -11725,6 +11744,12 @@
      x="368.02084"
      y="48.015816"
      style="font-size:37.33333206px;fill:#000000;fill-opacity:1;stroke-width:1">Basic Electricity</tspan></text>
+
+
+
+
+
+
 
 <g
    style="display:inline;opacity:0.98999999"
@@ -11833,6 +11858,12 @@
      x="-826.54779"
      y="374.67105" /></text>
 
+
+
+
+
+
+
 </g>
 <g
    style="display:inline;opacity:0.98999999"
@@ -11929,6 +11960,12 @@
      y="77.222107"
      style="font-size:24px;text-align:start;text-anchor:start"
      id="tspan3903">atoms.</tspan></text>
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:0.96862745;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.94117647;paint-order:fill markers stroke"
@@ -11938,11 +11975,17 @@
      sodipodi:role="line"
      id="tspan3825"
      x="-574.50061"
-     y="257.50763"></tspan><tspan
+     y="257.50763" /><tspan
      sodipodi:role="line"
      x="-574.50061"
      y="287.50763"
      id="tspan3829" /></text>
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:0.96862745;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.94117647;paint-order:fill markers stroke"
@@ -11974,6 +12017,12 @@
      y="342.87411"
      style="font-size:24px;text-align:start;text-anchor:start"
      id="tspan3923" /></text>
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:0.96862745;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.94117647;paint-order:fill markers stroke"
@@ -11995,18 +12044,30 @@
      y="179.40517"
      style="font-size:24px;text-align:start;text-anchor:start"
      id="tspan3907">works.</tspan></text>
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
-   x="117.33242"
-   y="80.018715"
+   x="247.63365"
+   y="55.108185"
    id="slide1Text1"
    inkscape:label="#text13180-4"><tspan
      sodipodi:role="line"
      id="tspan13178-8-0"
-     x="117.33242"
-     y="80.018715"
-     style="font-size:96px;fill:#000000;fill-opacity:1;stroke-width:1">What is Electricity?</tspan></text>
+     x="247.63365"
+     y="55.108185"
+     style="font-size:53.33333206px;fill:#000000;fill-opacity:1;stroke-width:1">What is Electricity?</tspan></text>
+
+
+
+
+
+
 <path
    style="display:inline;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    d="m -334.94018,370.80371 -0.47393,109.00474 112.08531,0.7109 -19.65746,-9.73432 19.65746,9.73432 -17.53555,10.18957"
@@ -12024,6 +12085,12 @@
      id="tspan4477"
      x="219.45421"
      y="167.74216">Atom</tspan></text>
+
+
+
+
+
+
 </g><g
      inkscape:groupmode="layer"
      id="layer6"
@@ -12060,6 +12127,12 @@
      x="126.56143"
      y="114.77009" /></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -12072,6 +12145,12 @@
      y="347.58765"
      id="tspan2414"
      style="font-size:24px">An atom is made up of 3 parts:</tspan></text>
+
+
+
+
+
+
 
 <text
    xml:space="preserve"
@@ -12086,6 +12165,12 @@
      style="fill:#000000;stroke-width:0.91388595"
      id="tspan4697">Sound Familiar?</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -12097,6 +12182,12 @@
      id="tspan2410"
      x="653.09436"
      y="164.32411">Nucleus</tspan></text>
+
+
+
+
+
+
 
 <text
    xml:space="preserve"
@@ -12111,6 +12202,12 @@
      y="520.76721"
      style="fill:#000000;stroke-width:0.76969278">Positively charged protons.</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.7578392px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.98999999;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79708499"
@@ -12124,6 +12221,12 @@
      y="521.02563"
      style="fill:#000000;stroke-width:0.79708499">Neutrally charged neutrons.</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -12136,6 +12239,12 @@
      x="-935.60974"
      y="273.06516"
      style="font-size:24px">All matter is made up of atoms.</tspan></text>
+
+
+
+
+
+
 
 <path
    style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -12172,6 +12281,12 @@
      y="311.58636"
      style="font-size:24px">Negatively charged electrons orbit around the nucleus.</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -12185,6 +12300,12 @@
      style="font-size:24px"
      id="tspan3841">The outer band of electrons is what makes electric current possible.</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:#ff001f;stroke-width:4.30000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
@@ -12196,6 +12317,12 @@
      y="203.94429"
      id="tspan3460"
      style="font-size:24px">This attraction keeps the electrons orbiting around the nucleus.</tspan></text>
+
+
+
+
+
+
 
 </g><g
      inkscape:groupmode="layer"
@@ -12328,6 +12455,12 @@
      x="463.80844"
      y="124.96756">Sun = Nucleus</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -12339,6 +12472,12 @@
      id="tspan3593"
      x="41.555092"
      y="230.86606">Planets = Electrons</tspan></text>
+
+
+
+
+
+
 
 </g>
 
@@ -12478,6 +12617,12 @@
      id="tspan11928-4-8-1-8"
      x="-826.54779"
      y="374.67105" /></text>
+
+
+
+
+
+
 
 </g><g
        transform="matrix(1.3950091,0,0,1.3950091,-561.18327,41.047362)"
@@ -12649,6 +12794,12 @@
      y="60.626125"
      style="stroke-width:0.62900025" /></text>
 
+
+
+
+
+
+
 </g></g><g
          style="display:inline;opacity:0.92000002;stroke:#00ff00;stroke-opacity:1"
          id="outerBand"
@@ -12667,16 +12818,22 @@
            id="missingElecron2-8"
            transform="translate(288.12878,126.01831)"
            inkscape:label="#g3866-3"><text
-             xml:space="preserve"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.12800789px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#00ff00;stroke-width:0.62900025;stroke-opacity:1"
-             x="623.45087"
-             y="42.495731"
-             id="text4271-4"><tspan
-               sodipodi:role="line"
-               id="tspan4269-4"
-               x="623.45087"
-               y="60.626125"
-               style="stroke:#00ff00;stroke-width:0.62900025;stroke-opacity:1" /></text>
+   xml:space="preserve"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.12800789px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#00ff00;stroke-width:0.62900025;stroke-opacity:1"
+   x="623.45087"
+   y="42.495731"
+   id="text4271-4"><tspan
+     sodipodi:role="line"
+     id="tspan4269-4"
+     x="623.45087"
+     y="60.626125"
+     style="stroke:#00ff00;stroke-width:0.62900025;stroke-opacity:1" /></text>
+
+
+
+
+
+
 </g></g></g><g
        inkscape:groupmode="layer"
        id="layer8"
@@ -12695,6 +12852,12 @@
      y="575.41785"
      id="tspan3168">Holds 1 electron.</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.92000002;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -12706,6 +12869,12 @@
      id="tspan4361"
      x="243.84375"
      y="42.869576">Components of a Copper Atom</tspan></text>
+
+
+
+
+
+
 
 <text
    xml:space="preserve"
@@ -12722,6 +12891,12 @@
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
      id="tspan4204">Electrons are free to move in and out of the holes.</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.92000002;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -12735,6 +12910,12 @@
      x="233.63081"
      y="320.76144"
      id="tspan4312">Orbit Path 1</tspan></text>
+
+
+
+
+
+
 
 <text
    xml:space="preserve"
@@ -12750,6 +12931,12 @@
      y="320.76144"
      id="tspan4312-4-3">Orbit Path 2</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.92000002;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -12763,6 +12950,12 @@
      x="134.97821"
      y="320.75363"
      id="tspan4312-4-3-4-7">Orbit Path 3</tspan></text>
+
+
+
+
+
+
 
 <text
    xml:space="preserve"
@@ -12778,6 +12971,12 @@
      y="320.76144"
      id="tspan4312-4-3-4-7-5-6">Orbit Path 4</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.92000002;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -12792,6 +12991,12 @@
      y="424.4426"
      id="tspan4312-4">Holds 2 electrons.</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.92000002;fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter2990)"
@@ -12803,6 +13008,12 @@
      x="441.55469"
      y="246.16132"
      id="tspan4185">Nucleus</tspan></text>
+
+
+
+
+
+
 
 <text
    xml:space="preserve"
@@ -12818,6 +13029,12 @@
      y="474.4426"
      id="tspan4312-4-3-4">Holds 8 electrons.</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.92000002;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -12831,6 +13048,12 @@
      x="383.05591"
      y="531.3299"
      id="tspan4312-4-3-4-7-5">Holds 18 electrons.</tspan></text>
+
+
+
+
+
+
 
 </g><g
        inkscape:groupmode="layer"
@@ -13004,16 +13227,22 @@
            id="missingElecron2-0"
            transform="translate(288.12878,126.01831)"
            inkscape:label="#g3866-3"><text
-             xml:space="preserve"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.12800789px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.62900025"
-             x="623.45087"
-             y="42.495731"
-             id="text4271-0"><tspan
-               sodipodi:role="line"
-               id="tspan4269-3"
-               x="623.45087"
-               y="60.626125"
-               style="stroke-width:0.62900025" /></text>
+   xml:space="preserve"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.12800789px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.62900025"
+   x="623.45087"
+   y="42.495731"
+   id="text4271-0"><tspan
+     sodipodi:role="line"
+     id="tspan4269-3"
+     x="623.45087"
+     y="60.626125"
+     style="stroke-width:0.62900025" /></text>
+
+
+
+
+
+
 </g></g><g
          style="display:inline;opacity:0.92000002;stroke:#00ff00;stroke-opacity:1"
          id="outerBand-0"
@@ -13032,16 +13261,22 @@
            id="missingElecron2-8-9"
            transform="translate(288.12878,126.01831)"
            inkscape:label="#g3866-3"><text
-             xml:space="preserve"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.12800789px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#00ff00;stroke-width:0.62900025;stroke-opacity:1"
-             x="623.45087"
-             y="42.495731"
-             id="text4271-4-3"><tspan
-               sodipodi:role="line"
-               id="tspan4269-4-2"
-               x="623.45087"
-               y="60.626125"
-               style="stroke:#00ff00;stroke-width:0.62900025;stroke-opacity:1" /></text>
+   xml:space="preserve"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.12800789px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#00ff00;stroke-width:0.62900025;stroke-opacity:1"
+   x="623.45087"
+   y="42.495731"
+   id="text4271-4-3"><tspan
+     sodipodi:role="line"
+     id="tspan4269-4-2"
+     x="623.45087"
+     y="60.626125"
+     style="stroke:#00ff00;stroke-width:0.62900025;stroke-opacity:1" /></text>
+
+
+
+
+
+
 </g></g></g></g><g
      inkscape:groupmode="layer"
      id="layer7"
@@ -13065,6 +13300,12 @@
      x="-688.13995"
      y="417.40024"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000">DC Circuits</tspan></text>
+
+
+
+
+
+
 
 <g
    transform="matrix(1.3333333,0,0,-1.3333333,-1070.9175,1539.1759)"
@@ -13156,6 +13397,12 @@
      y="-469.36978"
      style="fill:#ffffff;stroke:#000000;stroke-width:0.75">R1</tspan></text>
 
+
+
+
+
+
+
 <circle
    style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.875;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
    id="path5027"
@@ -13172,6 +13419,12 @@
      id="tspan4720"
      x="-656.51862"
      y="467.1683">Source</tspan></text>
+
+
+
+
+
+
 
 <path
    style="opacity:0.98999999;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -13190,6 +13443,12 @@
      id="tspan5754-2"
      sodipodi:role="line">+</tspan></text>
 
+
+
+
+
+
+
 <text
    inkscape:label="#text5756-7-6"
    id="batteryMinus"
@@ -13202,6 +13461,12 @@
      x="-693.60944"
      id="tspan5754-2-2"
      sodipodi:role="line">-</tspan></text>
+
+
+
+
+
+
 
 <g
    inkscape:groupmode="layer"
@@ -13225,6 +13490,12 @@
      x="18.912439"
      y="136.46281"
      id="tspan4108" /></text>
+
+
+
+
+
+
 
 <path
    d="m -1238.3673,352.83863 c 0,54.465 -10.278,98.618 -22.956,98.618 -12.679,0 -22.956,-44.153 -22.956,-98.618 0,-54.465 10.278,-98.618 22.956,-98.618 12.678,0 22.956,44.153 22.956,98.618 z"
@@ -13301,6 +13572,12 @@
      y="601.94824"
      style="font-size:32px;fill:#ffffff;fill-opacity:1;stroke-width:1">Battery</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.33333397px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;display:inline;fill:#ff0000;fill-opacity:1;stroke:none"
@@ -13313,6 +13590,12 @@
      y="632.6474"
      style="font-size:21.33333397px;fill:#ff0000;fill-opacity:1">Battery</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -13323,6 +13606,12 @@
      id="tspan2983"
      x="-780.11053"
      y="633.34247">Inside the battery are trillions of atoms.</tspan></text>
+
+
+
+
+
+
 
 <text
    xml:space="preserve"
@@ -13336,6 +13625,12 @@
      y="68.952034"
      style="stroke-width:1">Electrons</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
@@ -13347,6 +13642,12 @@
      x="-927.28186"
      y="73.912674"
      style="stroke-width:1">Nucleus</tspan></text>
+
+
+
+
+
+
 
 <text
    xml:space="preserve"
@@ -13360,6 +13661,12 @@
      style="stroke-width:1"
      id="tspan2991">Atoms are composed of:</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -13372,6 +13679,12 @@
      x="-1147.9652"
      y="-10.719084">PAUSE</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -13383,6 +13696,12 @@
      id="tspan13129-44"
      x="-462.89484"
      y="266.95322">Electrolyte</tspan></text>
+
+
+
+
+
+
 
 <g
    transform="matrix(1.3333333,0,0,-1.3333333,-1193.2667,1118.7045)"
@@ -13430,6 +13749,12 @@
      id="tspan5754-2-7"
      sodipodi:role="line">+</tspan></text>
 
+
+
+
+
+
+
 <text
    transform="scale(1,-1)"
    inkscape:label="#text5756-7-6"
@@ -13443,6 +13768,12 @@
      x="277.13757"
      id="tspan5754-2-2-0"
      sodipodi:role="line">-</tspan></text>
+
+
+
+
+
+
 
 <circle
    style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.76725006;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -13480,6 +13811,12 @@
      x="-939.93018"
      y="276.58023"
      id="tspan13281-0">inside the battery and pushes them into the cathode. </tspan></text>
+
+
+
+
+
+
 
 <path
    style="display:inline;opacity:0.98999999;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker13811)"
@@ -13562,6 +13899,12 @@
      y="-257.04846"
      style="stroke-width:1.09868181" /></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.22800064px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.09868181"
@@ -13574,6 +13917,12 @@
      x="-537.9173"
      y="-229.61172"
      style="fill:#ffffff;stroke-width:1.09868181">4</tspan></text>
+
+
+
+
+
+
 
 <circle
    style="display:inline;opacity:0.98999999;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffff00;stroke-width:1.09868181;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -13594,6 +13943,12 @@
      x="-567.46997"
      y="-264.30399"
      style="fill:#ffffff;stroke-width:1.09868181">Hole</tspan></text>
+
+
+
+
+
+
 
 </g><g
    style="display:inline;opacity:0.98999999"
@@ -13676,6 +14031,12 @@
      y="-397.33469"
      style="fill:#ffffff;stroke-width:1.09868181">3</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.22800064px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.09868181"
@@ -13688,6 +14049,12 @@
      x="196.38414"
      y="-475.71353"
      style="fill:#ffffff;stroke-width:1.09868181">Hole</tspan></text>
+
+
+
+
+
+
 
 </g><g
    style="display:inline;opacity:0.98999999"
@@ -13770,6 +14137,12 @@
      y="-460.46457"
      style="fill:#ffffff;stroke-width:1.09868181">3</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.22800064px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.09868181"
@@ -13782,6 +14155,12 @@
      x="151.28642"
      y="-386.58286"
      style="fill:#ffffff;stroke-width:1.09868181">Hole</tspan></text>
+
+
+
+
+
+
 
 </g><text
    xml:space="preserve"
@@ -13798,6 +14177,12 @@
      y="282.31573"
      id="tspan4116">the nucleus of atoms.</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -13813,6 +14198,12 @@
      y="376.59131"
      id="tspan4122">electrons than others</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -13824,6 +14215,12 @@
      x="-563.62018"
      y="108.10305"
      id="tspan13281-3">Atom</tspan></text>
+
+
+
+
+
+
 
 <text
    xml:space="preserve"
@@ -13840,6 +14237,12 @@
      y="139.49748"
      id="tspan4102">held in the orbit.</tspan></text>
 
+
+
+
+
+
+
 <g
    transform="matrix(0.5136276,-0.7514102,-0.7514102,-0.5136276,-232.99636,465.71056)"
    style="display:inline"
@@ -13855,6 +14258,12 @@
      x="-631.07251"
      id="tspan4446"
      sodipodi:role="line">Free Electron</tspan></text>
+
+
+
+
+
+
 
 <path
    inkscape:connector-curvature="0"
@@ -14007,6 +14416,12 @@
      y="126.50642"
      id="tspan12959">that always flows in the same direction.</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -14018,6 +14433,12 @@
      id="tspan3963"
      x="-1039.1925"
      y="124.68413">Electric current is the movement of electrons in a substance.</tspan></text>
+
+
+
+
+
+
 
 <text
    xml:space="preserve"
@@ -14032,6 +14453,12 @@
      y="435.29202"
      style="fill:#ffffff;stroke-width:1">What causes current to flow?</tspan></text>
 
+
+
+
+
+
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -14042,6 +14469,12 @@
      id="tspan2045"
      x="-1146.5299"
      y="-64.629028">Atoms</tspan></text>
+
+
+
+
+
+
 
 <path
    style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -14061,5 +14494,11 @@
      x="-621.16132"
      y="165.4147"
      style="font-size:19.71131134px;fill:#ffffff;fill-opacity:1;stroke-width:0.61597848">Negative</tspan></text>
+
+
+
+
+
+
 
 </g></svg>

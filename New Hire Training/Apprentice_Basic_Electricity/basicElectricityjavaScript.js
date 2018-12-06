@@ -5,20 +5,23 @@ introSlide.open("GET","introPage.svg",false);
 introSlide.overrideMimeType("image/svg+xml");
 introSlide.send("");
 var introSlide= document.getElementById("main").appendChild(introSlide.responseXML.documentElement);
-
+var slides = [introSlide];
 
 slide1 = new XMLHttpRequest();
 slide1.open("GET","slide1.svg",false);
 slide1.overrideMimeType("image/svg+xml");
 slide1.send("");
 var slide1= document.getElementById("hiddenWindow").appendChild(slide1.responseXML.documentElement);
+slides.push(slide1);
 
 slide2 = new XMLHttpRequest();
 slide2.open("GET","slide2.svg",false);
 slide2.overrideMimeType("image/svg+xml");
 slide2.send("");
 var slide2= document.getElementById("hiddenWindow").appendChild(slide2.responseXML.documentElement);
+slides.push(slide2);
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var svgWindow = document.getElementById("main");
 var svg = d3.select(introSlide);
 function redraw(){
@@ -31,24 +34,58 @@ function redraw(){
 redraw();
 window.addEventListener("resize", redraw);
 
+//Change Menu Item
+
+var currentTimeline;
+
+function changeSlides(slide){
+	closeMenu();
+	for(i=0; i<slides.length; i++){
+		TweenMax.to(slides[i], .001, {autoAlpha:0})
+		TweenMax.to([slides[i]], .001, {className:"hidden"});
+	}
+	var showThisSlide = document.getElementById(slide.id)
+	TweenMax.to([showThisSlide], .01, {className:"mainWindow"});
+	TweenMax.to(showThisSlide, 1, {autoAlpha:1, delay:.5})
+	currentTimeline=slide.id;
+	slideSplit=slide.id.split("slide")
+	var n = slideSplit[1]
+	console.log(n)
+	thisTrack.src='audioTracks/slide' + n + '.ogg';
+	thisTrack.load();
+	thisTrack.play(0);
+	timelinesArray[n].restart();
+}
+function closeMenu(){
+	document.getElementById("menuItems").className="menuItemsHidden";
+}
+
+var timelinesArray = []
+
 //Audio
 var thisTrack = document.getElementById('music');
-thisTrack.loop = true;
-
 thisTrack.onplay = function() {
-	mainTl.play();
+	var nameSplit = currentTimeline.split("slide")
+	var slideNumber = nameSplit[1];
+	timelinesArray[slideNumber].play();
 };
 
 thisTrack.onpause = function() {
-	mainTl.pause();
+	var nameSplit = currentTimeline.split("slide")
+	var slideNumber = nameSplit[1];
+	timelinesArray[slideNumber].pause();
 };
 
 thisTrack.onseeked = function() {
-	mainTl.time(thisTrack.currentTime);
+	var nameSplit = currentTimeline.split("slide")
+	var slideNumber = nameSplit[1];
+	timelinesArray[slideNumber].time(thisTrack.currentTime);
 }
 
 thisTrack.ontimeupdate = function() {
-	mainTl.time(thisTrack.currentTime);
+	var nameSplit = currentTimeline.split("slide")
+	var slideNumber = nameSplit[1];
+	timelinesArray[slideNumber].time(thisTrack.currentTime);
 };
 //End Audio
 
@@ -78,29 +115,14 @@ for (i=0; i<objectArray.length; i++) {
 	switch(groupNameSplit[1]) {
 		case "drag":
 		TweenMax.to(objectArray[i], .01, {autoAlpha:0})
-		Draggable.create(objectArray[i], {zIndexBoost:false});
-		objectArray[i].onmousedown = function(){myDraggable[0].disable(); setUpChechArrays(this);};
-		objectArray[i].onmouseup = function(){
-			myDraggable[0].enable(); 
-			idText.innerHTML=this.id;
-			objectTypeText.innerHTML=this.tagName;
-			objectContentText.innerHTML=this.textContent;
-			idText.innerHTML=this.id;
-			xText.innerHTML=this._gsTransform.x;
-			yText.innerHTML=this._gsTransform.y;
-			scaleXText.innerHTML=this._gsTransform.scaleX;
-			scaleYText.innerHTML=this._gsTransform.scaleY;
-		};
 	}
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// This code has to be seperate because it drags the parent and not the object!!!
-
-
-
-var introTl = new TimelineMax({paused:false, repeat:-1});
-introTl
-.from([g2381], .01, {autoAlpha:0})
+var slide0Tl = new TimelineMax({paused:false, repeat:-1});
+timelinesArray.push(slide0Tl);
+slide0Tl
+// .from([g2381], .01, {autoAlpha:0})
 .from(s1T1_drag, 1, {x:-800, autoAlpha:0, ease:Back.easeOut})
 .to(g2381, 2.5, {x:500, ease: Power0.easeNone},"-=.5")
 .from(text2524, 1, {x:-800, ease: Power0.easeNone},"-=2")
@@ -126,11 +148,6 @@ introTl
  .to([s1T1_drag,s1T2,path2810,path2411,s1T3,sineWave1,s1T4,s1Heater,path4846,path4846,path1043,path_fzLight,path10,path_waterValve,path2812,s1T5,s1T6,s1H1,text5457,path25942,text2524], 1, {autoAlpha:0, ease:Back.easeOut},"+=5")
 .add("end");
 
-
-
-
-
-var currentTl = new TimelineMax({paused:true,repeat:-1});
 var orbitPath1 = MorphSVGPlugin.pathDataToBezier("#orbitPath1", {align:electron1_drag});
 TweenLite.set(electron1_drag, {xPercent:-50, yPercent:-50});
 var orbitPath2 = MorphSVGPlugin.pathDataToBezier("#orbitPath2", {align:electron2_drag});
@@ -170,30 +187,17 @@ var orbit1Array = [orbitPath1,orbitPath2,orbitPath3,orbitPath4,orbitPath5,orbitP
 
 // Timelines//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-
-
-
-var mainTl = new TimelineMax({paused:true});
-
-
 TweenMax.to([svgAtom_drag,electron1_drag,electron2_drag,electron3_drag,electron4_drag,electron5_drag,electron6_drag,electron7_drag,electron8_drag], .01, {autoAlpha:1})
 TweenMax.to([mainBackground], .01, {autoAlpha:0})
+var slide1Tl = new TimelineMax({paused:true});
+timelinesArray.push(slide1Tl);
 
-//Hide heading text.
-mainTl.to([introSlide], 1, {className:"hidden"})
-.to([slide1], .01, {className:"mainWindow"})
-.from([slide1], .01, {autoAlpha:0})
-
-
+slide1Tl
 .from([slide1Text1], 1, {autoAlpha:0})
 .to([slide1Text1], 1, {autoAlpha:0},"+=5")
 .from([svgAtom_drag], 1, {autoAlpha:0})
 .to([text3115_drag], 1, {autoAlpha:1},"-=1")
-
 .from([text4691_drag], 1, {autoAlpha:0},'+=0')
-
 .to([electronOrbitTl], 1, {timeScale:0, progress:.25, ease:Quad.easeOut},'+=19')
 .to([electronOrbitTl2], 1, {timeScale:0, progress:.25, ease:Quad.easeOut},"-=1")
 .to([electronOrbitTl3], 1, {timeScale:0, progress:.25, ease:Quad.easeOut},"-=1")
@@ -300,12 +304,16 @@ mainTl.to([introSlide], 1, {className:"hidden"})
 .to([svgAtom_drag], 1, {x:1160, y:-218, transformOrigin: '50% 50%', ease: Power0.easeNone},'-=1')
 .from("#path3608-0", .5, {drawSVG:"0%", immediateRender:true, ease: Power0.easeNone, onComplete: pause, onCompleteParams:[2, new Error().lineNumber]})
 
-
 .to([copperAtom_drag], 1, {autoAlpha:1})
 .from([outerBand], 1, {autoAlpha:0, immediateRender:true},"+=3.5")
 .to([copperAtom_drag], 1, {x:"+=275", transformOrigin: '50% 50%', ease: Power0.easeNone},"+=8")
 .from([copperAtom_drag2], 1, {autoAlpha:0})
 
 
+
+var slide2Tl = new TimelineMax({paused:true});
+timelinesArray.push(slide2Tl);
+slide2Tl
+.to([s2Schematic_drag],1, {autoAlpha:1})
 
 

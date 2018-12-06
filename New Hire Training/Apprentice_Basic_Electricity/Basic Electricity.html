@@ -31,7 +31,6 @@
 }
 
 
-
 #menu{
   position: fixed;
     top: 0;
@@ -64,6 +63,7 @@
     background-color: #B8B8B8;
     border-style: solid;
   border-width: 2px;
+  overflow: scroll;
 }
 
 
@@ -72,29 +72,52 @@
 
 <body bgcolor="#D3D3D3">
   <div id="main" class="mainWindow" style="align-content: center;">
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <button id="backButton">NEXT</button>
+    <button id="nextButton">BACK</button>
   </div>
   <div id="hiddenWindow" class="hidden">
   </div>
   <audio id='music' controls='controls' class="playerControls">
     <source src='audioTracks/slide1.ogg' type='audio/ogg' />
   </audio>
-    
-  
-    <div id="menu"><img src="Menu Icon.png" width="30%" onclick="toggleMenu()"> </div>
+   <div id="menu"><img src="Menu Icon.png" width="30%" onclick="toggleMenuVisibility()"> </div>
     <div id="menuItems" class="menuItemsHidden">
-      <br>
-    <button id="backButton">NEXT</button>
-    <button id="nextButton">BACK</button>
-    <br><br>
-    <a href="#" onclick="alert('hello')">Module 1 - The Atom</a><br><br>
-    <a href="#" onclick="alert('hello')">Module 2 - The Atom</a><br><br>
-    <a href="#" onclick="alert('hello')">Module 3 - The Atom</a><br><br>
-    <a href="#" onclick="alert('hello')">Module 4 - The Atom</a><br><br>
-    <a href="#" onclick="alert('hello')">Module 5 - The Atom</a><br><br>
-    <a href="#" onclick="alert('hello')">Module 6 - The Atom</a><br><br>
-    <a href="#" onclick="alert('hello')">Module 7 - The Atom</a><br><br>
-    <a href="#" onclick="alert('hello')">Module 8 - The Atom</a><br><br>
-    <a href="#" onclick="alert('hello')">Module 9 - The Atom</a>
+    <a href="#" onclick="changeSlides(slide1)">Module 1 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides(slide2)">Module 2 - Voltage Current Ohms</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 3 - Meters</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 4 - Power Supplies</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 5 - Series & Parllel Circuits</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 6 - DC Circuits</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 7 - AC Circuits</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 8 - Electricity & Magnetism</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 9 - Motors</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 10 - Reading Schematics</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 11 - Mini Manuals</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 12 - Schematic Excercise 1/a><br><br>
+    <a href="#" onclick="changeSlides()">Module 7 - Schematic Exercise 2</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 8 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 4 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 5 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 6 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 7 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 8 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 4 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 5 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 6 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 7 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 8 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 4 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 5 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 6 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 7 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 8 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 4 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 5 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 6 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 7 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 8 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 9 - The Atom</a>
   </div>
 
   
@@ -102,9 +125,8 @@
 
 </body>
 <script type="text/javascript">
-  function toggleMenu(){
+  function toggleMenuVisibility(){
    var state=document.getElementById("menuItems").classList;
-   console.log(state)
    if(state == "menuItemsHidden"){
     document.getElementById("menuItems").className="menuItemsVisible";
   }else{
