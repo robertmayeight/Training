@@ -7,7 +7,7 @@
   <style type="text/css">
   .mainWindow {
     position: fixed;
-    top: 0;
+    top: -40px;
     left: 0%;
     margin: auto;
   width: 100%;
@@ -66,8 +66,14 @@
   overflow: scroll;
 }
 
-
+.colorPicker{
+  right: 50px;
+  position: fixed;
+  width: 10%;
+z-index: 500;
+}
   </style>
+}
 </head>
 
 <body bgcolor="#D3D3D3">
@@ -85,8 +91,8 @@
     <div id="menuItems" class="menuItemsHidden">
     <a href="#" onclick="changeSlides(slide1)">Module 1 - The Atom</a><br><br>
     <a href="#" onclick="changeSlides(slide2)">Module 2 - Voltage Current Ohms</a><br><br>
-    <a href="#" onclick="changeSlides()">Module 3 - Meters</a><br><br>
-    <a href="#" onclick="changeSlides()">Module 4 - Power Supplies</a><br><br>
+    <a href="#" onclick="showMenu(); changeSlides(slide3)">Module 3 - Meters</a><br><br>
+    <a href="#" onclick="changeSlides(slide4)">Module 4 - Power Supplies</a><br><br>
     <a href="#" onclick="changeSlides()">Module 5 - Series & Parllel Circuits</a><br><br>
     <a href="#" onclick="changeSlides()">Module 6 - DC Circuits</a><br><br>
     <a href="#" onclick="changeSlides()">Module 7 - AC Circuits</a><br><br>
@@ -119,7 +125,17 @@
     <a href="#" onclick="changeSlides()">Module 8 - The Atom</a><br><br>
     <a href="#" onclick="changeSlides()">Module 9 - The Atom</a>
   </div>
-
+<div id="colorPickerDiv" class="menuItemsHidden">
+    <div id="redBox" onclick="changeColors('red')" style="cursor:pointer;display:block; width:100%; background-color:brown; color:white";><center>Red</center></div>
+    <div id="blueBox" onclick="changeColors('blue')" style="cursor:pointer;display:block; width:100%; background-color:blue; color:white";><center>Blue</center></div>
+    <div id="orangeBox" onclick="changeColors('orange')" style="cursor:pointer;display:block; width:100%; background-color:orange; color:black";><center>Orange</center></div>
+    <div id="yellowBox" onclick="changeColors('yellow')" style="cursor:pointer;display:block; width:100%; background-color:yellow";><center>Yellow</center></div>
+    <div id="purpleBox" onclick="changeColors('purple')" style="cursor:pointer;display:block; width:100%; background-color:purple; color:white";><center>Purple</center></div>
+    <div id="greenBox" onclick="changeColors('green')" style="cursor:pointer;display:block; width:100%; background-color:green";><center>Green</center></div>
+    <div id="greyBox" onclick="changeColors('grey')" style="cursor:pointer;display:block; width:100%; background-color:grey";><center>Grey</center></div>
+    <div id="brownBox" onclick="changeColors('brown')" style="cursor:pointer;display:block; width:100%; background-color:brown";><center>Brown</center></div>
+    <div id="blackBox" onclick="changeColors('black')" style="cursor:pointer;display:block; width:100%; background-color:black; color:white";><center>Black</center></div>
+</div>
   
     
 
@@ -134,6 +150,18 @@
     
   }
   }
+  function showMenu(){
+    var state=document.getElementById("colorPickerDiv").classList;
+    console.log(state)
+    if(state == "menuItemsHidden"){
+    document.getElementById("colorPickerDiv").className="colorPicker";
+  }else{
+    document.getElementById("colorPickerDiv").className="menuItemsHidden";
+    
+  }
+  }
+
+
 </script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="../../JavaScriptLibraries/TweenMax.min.js"></script>
