@@ -7,7 +7,7 @@
   <style type="text/css">
   .mainWindow {
     position: fixed;
-    top: -40px;
+    /*top: -40px;*/
     left: 0%;
     margin: auto;
   width: 100%;
@@ -73,7 +73,7 @@
 z-index: 500;
 }
   </style>
-}
+
 </head>
 
 <body bgcolor="#D3D3D3">
@@ -144,21 +144,19 @@ z-index: 500;
   function toggleMenuVisibility(){
    var state=document.getElementById("menuItems").classList;
    if(state == "menuItemsHidden"){
-    document.getElementById("menuItems").className="menuItemsVisible";
-  }else{
-    document.getElementById("menuItems").className="menuItemsHidden";
-    
-  }
+      document.getElementById("menuItems").className="menuItemsVisible";
+      }else{
+        document.getElementById("menuItems").className="menuItemsHidden";
+      }
   }
   function showMenu(){
     var state=document.getElementById("colorPickerDiv").classList;
-    console.log(state)
     if(state == "menuItemsHidden"){
-    document.getElementById("colorPickerDiv").className="colorPicker";
-  }else{
+      document.getElementById("colorPickerDiv").className="colorPicker";
+    }else{
     document.getElementById("colorPickerDiv").className="menuItemsHidden";
     
-  }
+    }
   }
 
 
@@ -171,4 +169,7 @@ z-index: 500;
 <script src="../../JavaScriptLibraries/MorphSVGPlugin.js"></script>
 <script src="../../JavaScriptLibraries/Refrigeration Variables.js"></script>
 <script src="basicElectricityjavaScript.js"></script>
+<script src="slide1.js"></script>
+<script src="slide2.js"></script>
+<script src="slide3.js"></script>
 </html>
