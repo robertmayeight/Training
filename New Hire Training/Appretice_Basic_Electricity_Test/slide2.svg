@@ -24956,13 +24956,7 @@
        originy="-180.40434" /></sodipodi:namedview><g
      inkscape:groupmode="layer"
      id="layer3"
-     inkscape:label="Background"><rect
-       style="opacity:1;vector-effect:none;fill:#b3b3b3;fill-opacity:0.96862745;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-       id="rect5282"
-       width="769.52539"
-       height="456.68643"
-       x="1.1694915"
-       y="0.94526362" /></g><g
+     inkscape:label="Background" /><g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="battery"
