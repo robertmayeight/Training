@@ -13,7 +13,7 @@
         <options>
           <option name="title_enabled" value="true">
             <options>
-              <option name="title_text" value="Sample" />
+              <option name="title_text" value="storyLineSample" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
@@ -1261,11 +1261,10 @@
   <nav_data>
     <outline>
       <links>
-        <slidelink slideid="_player.6lkzRSabq2S" displaytext="Untitled Scene" expand="true" type="slide">
+        <slidelink slideid="_player.66Ttk88gfg4" displaytext="Untitled Scene" expand="true" type="slide">
           <links>
-            <slidelink slideid="_player.6lkzRSabq2S.6KGXD1MP66g" displaytext="Untitled Slide" expand="false" type="slide" />
-            <slidelink slideid="_player.6lkzRSabq2S.6ntwgXF2fWY" displaytext="Untitled Slide" expand="false" type="slide" />
-            <slidelink slideid="_player.6lkzRSabq2S.6eLCRD4vKQt" displaytext="Untitled Slide" expand="false" type="slide" />
+            <slidelink slideid="_player.66Ttk88gfg4.6Pi4MdxgDwE" displaytext="Untitled Slide" expand="false" type="slide" />
+            <slidelink slideid="_player.66Ttk88gfg4.5dEUHgKE6dT" displaytext="Untitled Slide" expand="false" type="slide" />
           </links>
         </slidelink>
       </links>
