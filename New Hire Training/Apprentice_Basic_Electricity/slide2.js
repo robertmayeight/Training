@@ -34,7 +34,7 @@ slide2Tl
 
 .to([BatteryACharges_drag],1, {autoAlpha:1},"+=11")
 
-.from([path23357], 1, {drawSVG:"0%", immediateRender:true, ease: Power0.easeNone, delay:.1},"+=25.5")
+.from([path23357], 1, {drawSVG:"0%", immediateRender:true, ease: Power0.easeNone, delay:.1},"+=24.5")
 
 .to([BatteryACharges_drag],1, {autoAlpha:1})
 
