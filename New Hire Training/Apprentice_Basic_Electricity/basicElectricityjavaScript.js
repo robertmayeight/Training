@@ -131,6 +131,7 @@ for (i=0; i<objectArray.length; i++) {
 	switch(groupNameSplit[1]) {
 		case "drag":
 		TweenMax.to(objectArray[i], .01, {autoAlpha:0})
+		case 
 	}
 }
 
@@ -181,3 +182,4 @@ function changeColors(myColor){
 	}
 }
 
+//
