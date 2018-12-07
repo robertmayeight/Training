@@ -5,7 +5,17 @@ slide2.overrideMimeType("image/svg+xml");
 slide2.send("");
 var slide2= document.getElementById("main").appendChild(slide2.responseXML.documentElement);
 
-
+var svgWindow = document.getElementById("main");
+var svg = d3.select(slide2);
+function redraw(){
+	var width = svgWindow.clientWidth;
+	var height = svgWindow.clientHeight;
+	svg
+	.attr("width", width)
+	 .attr("height", height);
+}
+redraw();
+window.addEventListener("resize", redraw);
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
