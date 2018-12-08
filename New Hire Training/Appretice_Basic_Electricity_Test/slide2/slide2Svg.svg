@@ -13,9 +13,9 @@
    version="1.1"
    id="slide1"
    xml:space="preserve"
-   width="578.60931"
+   width="654.48676"
    height="577.40106"
-   viewBox="0 0 578.6093 577.40106"
+   viewBox="0 0 654.48674 577.40106"
    sodipodi:docname="slide2Svg.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    style="enable-background:new"><metadata
@@ -11480,7 +11480,7 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.7380323"
-     inkscape:cx="465.99639"
+     inkscape:cx="498.5153"
      inkscape:cy="243.51347"
      inkscape:window-x="1909"
      inkscape:window-y="-11"
@@ -11495,24 +11495,24 @@
      inkscape:measure-end="0,0"><inkscape:grid
        type="xygrid"
        id="grid1433"
-       originx="-711.31879"
+       originx="-678.79987"
        originy="-345.15322" /></sodipodi:namedview><g
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Background"
      style="display:inline"
-     transform="translate(9.7685976,22.888378)"><rect
+     transform="translate(42.287498,22.888378)"><rect
    style="display:inline;opacity:1;vector-effect:none;fill:#ff5524;fill-opacity:1;fill-rule:evenodd;stroke:#00ffff;stroke-width:1.73844409;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
    id="rect9529"
    width="760.15198"
    height="649.6405"
    x="-962.1637"
    y="-9.2460136" /><rect
-   style="display:inline;opacity:1;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.71642566;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+   style="display:inline;opacity:1;vector-effect:none;fill:#ff00ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.82550371;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
    id="mainBackground"
-   width="578.60931"
+   width="654.48676"
    height="577.40106"
-   x="-9.7685976"
+   x="-42.287498"
    y="-22.888378"
    inkscape:label="#rect5127" />
 <ellipse
@@ -11526,7 +11526,7 @@
      id="layer5"
      inkscape:label="layer1"
      style="display:none"
-     transform="translate(9.7685992,22.888418)"><text
+     transform="translate(42.2875,22.888418)"><text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1"
    x="368.02084"
@@ -11829,7 +11829,7 @@
      id="layer6"
      inkscape:label="Layer2"
      style="display:none"
-     transform="translate(9.7685992,22.888418)"><flowRoot
+     transform="translate(42.2875,22.888418)"><flowRoot
    xml:space="preserve"
    id="flowRoot19528"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
@@ -12005,7 +12005,7 @@
      id="layer9"
      inkscape:label="Layer3"
      style="display:inline"
-     transform="translate(9.7685994,24.180278)"><path
+     transform="translate(42.2875,24.180278)"><path
    style="fill:none;stroke:#ffff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    d="M 379.35776,167.86316 499.33133,117.5949 617.96441,165.85242 670.91364,286.49624 616.62393,405.12932 500.00158,454.72733 379.35776,403.78884 332.44073,293.86892 Z"
    id="path4790"
@@ -12061,7 +12061,7 @@
      id="layer10"
      inkscape:label="Layer4"
      style="display:none"
-     transform="translate(9.7685994,24.180278)"><g
+     transform="translate(42.2875,24.180278)"><g
    id="solarSystem_drag"
    inkscape:label="#g3482"><image
    inkscape:label="#image2666"
@@ -12162,7 +12162,7 @@
      id="layer2"
      inkscape:label="Layer5"
      style="display:inline;opacity:0.92000002"
-     transform="translate(9.7685992,22.888418)"><g
+     transform="translate(42.2875,22.888418)"><g
    transform="matrix(1.3950091,0,0,1.3950091,-561.18327,41.047362)"
    style="display:inline"
    id="copperAtom_drag"
