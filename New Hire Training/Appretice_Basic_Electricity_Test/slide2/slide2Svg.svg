@@ -13,9 +13,9 @@
    version="1.1"
    id="slide1"
    xml:space="preserve"
-   width="849.60016"
+   width="578.60931"
    height="577.40106"
-   viewBox="0 0 849.60014 577.40106"
+   viewBox="0 0 578.6093 577.40106"
    sodipodi:docname="slide2Svg.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    style="enable-background:new"><metadata
@@ -226,7 +226,7 @@
        inkscape:vp_x="-1165.9328 : 128.37165 : 1"
        inkscape:vp_y="0 : 796.60448 : 0"
        inkscape:vp_z="-656.84114 : 133.04962 : 1"
-       inkscape:persp3d-origin="-855.25133 : 48.29435 : 1"
+       inkscape:persp3d-origin="-855.25132 : 48.29435 : 1"
        id="perspective1940" /><marker
        inkscape:stockid="Arrow1Mend"
        orient="auto"
@@ -11480,8 +11480,8 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.7380323"
-     inkscape:cx="556.04684"
-     inkscape:cy="282.77319"
+     inkscape:cx="465.99639"
+     inkscape:cy="243.51347"
      inkscape:window-x="1909"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
@@ -11495,7 +11495,7 @@
      inkscape:measure-end="0,0"><inkscape:grid
        type="xygrid"
        id="grid1433"
-       originx="-711.31881"
+       originx="-711.31879"
        originy="-345.15322" /></sodipodi:namedview><g
      inkscape:groupmode="layer"
      id="layer1"
@@ -11508,9 +11508,9 @@
    height="649.6405"
    x="-962.1637"
    y="-9.2460136" /><rect
-   style="display:inline;opacity:1;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.0798862;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+   style="display:inline;opacity:1;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.71642566;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
    id="mainBackground"
-   width="849.60016"
+   width="578.60931"
    height="577.40106"
    x="-9.7685976"
    y="-22.888378"
