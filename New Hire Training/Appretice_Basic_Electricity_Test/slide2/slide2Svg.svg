@@ -13,9 +13,9 @@
    version="1.1"
    id="slide1"
    xml:space="preserve"
-   width="929.54248"
+   width="849.60016"
    height="577.40106"
-   viewBox="0 0 929.54246 577.40106"
+   viewBox="0 0 849.60014 577.40106"
    sodipodi:docname="slide2Svg.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    style="enable-background:new"><metadata
@@ -11495,7 +11495,7 @@
      inkscape:measure-end="0,0"><inkscape:grid
        type="xygrid"
        id="grid1433"
-       originx="-711.31883"
+       originx="-711.31881"
        originy="-345.15322" /></sodipodi:namedview><g
      inkscape:groupmode="layer"
      id="layer1"
@@ -11508,9 +11508,9 @@
    height="649.6405"
    x="-962.1637"
    y="-9.2460136" /><rect
-   style="display:inline;opacity:1;vector-effect:none;fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.17553902;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+   style="display:inline;opacity:1;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.0798862;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
    id="mainBackground"
-   width="929.54248"
+   width="849.60016"
    height="577.40106"
    x="-9.7685976"
    y="-22.888378"
