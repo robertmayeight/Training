@@ -17,6 +17,7 @@ redraw();
 window.addEventListener("resize", redraw);
 
 
+
 //Audio
 var thisTrack = document.getElementById('music');
 thisTrack.onplay = function() {
