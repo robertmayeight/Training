@@ -141,7 +141,7 @@ slide2Tl
 .to(path4459, 1, {autoAlpha:0, ease: Power0.easeNone},'-=1')
 
 //Show nuecleus protons and neutons.
-.to([nucleus_drag], 1, {x:127, y:-174, scaleX:0.3567945767525061, scaleY:0.350428666064864, autoAlpha:1, transformOrigin: '50% 50%', ease: Power0.easeNone})
+.to([nucleus_drag], 1, {scaleX:0.3567945767525061, scaleY:0.350428666064864, autoAlpha:1, transformOrigin: '50% 50%', ease: Power0.easeNone})
 
 //Show Inside the nucleus are...
 .from([text2755_drag], .5, {autoAlpha:0},'+=1')
@@ -191,7 +191,7 @@ slide2Tl
 
 // //Hide Nucleus and Text and Lines
 .to([path4790], .5, {autoAlpha:0, transformOrigin: '50% 50%', ease: Power0.easeNone})
-.to([nucleus_drag], 1, {x:127, y:-174, scaleX:.01, scaleY:.01, autoAlpha:0, transformOrigin: '50% 50%', ease: Power0.easeNone})
+.to([nucleus_drag], 1, {scaleX:.01, scaleY:.01, autoAlpha:0, transformOrigin: '50% 50%', ease: Power0.easeNone})
 
 
 // //Arrow showing attraction
@@ -220,7 +220,7 @@ slide2Tl
 
 .to([copperAtom_drag], 1, {autoAlpha:1})
 .from([outerBand], 1, {autoAlpha:0, immediateRender:true},"+=3.5")
-.to([copperAtom_drag], 1, {x:"+=275", transformOrigin: '50% 50%', ease: Power0.easeNone},"+=8")
+
 .from([copperAtom_drag2], 1, {autoAlpha:0})
 .to (moveElectron, 2, {x:233, y:50})
 .from([morePositive_drag], 1, {autoAlpha:0},"+=3")
