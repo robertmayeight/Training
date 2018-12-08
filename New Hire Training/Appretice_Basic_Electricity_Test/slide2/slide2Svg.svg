@@ -14,8 +14,8 @@
    id="slide1"
    xml:space="preserve"
    width="1010.8397"
-   height="918.84955"
-   viewBox="0 0 1010.8397 918.84955"
+   height="833.48743"
+   viewBox="0 0 1010.8397 833.48743"
    sodipodi:docname="slide2Svg.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    style="enable-background:new"><metadata
@@ -11480,8 +11480,8 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.7380323"
-     inkscape:cx="230.85782"
-     inkscape:cy="399.29927"
+     inkscape:cx="230.85783"
+     inkscape:cy="313.93715"
      inkscape:window-x="1909"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
@@ -11495,8 +11495,8 @@
      inkscape:measure-end="0,0"><inkscape:grid
        type="xygrid"
        id="grid1433"
-       originx="-711.31895"
-       originy="-259.79109" /></sodipodi:namedview><g
+       originx="-711.31893"
+       originy="-345.15321" /></sodipodi:namedview><g
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Background"
@@ -11508,10 +11508,10 @@
    height="649.6405"
    x="-962.1637"
    y="-9.2460136" /><rect
-   style="display:inline;opacity:1;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.86191535;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+   style="display:inline;opacity:1;vector-effect:none;fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.72573805;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
    id="mainBackground"
    width="1010.8397"
-   height="918.84955"
+   height="833.48743"
    x="-9.7685976"
    y="-278.97473"
    inkscape:label="#rect5127" />
@@ -12618,14 +12618,14 @@
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.92000002;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-   x="375.35657"
-   y="606.37286"
+   x="379.42142"
+   y="538.62512"
    id="s1Clicknext_drag"
    inkscape:label="#text4479"><tspan
      sodipodi:role="line"
      id="tspan4477-5-0"
-     x="375.35657"
-     y="606.37286"
+     x="379.42142"
+     y="538.62512"
      style="font-size:26.66666603px;fill:#000000">Click the Next Button</tspan></text>
 
 </g></svg>
