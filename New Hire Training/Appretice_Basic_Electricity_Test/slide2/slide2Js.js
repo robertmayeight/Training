@@ -69,6 +69,7 @@ for (i=0; i<objectArray.length; i++) {
 		TweenMax.to(objectArray[i], .01, {autoAlpha:0})
 	}
 }
+TweenMax.to(path3454, 1, {autoAlpha:1})
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -225,5 +226,5 @@ slide2Tl
 .to (moveElectron, 2, {x:233, y:50})
 .from([morePositive_drag], 1, {autoAlpha:0},"+=3")
 .from([moreNegative_drag], 1, {autoAlpha:0},"+=2.5")
-.from([s1Clicknext_drag], 1, {autoAlpha:0})
+// .from([s1Clicknext_drag], 1, {autoAlpha:0})
 
