@@ -11479,9 +11479,9 @@
      inkscape:window-height="986"
      id="namedview4"
      showgrid="false"
-     inkscape:zoom="2.9521292"
-     inkscape:cx="264.41075"
-     inkscape:cy="298.95329"
+     inkscape:zoom="1.4760646"
+     inkscape:cx="112.12174"
+     inkscape:cy="201.30652"
      inkscape:window-x="1909"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
@@ -11572,11 +11572,12 @@
      style="stroke:none"
      id="tspan3429">lation of charge or dynamically as a current.</tspan></text>
 <circle
-   style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#800000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:31.19999886, 31.19999886000000089;stroke-dashoffset:25.99999905;stroke-opacity:1;paint-order:fill markers stroke"
-   id="path3454"
+   style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#800000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:31.19999886, 31.19999886;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke"
+   id="loaderSymbol"
    cx="316.04089"
    cy="281.45496"
-   r="70.8992" /></g><g
+   r="70.8992"
+   inkscape:label="#path3454" /></g><g
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="layer1"
