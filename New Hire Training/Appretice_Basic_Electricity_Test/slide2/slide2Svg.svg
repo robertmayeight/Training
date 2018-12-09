@@ -11479,13 +11479,13 @@
      inkscape:window-height="986"
      id="namedview4"
      showgrid="false"
-     inkscape:zoom="4.1749411"
-     inkscape:cx="278.07538"
-     inkscape:cy="241.04388"
+     inkscape:zoom="2.0874706"
+     inkscape:cx="138.62818"
+     inkscape:cy="146.23935"
      inkscape:window-x="1909"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer3"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -11502,7 +11502,7 @@
      inkscape:label="Background 1"
      style="display:inline"
      sodipodi:insensitive="true"><rect
-       style="display:inline;opacity:1;vector-effect:none;fill:#5555ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.93449819;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;shape-rendering:crispEdges;enable-background:new"
+       style="display:inline;opacity:1;vector-effect:none;fill:#003b71;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.93449819;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;shape-rendering:crispEdges;enable-background:new"
        id="mainBackground"
        width="723.09625"
        height="586.88574"
@@ -11540,6 +11540,7 @@
      x="185.73334"
      y="48.015816"
      style="font-size:37.33333206px;fill:#ffffff;fill-opacity:1;stroke-width:1">Basic Electricity</tspan></text>
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.33333397px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
@@ -11549,7 +11550,8 @@
      sodipodi:role="line"
      id="tspan3395"
      x="112.85476"
-     y="180.11456"></tspan></text>
+     y="180.11456" /></text>
+
 <g
    id="loaderSymbol"
    inkscape:label="#g3484"
@@ -11558,17 +11560,17 @@
      cy="286.23175"
      cx="193.47455"
      id="path3458"
-     style="opacity:1;vector-effect:none;fill:#800000;fill-opacity:1;fill-rule:evenodd;stroke:#800000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:31.19999886, 31.19999886;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke" /><circle
+     style="opacity:1;vector-effect:none;fill:#800000;fill-opacity:1;fill-rule:evenodd;stroke:#800000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke" /><circle
      r="12.194589"
      cy="286.23175"
      cx="249.70514"
      id="path3458-6"
-     style="display:inline;opacity:1;vector-effect:none;fill:#800000;fill-opacity:1;fill-rule:evenodd;stroke:#800000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:31.19999886, 31.19999886;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke;shape-rendering:crispEdges;enable-background:new" /><circle
+     style="display:inline;opacity:1;vector-effect:none;fill:#800000;fill-opacity:1;fill-rule:evenodd;stroke:#800000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke;shape-rendering:crispEdges;enable-background:new" /><circle
      r="12.194589"
      cy="286.23175"
      cx="305.93573"
      id="path3458-7"
-     style="display:inline;opacity:1;vector-effect:none;fill:#800000;fill-opacity:1;fill-rule:evenodd;stroke:#800000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:31.19999886, 31.19999886;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke;shape-rendering:crispEdges;enable-background:new" /></g></g><g
+     style="display:inline;opacity:1;vector-effect:none;fill:#800000;fill-opacity:1;fill-rule:evenodd;stroke:#800000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke;shape-rendering:crispEdges;enable-background:new" /></g></g><g
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="layer1"
@@ -11688,6 +11690,7 @@
      id="tspan11928"
      x="-826.54779"
      y="374.67105" /></text>
+
 
 
 
@@ -11820,6 +11823,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1"
@@ -11840,6 +11844,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -11851,6 +11856,7 @@
      id="tspan4477"
      x="103.60562"
      y="130.48091">Atom</tspan></text>
+
 
 
 
@@ -11919,6 +11925,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -11930,6 +11937,7 @@
      id="tspan2410"
      x="470.17554"
      y="142.64484">Nucleus</tspan></text>
+
 
 
 
@@ -11960,6 +11968,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.7578392px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.98999999;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.79708499"
@@ -11972,6 +11981,7 @@
      x="-29.746206"
      y="469.67355"
      style="font-size:21.33333397px;fill:#ffffff;stroke-width:0.79708499">Neutrally charged neutrons.</tspan></text>
+
 
 
 
@@ -12171,6 +12181,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -12182,6 +12193,7 @@
      id="tspan3593"
      x="41.555092"
      y="230.86606">Planets = Electrons</tspan></text>
+
 
 
 
@@ -12376,6 +12388,7 @@
 
 
 
+
 </g></g><g
      style="display:inline;opacity:0.92000002;stroke:#00ff00;stroke-opacity:1"
      id="outerBand"
@@ -12404,6 +12417,7 @@
      x="623.45087"
      y="60.626125"
      style="stroke:#00ff00;stroke-width:0.62900025;stroke-opacity:1" /></text>
+
 
 
 
@@ -12584,6 +12598,7 @@
 
 
 
+
 </g></g><g
      style="display:inline;opacity:0.92000002;stroke:#00ff00;stroke-opacity:1"
      id="outerBand-0"
@@ -12620,6 +12635,7 @@
 
 
 
+
 </g><path
        inkscape:label="#path16-4-7-2-1-13-5"
        inkscape:connector-curvature="0"
@@ -12638,6 +12654,7 @@
      y="117.6022"
      style="font-size:26.66666603px;fill:#ffffff">More Positive</tspan></text>
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.92000002;fill:#ffffff;fill-opacity:1;stroke:none;enable-background:new"
@@ -12650,6 +12667,7 @@
      x="407.198"
      y="114.95245"
      style="font-size:26.66666603px;fill:#ffffff">More Negative</tspan></text>
+
 
 
 </g></svg>
