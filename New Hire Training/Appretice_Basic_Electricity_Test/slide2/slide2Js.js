@@ -22,7 +22,7 @@ thisTrack.ontimeupdate = function() {
 	slide2Tl.time(thisTrack.currentTime);
 };
 
-TweenMax.to(thisTrack, .01, {opacity:0})
+
 //End Audio
 
 var gArray = document.getElementsByTagName("g");
@@ -106,9 +106,9 @@ var orbit1Array = [orbitPath1,orbitPath2,orbitPath3,orbitPath4,orbitPath5,orbitP
 function playAudio(){
 	thisTrack.play();
 }
-var slide2Tl = new TimelineMax({paused:true});
+var slide2Tl = new TimelineMax({paused:false});
 slide2Tl
-.to(thisTrack, 1, {opacity:1})
+.to(music, 1, {opacity:1})
 .from([slide1Text1], 1, {autoAlpha:0, onStart:playAudio()})
 .to([slide1Text1], 1, {autoAlpha:0},"+=5")
 .from([svgAtom_drag], 1, {autoAlpha:0})
