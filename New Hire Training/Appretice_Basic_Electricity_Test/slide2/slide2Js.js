@@ -27,6 +27,34 @@ thisTrack.ontimeupdate = function() {
 };
 //End Audio
 
+
+TweenMax.to(path3454, 1, {autoAlpha:1})
+
+ // onloadeddata="hideLoaderIcon()"
+
+
+console.log(thisTrack.paused)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function hideLoaderIcon(){
+	console.log("fired")
+	TweenMax.to(path3454, 1, {autoAlpha:0})
+}
+
 var gArray = document.getElementsByTagName("g");
 var tArray = document.getElementsByTagName("text");
 var imageArray = document.getElementsByTagName("image");
@@ -59,7 +87,7 @@ for (i=0; i<objectArray.length; i++) {
 		TweenMax.to(objectArray[i], .01, {autoAlpha:0})
 	}
 }
-TweenMax.to(path3454, 1, {autoAlpha:1})
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
