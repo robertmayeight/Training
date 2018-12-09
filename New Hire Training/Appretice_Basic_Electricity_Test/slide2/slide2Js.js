@@ -102,8 +102,9 @@ var orbit1Array = [orbitPath1,orbitPath2,orbitPath3,orbitPath4,orbitPath5,orbitP
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TweenMax.to([svgAtom_drag,electron1_drag,electron2_drag,electron3_drag,electron4_drag,electron5_drag,electron6_drag,electron7_drag,electron8_drag], .01, {autoAlpha:1})
+// TweenMax.to([svgAtom_drag,electron1_drag,electron2_drag,electron3_drag,electron4_drag,electron5_drag,electron6_drag,electron7_drag,electron8_drag], .01, {autoAlpha:1})
 // TweenMax.to([mainBackground], .01, {autoAlpha:0})
+TweenMax.to(path3454, 1, {rotation:360, transformOrigin: '50% 50%', repeat:-1})
 var slide2Tl = new TimelineMax({paused:true});
 slide2Tl
 .from([slide1Text1], 1, {autoAlpha:0})
