@@ -4,10 +4,6 @@ slide2.overrideMimeType("image/svg+xml");
 slide2.send("");
 var slide2= document.getElementById("main").appendChild(slide2.responseXML.documentElement);
 
-TweenMax.to(loaderSymbol, 1, {rotation:360, transformOrigin: '50% 50%', repeat:-1})
-
-
-
 //Audio
 var thisTrack = document.getElementById('music');
 thisTrack.onplay = function() {
@@ -25,6 +21,8 @@ thisTrack.onseeked = function() {
 thisTrack.ontimeupdate = function() {
 	slide2Tl.time(thisTrack.currentTime);
 };
+
+TweenMax.to(thisTrack, .01, {opacity:0})
 //End Audio
 
 var gArray = document.getElementsByTagName("g");
@@ -105,10 +103,13 @@ var orbit1Array = [orbitPath1,orbitPath2,orbitPath3,orbitPath4,orbitPath5,orbitP
 // TweenMax.to([svgAtom_drag,electron1_drag,electron2_drag,electron3_drag,electron4_drag,electron5_drag,electron6_drag,electron7_drag,electron8_drag], .01, {autoAlpha:1})
 // TweenMax.to([mainBackground], .01, {autoAlpha:0})
 
+function playAudio(){
+	thisTrack.play();
+}
 var slide2Tl = new TimelineMax({paused:true});
 slide2Tl
-.to(loaderSymbol, .5, {autoAlpha:0})
-.from([slide1Text1], 1, {autoAlpha:0})
+.to(thisTrack, 1, {opacity:1})
+.from([slide1Text1], 1, {autoAlpha:0, onStart:playAudio()})
 .to([slide1Text1], 1, {autoAlpha:0},"+=5")
 .from([svgAtom_drag], 1, {autoAlpha:0})
 .to([text3115_drag], 1, {autoAlpha:1},"-=1")

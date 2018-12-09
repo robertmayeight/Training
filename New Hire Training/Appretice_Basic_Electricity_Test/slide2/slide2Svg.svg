@@ -11479,9 +11479,9 @@
      inkscape:window-height="986"
      id="namedview4"
      showgrid="false"
-     inkscape:zoom="2.0874706"
-     inkscape:cx="138.62818"
-     inkscape:cy="146.23935"
+     inkscape:zoom="0.73803229"
+     inkscape:cx="38.038909"
+     inkscape:cy="-45.909946"
      inkscape:window-x="1909"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
@@ -11500,9 +11500,8 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Background 1"
-     style="display:inline"
-     sodipodi:insensitive="true"><rect
-       style="display:inline;opacity:1;vector-effect:none;fill:#003b71;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.93449819;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;shape-rendering:crispEdges;enable-background:new"
+     style="display:inline"><rect
+       style="display:inline;opacity:1;vector-effect:none;fill:#800000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.93449819;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;shape-rendering:crispEdges;enable-background:new"
        id="mainBackground"
        width="723.09625"
        height="586.88574"
@@ -11552,25 +11551,7 @@
      x="112.85476"
      y="180.11456" /></text>
 
-<g
-   id="loaderSymbol"
-   inkscape:label="#g3484"
-   transform="translate(9.1019247,-9.8204977)"><circle
-     r="12.194589"
-     cy="286.23175"
-     cx="193.47455"
-     id="path3458"
-     style="opacity:1;vector-effect:none;fill:#800000;fill-opacity:1;fill-rule:evenodd;stroke:#800000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke" /><circle
-     r="12.194589"
-     cy="286.23175"
-     cx="249.70514"
-     id="path3458-6"
-     style="display:inline;opacity:1;vector-effect:none;fill:#800000;fill-opacity:1;fill-rule:evenodd;stroke:#800000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke;shape-rendering:crispEdges;enable-background:new" /><circle
-     r="12.194589"
-     cy="286.23175"
-     cx="305.93573"
-     id="path3458-7"
-     style="display:inline;opacity:1;vector-effect:none;fill:#800000;fill-opacity:1;fill-rule:evenodd;stroke:#800000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke;shape-rendering:crispEdges;enable-background:new" /></g></g><g
+</g><g
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="layer1"
