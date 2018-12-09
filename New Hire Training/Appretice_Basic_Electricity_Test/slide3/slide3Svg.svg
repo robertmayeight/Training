@@ -13,10 +13,10 @@
    version="1.1"
    id="slide2"
    xml:space="preserve"
-   width="771.85529"
-   height="458.21643"
-   viewBox="0 0 771.85522 458.21643"
-   sodipodi:docname="slide2.svg"
+   width="720"
+   height="540"
+   viewBox="0 0 719.99994 540"
+   sodipodi:docname="slide3Svg.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"><metadata
      id="metadata8"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
@@ -24,15 +24,16 @@
      id="defs6"><marker
        inkscape:stockid="Arrow2Mend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker20175"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true"><path
          id="path19393"
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(0.6) rotate(180) translate(0,0)" /></marker><marker
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6)"
+         inkscape:connector-curvature="0" /></marker><marker
        inkscape:stockid="Arrow1Mend"
        orient="auto"
        refY="0"
@@ -24938,8 +24939,8 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.8550725"
-     inkscape:cx="171.82903"
-     inkscape:cy="422.16956"
+     inkscape:cx="144.93073"
+     inkscape:cy="425.67803"
      inkscape:window-x="1909"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
@@ -24956,12 +24957,13 @@
        originy="-180.40434" /></sodipodi:namedview><g
      inkscape:groupmode="layer"
      id="layer3"
-     inkscape:label="Background" /><g
+     inkscape:label="Background"
+     transform="translate(0,81.783569)" /><g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="battery"
      style="display:inline;opacity:0.98999999"
-     transform="translate(-1.0910445,0.62080801)">
+     transform="translate(-1.0910445,82.404377)">
 
 
 
@@ -25003,7 +25005,7 @@
 
 <g
    id="battery_drag"
-   transform="matrix(-1.6846565,0,0,1.6846565,931.07241,-185.16088)"
+   transform="matrix(-1.6846565,0,0,1.6846565,886.63173,-206.21173)"
    inkscape:label="#g1464"><g
      id="battery_dreag"
      inkscape:label="#g2339"><g
@@ -25085,70 +25087,75 @@
      y="493.19513"
      style="font-size:13.33333302px;fill:#000000;fill-opacity:0.96862745;stroke:none" /></text>
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:0.96862745;fill-rule:evenodd;stroke:none;stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-   x="115.70121"
-   y="135.21428"
+   x="71.260536"
+   y="114.16343"
    id="s2Text2_drag"
    inkscape:label="#text19360"><tspan
      sodipodi:role="line"
      id="tspan19358"
-     x="115.70121"
-     y="135.21428">Excess</tspan><tspan
+     x="71.260536"
+     y="114.16343">Excess</tspan><tspan
      sodipodi:role="line"
-     x="115.70121"
-     y="151.88095"
+     x="71.260536"
+     y="130.83011"
      id="tspan21358">Free</tspan><tspan
      sodipodi:role="line"
-     x="115.70121"
-     y="168.54761"
+     x="71.260536"
+     y="147.49677"
      id="tspan21360">Electrons</tspan></text>
+
 
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:0.96862745;fill-rule:evenodd;stroke:none;stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-   x="606.28802"
-   y="150.72466"
+   x="561.84735"
+   y="129.67381"
    id="s2Text1_drag"
    inkscape:label="#text19360-5"><tspan
      sodipodi:role="line"
      id="tspan19358-8"
-     x="606.28802"
-     y="150.72466">Excess</tspan><tspan
+     x="561.84735"
+     y="129.67381">Excess</tspan><tspan
      sodipodi:role="line"
-     x="606.28802"
-     y="167.39133"
+     x="561.84735"
+     y="146.34048"
      id="tspan21360-8">Holes</tspan></text>
+
 
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:0.96862745;fill-rule:evenodd;stroke:none;stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-   x="163.05074"
-   y="40.292461"
+   x="118.61006"
+   y="19.241615"
    id="s2Text3_drag"
    inkscape:label="#text19360"><tspan
      sodipodi:role="line"
-     x="163.05074"
-     y="40.292461"
+     x="118.61006"
+     y="19.241615"
      id="tspan21360-9"
      style="font-size:26.66666603px">Potential Difference - Expressed in Volts</tspan></text>
 
+
 <path
    style="opacity:1;vector-effect:none;fill:#999999;fill-opacity:0.92571429;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-   d="M 396.45762,110.69101 V 403.06389"
+   d="M 353.10799,89.019355 V 381.39224"
    id="path19362"
-   inkscape:connector-curvature="0"
-   transform="translate(1.0910445,-0.62080801)" /></g><g
+   inkscape:connector-curvature="0" /></g><g
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="box"
-     style="display:inline" /><g
+     style="display:inline"
+     transform="translate(0,81.783569)" /><g
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="atom"
-     style="display:inline"><g
-       transform="matrix(0.38205721,0,0,0.38205721,-81.655817,-291.14439)"
+     style="display:inline"
+     transform="translate(0,81.783569)"><g
+       transform="matrix(0.38205721,0,0,0.38205721,-269.94394,-565.97489)"
        style="display:inline;opacity:0.92000002;enable-background:new"
        id="positiveAton1"
        inkscape:label="#g3739"><path
@@ -25312,6 +25319,7 @@
      y="60.626125"
      style="stroke-width:0.62900025" /></text>
 
+
 </g></g><g
          style="display:inline;opacity:0.92000002;stroke:#00ff00;stroke-opacity:1"
          id="outerBand-0-2"
@@ -25341,6 +25349,7 @@
      y="60.626125"
      style="stroke:#00ff00;stroke-width:0.62900025;stroke-opacity:1" /></text>
 
+
 </g><path
            inkscape:label="#path16-4-7-2-1-13-5"
            inkscape:connector-curvature="0"
@@ -25350,42 +25359,46 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="arrow1"
-     style="display:inline"><path
+     style="display:inline"
+     transform="translate(0,81.783569)"><path
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.92571429;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-       d="m 597.02541,161.56389 c 0,0 -188.28813,-187.118636 -417.50847,-3.50848"
+       d="m 552.58473,140.51304 c 0,0 -188.28813,-187.118633 -417.50847,-3.50848"
        id="arrow1"
        inkscape:connector-curvature="0"
        inkscape:label="#path19364" /><path
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.92571429;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker20175);paint-order:fill markers stroke"
-       d="m 187.72807,151.47042 -8.21113,6.58499"
+       d="m 143.28739,130.41957 -8.21113,6.58499"
        id="arrowHead1_drag"
        inkscape:connector-curvature="0"
        inkscape:label="#path20960" /></g><g
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="potential difference"
-     style="display:inline" /><g
+     style="display:inline"
+     transform="translate(0,81.783569)" /><g
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="arrow2"
-     style="display:inline"><path
+     style="display:inline"
+     transform="translate(0,81.783569)"><path
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.92571429;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-       d="m 179.51694,165.07237 c 0,0 188.28814,-187.118638 417.50847,-3.50848"
+       d="m 135.07626,144.02152 c 0,0 188.28814,-187.118635 417.50847,-3.50848"
        id="arrow2"
        inkscape:connector-curvature="0"
        inkscape:label="#path19364-6" /><path
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.92571429;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker20175-0);paint-order:fill markers stroke"
-       d="m 588.81428,154.9789 8.21113,6.58499"
+       d="m 544.3736,133.92805 8.21113,6.58499"
        id="arrowHead2_drag"
        inkscape:connector-curvature="0"
        inkscape:label="#path20960" /></g><g
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="2 batteriies"
-     style="display:inline"><g
+     style="display:inline"
+     transform="translate(0,81.783569)"><g
    id="batteries_drag"
    inkscape:label="#g23328"
-   transform="translate(51.457626,-37.423728)"><g
+   transform="translate(7.0169499,-58.474575)"><g
    inkscape:label="#g1464"
    transform="matrix(0,0.56565328,0.56565328,0,326.85529,80.082867)"
    id="batteryB_"
@@ -25546,6 +25559,7 @@
      id="tspan23067"
      sodipodi:role="line">Battery A</tspan></text>
 
+
 <text
    inkscape:label="#text23069-5"
    inkscape:transform-center-y="-3.5084745"
@@ -25561,21 +25575,22 @@
      id="tspan23067-4"
      sodipodi:role="line">Battery B </tspan></text>
 
+
 </g><path
    style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.92571429;fill-rule:evenodd;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-   d="M 315.68853,135.93155 255.26839,97.225402 160.80508,180.46219"
+   d="M 271.24785,114.8807 210.82771,76.174555 116.3644,159.41134"
    id="path23095"
    inkscape:connector-curvature="0"
    sodipodi:nodetypes="ccc" /><path
    style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.92571429;fill-rule:evenodd;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-   d="m 317.55672,312.54193 -60.42014,38.70615 C 233.31356,337.7588 158.4661,251.21644 158.4661,251.21644"
+   d="M 273.11604,291.49108 212.6959,330.19723 C 188.87288,316.70795 114.02542,230.16559 114.02542,230.16559"
    id="path230951"
    inkscape:connector-curvature="0"
    sodipodi:nodetypes="ccc"
    inkscape:label="#path23095-0-1" /><g
    id="BatteryACharges_drag"
    inkscape:label="#g23335"
-   transform="translate(51.457626,-37.423728)"><text
+   transform="translate(7.0169499,-58.474575)"><text
    inkscape:label="#text23069"
    inkscape:transform-center-y="-3.5084745"
    inkscape:transform-center-x="70.754236"
@@ -25589,6 +25604,7 @@
      x="310.02689"
      id="tspan23067-5"
      sodipodi:role="line">Holes</tspan></text>
+
 
 <text
    inkscape:label="#text23069"
@@ -25611,10 +25627,11 @@
      x="317.63263"
      sodipodi:role="line">Electrons</tspan></text>
 
+
 </g><g
    id="baatteryBcharge_drag"
    inkscape:label="#g23342"
-   transform="translate(67.245761,-46.194914)"><text
+   transform="translate(22.805085,-67.245761)"><text
    inkscape:label="#text23069"
    inkscape:transform-center-y="-3.5084745"
    inkscape:transform-center-x="70.754236"
@@ -25628,6 +25645,7 @@
      x="459.51169"
      id="tspan23067-5-6"
      sodipodi:role="line">Holes</tspan></text>
+
 
 <text
    inkscape:label="#text23069"
@@ -25650,33 +25668,36 @@
      x="457.46945"
      sodipodi:role="line">Electrons</tspan></text>
 
+
 </g><text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:none;fill-opacity:0.92571429;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-   x="150.76518"
-   y="206.81967"
+   x="106.32451"
+   y="185.76883"
    id="pd1_drag"
    inkscape:transform-center-x="70.754236"
    inkscape:transform-center-y="-3.5084745"
    inkscape:label="#text23069"><tspan
      sodipodi:role="line"
      id="tspan23067-5-3"
-     x="150.76518"
-     y="206.81967"
+     x="106.32451"
+     y="185.76883"
      style="fill:#000000;stroke:none">Potential</tspan><tspan
      sodipodi:role="line"
-     x="150.76518"
-     y="240.153"
+     x="106.32451"
+     y="219.10216"
      style="fill:#000000;stroke:none"
      id="tspan23344">Difference</tspan></text>
 
+
 <path
    style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.92571429;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-   d="M 327.36994,144.35556 499.34891,303.45428"
+   d="M 282.92926,123.30471 454.90823,282.40343"
    id="path23357"
    inkscape:connector-curvature="0"
    sodipodi:nodetypes="cc" /></g><g
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="battery text"
-     style="display:inline" /></svg>
+     style="display:inline"
+     transform="translate(0,81.783569)" /></svg>

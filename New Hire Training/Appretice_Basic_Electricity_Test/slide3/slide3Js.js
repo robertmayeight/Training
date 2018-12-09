@@ -1,40 +1,8 @@
-slide2 = new XMLHttpRequest();
-slide2.open("GET","slide2.svg",false);
-slide2.overrideMimeType("image/svg+xml");
-slide2.send("");
-var slide2= document.getElementById("main").appendChild(slide2.responseXML.documentElement);
-
-var svgWindow = document.getElementById("main");
-var svg = d3.select(slide2);
-function redraw(){
-	var width = svgWindow.clientWidth;
-	var height = svgWindow.clientHeight;
-	svg
-	.attr("width", width)
-	 .attr("height", height);
-}
-redraw();
-window.addEventListener("resize", redraw);
-
-
-//Audio
-var thisTrack = document.getElementById('music');
-thisTrack.onplay = function() {
-	slide2Tl.play();
-};
-
-thisTrack.onpause = function() {
-	slide2Tl.pause();
-};
-
-thisTrack.onseeked = function() {
-	slide2Tl.time(thisTrack.currentTime);
-}
-
-thisTrack.ontimeupdate = function() {
-	slide2Tl.time(thisTrack.currentTime);
-};
-//End Audio
+slide3 = new XMLHttpRequest();
+slide3.open("GET","slide3Svg.svg",false);
+slide3.overrideMimeType("image/svg+xml");
+slide3.send("");
+var slide3= document.getElementById("main").appendChild(slide3.responseXML.documentElement);
 
 var gArray = document.getElementsByTagName("g");
 var tArray = document.getElementsByTagName("text");
@@ -58,8 +26,6 @@ for (i=0; i<pathArray.length; i++) {
 for (i=0; i<rectArray.length; i++) {
 	objectArray.push(rectArray[i]);
 }
-
-
 for (i=0; i<objectArray.length; i++) {
 	objectArray[i].style.display="inline";
 	groupNameSplit = objectArray[i].id.split("_");
@@ -69,11 +35,34 @@ for (i=0; i<objectArray.length; i++) {
 	}
 }
 
+//Audio
+var slideAudio = document.getElementById('music');
+slideAudio.onplay = function() {
+	slide3Tl.play();
+};
+
+slideAudio.onpause = function() {
+	slide3Tl.pause();
+};
+
+slideAudio.onseeked = function() {
+	slide3Tl.time(slideAudio.currentTime);
+}
+
+slideAudio.ontimeupdate = function() {
+	slide3Tl.time(slideAudio.currentTime);
+};
+
+function playAudio(){
+	slideAudio.play();
+}
+//End Audio
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var slide2Tl = new TimelineMax({paused:true});
-slide2Tl
-
+var slide3Tl = new TimelineMax({paused:true});
+slide3Tl
+.to(music, 1, {opacity:1, onStart:playAudio()})
 .to([battery_drag],1, {autoAlpha:1},"+=4")
 // .to([box_drag],1, {autoAlpha:1})
 .from(path19362, 1, {drawSVG:"0%", immediateRender:true, ease: Power0.easeNone},"+=9")
