@@ -21,7 +21,7 @@
    style="shape-rendering:crispEdges;enable-background:new"><metadata
      id="metadata8"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs6"><radialGradient
        spreadMethod="pad"
        fr="0"
@@ -11480,12 +11480,12 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="1.0437353"
-     inkscape:cx="264.46168"
-     inkscape:cy="148.68819"
+     inkscape:cx="213.68252"
+     inkscape:cy="176.47301"
      inkscape:window-x="1909"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer6"
+     inkscape:current-layer="layer3"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -11501,14 +11501,13 @@
      id="layer3"
      inkscape:label="Background 1"
      style="display:inline"><rect
-       style="display:inline;opacity:1;vector-effect:none;fill:#003b71;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.93449819;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;shape-rendering:crispEdges;enable-background:new"
+       style="display:inline;opacity:1;vector-effect:none;fill:#003b71;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.86044478;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;shape-rendering:crispEdges;enable-background:new"
        id="mainBackground"
        width="723.09625"
-       height="586.88574"
-       x="-42.287498"
-       y="-32.373058"
-       inkscape:label="#rect5127"
-       transform="translate(42.287498,-14.512686)" /><rect
+       height="542.81329"
+       x="-4.7412109e-007"
+       y="-0.89707291"
+       inkscape:label="#rect5127" /><rect
        transform="translate(42.287498,-14.512686)"
        style="display:inline;opacity:1;vector-effect:none;fill:#ff5524;fill-opacity:1;fill-rule:evenodd;stroke:#00ffff;stroke-width:1.73844409;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;shape-rendering:crispEdges;enable-background:new"
        id="rect9529"
@@ -11519,7 +11518,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="layer0"
-     style="display:none"
+     style="display:inline"
      transform="translate(42.287498,-14.512686)">
 <ellipse
    style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#d6dde3;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
@@ -11530,16 +11529,16 @@
    ry="84.360191" /><text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;shape-rendering:crispEdges;enable-background:new"
-   x="185.73334"
-   y="48.015816"
-   id="slide1HeadingText_drag"
-   inkscape:label="#text13180-4"
-   transform="translate(2e-6,4e-5)"><tspan
+   x="204.61354"
+   y="108.01585"
+   id="headingText"
+   inkscape:label="#text13180-4"><tspan
      sodipodi:role="line"
      id="tspan13178-8"
-     x="185.73334"
-     y="48.015816"
-     style="font-size:37.33333206px;fill:#ffffff;fill-opacity:1;stroke-width:1">Basic Electricity</tspan></text>
+     x="204.61354"
+     y="108.01585"
+     style="font-size:53.33333206px;fill:#ffffff;fill-opacity:1;stroke-width:1">The Atom</tspan></text>
+
 
 <text
    xml:space="preserve"
@@ -11552,11 +11551,12 @@
      x="112.85476"
      y="180.11456" /></text>
 
+
 </g><g
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="layer1"
-     style="display:inline"
+     style="display:none"
      transform="translate(42.2875,-14.512646)"
      sodipodi:insensitive="true">
 
@@ -11673,6 +11673,7 @@
      id="tspan11928"
      x="-826.54779"
      y="374.67105" /></text>
+
 
 
 
@@ -11807,6 +11808,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1"
@@ -11819,6 +11821,7 @@
      x="159.14392"
      y="5.493784"
      style="font-size:37.33333206px;fill:#ffffff;fill-opacity:1;stroke-width:1">The Atom</tspan></text>
+
 
 
 
@@ -11848,11 +11851,12 @@
 
 
 
+
 </g><g
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Layer2"
-     style="display:inline"
+     style="display:none"
      transform="translate(42.2875,-14.512646)"><flowRoot
    xml:space="preserve"
    id="flowRoot19528"
@@ -11909,6 +11913,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -11920,6 +11925,7 @@
      id="tspan2410"
      x="470.17554"
      y="142.64484">Nucleus</tspan></text>
+
 
 
 
@@ -11952,6 +11958,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.7578392px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.98999999;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.79708499"
@@ -11964,6 +11971,7 @@
      x="-29.746206"
      y="469.67355"
      style="font-size:21.33333397px;fill:#ffffff;stroke-width:0.79708499">Neutrally charged neutrons.</tspan></text>
+
 
 
 
@@ -12032,7 +12040,7 @@
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="Layer3"
-     style="display:inline"
+     style="display:none"
      transform="translate(42.2875,-13.220786)"><path
    style="fill:none;stroke:#ffff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    d="M 181.05363,145.13512 301.0272,94.866864 419.66028,143.12438 472.60951,263.7682 418.3198,382.40128 301.69745,431.99929 181.05363,381.0608 134.1366,271.14088 Z"
@@ -12165,6 +12173,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -12176,6 +12185,7 @@
      id="tspan3593"
      x="41.555092"
      y="230.86606">Planets = Electrons</tspan></text>
+
 
 
 
@@ -12372,6 +12382,7 @@
 
 
 
+
 </g></g><g
      style="display:inline;opacity:0.92000002;stroke:#00ff00;stroke-opacity:1"
      id="outerBand"
@@ -12400,6 +12411,7 @@
      x="623.45087"
      y="60.626125"
      style="stroke:#00ff00;stroke-width:0.62900025;stroke-opacity:1" /></text>
+
 
 
 
@@ -12582,6 +12594,7 @@
 
 
 
+
 </g></g><g
      style="display:inline;opacity:0.92000002;stroke:#00ff00;stroke-opacity:1"
      id="outerBand-0"
@@ -12619,6 +12632,7 @@
 
 
 
+
 </g><path
        inkscape:label="#path16-4-7-2-1-13-5"
        inkscape:connector-curvature="0"
@@ -12638,6 +12652,7 @@
      style="font-size:26.66666603px;fill:#ffffff">More Positive</tspan></text>
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.92000002;fill:#ffffff;fill-opacity:1;stroke:none;enable-background:new"
@@ -12650,6 +12665,7 @@
      x="407.198"
      y="114.95245"
      style="font-size:26.66666603px;fill:#ffffff">More Negative</tspan></text>
+
 
 
 
