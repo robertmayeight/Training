@@ -11480,8 +11480,8 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="1.0437353"
-     inkscape:cx="5.7754003"
-     inkscape:cy="188.92828"
+     inkscape:cx="321.94752"
+     inkscape:cy="184.13779"
      inkscape:window-x="1909"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
@@ -11519,7 +11519,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="layer0"
-     style="display:inline"
+     style="display:none"
      transform="translate(42.287498,-14.512686)">
 <ellipse
    style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#d6dde3;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
@@ -11846,7 +11846,13 @@
 
 
 
-</g><g
+<rect
+   style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke"
+   id="rect3223"
+   width="723.09625"
+   height="542.81329"
+   x="-42.287502"
+   y="13.615573" /></g><g
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Layer2"
@@ -12094,7 +12100,7 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="Layer4"
-     style="display:none"
+     style="display:inline"
      transform="translate(42.2875,-13.220786)"><g
    id="solarSystem_drag"
    inkscape:label="#g3482"
