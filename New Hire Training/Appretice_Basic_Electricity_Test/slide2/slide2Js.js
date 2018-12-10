@@ -96,13 +96,13 @@ electronOrbitTl8.to(electron8_drag, 4, {bezier:{values:orbitPath8, type:"cubic"}
 var orbitsArray = [orbitPath1,orbitPath2,orbitPath3,orbitPath4,orbitPath5,orbitPath7];
 var orbit1Array = [orbitPath1,orbitPath2,orbitPath3,orbitPath4,orbitPath5,orbitPath7];
 
+TweenMax.to([electron1_drag,electron2_drag,electron3_drag,electron4_drag,electron5_drag,electron6_drag,electron7_drag,electron8_drag], 1, {autoAlpha:1})
+
 //Main Timeline//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var slide2Tl = new TimelineMax({paused:false});
 slide2Tl
 .to(music, 1, {opacity:1, onStart:playAudio()})
-.from([slide1Text1], 1, {autoAlpha:0})
-.to([slide1Text1], 1, {autoAlpha:0},"+=5")
 .from([svgAtom_drag], 1, {autoAlpha:0})
 .to([text3115_drag], 1, {autoAlpha:1},"-=1")
 .to([electronOrbitTl], 1, {timeScale:0, progress:.25, ease:Quad.easeOut},'+=19')
