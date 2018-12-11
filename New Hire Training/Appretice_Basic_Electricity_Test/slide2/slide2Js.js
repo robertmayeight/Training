@@ -42,7 +42,7 @@ slideAudio.addEventListener('onLoad', audioLoaded());
 slideAudio.source="slide2Audio"
 
 function audioLoaded(){
-	playAudio();
+	// playAudio();
 }
 
 slideAudio
