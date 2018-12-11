@@ -60,7 +60,7 @@ function playAudio(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var slide3Tl = new TimelineMax({paused:true});
+var slide3Tl = new TimelineMax({paused:false});
 slide3Tl
 .to(music, 1, {opacity:1, onStart:playAudio()})
 .to([battery_drag],1, {autoAlpha:1},"+=4")
