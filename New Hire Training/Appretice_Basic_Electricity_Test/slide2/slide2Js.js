@@ -242,8 +242,15 @@ slide2Tl
 .to(copperAtom_drag, 2, {x:"+=175"})
 .to(copperAtom2_drag, 1, {autoAlpha:1})
 
-.to (freeElectron, 2, {x:-233, y:50})
+.to (freeElectron, 2, {x:-245, y:50})
+.to(band4Electron1_drag, 1, {autoAlpha:1},"-=1")
+
 .from([morePositive_drag], 1, {autoAlpha:0},"+=3")
 .from([moreNegative_drag], 1, {autoAlpha:0},"+=2.5")
-// .from([s1Clicknext_drag], 1, {autoAlpha:0})
 
+.to([moreNegative_drag,morePositive_drag,copperAtom_drag, copperAtom2_drag], 1, {autoAlpha:0},"+=6")
+.to([circuit_drag,current_drag], 1, {autoAlpha:1})
+
+.to([line1_copy,r1_copy,line2_copy], 0.5, {strokeDashoffset:"-=12", repeat:-1, ease:Linear.easeNone,yoyo:false})
+
+TweenMax.to([line1_copy,r1_copy,line2_copy], 0.5, {strokeDasharray:"2,4", ease:Linear.easeNone})
