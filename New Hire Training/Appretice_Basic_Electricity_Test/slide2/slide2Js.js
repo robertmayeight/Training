@@ -37,9 +37,9 @@ for (i=0; i<objectArray.length; i++) {
 
 //Audio
 var slideAudio = document.getElementById('music');
-
+slideAudio.src="slide2Audio.ogg"
 slideAudio.addEventListener('onLoad', audioLoaded());
-slideAudio.source="slideAudio"
+
 
 function audioLoaded(){
 	playAudio();
