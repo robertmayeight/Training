@@ -37,6 +37,15 @@ for (i=0; i<objectArray.length; i++) {
 
 //Audio
 var slideAudio = document.getElementById('music');
+
+slideAudio.addEventListener('onLoad', audioLoaded());
+slideAudio.source="slide2Audio"
+
+function audioLoaded(){
+	playAudio();
+}
+
+slideAudio
 slideAudio.onplay = function() {
 	slide2Tl.play();
 };
@@ -100,9 +109,9 @@ TweenMax.to([electron1_drag,electron2_drag,electron3_drag,electron4_drag,electro
 
 //Main Timeline//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var slide2Tl = new TimelineMax({paused:false});
+var slide2Tl = new TimelineMax({paused:true});
 slide2Tl
-.to([music,lightning_drag], 1, {opacity:1, onStart:playAudio()})
+.to([music,lightning_drag], 1, {opacity:1})
 .to(lightning_drag, 1, {autoAlpha:1})
 .to(lightning_drag, 1, {autoAlpha:0},"+=16.5")
 
