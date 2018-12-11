@@ -37,16 +37,14 @@ for (i=0; i<objectArray.length; i++) {
 
 //Audio
 var slideAudio = document.getElementById('music');
-slideAudio.src="slide2Audio.ogg"
-slideAudio.addEventListener('onLoad', audioLoaded());
 
 
-function audioLoaded(){
-	playAudio();
-	TweenMax.to([slideAudio], 1, {opacity:1})
-}
+slideAudio.src="https://robertmayeight.github.io/Training/New%20Hire%20Training/Appretice_Basic_Electricity_Test/slide2/slide2Audio.ogg"
+slideAudio.onloadeddata = function() {
+  playAudio();
+  TweenMax.to([slideAudio], 1, {opacity:1})
+};
 
-slideAudio
 slideAudio.onplay = function() {
 	slideTl.play();
 };
