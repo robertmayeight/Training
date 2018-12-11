@@ -102,10 +102,35 @@ TweenMax.to([electron1_drag,electron2_drag,electron3_drag,electron4_drag,electro
 
 var slide2Tl = new TimelineMax({paused:false});
 slide2Tl
-.to(music, 1, {opacity:1, onStart:playAudio()})
-.from([svgAtom_drag], 1, {autoAlpha:0})
-.to([text3115_drag], 1, {autoAlpha:1},"-=1")
-.to([electronOrbitTl], 1, {timeScale:0, progress:.25, ease:Quad.easeOut},'+=19')
+.to([music,lightning_drag], 1, {opacity:1, onStart:playAudio()})
+.to(lightning_drag, 1, {autoAlpha:1})
+.to(lightning_drag, 1, {autoAlpha:0},"+=16.5")
+
+
+
+.from([svgAtom_drag,text3115_drag], 1, {autoAlpha:0})
+
+.to([svgAtom_drag,text3115_drag], 1, {autoAlpha:0},"+=5")
+
+//copper wire division
+.to(piece1_drag, 1, {autoAlpha:1})
+.to(piece3, 1, {autoAlpha:0},"+=2")
+.to(piece2, 1, {x:"+=50"})
+
+.to(piece4, 1, {autoAlpha:0},"+=.5")
+.to(piece5, 1, {x:"+=25"})
+
+.to(piece6, 1, {autoAlpha:0},"+=.5")
+.to(piece7, 1, {x:"+=12"})
+
+.to(piece1_drag, 1, {autoAlpha:0},"+=2")
+
+
+
+.to([svgAtom_drag], 2, {autoAlpha:1},"+=1")
+
+
+.to([electronOrbitTl], 1, {timeScale:0, progress:.25, ease:Quad.easeOut},'+=5')
 .to([electronOrbitTl2], 1, {timeScale:0, progress:.25, ease:Quad.easeOut},"-=1")
 .to([electronOrbitTl3], 1, {timeScale:0, progress:.25, ease:Quad.easeOut},"-=1")
 .to([electronOrbitTl4], 1, {timeScale:0, progress:.25, ease:Quad.easeOut},"-=1")
@@ -117,7 +142,7 @@ slide2Tl
 
 
 //Call out nucleus
-.from([text2412_drag], 1, {autoAlpha:0})
+.from([text2412_drag], 1, {autoAlpha:0},"+=1")
 .from(path4459, .75, {drawSVG:"0%", autoAlpha:0, immediateRender:true, ease: Power0.easeNone},'-=1')
 
 
@@ -137,11 +162,11 @@ slide2Tl
 .from(neutronArrow_drag, .75, {drawSVG:"0%", autoAlpha:0, immediateRender:true, ease: Power0.easeNone},'-=1')
 
 // Hide protons and neutrons
-.to([text2755_drag,text3603_drag], .5, {autoAlpha:0},'+=1.5')
+.to([text2755_drag,text3603_drag], .5, {autoAlpha:0},'+=3')
 .to([protonArrow_drag,neutronArrow_drag], .25, {drawSVG:"0%", autoAlpha:0, immediateRender:false, ease: Power0.easeNone},"-=.5")
 
 // //Atom connecting lines
-.fromTo(path4790, .1, {drawSVG:"0%"}, {drawSVG:"13%",immediateRender:true, ease: Power0.easeNone},"+=.5")
+.fromTo(path4790, .1, {drawSVG:"0%"}, {drawSVG:"13%",immediateRender:true, ease: Power0.easeNone},"+=2")
 .to([electron5_drag], .1, {stroke:"red", scaleX:2, scaleY:2, autoAlpha:1, transformOrigin: '50% 50%', ease: Bounce. easeIn},'+=0')
 .to([electron5_drag], .1, {stroke:"brown", scaleX:1, scaleY:1, autoAlpha:1, transformOrigin: '50% 50%', ease: Bounce. easeOut},'+=0')
 
@@ -198,15 +223,26 @@ slide2Tl
 .from(path3490f, .5, {drawSVG:"0%", immediateRender:true, ease: Power0.easeNone})
 .from(path3490g, .5, {drawSVG:"0%", immediateRender:true, ease: Power0.easeNone})
 .from([text3595_drag], 1, {autoAlpha:0})
-.to([solarSystem_drag,svgAtom_drag], 1, {autoAlpha:0},"+=3")
+.to([solarSystem_drag,svgAtom_drag], 1, {autoAlpha:0},"+=1.5")
 .to([solarSystem_drag], 1, {x:254, y:-37, scaleX:0.5000000000000001, scaleY:0.5000000000000001, transformOrigin: '50% 50%', ease: Power0.easeNone},'-=0')
 .to([svgAtom_drag], 1, {x:1160, y:-218, transformOrigin: '50% 50%', ease: Power0.easeNone},'-=1')
 
 .to([copperAtom_drag], 1, {autoAlpha:1})
-.from([outerBand], 1, {autoAlpha:0, immediateRender:true},"+=3.5")
+.to(band1_drag, 1, {autoAlpha:1},"+=1")
+.to(band2_drag, 1, {autoAlpha:1})
+.to(band3_drag, 1, {autoAlpha:1})
+.to(band4_drag, 1, {autoAlpha:1})
 
-.from([copperAtom_drag2], 1, {autoAlpha:0})
-.to (moveElectron, 2, {x:233, y:50})
+.to([band1_drag,band2_drag,band3_drag,band4_drag], 1, {autoAlpha:0},"+=1")
+
+.to(conductionBand_drag, 1, {autoAlpha:1})
+
+.to(conductionBand_drag, 1, {autoAlpha:0},"+=3")
+
+.to(copperAtom_drag, 2, {x:"+=175"})
+.to(copperAtom2_drag, 1, {autoAlpha:1})
+
+.to (freeElectron, 2, {x:-233, y:50})
 .from([morePositive_drag], 1, {autoAlpha:0},"+=3")
 .from([moreNegative_drag], 1, {autoAlpha:0},"+=2.5")
 // .from([s1Clicknext_drag], 1, {autoAlpha:0})
