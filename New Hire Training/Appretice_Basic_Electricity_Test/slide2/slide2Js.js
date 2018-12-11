@@ -254,3 +254,5 @@ slide2Tl
 .to([line1_copy,r1_copy,line2_copy], 0.5, {strokeDashoffset:"-=12", repeat:-1, ease:Linear.easeNone,yoyo:false})
 
 TweenMax.to([line1_copy,r1_copy,line2_copy], 0.5, {strokeDasharray:"2,4", ease:Linear.easeNone})
+
+//
