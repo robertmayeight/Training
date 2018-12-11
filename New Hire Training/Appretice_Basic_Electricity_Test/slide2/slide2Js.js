@@ -1,8 +1,8 @@
-slide2 = new XMLHttpRequest();
-slide2.open("GET","slide2Svg.svg",false);
-slide2.overrideMimeType("image/svg+xml");
-slide2.send("");
-var slide2= document.getElementById("main").appendChild(slide2.responseXML.documentElement);
+slide = new XMLHttpRequest();
+slide.open("GET","slide2Svg.svg",false);
+slide.overrideMimeType("image/svg+xml");
+slide.send("");
+var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
 
 var gArray = document.getElementsByTagName("g");
 var tArray = document.getElementsByTagName("text");
@@ -39,27 +39,28 @@ for (i=0; i<objectArray.length; i++) {
 var slideAudio = document.getElementById('music');
 
 slideAudio.addEventListener('onLoad', audioLoaded());
-slideAudio.source="slide2Audio"
+slideAudio.source="slideAudio"
 
 function audioLoaded(){
-	// playAudio();
+	playAudio();
+	TweenMax.to([slideAudio], 1, {opacity:1})
 }
 
 slideAudio
 slideAudio.onplay = function() {
-	slide2Tl.play();
+	slideTl.play();
 };
 
 slideAudio.onpause = function() {
-	slide2Tl.pause();
+	slideTl.pause();
 };
 
 slideAudio.onseeked = function() {
-	slide2Tl.time(slideAudio.currentTime);
+	slideTl.time(slideAudio.currentTime);
 }
 
 slideAudio.ontimeupdate = function() {
-	slide2Tl.time(slideAudio.currentTime);
+	slideTl.time(slideAudio.currentTime);
 };
 
 function playAudio(){
@@ -109,9 +110,9 @@ TweenMax.to([electron1_drag,electron2_drag,electron3_drag,electron4_drag,electro
 
 //Main Timeline//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var slide2Tl = new TimelineMax({paused:true});
-slide2Tl
-.to([music,lightning_drag], 1, {opacity:1})
+var slideTl = new TimelineMax({paused:true});
+slideTl
+.to([lightning_drag], 1, {opacity:1})
 .to(lightning_drag, 1, {autoAlpha:1})
 .to(lightning_drag, 1, {autoAlpha:0},"+=16.5")
 
