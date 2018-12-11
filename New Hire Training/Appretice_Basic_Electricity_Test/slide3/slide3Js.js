@@ -1,8 +1,8 @@
-slide3 = new XMLHttpRequest();
-slide3.open("GET","slide3Svg.svg",false);
-slide3.overrideMimeType("image/svg+xml");
-slide3.send("");
-var slide3= document.getElementById("main").appendChild(slide3.responseXML.documentElement);
+slide = new XMLHttpRequest();
+slide.open("GET","slide3Svg.svg",false);
+slide.overrideMimeType("image/svg+xml");
+slide.send("");
+var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
 
 var gArray = document.getElementsByTagName("g");
 var tArray = document.getElementsByTagName("text");
@@ -35,22 +35,28 @@ for (i=0; i<objectArray.length; i++) {
 	}
 }
 
-//Audio
 var slideAudio = document.getElementById('music');
+slideAudio.src="https://robertmayeight.github.io/Training/New%20Hire%20Training/Appretice_Basic_Electricity_Test/slide3/slide3Audio.ogg"
+slideAudio.onloadeddata = function() {
+	console.log("fired")
+  playAudio();
+  TweenMax.to([slideAudio], 1, {opacity:1})
+};
+
 slideAudio.onplay = function() {
-	slide3Tl.play();
+	slideTl.play();
 };
 
 slideAudio.onpause = function() {
-	slide3Tl.pause();
+	slideTl.pause();
 };
 
 slideAudio.onseeked = function() {
-	slide3Tl.time(slideAudio.currentTime);
+	slideTl.time(slideAudio.currentTime);
 }
 
 slideAudio.ontimeupdate = function() {
-	slide3Tl.time(slideAudio.currentTime);
+	slideTl.time(slideAudio.currentTime);
 };
 
 function playAudio(){
@@ -60,9 +66,10 @@ function playAudio(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var slide3Tl = new TimelineMax({paused:false});
-slide3Tl
-.to(music, 1, {opacity:1, onStart:playAudio()})
+var slideTl = new TimelineMax({paused:true});
+slideTl
+slideTl
+.to(moduleLoadingIcon,1,{autoAlpha:0})
 .to([battery_drag],1, {autoAlpha:1},"+=4")
 // .to([box_drag],1, {autoAlpha:1})
 .from(path19362, 1, {drawSVG:"0%", immediateRender:true, ease: Power0.easeNone},"+=9")

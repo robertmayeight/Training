@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Apprentice - Basic Electricity Slide 3</title>
+  <title>Apprentice - Basic Electricity</title>
   <meta charset="UTF-8">
   <!DOCTYPE html>
   <style type="text/css">
@@ -9,6 +9,7 @@
     padding: 0px;
     margin: 0px;
     text-align: center;
+    background: black;
   }
   .mainWindow {
     position: fixed;
@@ -28,13 +29,18 @@
     margin: auto;
     width: 100%;
   }
+  .slideHeading{
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    top: 20%
+    font-size: xx-large;
+  }
   </style>
 </head>
-<body bgcolor="#D3D3D3">
+<body>
   <div id="main" class="mainWindow" style="align-content: center;"></div>
-  <audio id='music' controls='controls' class="playerControls" style="opacity: 0">
-    <source id="audio" src='slide3Audio.ogg' type='audio/ogg' />
-  </audio>
+  <audio id='music' controls='controls' class="playerControls" style="opacity: 0"></audio>
 </body>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="../../../JavaScriptLibraries/jquery-3.2.1.min.js"></script>
