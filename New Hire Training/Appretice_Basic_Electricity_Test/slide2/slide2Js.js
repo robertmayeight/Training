@@ -255,4 +255,3 @@ slide2Tl
 
 TweenMax.to([line1_copy,r1_copy,line2_copy], 0.5, {strokeDasharray:"2,4", ease:Linear.easeNone})
 
-//
