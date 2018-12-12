@@ -1,1 +1,1 @@
-// User defined code goes here
+alert("hello")
