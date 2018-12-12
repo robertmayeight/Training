@@ -1,68 +1,68 @@
-slide = new XMLHttpRequest();
-slide.open("GET","slide2Svg.svg",false);
-slide.overrideMimeType("image/svg+xml");
-slide.send("");
-var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
+// slide = new XMLHttpRequest();
+// slide.open("GET","slide2Svg.svg",false);
+// slide.overrideMimeType("image/svg+xml");
+// slide.send("");
+// var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
 
-var gArray = document.getElementsByTagName("g");
-var tArray = document.getElementsByTagName("text");
-var imageArray = document.getElementsByTagName("image");
-var pathArray = document.getElementsByTagName("path");
-var rectArray = document.getElementsByTagName("rect");
-var objectArray=[];
+// var gArray = document.getElementsByTagName("g");
+// var tArray = document.getElementsByTagName("text");
+// var imageArray = document.getElementsByTagName("image");
+// var pathArray = document.getElementsByTagName("path");
+// var rectArray = document.getElementsByTagName("rect");
+// var objectArray=[];
 
-for (i=0; i<gArray.length; i++) {
-	objectArray.push(gArray[i]);
-}
-for (i=0; i<tArray.length; i++) {
-	objectArray.push(tArray[i]);
-}
-for (i=0; i<imageArray.length; i++) {
-	objectArray.push(imageArray[i]);
-}
-for (i=0; i<pathArray.length; i++) {
-	objectArray.push(pathArray[i]);
-}
-for (i=0; i<rectArray.length; i++) {
-	objectArray.push(rectArray[i]);
-}
-for (i=0; i<objectArray.length; i++) {
-	objectArray[i].style.display="inline";
-	groupNameSplit = objectArray[i].id.split("_");
-	switch(groupNameSplit[1]) {
-		case "drag":
-		TweenMax.to(objectArray[i], .01, {autoAlpha:0})
-	}
-}
+// for (i=0; i<gArray.length; i++) {
+// 	objectArray.push(gArray[i]);
+// }
+// for (i=0; i<tArray.length; i++) {
+// 	objectArray.push(tArray[i]);
+// }
+// for (i=0; i<imageArray.length; i++) {
+// 	objectArray.push(imageArray[i]);
+// }
+// for (i=0; i<pathArray.length; i++) {
+// 	objectArray.push(pathArray[i]);
+// }
+// for (i=0; i<rectArray.length; i++) {
+// 	objectArray.push(rectArray[i]);
+// }
+// for (i=0; i<objectArray.length; i++) {
+// 	objectArray[i].style.display="inline";
+// 	groupNameSplit = objectArray[i].id.split("_");
+// 	switch(groupNameSplit[1]) {
+// 		case "drag":
+// 		TweenMax.to(objectArray[i], .01, {autoAlpha:0})
+// 	}
+// }
 
-//Audio
-var slideAudio = document.getElementById('music');
-slideAudio.src="slide2Audio.ogg"
-slideAudio.onloadeddata = function() {
-  playAudio();
-  TweenMax.to([slideAudio], 1, {opacity:1})
-};
+// //Audio
+// var slideAudio = document.getElementById('music');
+// slideAudio.src="slide2Audio.ogg"
+// slideAudio.onloadeddata = function() {
+//   playAudio();
+//   TweenMax.to([slideAudio], 1, {opacity:1})
+// };
 
-slideAudio.onplay = function() {
-	slideTl.play();
-};
+// slideAudio.onplay = function() {
+// 	slideTl.play();
+// };
 
-slideAudio.onpause = function() {
-	slideTl.pause();
-};
+// slideAudio.onpause = function() {
+// 	slideTl.pause();
+// };
 
-slideAudio.onseeked = function() {
-	slideTl.time(slideAudio.currentTime);
-}
+// slideAudio.onseeked = function() {
+// 	slideTl.time(slideAudio.currentTime);
+// }
 
-slideAudio.ontimeupdate = function() {
-	slideTl.time(slideAudio.currentTime);
-};
+// slideAudio.ontimeupdate = function() {
+// 	slideTl.time(slideAudio.currentTime);
+// };
 
-function playAudio(){
-	slideAudio.play();
-}
-//End Audio
+// function playAudio(){
+// 	slideAudio.play();
+// }
+// //End Audio
 
 
 //TimeLines////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -106,9 +106,7 @@ TweenMax.to([electron1_drag,electron2_drag,electron3_drag,electron4_drag,electro
 
 //Main Timeline//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var slideTl = new TimelineMax({paused:true});
-slideTl
-.to(moduleLoadingIcon,1,{autoAlpha:0})
+slide2Tl
 .to([lightning_drag], 1, {opacity:1})
 .to(lightning_drag, 1, {autoAlpha:1})
 .to(lightning_drag, 1, {autoAlpha:0},"+=16.5")

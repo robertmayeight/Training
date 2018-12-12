@@ -12654,12 +12654,12 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="2"
-     inkscape:cx="194.49995"
-     inkscape:cy="303.05947"
+     inkscape:cx="85.99995"
+     inkscape:cy="309.55947"
      inkscape:window-x="1909"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="moduleLoadingIcon"
+     inkscape:current-layer="layer3"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -12770,6 +12770,7 @@
      id="tspan3395"
      x="112.85476"
      y="180.11456" /></text>
+
 
 
 
@@ -12898,6 +12899,7 @@
      id="tspan11928"
      x="-826.54779"
      y="374.67105" /></text>
+
 
 
 
@@ -13044,6 +13046,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1"
@@ -13071,6 +13074,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -13082,6 +13086,7 @@
      id="tspan4477"
      x="140.01332"
      y="92.157021">Atom</tspan></text>
+
 
 
 
@@ -13165,6 +13170,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -13176,6 +13182,7 @@
      id="tspan2410"
      x="470.17554"
      y="142.64484">Nucleus</tspan></text>
+
 
 
 
@@ -13220,6 +13227,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.7578392px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.98999999;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.79708499"
@@ -13232,6 +13240,7 @@
      x="-29.746206"
      y="469.67355"
      style="font-size:21.33333397px;fill:#ffffff;stroke-width:0.79708499">Neutrally charged neutrons.</tspan></text>
+
 
 
 
@@ -13447,6 +13456,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -13458,6 +13468,7 @@
      id="tspan3593"
      x="41.555092"
      y="230.86606">Planets = Electrons</tspan></text>
+
 
 
 
@@ -13518,6 +13529,7 @@
      style="stroke-width:0.62900025" /></text>
 
 
+
 </g><g
        style="display:inline;opacity:0.77868808;stroke:#00ff00;stroke-opacity:1;shape-rendering:crispEdges"
        id="missingElecron2-8-0"
@@ -13533,6 +13545,7 @@
      x="623.45087"
      y="60.626125"
      style="stroke:#00ff00;stroke-width:0.62900025;stroke-opacity:1" /></text>
+
 
 
 </g></g><g
@@ -13711,6 +13724,7 @@
      style="stroke-width:0.62900025" /></text>
 
 
+
 </g></g><g
      style="display:inline;opacity:0.92000002;stroke:none;stroke-opacity:1"
      id="outerBand-9"
@@ -13735,6 +13749,7 @@
      x="623.45087"
      y="60.626125"
      style="stroke:none;stroke-width:0.62900025;stroke-opacity:1" /></text>
+
 
 
 </g></g></g><g
@@ -13922,6 +13937,7 @@
 
 
 
+
 </g></g><g
      style="display:inline;opacity:0.92000002;stroke:none;stroke-opacity:1"
      id="freeElectron"
@@ -13961,6 +13977,7 @@
 
 
 
+
 </g></g></g><text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;enable-background:new"
@@ -13981,6 +13998,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.92000002;fill:#ffffff;fill-opacity:1;stroke:none;enable-background:new"
@@ -13993,6 +14011,7 @@
      x="56.909477"
      y="118.48799"
      style="font-size:26.66666603px;fill:#ffffff">More Negative</tspan></text>
+
 
 
 
@@ -14049,6 +14068,7 @@
      style="fill:#ffffff;stroke:none;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4.06838226;stroke-dasharray:none">L1</tspan></text>
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.55372047px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.98999999;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4.06838226;stroke-dasharray:none;enable-background:new"
@@ -14060,6 +14080,7 @@
      x="609.19238"
      y="352.26181"
      style="fill:#ffffff;stroke:none;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4.06838226;stroke-dasharray:none">N</tspan></text>
+
 
 
 <path
@@ -14111,6 +14132,7 @@
      style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4.06838226;stroke-dasharray:none">L1</tspan></text>
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.55372047px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.98999999;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4.06838226;stroke-dasharray:none;enable-background:new"
@@ -14122,6 +14144,7 @@
      x="609.19238"
      y="352.26181"
      style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4.06838226;stroke-dasharray:none">N</tspan></text>
+
 
 
 <path
@@ -14139,24 +14162,4 @@
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="Module Loading"
-     style="display:inline"><g
-       id="moduleLoadingIcon"
-       inkscape:label="#g3657"><rect
-   inkscape:label="#rect5127"
-   y="-0.89706999"
-   x="-4.7412109e-007"
-   height="542.81329"
-   width="723.09625"
-   id="mainBackground-2"
-   style="display:inline;opacity:1;vector-effect:none;fill:#262626;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.86044478;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;shape-rendering:crispEdges;enable-background:new" /><text
-   id="text3455"
-   y="241.50002"
-   x="127.5"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;opacity:0.9;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke;shape-rendering:crispEdges;enable-background:new"
-   xml:space="preserve"><tspan
-     id="tspan3651"
-     y="241.50002"
-     x="127.5"
-     sodipodi:role="line">dule is Loading</tspan></text>
-
-</g></g></svg>
+     style="display:inline" /></svg>

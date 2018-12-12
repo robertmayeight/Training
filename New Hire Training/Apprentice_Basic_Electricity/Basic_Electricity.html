@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apprentice - Basic Electricity</title>
+  <meta charset="UTF-8">
+  <!DOCTYPE html>
+  <style type="text/css">
+  .mainWindow {
+    position: fixed;
+    /*top: -40px;*/
+    left: 0%;
+    margin: auto;
+  width: 100%;
+    height:100vh;
+    overflow: hidden;
+
+}
+
+.hidden {
+  position: fixed;
+  left: -50000px;
+}
+
+
+.playerControls {
+  position: fixed;
+  padding: 1px;
+  bottom: 0;
+  margin: auto;
+  width: 98%;
+}
+
+
+#menu{
+  position: fixed;
+    top: 0;
+    left: 0%;
+    width: 8%;
+    padding: 1px;
+}
+
+.menuItemsHidden{
+  position: fixed;
+    top: 0%;
+    left: -5000px;
+    width: 20%;
+    height:95vh;
+    word-wrap: break-word;
+    margin: 0px;
+    padding: 10px;
+    background-color: #B8B8B8;
+}
+
+.menuItemsVisible{
+  position: fixed;
+    top: 5%;
+    left: 0%;
+    width: 20%;
+    height:95vh;
+    word-wrap: break-word;
+    margin: 0px;
+    padding: 10px;
+    background-color: #B8B8B8;
+    border-style: solid;
+  border-width: 2px;
+  overflow: scroll;
+}
+
+.colorPicker{
+  right: 50px;
+  position: fixed;
+  width: 10%;
+z-index: 500;
+}
+  </style>
+
+</head>
+
+<body bgcolor="#D3D3D3">
+  <div id="main" class="mainWindow" style="align-content: center;">
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <button id="backButton">NEXT</button>
+    <button id="nextButton">BACK</button>
+  </div>
+  <div id="hiddenWindow" class="hidden">
+  </div>
+  <audio id='music' controls='controls' class="playerControls">
+    <!-- <source src='slide1/slide1.ogg' type='audio/ogg' />
+    <source src='slide2/slide1.ogg' type='audio/ogg' /> -->
+  </audio>
+   <div id="menu"><img src="Menu Icon.png" width="30%" onclick="toggleMenuVisibility()"> </div>
+    <div id="menuItems" class="menuItemsHidden">
+    <a href="#" onclick="changeSlides(slide1); slide1Tl.restart();">Module 1 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides(slide2); slide2Tl.restart();">Module 2 - Voltage Current Ohms</a><br><br>
+    <a href="#" onclick="showMenu(); changeSlides(slide3)">Module 3 - Meters</a><br><br>
+    <a href="#" onclick="changeSlides(slide4)">Module 4 - Power Supplies</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 5 - Series & Parllel Circuits</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 6 - DC Circuits</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 7 - AC Circuits</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 8 - Electricity & Magnetism</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 9 - Motors</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 10 - Reading Schematics</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 11 - Mini Manuals</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 12 - Schematic Excercise 1/a><br><br>
+    <a href="#" onclick="changeSlides()">Module 7 - Schematic Exercise 2</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 8 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 4 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 5 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 6 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 7 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 8 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 4 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 5 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 6 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 7 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 8 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 4 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 5 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 6 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 7 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 8 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 4 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 5 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 6 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 7 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 8 - The Atom</a><br><br>
+    <a href="#" onclick="changeSlides()">Module 9 - The Atom</a>
+  </div>
+<div id="colorPickerDiv" class="menuItemsHidden">
+    <div id="redBox" onclick="changeColors('red')" style="cursor:pointer;display:block; width:100%; background-color:brown; color:white";><center>Red</center></div>
+    <div id="blueBox" onclick="changeColors('blue')" style="cursor:pointer;display:block; width:100%; background-color:blue; color:white";><center>Blue</center></div>
+    <div id="orangeBox" onclick="changeColors('orange')" style="cursor:pointer;display:block; width:100%; background-color:orange; color:black";><center>Orange</center></div>
+    <div id="yellowBox" onclick="changeColors('yellow')" style="cursor:pointer;display:block; width:100%; background-color:yellow";><center>Yellow</center></div>
+    <div id="purpleBox" onclick="changeColors('purple')" style="cursor:pointer;display:block; width:100%; background-color:purple; color:white";><center>Purple</center></div>
+    <div id="greenBox" onclick="changeColors('green')" style="cursor:pointer;display:block; width:100%; background-color:green";><center>Green</center></div>
+    <div id="greyBox" onclick="changeColors('grey')" style="cursor:pointer;display:block; width:100%; background-color:grey";><center>Grey</center></div>
+    <div id="brownBox" onclick="changeColors('brown')" style="cursor:pointer;display:block; width:100%; background-color:brown";><center>Brown</center></div>
+    <div id="blackBox" onclick="changeColors('black')" style="cursor:pointer;display:block; width:100%; background-color:black; color:white";><center>Black</center></div>
+</div>
+  
+    
+
+</body>
+<script type="text/javascript">
+  var timelinesArray = [];
+  function toggleMenuVisibility(){
+   var state=document.getElementById("menuItems").classList;
+   if(state == "menuItemsHidden"){
+      document.getElementById("menuItems").className="menuItemsVisible";
+      }else{
+        document.getElementById("menuItems").className="menuItemsHidden";
+      }
+  }
+  function showMenu(){
+    var state=document.getElementById("colorPickerDiv").classList;
+    if(state == "menuItemsHidden"){
+      document.getElementById("colorPickerDiv").className="colorPicker";
+    }else{
+    document.getElementById("colorPickerDiv").className="menuItemsHidden";
+    
+    }
+  }
+
+</script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="../../JavaScriptLibraries/TweenMax.min.js"></script>
+<script src="../../JavaScriptLibraries/draggable.js"></script>
+<script src="../../JavaScriptLibraries/DrawSVGPlugin.min.js"></script>
+<script src="../../JavaScriptLibraries/jquery-3.2.1.min.js"></script>
+<script src="../../JavaScriptLibraries/MorphSVGPlugin.js"></script>
+<script src="../../JavaScriptLibraries/Refrigeration Variables.js"></script>
+<script src="basicElectricityjavaScript.js"></script>
+<script src="slide1/slide1Js.js"></script>
+<script src="slide2/slide2Js.js"></script>
+<script src="slide3/slide3Js.js"></script>
+</html>
