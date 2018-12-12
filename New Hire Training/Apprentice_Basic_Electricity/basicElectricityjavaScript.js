@@ -5,6 +5,17 @@ var slides=[];
 var slide0Tl = new TimelineMax({paused:true});
 timelinesArray.push(slide0Tl);
 
+slide0 = new XMLHttpRequest();
+slide0.open("GET","slide0/slide0Svg.svg",false);
+slide0.overrideMimeType("image/svg+xml");
+slide0.send("");
+var slide0= document.getElementById("hiddenWindow").appendChild(slide0.responseXML.documentElement);
+slide0.setAttribute("id","slide0")
+slides.push(slide0);
+TweenMax.to([slide0], .001, {className:"mainWindow"});
+var currentSlide = [slide0];
+var slide0Tl = new TimelineMax({paused:false, repeat:-1});
+
 slide1 = new XMLHttpRequest();
 slide1.open("GET","slide1/slide1Svg.svg",false);
 slide1.overrideMimeType("image/svg+xml");
@@ -12,7 +23,7 @@ slide1.send("");
 var slide1= document.getElementById("hiddenWindow").appendChild(slide1.responseXML.documentElement);
 slide1.setAttribute("id","slide1")
 slides.push(slide1);
-var slide1Tl = new TimelineMax({paused:false, repeat:-1});
+var slide1Tl = new TimelineMax({paused:true});
 timelinesArray.push(slide1Tl);
 
 slide2 = new XMLHttpRequest();
@@ -24,16 +35,6 @@ slide2.setAttribute("id","slide2")
 slides.push(slide2);
 var slide2Tl = new TimelineMax({paused:true});
 timelinesArray.push(slide2Tl);
-
-slide3 = new XMLHttpRequest();
-slide3.open("GET","slide3/slide3Svg.svg",false);
-slide3.overrideMimeType("image/svg+xml");
-slide3.send("");
-var slide3= document.getElementById("hiddenWindow").appendChild(slide3.responseXML.documentElement);
-slide3.setAttribute("id","slide3")
-slides.push(slide3);
-var slide3Tl = new TimelineMax({paused:true});
-timelinesArray.push(slide3Tl);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var svgWindow = document.getElementById("main");
@@ -48,13 +49,33 @@ function redraw(){
 redraw();
 window.addEventListener("resize", redraw);
 
+
+function forwardClicked(){
+	console.log(currentSlide[0])
+	currentSlideSplit = currentSlide[0].id.split("slide")
+	nextSlideNumber = Number(currentSlideSplit[1]+1);
+	var nextSlide = document.getElementById("slide" + nextSlideNumber)
+	currentSlide.pop();
+	currentSlide.push(nextSlide)
+	console.log(currentSlide[0])
+	changeSlides(nextSlide)
+}
+
+function reverseClicked(){
+	console.log(currentSlide.id);
+}
+
 //Change Menu Item
 
 var currentTimeline;
 
 function changeSlides(slide){
-	if(slide.id!="slide3"){
-		document.getElementById("colorPickerDiv").className="menuItemsHidden";
+	currentSlide=slide;
+	if(slide.id == "slide0"){
+		TweenMax.to(thisTrack, 1, {autoAlpha:0})
+		// document.getElementById("colorPickerDiv").className="menuItemsHidden";
+	}else{
+		TweenMax.to(thisTrack, 1, {autoAlpha:1})
 	}
 	closeMenu();
 	for(i=0; i<slides.length; i++){
@@ -89,8 +110,10 @@ thisTrack.onplay = function() {
 thisTrack.onpause = function() {
 	var nameSplit = currentTimeline.split("slide")
 	var slideNumber = nameSplit[1];
+	var tempTimeline = document.getElementById(slide2Tl)
+	console.log(currentTimeline)
 	timelinesArray[slideNumber].pause();
-	console.log(timelinesArray[slideNumber])
+	
 };
 
 thisTrack.onseeked = function() {
@@ -138,7 +161,6 @@ for (i=0; i<objectArray.length; i++) {
 		TweenMax.to(objectArray[i], .01, {autoAlpha:0})
 	}
 }
-
 
 
 var highlightColor=black;

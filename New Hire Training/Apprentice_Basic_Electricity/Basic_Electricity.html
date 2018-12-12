@@ -5,20 +5,38 @@
   <meta charset="UTF-8">
   <!DOCTYPE html>
   <style type="text/css">
+  body{
+    background-color: #262626ff;
+    margin: auto;
+  width: 100%;
+  }
+
+  a {
+  color: white;
+  text-decoration: none;
+  font-family: "Arial", Times, serif;
+  font-size: .75em; /* 30px/16=1.875em */
+}
+
   .mainWindow {
     position: fixed;
-    /*top: -40px;*/
+    top: 7%;
     left: 0%;
     margin: auto;
   width: 100%;
-    height:100vh;
+    height:87vh;
     overflow: hidden;
 
 }
 
 .hidden {
   position: fixed;
-  left: -50000px;
+    top: 7%;
+    left: 5000px;
+    margin: auto;
+  width: 100%;
+    height:87vh;
+    overflow: hidden;
 }
 
 
@@ -27,19 +45,20 @@
   padding: 1px;
   bottom: 0;
   margin: auto;
-  width: 98%;
+  width: 85%;
 }
 
 
 #menu{
   position: fixed;
-    top: 0;
-    left: 0%;
+    top: 1em;
+    left: 1em;
     width: 8%;
     padding: 1px;
 }
 
 .menuItemsHidden{
+  font-size: small;
   position: fixed;
     top: 0%;
     left: -5000px;
@@ -48,19 +67,19 @@
     word-wrap: break-word;
     margin: 0px;
     padding: 10px;
-    background-color: #B8B8B8;
+    background-color: #262626ff;
 }
 
 .menuItemsVisible{
   position: fixed;
-    top: 5%;
+    top: 6%;
     left: 0%;
     width: 20%;
     height:95vh;
     word-wrap: break-word;
     margin: 0px;
     padding: 10px;
-    background-color: #B8B8B8;
+    background-color: #262626ff;
     border-style: solid;
   border-width: 2px;
   overflow: scroll;
@@ -72,26 +91,34 @@
   width: 10%;
 z-index: 500;
 }
+#navButtons{
+position: fixed;
+  bottom: 3.5px;
+  right: .5px;
+  z-index: 5000;
+}
+
   </style>
+
 
 </head>
 
-<body bgcolor="#D3D3D3">
+<body>
   <div id="main" class="mainWindow" style="align-content: center;">
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <button id="backButton">NEXT</button>
-    <button id="nextButton">BACK</button>
+    <div id="navButtons">
+      <img src="Reverse_Arrow.png" width="10%" onclick="reverseClicked()" onmouseover="" style="cursor: pointer; opacity:.5">
+       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+       <img src="Forward_Arrow.png" width="10%" onclick="forwardClicked()" onmouseover="" style="cursor: pointer;  opacity:.5">
+    </div>
   </div>
   <div id="hiddenWindow" class="hidden">
   </div>
-  <audio id='music' controls='controls' class="playerControls">
-    <!-- <source src='slide1/slide1.ogg' type='audio/ogg' />
-    <source src='slide2/slide1.ogg' type='audio/ogg' /> -->
-  </audio>
-   <div id="menu"><img src="Menu Icon.png" width="30%" onclick="toggleMenuVisibility()"> </div>
+  <audio id='music' controls='controls' class="playerControls"></audio>
+   <div id="menu"><img src="Menu_Icon.png" width="30%" onclick="toggleMenuVisibility()" style="cursor: pointer;  opacity:.5"> </div>
     <div id="menuItems" class="menuItemsHidden">
-    <a href="#" onclick="changeSlides(slide1); slide1Tl.restart();">Module 1 - The Atom</a><br><br>
-    <a href="#" onclick="changeSlides(slide2); slide2Tl.restart();">Module 2 - Voltage Current Ohms</a><br><br>
+      <a href="#" onclick="changeSlides(slide0)">Home</a><br><br>
+    <a href="#" onclick="changeSlides(slide1)">The Atom</a><br><br>
+    <a href="#" onclick="changeSlides(slide2)">Current</a><br><br>
     <a href="#" onclick="showMenu(); changeSlides(slide3)">Module 3 - Meters</a><br><br>
     <a href="#" onclick="changeSlides(slide4)">Module 4 - Power Supplies</a><br><br>
     <a href="#" onclick="changeSlides()">Module 5 - Series & Parllel Circuits</a><br><br>
@@ -170,7 +197,8 @@ z-index: 500;
 <script src="../../JavaScriptLibraries/MorphSVGPlugin.js"></script>
 <script src="../../JavaScriptLibraries/Refrigeration Variables.js"></script>
 <script src="basicElectricityjavaScript.js"></script>
+<script src="slide0/slide0Js.js"></script>
 <script src="slide1/slide1Js.js"></script>
 <script src="slide2/slide2Js.js"></script>
-<script src="slide3/slide3Js.js"></script>
+
 </html>
