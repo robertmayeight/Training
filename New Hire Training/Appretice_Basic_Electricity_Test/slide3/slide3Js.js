@@ -36,7 +36,7 @@ for (i=0; i<objectArray.length; i++) {
 }
 
 var slideAudio = document.getElementById('music');
-slideAudio.src="https://robertmayeight.github.io/Training/New%20Hire%20Training/Appretice_Basic_Electricity_Test/slide3/slide3Audio.ogg"
+// slideAudio.src="https://robertmayeight.github.io/Training/New%20Hire%20Training/Appretice_Basic_Electricity_Test/slide3/slide3Audio.ogg"
 slideAudio.onloadeddata = function() {
 	console.log("fired")
   playAudio();
