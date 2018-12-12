@@ -1,3 +1,4 @@
+alert("fuck")
 var htmlBody = document.getElementsByTagName("BODY")[0];
 var haierBlue = "#2b3b6c"
 
