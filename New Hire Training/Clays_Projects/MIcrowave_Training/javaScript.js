@@ -18,7 +18,7 @@ var schematic = document.getElementById("showWindow").appendChild(xhr.responseXM
 schematic.classList.add("center");
 zoomSlider.value=0;
 
-var noPaths = document.getElementById("diagram1").getElementsByTagName("path");
+var noPaths = document.getElementById("Layer_1").getElementsByTagName("path");
 var noPathsLength = noPaths.length;
 for(i=0; i<noPathsLength; i++){
   TweenMax.to(noPaths[i],.1,{stroke:black});
@@ -35,7 +35,7 @@ for(i=0; i<noPathsLength; i++){
   path.style['stroke-linecap']="round";
   noPaths[i].style['stroke-linecap']="round";
   path.setAttribute("d", noPaths[i].getAttribute("d"));
-  diagram1.appendChild(path);
+  Layer_1.appendChild(path);
   path.style["stroke-width"]= 3;
   path.setAttribute('touchmove','wireClicked(this);');  
 }
