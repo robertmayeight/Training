@@ -49,7 +49,6 @@ function redraw(){
 redraw();
 window.addEventListener("resize", redraw);
 
-
 function forwardClicked(){
 	console.log(currentSlide[0])
 	currentSlideSplit = currentSlide[0].id.split("slide")
@@ -89,7 +88,7 @@ function changeSlides(slide){
 	slideSplit=slide.id.split("slide")
 	var n = slideSplit[1]
 	thisTrack.src='slide' + n + '/slide' + n + '.ogg';
-	thisTrack.load();
+	thisTrack.load('slide' + n + '/slide' + n + '.ogg');
 	thisTrack.play(0);
 	timelinesArray[n].restart();
 }
