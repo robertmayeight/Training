@@ -113,13 +113,18 @@ position: fixed;
   </div>
   <div id="hiddenWindow" class="hidden">
   </div>
-  <audio id='music' controls='controls' class="playerControls" preload"auto"></audio>
+  <audio id='music' controls='controls' class="playerControls" preload"auto">
+    <source id="slide0Audio" src="slide0.ogg" type="audio/ogg">
+      <source id="slide1Audio" src="slide1.ogg" type="audio/ogg">
+        <source id="slide2Audio" src="slide2.ogg" type="audio/ogg">
+          <source id="slide2Audio" src="slide2.ogg" type="audio/ogg">
+  </audio>
    <div id="menu"><img src="Menu_Icon.png" width="30%" onclick="toggleMenuVisibility()" style="cursor: pointer;  opacity:.5"> </div>
     <div id="menuItems" class="menuItemsHidden">
       <a href="#" onclick="changeSlides(slide0)">Home</a><br><br>
     <a href="#" onclick="changeSlides(slide1)">The Atom</a><br><br>
     <a href="#" onclick="changeSlides(slide2)">Current</a><br><br>
-    <a href="#" onclick="showMenu(); changeSlides(slide3)">Module 3 - Meters</a><br><br>
+    <a href="#" onclick="changeSlides(slide3)">Microwave Interactive Diagram</a><br><br>
     <a href="#" onclick="changeSlides(slide4)">Module 4 - Power Supplies</a><br><br>
     <a href="#" onclick="changeSlides()">Module 5 - Series & Parllel Circuits</a><br><br>
     <a href="#" onclick="changeSlides()">Module 6 - DC Circuits</a><br><br>

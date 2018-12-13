@@ -36,6 +36,16 @@ slides.push(slide2);
 var slide2Tl = new TimelineMax({paused:true});
 timelinesArray.push(slide2Tl);
 
+slide3 = new XMLHttpRequest();
+slide3.open("GET","slide3/schematic.svg",false);
+slide3.overrideMimeType("image/svg+xml");
+slide3.send("");
+var slide3= document.getElementById("hiddenWindow").appendChild(slide3.responseXML.documentElement);
+slide3.setAttribute("id","slide3")
+slides.push(slide3);
+var slide3Tl = new TimelineMax({paused:true});
+timelinesArray.push(slide3Tl);
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var svgWindow = document.getElementById("main");
 var svg = d3.select(slide1);
@@ -88,7 +98,7 @@ function changeSlides(slide){
 	slideSplit=slide.id.split("slide")
 	var n = slideSplit[1]
 	thisTrack.src='slide' + n + '/slide' + n + '.ogg';
-	thisTrack.load('slide' + n + '/slide' + n + '.ogg');
+	thisTrack.load();
 	thisTrack.play(0);
 	timelinesArray[n].restart();
 }
@@ -207,3 +217,61 @@ function changeColors(myColor){
 	}
 }
 
+
+
+
+
+
+// var audioFiles = [
+//     "http://www.teanglann.ie/CanC/nua.mp3",
+//     "http://www.teanglann.ie/CanC/ag.mp3",
+//     "http://www.teanglann.ie/CanC/dul.mp3",
+//     "http://www.teanglann.ie/CanC/freisin.mp3"
+// ];
+    
+// function preloadAudio(url) {
+//     var audio = new Audio();
+//     // once this file loads, it will call loadedAudio()
+//     // the file will be kept by the browser as cache
+//     audio.addEventListener('canplaythrough', loadedAudio, false);
+//     audio.src = url;
+// }
+    
+// var loaded = 0;
+// function loadedAudio() {
+//     // this will be called every time an audio file is loaded
+//     // we keep track of the loaded files vs the requested files
+//     loaded++;
+//     if (loaded == audioFiles.length){
+//     	// all have loaded
+//     	init();
+//     }
+// }
+    
+// var music = document.getElementById('music');
+// function play(index) {
+//     music.src = audioFiles[index];
+//     music.play();
+// }
+    
+// function init() {
+//     // do your stuff here, audio has been loaded
+//     // for example, play all files one after the other
+//     var i = 0;
+//     // once the music ends, play the next one
+//     music.onended = function() {
+//     	i++;
+//         if (i >= audioFiles.length) {
+//             // end 
+//             return;
+//         }
+//     	play(i);
+//     };
+//     // play the first file
+//     play(i);
+// }
+    
+// // we start preloading all the audio files
+// for (var i in audioFiles) {
+//     preloadAudio(audioFiles[i]);
+// }
