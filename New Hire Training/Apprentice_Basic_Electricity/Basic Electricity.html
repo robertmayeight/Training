@@ -5,41 +5,49 @@
   <meta charset="UTF-8">
   <!DOCTYPE html>
   <style type="text/css">
-  .mainWindow {
-    position: fixed;
-    /*top: -40px;*/
-    left: 0%;
+ body{
+    background-color: black;
     margin: auto;
-  width: 100%;
+    width: 100%;
+  }
+
+   a {
+  color: white;
+  text-decoration: none;
+  font-family: "Arial", Times, serif;
+  font-size: .75em; /* 30px/16=1.875em */
+}
+a:hover{
+  text-decoration: underline;
+}
+
+.iframeVisible{
+    position: fixed;
+    top:10px;
+    width: 90%;
+    height:95vh;
+    left:75px;
+    border: none;
+}
+
+.iframeHidden{
+    position: fixed;
+    width: 100%;
     height:100vh;
-    overflow: hidden;
-
+    left:-50000px;
+    border: none;
 }
-
-.hidden {
-  position: fixed;
-  left: -50000px;
-}
-
-
-.playerControls {
-  position: fixed;
-  padding: 1px;
-  bottom: 0;
-  margin: auto;
-  width: 98%;
-}
-
 
 #menu{
   position: fixed;
-    top: 0;
-    left: 0%;
+    top: 1em;
+    left: 1em;
     width: 8%;
     padding: 1px;
 }
 
 .menuItemsHidden{
+  font-size: small;
   position: fixed;
     top: 0%;
     left: -5000px;
@@ -48,49 +56,68 @@
     word-wrap: break-word;
     margin: 0px;
     padding: 10px;
-    background-color: #B8B8B8;
+    background-color: #262626ff;
 }
 
 .menuItemsVisible{
   position: fixed;
-    top: 5%;
+    top: 6%;
     left: 0%;
     width: 20%;
     height:95vh;
     word-wrap: break-word;
     margin: 0px;
     padding: 10px;
-    background-color: #B8B8B8;
+    background-color: #262626ff;
     border-style: solid;
   border-width: 2px;
   overflow: scroll;
 }
 
-.colorPicker{
-  right: 50px;
+.playerControls {
   position: fixed;
-  width: 10%;
-z-index: 500;
+  padding: 1px;
+  bottom: 0;
+  margin: auto;
+  width: 85%;
 }
-  </style>
+
+#navButtons{
+position: fixed;
+  bottom: 3.5px;
+  right: .5px;
+  z-index: 5000;
+}
+/*.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}*/
+</style>
+
 
 </head>
 
 <body bgcolor="#D3D3D3">
-  <div id="main" class="mainWindow" style="align-content: center;">
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <button id="backButton">NEXT</button>
-    <button id="nextButton">BACK</button>
-  </div>
-  <div id="hiddenWindow" class="hidden">
-  </div>
-  <audio id='music' controls='controls' class="playerControls"></audio>
-   <div id="menu"><img src="Menu Icon.png" width="30%" onclick="toggleMenuVisibility()"> </div>
+  <iframe id="slide0" class="iframeVisible" src="file:///C:/Users/214019368/Documents/Training/New%20Hire%20Training/Apprentice_Basic_Electricity/newSlide1/slide1Html.html"></iframe>
+  <iframe id="slide1" class="iframeHidden" src="file:///C:/Users/214019368/Documents/Training/New%20Hire%20Training/Apprentice_Basic_Electricity/newSlide2/slide2Html.html"></iframe>
+  <iframe id="slide2" class="iframeHidden" src="file:///C:/Users/214019368/Documents/Training/New%20Hire%20Training/Apprentice_Basic_Electricity/newSlide3/slide3Html.html"></iframe>
+  <iframe id="slide3" class="iframeHidden" src="https://robertmayeight.github.io/Training/New%20Hire%20Training/1%20tmTimerDefIAS/tmTimerDefIAS.html"></iframe>
+
+  <div id="navButtons">
+      <img src="Reverse_Arrow.png" width="10%" onclick="reverseClicked()" onmouseover="" style="cursor: pointer; opacity:.5">
+       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+       <img src="Forward_Arrow.png" width="10%" onclick="forwardClicked()" onmouseover="" style="cursor: pointer;  opacity:.5">
+    </div>
+<div id="menu"><img src="Menu_Icon.png" width="30%" onclick="toggleMenuVisibility()" style="cursor: pointer;  opacity:.5"> </div>
     <div id="menuItems" class="menuItemsHidden">
-      <a href="#" onclick="changeSlides(slide1)">Introduction</a><br><br>
-    <a href="#" onclick="changeSlides(slide2)">Module 1 - The Atom</a><br><br>
-    <a href="#" onclick="changeSlides(slide3)">Module 2 - Voltage Current Ohms</a><br><br>
-    <a href="#" onclick="showMenu(); changeSlides(slide3)">Module 3 - Meters</a><br><br>
+      <a href="#" onclick="changeSlides(slide0)">Home</a><br><br>
+    <a href="#" onclick="changeSlides(slide1)">The Atom</a><br><br>
+    <a href="#" onclick="changeSlides(slide2)">Current</a><br><br>
+    <a href="#" onclick="changeSlides(slide3)">Microwave Interactive Diagram</a><br><br>
     <a href="#" onclick="changeSlides(slide4)">Module 4 - Power Supplies</a><br><br>
     <a href="#" onclick="changeSlides()">Module 5 - Series & Parllel Circuits</a><br><br>
     <a href="#" onclick="changeSlides()">Module 6 - DC Circuits</a><br><br>
@@ -124,23 +151,11 @@ z-index: 500;
     <a href="#" onclick="changeSlides()">Module 8 - The Atom</a><br><br>
     <a href="#" onclick="changeSlides()">Module 9 - The Atom</a>
   </div>
-<div id="colorPickerDiv" class="menuItemsHidden">
-    <div id="redBox" onclick="changeColors('red')" style="cursor:pointer;display:block; width:100%; background-color:brown; color:white";><center>Red</center></div>
-    <div id="blueBox" onclick="changeColors('blue')" style="cursor:pointer;display:block; width:100%; background-color:blue; color:white";><center>Blue</center></div>
-    <div id="orangeBox" onclick="changeColors('orange')" style="cursor:pointer;display:block; width:100%; background-color:orange; color:black";><center>Orange</center></div>
-    <div id="yellowBox" onclick="changeColors('yellow')" style="cursor:pointer;display:block; width:100%; background-color:yellow";><center>Yellow</center></div>
-    <div id="purpleBox" onclick="changeColors('purple')" style="cursor:pointer;display:block; width:100%; background-color:purple; color:white";><center>Purple</center></div>
-    <div id="greenBox" onclick="changeColors('green')" style="cursor:pointer;display:block; width:100%; background-color:green";><center>Green</center></div>
-    <div id="greyBox" onclick="changeColors('grey')" style="cursor:pointer;display:block; width:100%; background-color:grey";><center>Grey</center></div>
-    <div id="brownBox" onclick="changeColors('brown')" style="cursor:pointer;display:block; width:100%; background-color:brown";><center>Brown</center></div>
-    <div id="blackBox" onclick="changeColors('black')" style="cursor:pointer;display:block; width:100%; background-color:black; color:white";><center>Black</center></div>
-</div>
-  
-    
 
 </body>
+<script src="../../JavaScriptLibraries/TweenMax.min.js"></script>
 <script type="text/javascript">
-  var timelinesArray = [];
+  var slideNumber = 0;
   function toggleMenuVisibility(){
    var state=document.getElementById("menuItems").classList;
    if(state == "menuItemsHidden"){
@@ -158,17 +173,37 @@ z-index: 500;
     
     }
   }
+  function forwardClicked(){
+    slideNumber++
+   console.log("Forward: " + slideNumber)
+    var iframeArray = document.getElementsByTagName("iframe");
+    for(i=0; i<iframeArray.length; i++){
+      slideNameSplit = iframeArray[i].id.split("slide")
+      if(slideNameSplit[1] == slideNumber){
+         TweenMax.to(iframeArray[i], .001, {className:"iframeVisible"})
+         TweenMax.from(iframeArray[i], 1, {opacity:1})
+       }else{
+        TweenMax.to(iframeArray[i], .001, {className:"iframeHidden"})
+        TweenMax.from(iframeArray[i], 1, {opacity:1})
+       }
+    }
+   
+  }
 
+  function reverseClicked(){
+    slideNumber--
+   console.log("Forward: " + slideNumber)
+    var iframeArray = document.getElementsByTagName("iframe");
+    for(i=0; i<iframeArray.length; i++){
+      slideNameSplit = iframeArray[i].id.split("slide")
+      if(slideNameSplit[1] == slideNumber){
+        TweenMax.to(iframeArray[i], .001, {className:"iframeVisible"})
+         TweenMax.from(iframeArray[i], 1, {opacity:1})
+       }else{
+        TweenMax.to(iframeArray[i], .001, {className:"iframeHidden"})
+        TweenMax.from(iframeArray[i], 1, {opacity:1})
+       }
+    }
+  }
 </script>
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="../../JavaScriptLibraries/TweenMax.min.js"></script>
-<script src="../../JavaScriptLibraries/draggable.js"></script>
-<script src="../../JavaScriptLibraries/DrawSVGPlugin.min.js"></script>
-<script src="../../JavaScriptLibraries/jquery-3.2.1.min.js"></script>
-<script src="../../JavaScriptLibraries/MorphSVGPlugin.js"></script>
-<script src="../../JavaScriptLibraries/Refrigeration Variables.js"></script>
-<script src="basicElectricityjavaScript.js"></script>
-<script src="slide1/slide1Js.js"></script>
-<script src="slide2/slide2Js.js"></script>
-<script src="slide3/slide3Js.js"></script>
 </html>
