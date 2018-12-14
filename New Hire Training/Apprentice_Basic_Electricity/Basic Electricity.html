@@ -6,7 +6,7 @@
   <!DOCTYPE html>
   <style type="text/css">
  body{
-    background-color: black;
+    background-color: white;
     margin: auto;
     width: 100%;
   }
@@ -95,14 +95,15 @@ position: fixed;
 </head>
 
 <body bgcolor="#D3D3D3">
-  //Start Slides//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  <body bgcolor=white>
+
 
   <iframe id="slide0" class="iframeVisible" src="https://robertmayeight.github.io/Training/New%20Hire%20Training/Apprentice_Basic_Electricity/newSlide1/slide1Html.html"></iframe>
   <iframe id="slide1" class="iframeHidden" src="https://robertmayeight.github.io/Training/New%20Hire%20Training/Apprentice_Basic_Electricity/newSlide2/slide2Html.html"></iframe>
   <iframe id="slide2" class="iframeHidden" src="https://robertmayeight.github.io/Training/New%20Hire%20Training/Apprentice_Basic_Electricity/newSlide3/slide3Html.html"></iframe>
   <iframe id="slide3" class="iframeHidden" src="https://robertmayeight.github.io/Training/New%20Hire%20Training/1%20tmTimerDefIAS/tmTimerDefIAS.html"></iframe>
 
-//End Slids///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   <div id="navButtons">
       <img src="Reverse_Arrow.png" width="10%" onclick="reverseClicked()" onmouseover="" style="cursor: pointer; opacity:.5">
        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -155,9 +156,13 @@ position: fixed;
 
 
 </body>
+<script type="text/javascript">
+</script>
 <script src="../../JavaScriptLibraries/TweenMax.min.js"></script>
 <script src="d3.min.js"></script>
 <script type="text/javascript">
+  slide1.style.display="none"
+  slide1.contentWindow.postMessage('hello', '*');
   var slideNumber = 0;
   function toggleMenuVisibility(){
    var state=document.getElementById("menuItems").classList;

@@ -21,7 +21,7 @@
    style="shape-rendering:crispEdges;enable-background:new"><metadata
      id="metadata8"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs6"><radialGradient
        spreadMethod="pad"
        fr="0"
@@ -12654,12 +12654,12 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.5"
-     inkscape:cx="404.85867"
-     inkscape:cy="307.1976"
+     inkscape:cx="-72.14133"
+     inkscape:cy="333.1976"
      inkscape:window-x="1909"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer5"
+     inkscape:current-layer="layer4"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -12696,11 +12696,12 @@
        preserveAspectRatio="none"
        height="770.69525"
        width="1156.0428"
-       inkscape:label="#image3380" /></g><g
+       inkscape:label="#image3380"
+       onclick="alert(&quot;hello&quot;)" /></g><g
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Copper Wire"
-     style="display:inline"
+     style="display:none"
      transform="translate(1.14109,-20.088861)"><g
        id="g3428"
        transform="matrix(1.5240611,0,0,1.5240611,201.79048,49.852811)"><g
@@ -12744,7 +12745,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="layer0"
-     style="display:inline"
+     style="display:none"
      transform="translate(43.428588,-34.601547)">
 
 
@@ -12767,11 +12768,12 @@
 
 
 
+
 </g><g
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="layer1"
-     style="display:inline"
+     style="display:none"
      transform="translate(43.42859,-34.601507)">
 
 
@@ -12887,6 +12889,7 @@
      id="tspan11928"
      x="-826.54779"
      y="374.67105" /></text>
+
 
 
 
@@ -13051,6 +13054,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56.89827728px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.52406096"
@@ -13079,11 +13083,12 @@
 
 
 
+
 </g><g
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Layer2"
-     style="display:inline"
+     style="display:none"
      transform="translate(43.42859,-34.601507)"><flowRoot
    xml:space="preserve"
    id="flowRoot19528"
@@ -13147,6 +13152,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56.89827728px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.52406096"
@@ -13159,6 +13165,7 @@
      x="779.54877"
      y="259.64673"
      style="stroke-width:1.52406096">Nucleus</tspan></text>
+
 
 
 
@@ -13205,6 +13212,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.35276413px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.98999999;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.2148062"
@@ -13217,6 +13225,7 @@
      x="17.637508"
      y="758.05847"
      style="font-size:32.51330185px;fill:#ffffff;stroke-width:1.2148062">Neutrally charged neutrons.</tspan></text>
+
 
 
 
@@ -13292,7 +13301,7 @@
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="Layer3"
-     style="display:inline"
+     style="display:none"
      transform="translate(43.42859,-33.309647)"><path
    style="fill:none;stroke:#ffff00;stroke-width:3.04812193;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    d="M 338.90933,264.11909 521.75638,187.50721 702.56043,261.0546 783.25829,444.92316 700.51746,625.72721 522.77788,701.31761 338.90933,623.68424 267.40491,456.15957 Z"
@@ -13348,7 +13357,7 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="Layer4"
-     style="display:inline"
+     style="display:none"
      transform="translate(43.42859,-33.309647)"><g
    id="solarSystem_drag"
    inkscape:label="#g3482"
@@ -13432,6 +13441,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
@@ -13460,13 +13470,14 @@
 
 
 
+
 </g>
 
 </g><g
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="Shell Highlights"
-     style="display:inline"
+     style="display:none"
      transform="translate(1.14109,-20.088861)"><path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#00ff00;stroke-width:30.4024353;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.42325583;paint-order:fill markers stroke;shape-rendering:crispEdges"
        d="M 805.48263,466.38337 A 216.00933,214.89411 0 0 1 589.4733,681.27746 216.00933,214.89411 0 0 1 373.46394,466.38337 216.00933,214.89411 0 0 1 589.4733,251.48923 216.00933,214.89411 0 0 1 805.48263,466.38337 Z"
@@ -13505,6 +13516,7 @@
 
 
 
+
 </g><g
        style="display:inline;opacity:0.77868808;stroke:#00ff00;stroke-opacity:1;shape-rendering:crispEdges"
        id="missingElecron2-8-0"
@@ -13523,11 +13535,12 @@
 
 
 
+
 </g></g><g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Layer5"
-     style="display:inline;opacity:0.92000002"
+     style="display:none;opacity:0.92000002"
      transform="translate(43.42859,-34.601507)"><g
    transform="matrix(1.4111306,0,0,1.4111306,-790.84197,194.64376)"
    style="display:inline;opacity:0.92000002;shape-rendering:crispEdges;enable-background:new"
@@ -13700,6 +13713,7 @@
 
 
 
+
 </g></g><g
      style="display:inline;opacity:0.92000002;stroke:none;stroke-opacity:1"
      id="outerBand-9"
@@ -13724,6 +13738,7 @@
      x="623.45087"
      y="60.626125"
      style="stroke:none;stroke-width:0.62900025;stroke-opacity:1" /></text>
+
 
 
 
@@ -13913,6 +13928,7 @@
 
 
 
+
 </g></g><g
      style="display:inline;opacity:0.92000002;stroke:none;stroke-opacity:1"
      id="freeElectron"
@@ -13953,6 +13969,7 @@
 
 
 
+
 </g></g></g><text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56.89827728px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.52406096;enable-background:new"
@@ -13965,6 +13982,7 @@
      x="707.3429"
      y="226.86861"
      style="font-size:40.64162445px;fill:#ffffff;stroke-width:1.52406096">More Positive</tspan></text>
+
 
 
 
@@ -13996,11 +14014,12 @@
 
 
 
+
 </g><g
      inkscape:groupmode="layer"
      id="layer12"
      inkscape:label="Outer Band Highlight"
-     style="display:inline"
+     style="display:none"
      transform="translate(1.14109,-20.088861)"><path
        style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#00ff00;stroke-width:3.9633019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;shape-rendering:crispEdges;enable-background:new"
        d="M 805.48264,467.53076 A 216.00934,216.00934 0 0 1 589.4733,683.5401 216.00934,216.00934 0 0 1 373.46395,467.53076 216.00934,216.00934 0 0 1 589.4733,251.5214 216.00934,216.00934 0 0 1 805.48264,467.53076 Z"
@@ -14010,7 +14029,7 @@
      inkscape:groupmode="layer"
      id="layer13"
      inkscape:label="Current Flow"
-     style="display:inline"
+     style="display:none"
      transform="translate(1.14109,-20.088861)"><g
        id="circuit_drag"
        transform="matrix(1.5240611,0,0,1.5240611,18.379132,-107.00626)"
@@ -14045,6 +14064,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.55372047px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.98999999;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4.06838226;stroke-dasharray:none;enable-background:new"
@@ -14056,6 +14076,7 @@
      x="609.19238"
      y="352.26181"
      style="fill:#ffffff;stroke:none;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4.06838226;stroke-dasharray:none">N</tspan></text>
+
 
 
 
@@ -14074,7 +14095,7 @@
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="Current Flow Overlay"
-     style="display:inline"
+     style="display:none"
      transform="translate(1.14109,-20.088861)"><g
        style="display:inline;stroke:#000000;shape-rendering:crispEdges;enable-background:new"
        id="current_drag"
@@ -14110,6 +14131,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.55372047px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:0.98999999;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4.06838226;stroke-dasharray:none;enable-background:new"
@@ -14121,6 +14143,7 @@
      x="609.19238"
      y="352.26181"
      style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4.06838226;stroke-dasharray:none">N</tspan></text>
+
 
 
 
@@ -14139,5 +14162,5 @@
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="Module Loading"
-     style="display:inline"
+     style="display:none"
      transform="translate(1.14109,-20.088861)" /></svg>

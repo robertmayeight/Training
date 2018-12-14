@@ -1,3 +1,7 @@
+// document.getElementById('test').innerHTML = 
+    // console.log(top.document.getElementById('test').contentWindow
+    // document.getElementById('someOtherDiv').innerHTML;
+
 slide1 = new XMLHttpRequest();
 slide1.open("GET","slide1Svg.svg",false);
 slide1.overrideMimeType("image/svg+xml");

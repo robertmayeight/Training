@@ -1,3 +1,9 @@
+window.onmessage = function(e){
+    if (e.data == 'hello') {
+        alert('It works!');
+    }
+};
+
 
 var htmlBody = document.getElementsByTagName("BODY")[0];
 var haierBlue = "#2b3b6c"
