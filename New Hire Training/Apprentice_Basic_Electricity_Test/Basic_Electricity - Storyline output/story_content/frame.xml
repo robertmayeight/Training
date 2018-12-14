@@ -1300,9 +1300,10 @@
             <slidelink slideid="_player.5aystJCn5xB.6k5lxmqn0kk" displaytext="Untitled Slide" expand="false" type="slide" />
           </links>
         </slidelink>
-        <slidelink slideid="_player.5h3nK5JQcFh" displaytext="Untitled Scene" expand="true" type="slide">
+        <slidelink slideid="_player.5h3nK5JQcFh" displaytext="Schematics" expand="true" type="slide">
           <links>
-            <slidelink slideid="_player.5h3nK5JQcFh.5tJZhkv1jk8" displaytext="Untitled Slide" expand="false" type="slide" />
+            <slidelink slideid="_player.5h3nK5JQcFh.5tJZhkv1jk8" displaytext="Understanding Mini Manuals" expand="false" type="slide" />
+            <slidelink slideid="_player.5h3nK5JQcFh.5x643IG6Qot" displaytext="Practice Schematic" expand="false" type="slide" />
           </links>
         </slidelink>
       </links>
