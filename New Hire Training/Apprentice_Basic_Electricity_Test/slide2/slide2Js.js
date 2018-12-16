@@ -1,9 +1,3 @@
-slide = new XMLHttpRequest();
-slide.open("GET","slide2Svg.svg",false);
-slide.overrideMimeType("image/svg+xml");
-slide.send("");
-var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
-
 var gArray = document.getElementsByTagName("g");
 var tArray = document.getElementsByTagName("text");
 var imageArray = document.getElementsByTagName("image");
@@ -37,7 +31,7 @@ for (i=0; i<objectArray.length; i++) {
 
 //Audio
 var slideAudio = document.getElementById('music');
-slideAudio.src="slide2Audio.ogg"
+slideAudio.src="slideAudio2.mp3"
 slideAudio.onloadeddata = function() {
   playAudio();
   TweenMax.to([slideAudio], 1, {opacity:1})
@@ -102,14 +96,14 @@ electronOrbitTl8.to(electron8_drag, 4, {bezier:{values:orbitPath8, type:"cubic"}
 var orbitsArray = [orbitPath1,orbitPath2,orbitPath3,orbitPath4,orbitPath5,orbitPath7];
 var orbit1Array = [orbitPath1,orbitPath2,orbitPath3,orbitPath4,orbitPath5,orbitPath7];
 
-TweenMax.to([electron1_drag,electron2_drag,electron3_drag,electron4_drag,electron5_drag,electron6_drag,electron7_drag,electron8_drag], 1, {autoAlpha:1})
+TweenMax.from([electron1_drag], 1, {autoAlpha:0})
 
 //Main Timeline//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var slideTl = new TimelineMax({paused:true});
 slideTl
-.to(moduleLoadingIcon,1,{autoAlpha:0})
-.to([lightning_drag], 1, {opacity:1})
+.to(moduleLoadingIcon,.001,{autoAlpha:0})
+.to([lightning_drag], .001, {opacity:1})
 .to(lightning_drag, 1, {autoAlpha:1})
 .to(lightning_drag, 1, {autoAlpha:0},"+=16.5")
 
