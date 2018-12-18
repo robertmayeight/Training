@@ -61,6 +61,10 @@ function playAudio(){
 
 
 //TimeLines////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// var testLine = MorphSVGPlugin.pathDataToBezier("#testLine", {align:testCircle});
+// TweenLite.set(testCircle, {xPercent:-50, yPercent:-50});
+// TweenMax.to(testCircle, 42, {bezier:{values:testLine, type:"cubic"}, ease:Linear.easeNone})
+
 var orbitPath1 = MorphSVGPlugin.pathDataToBezier("#orbitPath1", {align:electron1_drag});
 TweenLite.set(electron1_drag, {xPercent:-50, yPercent:-50});
 var orbitPath2 = MorphSVGPlugin.pathDataToBezier("#orbitPath2", {align:electron2_drag});
@@ -242,10 +246,10 @@ slideTl
 
 .to(conductionBand_drag, 1, {autoAlpha:0},"+=3")
 
-.to(copperAtom_drag, 2, {x:"+=175"})
+.to(copperAtom_drag, 2, {x:"+=155"})
 .to(copperAtom2_drag, 1, {autoAlpha:1})
 
-.to (freeElectron, 2, {x:-253, y:50},"+=3")
+.to (freeElectron, 2, {x:"+=-255", y:50},"+=3")
 .to(band4Electron1_drag, 1, {autoAlpha:1},"-=1")
 
 .from([morePositive_drag], 1, {autoAlpha:0},"+=5")
