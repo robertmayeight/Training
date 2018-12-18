@@ -103,6 +103,7 @@ TweenMax.from([electron1_drag,electron2_drag,electron3_drag,electron4_drag,elect
 
 var slideTl = new TimelineMax({paused:false});
 slideTl
+.addCallBack
 .to(moduleLoadingIcon,.001,{autoAlpha:0, oncomplete:slideAudio})
 .to(lightning_drag, 1, {autoAlpha:1})
 .to(lightning_drag, 1, {autoAlpha:0},"+=2.5")
