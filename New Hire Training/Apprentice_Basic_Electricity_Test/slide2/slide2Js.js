@@ -100,7 +100,7 @@ TweenMax.from([electron1_drag,electron2_drag,electron3_drag,electron4_drag,elect
 
 //Main Timeline//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var slideTl = new TimelineMax({paused:true});
+var slideTl = new TimelineMax({paused:false});
 slideTl
 .to(moduleLoadingIcon,.001,{autoAlpha:0})
 .to(lightning_drag, 1, {autoAlpha:1})
