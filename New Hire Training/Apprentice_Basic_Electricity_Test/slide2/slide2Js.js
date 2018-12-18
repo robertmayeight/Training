@@ -245,7 +245,7 @@ slideTl
 .to(copperAtom_drag, 2, {x:"+=175"})
 .to(copperAtom2_drag, 1, {autoAlpha:1})
 
-.to (freeElectron, 2, {x:-253, y:50},"+=3")
+.to (freeElectron, 2, {x:"+=-275", y:50},"+=3")
 .to(band4Electron1_drag, 1, {autoAlpha:1},"-=1")
 
 .from([morePositive_drag], 1, {autoAlpha:0},"+=5")
