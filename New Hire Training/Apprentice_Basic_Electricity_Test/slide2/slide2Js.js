@@ -107,8 +107,9 @@ TweenMax.from([electron1_drag,electron2_drag,electron3_drag,electron4_drag,elect
 //Main Timeline//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
     alert("phone")
-    
+    console.log("phone")
     }else{
+    	console.log("computer")
     	alert("computer")
 }
 

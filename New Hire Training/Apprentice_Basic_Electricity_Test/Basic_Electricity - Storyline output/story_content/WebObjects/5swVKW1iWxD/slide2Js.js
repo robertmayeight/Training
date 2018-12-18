@@ -5,6 +5,8 @@ var pathArray = document.getElementsByTagName("path");
 var rectArray = document.getElementsByTagName("rect");
 var objectArray=[];
 
+var slideTl = new TimelineMax({paused:true});
+
 for (i=0; i<gArray.length; i++) {
 	objectArray.push(gArray[i]);
 }
@@ -33,8 +35,7 @@ for (i=0; i<objectArray.length; i++) {
 var slideAudio = document.getElementById('music');
 slideAudio.src="slideAudio2.mp3"
 slideAudio.onloadeddata = function() {
-	slideTl.play()
-  playAudio();
+	slideTl.play();
 };
 
 slideAudio.onplay = function() {
@@ -54,7 +55,7 @@ slideAudio.ontimeupdate = function() {
 };
 
 function playAudio(){
-	console.log("fire")
+	slideAudio.play();
 	slideAudio.play();
 }
 //End Audio
@@ -104,10 +105,17 @@ var orbit1Array = [orbitPath1,orbitPath2,orbitPath3,orbitPath4,orbitPath5,orbitP
 TweenMax.from([electron1_drag,electron2_drag,electron3_drag,electron4_drag,electron5_drag,electron6_drag,electron7_drag,electron8_drag], 1, {autoAlpha:0})
 
 //Main Timeline//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    alert("phone")
+    console.log("phone")
+    }else{
+    	console.log("computer")
+    	alert("computer")
+}
 
-var slideTl = new TimelineMax({paused:true});
+
 slideTl
-.to(moduleLoadingIcon,.001,{autoAlpha:0})
+.to(moduleLoadingIcon,.001,{autoAlpha:0, onComplete:playAudio})
 .to(lightning_drag, 1, {autoAlpha:1})
 .to(lightning_drag, 1, {autoAlpha:0},"+=2.5")
 .to([fan_drag, lightBulb_drag], 1, {autoAlpha:1})
