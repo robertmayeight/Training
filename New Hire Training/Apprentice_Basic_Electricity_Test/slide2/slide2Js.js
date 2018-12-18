@@ -58,6 +58,13 @@ function playAudio(){
 }
 //End Audio
 
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    alert("phone")
+    
+    }else{
+    	alert("computer")
+}
+
 
 //TimeLines////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // var testLine = MorphSVGPlugin.pathDataToBezier("#testLine", {align:testCircle});
@@ -106,7 +113,6 @@ TweenMax.from([electron1_drag,electron2_drag,electron3_drag,electron4_drag,elect
 
 var slideTl = new TimelineMax({paused:true});
 slideTl
-.to(moduleLoadingIcon,.001,{autoAlpha:0, onComplete:playAudio})
 .to(lightning_drag, 1, {autoAlpha:1})
 .to(lightning_drag, 1, {autoAlpha:0},"+=2.5")
 .to([fan_drag, lightBulb_drag], 1, {autoAlpha:1})
