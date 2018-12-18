@@ -106,16 +106,14 @@ TweenMax.from([electron1_drag,electron2_drag,electron3_drag,electron4_drag,elect
 
 //Main Timeline//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-    alert("phone")
-    console.log("phone")
+    TweenMax.to(pressPlayIcon, .001, {autoAlpha:1})
     }else{
-    	console.log("computer")
-    	alert("computer")
+    	
 }
 
 
 slideTl
-.to(moduleLoadingIcon,.001,{autoAlpha:0, onComplete:playAudio})
+.to([moduleLoadingIcon,pressPlayIcon_drag],.001,{autoAlpha:0, onComplete:playAudio})
 .to(lightning_drag, 1, {autoAlpha:1})
 .to(lightning_drag, 1, {autoAlpha:0},"+=2.5")
 .to([fan_drag, lightBulb_drag], 1, {autoAlpha:1})
