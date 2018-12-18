@@ -33,8 +33,7 @@ for (i=0; i<objectArray.length; i++) {
 var slideAudio = document.getElementById('music');
 slideAudio.src="slideAudio2.mp3"
 slideAudio.onloadeddata = function() {
-	slideTl.play()
-  playAudio();
+	slideTl.play();
 };
 
 slideAudio.onplay = function() {
@@ -107,7 +106,7 @@ TweenMax.from([electron1_drag,electron2_drag,electron3_drag,electron4_drag,elect
 
 var slideTl = new TimelineMax({paused:true});
 slideTl
-.to(moduleLoadingIcon,.001,{autoAlpha:0})
+.to(moduleLoadingIcon,.001,{autoAlpha:0, onComplete:playAudio})
 .to(lightning_drag, 1, {autoAlpha:1})
 .to(lightning_drag, 1, {autoAlpha:0},"+=2.5")
 .to([fan_drag, lightBulb_drag], 1, {autoAlpha:1})
