@@ -12740,7 +12740,7 @@
      inkscape:window-x="1909"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer14"
+     inkscape:current-layer="layer3"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -14443,7 +14443,7 @@
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="Module Loading"
-     style="display:none"
+     style="display:inline"
      transform="translate(1.5481261,3.4883829)"><g
        id="moduleLoadingIcon"
        inkscape:label="#g3657"
