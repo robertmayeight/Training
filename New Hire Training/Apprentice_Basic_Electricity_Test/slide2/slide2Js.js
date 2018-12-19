@@ -111,7 +111,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 
 
 slideTl
-.to([pressPlayIcon_drag],.001,{x:"+=0", onComplete:playAudio})
+.to([pressPlayIcon_drag],.001,{autoAlpha:0, onComplete:playAudio})
 .to(lightning_drag, 1, {autoAlpha:1, onStart:playAudio})
 .to(lightning_drag, 1, {autoAlpha:0},"+=2.5")
 .to([fan_drag, lightBulb_drag], 1, {autoAlpha:1})
