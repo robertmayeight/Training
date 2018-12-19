@@ -36,7 +36,7 @@ var slideAudio = document.getElementById('music');
 slideAudio.src="slideAudio2.mp3"
 slideAudio.onloadeddata = function() {
 	slideTl.play();
-	playAudio();
+	// playAudio();
 };
 
 slideAudio.onplay = function() {
