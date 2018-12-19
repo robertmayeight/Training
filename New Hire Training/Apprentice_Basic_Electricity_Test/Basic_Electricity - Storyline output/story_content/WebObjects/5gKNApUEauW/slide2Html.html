@@ -1,3 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apprentice - Basic Electricity</title>
+  <meta charset="UTF-8">
+  <!DOCTYPE html>
+  <style type="text/css">
+  body {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    background: #262626;
+    background-image: "htmlBackground.png";
+  }
+  .mainWindow {
+    position: fixed;
+    left: 0%;
+    top: 0%
+    margin: auto;
+    padding:0;
+    width: 100%;
+    height:100vh;
+    overflow: hidden;
+  }
+    .playerControls {
+    position: fixed;
+    left: 0px;
+    padding: 1px;
+    top:95%;
+    margin: auto;
+    width: 100%;
+  }
+  .slideHeading{
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    top: 20%
+    font-size: xx-large;
+  }
+  </style>
+
+</head>
+<body>
+  <div id="main" class="mainWindow" style="align-content: center;"></div>
+  <audio id='music' controls='controls' class="playerControls">
+    <source src="slide2Audio.mp3" type="audio/mp3">
+      <source src="slide2Audio.wav" type="audio/wav">
+    <source src="slide2Audio.ogg" type="audio/ogg">
+    
+
+  </audio>
+
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -14474,7 +14526,8 @@
        style="display:inline;shape-rendering:crispEdges;enable-background:new"
        id="pressPlayIcon_drag"
        inkscape:label="#g3657"
-       transform="matrix(0.93937192,0,0,0.93937192,-1.3744421e-5,0.84268175)"><rect
+       transform="matrix(0.93937192,0,0,0.93937192,-1.3744421e-5,0.84268175)"
+       onclick="slide1Tl.play();"><rect
          inkscape:label="#rect5127"
          y="-0.89706999"
          x="-4.7412109e-007"
@@ -14492,3 +14545,12 @@
            x="133.26689"
            sodipodi:role="line">Press Play To Start</tspan></text>
 </g></g></svg>
+
+</body>
+<script src="JavaScripts/d3.min.js"></script>
+<script src="JavaScripts/TweenMax.min.js"></script>
+<script src="JavaScripts/draggable.js"></script>
+<script src="JavaScripts/DrawSVGPlugin.min.js"></script>
+<script src="JavaScripts/MorphSVGPlugin.js"></script>
+<script src="slide2Js.js"></script>
+</html>
