@@ -36,6 +36,7 @@ var slideAudio = document.getElementById('music');
 slideAudio.src="slideAudio2.mp3"
 slideAudio.onloadeddata = function() {
 	slideTl.play();
+	playAudio();
 };
 
 slideAudio.onplay = function() {
@@ -106,12 +107,15 @@ TweenMax.from([electron1_drag,electron2_drag,electron3_drag,electron4_drag,elect
 
 //Main Timeline//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-    TweenMax.to(pressPlayIcon_drag, .001, {autoAlpha:1})
-}
+    TweenMax.to(pressPlayIcon_drag, .001, {autoAlpha:1});
+   
+} else{
+    	TweenMax.to(pressPlayIcon_drag, .001, {autoAlpha:1})
+    }
 
 
 slideTl
-.to([pressPlayIcon_drag],.001,{autoAlpha:0, onComplete:playAudio})
+.to([pressPlayIcon_drag],.001,{autoAlpha:0})
 .to(lightning_drag, 1, {autoAlpha:1, onStart:playAudio})
 .to(lightning_drag, 1, {autoAlpha:0},"+=2.5")
 .to([fan_drag, lightBulb_drag], 1, {autoAlpha:1})
