@@ -111,7 +111,6 @@ TweenMax.from([electron1_drag,electron2_drag,electron3_drag,electron4_drag,elect
 // } 
 
 slideTl
-.to([pressPlayIcon_drag],1,{autoAlpha:0})
 .to(lightning_drag, 1, {autoAlpha:1})
 .to(lightning_drag, 1, {autoAlpha:0},"+=2.5")
 .to([fan_drag, lightBulb_drag], 1, {autoAlpha:1})
