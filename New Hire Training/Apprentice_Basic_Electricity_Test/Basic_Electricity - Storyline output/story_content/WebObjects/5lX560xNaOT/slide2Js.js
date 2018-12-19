@@ -111,8 +111,8 @@ TweenMax.from([electron1_drag,electron2_drag,electron3_drag,electron4_drag,elect
 // } 
 
 slideTl
-.to(lightning_drag, 1, {autoAlpha:1})
-.to(lightning_drag, 1, {autoAlpha:0},"+=2.5")
+.to(topCover, 1, {autoAlpha:0})
+.to(lightningPic, 1, {autoAlpha:0},"+=2.5")
 .to([fan_drag, lightBulb_drag], 1, {autoAlpha:1})
 .to(fanBlade, 1, {rotation:360, transformOrigin: '50% 50%', repeat:7, ease: Power0.easeNone},"-=.5")
 .to([lightRays_drag], 1, {autoAlpha:1},"-=6")
