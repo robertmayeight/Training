@@ -28792,12 +28792,12 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="1.4142136"
-     inkscape:cx="458.5377"
-     inkscape:cy="242.61725"
+     inkscape:cx="504.85319"
+     inkscape:cy="239.08172"
      inkscape:window-x="-11"
      inkscape:window-y="69"
      inkscape:window-maximized="1"
-     inkscape:current-layer="copperAtom2_drag"
+     inkscape:current-layer="layer14"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -29010,6 +29010,7 @@
 
 
 
+
 </g></g><g
          id="g6135"><path
            style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke;shape-rendering:crispEdges;enable-background:new"
@@ -29180,6 +29181,7 @@
 
 
 
+
 </g></g><g
            inkscape:label="#g6492"
            id="freeElectron1"
@@ -29223,6 +29225,7 @@
 
 
 
+
 </g></g><path
            inkscape:connector-curvature="0"
            id="path6494"
@@ -29243,6 +29246,12 @@
        id="copperAtom2_drag"
        inkscape:label="#g3590"
        transform="translate(102.22446,16.417782)"><path
+         style="display:inline;opacity:0.92000002;fill:none;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;shape-rendering:crispEdges;enable-background:new"
+         d="M 402.29178,229.21314 668.13549,209.21377"
+         id="electronPath3"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path6266"
+         sodipodi:nodetypes="cc" /><path
          d="m 74.123481,210.7469 c 0,12.00864 -9.73535,21.74412 -21.74413,21.74412 -12.00917,0 -21.74417,-9.73492 -21.74417,-21.74412 0,-12.0087 9.73534,-21.74418 21.74417,-21.74418 12.00912,0 21.74413,9.73493 21.74413,21.74418 z"
          id="copperAtomNucleus-7-6"
          style="display:inline;opacity:0.91079999;fill:url(#b-3-96-5-7-4-2);fill-opacity:1;stroke-width:1.84714592;shape-rendering:crispEdges"
@@ -29547,6 +29556,7 @@
      style="stroke-width:0.62900025" /></text>
 
 
+
 </g><text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:40.35389328px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00884736"
@@ -29559,6 +29569,7 @@
      x="239.86443"
      y="-24.194717"
      style="font-size:26.90259361px;stroke-width:1.00884736">Positive Atom</tspan></text>
+
 
 
 <text
@@ -29575,6 +29586,7 @@
      style="font-size:26.90259361px;stroke-width:1.00884736">Negative Atom</tspan></text>
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:40.35389328px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;opacity:0.92000002;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00884736;shape-rendering:crispEdges;enable-background:new"
@@ -29588,6 +29600,7 @@
      y="309.61761"
      style="font-size:13.45129681px;stroke-width:1.00884736">Excess Electron</tspan></text>
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:40.35389328px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;opacity:0.92000002;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00884736;shape-rendering:crispEdges;enable-background:new"
@@ -29600,6 +29613,7 @@
      x="430.38174"
      y="244.06924"
      style="font-size:13.45129681px;stroke-width:1.00884736">Hole</tspan></text>
+
 
 <path
    d="m 775.38034,454.08348 c 0,5.25805 -4.60337,9.52079 -10.28174,9.52079 -5.67854,0 -10.28175,-4.26249 -10.28175,-9.52079 0,-5.25807 4.60339,-9.52079 10.28175,-9.52079 5.67852,0 10.28174,4.26248 10.28174,9.52079 z"
@@ -29632,6 +29646,7 @@
      style="stroke:none;stroke-width:0.62900025;stroke-opacity:1" /></text>
 
 
+
 </g><path
            inkscape:label="#path16-4-7-2-1-13-5"
            inkscape:connector-curvature="0"
@@ -29642,13 +29657,7 @@
          id="freeElectron1-2"
          style="display:inline;opacity:0.98999999;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.83311158;shape-rendering:crispEdges;enable-background:new"
          inkscape:connector-curvature="0"
-         inkscape:label="#path16-4-7-2-1-6-2-4" /><path
-         style="display:inline;opacity:0.92000002;fill:none;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;shape-rendering:crispEdges;enable-background:new"
-         d="M 402.29178,229.21314 668.13549,209.21377"
-         id="electronPath3"
-         inkscape:connector-curvature="0"
-         inkscape:label="#path6266"
-         sodipodi:nodetypes="cc" /><g
+         inkscape:label="#path16-4-7-2-1-6-2-4" /><g
          style="shape-rendering:crispEdges"
          id="band4-9-9"
          inkscape:label="#g3808"
@@ -29671,6 +29680,7 @@
      x="623.45087"
      y="60.626125"
      style="stroke-width:0.62900025" /></text>
+
 
 
 </g></g></g><path
@@ -29743,6 +29753,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:0.96862745;fill-rule:evenodd;stroke:none;stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
@@ -29769,6 +29780,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:0.96862745;fill-rule:evenodd;stroke:none;stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
@@ -29786,6 +29798,7 @@
      y="252.06161"
      id="tspan21360-8"
      style="font-size:21.33333397px">Holes</tspan></text>
+
 
 
 
@@ -29845,6 +29858,7 @@
 
 
 
+
 </g><g
      inkscape:groupmode="layer"
      id="layer13"
@@ -29862,6 +29876,7 @@
      y="98.92514"
      id="tspan21360-9-0"
      style="font-size:26.66666603px">Potential Difference - 12 Volts</tspan></text>
+
 
 
 </g><g
@@ -30019,6 +30034,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.33333397px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#000002;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke"
@@ -30041,6 +30057,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.33333397px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#000002;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26;stroke-opacity:1;paint-order:fill markers stroke"
@@ -30059,6 +30076,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -30070,4 +30088,5 @@
      x="84.852806"
      y="115.6299"
      style="font-size:21.33333397px"> are not attracted to other holes.</tspan></text>
+
 </g></svg>

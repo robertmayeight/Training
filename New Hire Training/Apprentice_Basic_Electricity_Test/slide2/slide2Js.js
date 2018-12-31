@@ -31,10 +31,6 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
 // Blink engine detection
 var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-
-
-console.log(isFirefox)
-
 var gArray = document.getElementsByTagName("g");
 var tArray = document.getElementsByTagName("text");
 var imageArray = document.getElementsByTagName("image");

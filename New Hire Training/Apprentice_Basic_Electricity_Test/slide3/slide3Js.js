@@ -9,6 +9,7 @@ function redraw(){
 }
 redraw();
 window.addEventListener("resize", redraw);
+
 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 
 // Firefox 1.0+
@@ -66,8 +67,8 @@ for (i=0; i<objectArray.length; i++) {
 var slideAudio = document.getElementById('music');
 slideAudio.src="slide3Audio.mp3"
 slideAudio.onloadeddata = function() {
-	slideTl.play();
-	playAudio();
+	// slideTl.play();
+	// playAudio();
 };
 
 slideAudio.onplay = function() {
@@ -92,13 +93,25 @@ function playAudio(){
 
 if(isFirefox == true){
 	TweenLite.to(slideAudio, 1, {bottom:0})
+	window.removeEventListener("resize", redraw);
 }
 if(isEdge == true){
 	TweenLite.to(slideAudio, 1, {bottom:-490})
+	window.removeEventListener("resize", redraw);
 }
 if(isChrome == true){
 	TweenLite.to(slideAudio, 1, {bottom:-750})
+	window.removeEventListener("resize", redraw);
 }
+if(isOpera == true){
+	TweenLite.to(slideAudio, 1, {bottom:-750})
+	window.removeEventListener("resize", redraw);
+}
+if(isSafari == true){
+	TweenLite.to(slideAudio, 1, {bottom:-750})
+	window.removeEventListener("resize", redraw);
+}
+
 function pausePlayer(){
 	slideAudio.pause();
 }

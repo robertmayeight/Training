@@ -1,14 +1,14 @@
-// var svgWindow = document.getElementById("main");
-// var svg = d3.select(svgContent);
-// function redraw(){
-// 	var width = svgWindow.clientWidth;
-// 	var height = svgWindow.clientHeight;
-// 	svg
-// 	.attr("width", width)
-// 	 .attr("height", height);
-// }
-// redraw();
-// window.addEventListener("resize", redraw);
+var svgWindow = document.getElementById("main");
+var svg = d3.select(svgContent);
+function redraw(){
+	var width = svgWindow.clientWidth;
+	var height = svgWindow.clientHeight;
+	svg
+	.attr("width", width)
+	 .attr("height", height);
+}
+redraw();
+window.addEventListener("resize", redraw);
 
 // Opera 8.0+
 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
@@ -96,13 +96,24 @@ function playAudio(){
 }
 
 if(isFirefox == true){
-	// TweenLite.to(slideAudio, 1, {bottom:0})
+	TweenLite.to(slideAudio, 1, {bottom:0})
+	window.removeEventListener("resize", redraw);
 }
 if(isEdge == true){
-	// TweenLite.to(slideAudio, 1, {bottom:-490})
+	TweenLite.to(slideAudio, 1, {bottom:-490})
+	window.removeEventListener("resize", redraw);
 }
 if(isChrome == true){
-	// TweenLite.to(slideAudio, 1, {bottom:-750})
+	TweenLite.to(slideAudio, 1, {bottom:-750})
+	window.removeEventListener("resize", redraw);
+}
+if(isOpera == true){
+	TweenLite.to(slideAudio, 1, {bottom:-750})
+	window.removeEventListener("resize", redraw);
+}
+if(isSafari == true){
+	TweenLite.to(slideAudio, 1, {bottom:-750})
+	window.removeEventListener("resize", redraw);
 }
 //End Audio
 
@@ -158,6 +169,10 @@ TweenMax.to(orbitPath6,0,{x:"-=8", y:"-=10"})
 TweenMax.to(orbitPath7,0,{x:"-=8", y:"-=10"})
 TweenMax.to(orbitPath8,0,{x:"-=8", y:"-=10"})
 //Main Timeline//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+//     TweenMax.to(pressPlayIcon_drag, .001, {autoAlpha:1});
+   
+// } 
 
 slideTl
 .to(lightningPic, 1, {autoAlpha:0},"+=2.5")
