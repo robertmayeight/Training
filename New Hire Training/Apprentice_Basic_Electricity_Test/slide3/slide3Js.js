@@ -108,8 +108,8 @@ function pausePlayer(){
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-TweenMax.to([copperAtom_drag],1, {autoAlpha:1})
-TweenMax.to([freeElectronPath2,electronPath3], 0.5, {opacity:0});
+
+TweenMax.to([rect6188], 0, {opacity:0});
 TweenMax.to([electronPath2], 0.5, {strokeDasharray:"2,12", ease:Linear.easeNone});
 TweenMax.to([electronPath2], 0.5, {strokeDashoffset:"-=14", repeat:-1, ease:Linear.easeNone,yoyo:false});
 
@@ -120,11 +120,9 @@ var motionPath3 = MorphSVGPlugin.pathDataToBezier("#motionPath3", {align:freeEle
 var motionPath4 = MorphSVGPlugin.pathDataToBezier("#electronPath3", {align:freeElectronAtom2});
 
 slideTl
-.set(freeElectron1, {xPercent:-50, yPercent:-50, delay:3})
-.to(freeElectron1, 2, {bezier:{values:motionPath1, type:"cubic"}, ease:Linear.easeNone})
-.set(freeElectron2, {xPercent:-50, yPercent:-50})
+.to(freeElectron1, 2, {bezier:{values:motionPath1, type:"cubic"}, ease:Linear.easeNone, delay:3})
 .to(freeElectron2, 2, {bezier:{values:motionPath2, type:"cubic"}, ease:Linear.easeNone})
-.to([copperAtom_drag],1, {autoAlpha:0,delay:2})
+.to([copperAtom],1, {autoAlpha:0,delay:2})
 .to([magnet1_drag,magnet2_drag],1, {autoAlpha:1,delay:0})
 
 .to([magnet1_drag],1, {x:"+=42",delay:3.5})
@@ -138,7 +136,7 @@ slideTl
 
 .to([copperAtom2_drag,positiveAtom_drag, negativeAtom_drag],1, {autoAlpha:1,delay:0})
 
-.set(freeElectronAtom2, {xPercent:-50, yPercent:-50})
+
 .to([freeElectronAtom2], 10, {bezier:{values:motionPath0, type:"cubic"}, ease: CustomEase.create("custom", "M0,0 C0.36,0.12 0.167,0.041 0.446,0.436 0.744,0.858 0.748,0.406 1,1")})
 .to([positiveAtom_drag,negativeAtom_drag,"#negativeAtom_drag-4-9","#negativeAtom_drag-4"],1, {autoAlpha:0, delay:1})
 
@@ -184,7 +182,7 @@ slideTl
 
 .to([wire1,wire2,battery1_drag,electronPath2,s2Text2_drag,s2Text1_drag], 1, {autoAlpha:0, delay:28})
 
-.from([endText1],1, {autoAlpha:0, delay:4})
+.from([endText1,text6241],1, {autoAlpha:0, delay:4})
 
 .from([endText2],1, {autoAlpha:0, delay:5.5})
 

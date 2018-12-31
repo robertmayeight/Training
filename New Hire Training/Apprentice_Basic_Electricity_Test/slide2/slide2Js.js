@@ -1,3 +1,15 @@
+var svgWindow = document.getElementById("main");
+var svg = d3.select(svgContent);
+function redraw(){
+	var width = svgWindow.clientWidth;
+	var height = svgWindow.clientHeight;
+	svg
+	.attr("width", width)
+	 .attr("height", height);
+}
+redraw();
+window.addEventListener("resize", redraw);
+
 // Opera 8.0+
 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 
@@ -60,8 +72,7 @@ for (i=0; i<objectArray.length; i++) {
 var slideAudio = document.getElementById('music');
 slideAudio.src="slideAudio2.mp3"
 slideAudio.onloadeddata = function() {
-	slideTl.play();
-	playAudio();
+	
 };
 
 slideAudio.onplay = function() {
@@ -102,21 +113,21 @@ if(isChrome == true){
 // TweenMax.to(testCircle, 42, {bezier:{values:testLine, type:"cubic"}, ease:Linear.easeNone})
 
 var orbitPath1 = MorphSVGPlugin.pathDataToBezier("#orbitPath1", {align:electron1_drag});
-TweenLite.set(electron1_drag, {xPercent:-50, yPercent:-50});
+// TweenLite.set(electron1_drag, {xPercent:-50, yPercent:-50});
 var orbitPath2 = MorphSVGPlugin.pathDataToBezier("#orbitPath2", {align:electron2_drag});
-TweenLite.set(electron2_drag, {xPercent:-50, yPercent:-50});
+// TweenLite.set(electron2_drag, {xPercent:-50, yPercent:-50});
 var orbitPath3 = MorphSVGPlugin.pathDataToBezier("#orbitPath3", {align:electron3_drag});
-TweenLite.set(electron3_drag, {xPercent:-50, yPercent:-50});
+// TweenLite.set(electron3_drag, {xPercent:-50, yPercent:-50});
 var orbitPath4 = MorphSVGPlugin.pathDataToBezier("#orbitPath4", {align:electron4_drag});
-TweenLite.set(electron4_drag, {xPercent:-50, yPercent:-50});
+// TweenLite.set(electron4_drag, {xPercent:-50, yPercent:-50});
 var orbitPath5 = MorphSVGPlugin.pathDataToBezier("#orbitPath5", {align:electron5_drag});
-TweenLite.set(electron5_drag, {xPercent:-50, yPercent:-50});
+// TweenLite.set(electron5_drag, {xPercent:-50, yPercent:-50});
 var orbitPath6 = MorphSVGPlugin.pathDataToBezier("#orbitPath6", {align:electron6_drag});
-TweenLite.set(electron6_drag, {xPercent:-50, yPercent:-50});
+// TweenLite.set(electron6_drag, {xPercent:-50, yPercent:-50});
 var orbitPath7 = MorphSVGPlugin.pathDataToBezier("#orbitPath7", {align:electron7_drag});
-TweenLite.set(electron7_drag, {xPercent:-50, yPercent:-50});
+// TweenLite.set(electron7_drag, {xPercent:-50, yPercent:-50});
 var orbitPath8 = MorphSVGPlugin.pathDataToBezier("#orbitPath8", {align:electron8_drag});
-TweenLite.set(electron8_drag, {xPercent:-50, yPercent:-50});
+// TweenLite.set(electron8_drag, {xPercent:-50, yPercent:-50});
 
 var electronOrbitTl = new TimelineMax({paused:false, repeat:-1});
 electronOrbitTl.to(electron1_drag, 4.2, {bezier:{values:orbitPath1, type:"cubic"}, ease:Linear.easeNone})
@@ -138,15 +149,17 @@ var orbitsArray = [orbitPath1,orbitPath2,orbitPath3,orbitPath4,orbitPath5,orbitP
 var orbit1Array = [orbitPath1,orbitPath2,orbitPath3,orbitPath4,orbitPath5,orbitPath7];
 
 TweenMax.from([electron1_drag,electron2_drag,electron3_drag,electron4_drag,electron5_drag,electron6_drag,electron7_drag,electron8_drag], 1, {autoAlpha:0})
-
+TweenMax.to(orbitPath1,0,{x:"-=8", y:"-=10"})
+TweenMax.to(orbitPath2,0,{x:"-=8", y:"-=10"})
+TweenMax.to(orbitPath3,0,{x:"-=8", y:"-=10"})
+TweenMax.to(orbitPath4,0,{x:"-=8", y:"-=10"})
+TweenMax.to(orbitPath5,0,{x:"-=8", y:"-=10"})
+TweenMax.to(orbitPath6,0,{x:"-=8", y:"-=10"})
+TweenMax.to(orbitPath7,0,{x:"-=8", y:"-=10"})
+TweenMax.to(orbitPath8,0,{x:"-=8", y:"-=10"})
 //Main Timeline//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-//     TweenMax.to(pressPlayIcon_drag, .001, {autoAlpha:1});
-   
-// } 
 
 slideTl
-.to(topCover, 1, {autoAlpha:0})
 .to(lightningPic, 1, {autoAlpha:0},"+=2.5")
 .to([fan_drag, lightBulb_drag], 1, {autoAlpha:1})
 .to(fanBlade, 1, {rotation:360, transformOrigin: '50% 50%', repeat:7, ease: Power0.easeNone},"-=.5")
