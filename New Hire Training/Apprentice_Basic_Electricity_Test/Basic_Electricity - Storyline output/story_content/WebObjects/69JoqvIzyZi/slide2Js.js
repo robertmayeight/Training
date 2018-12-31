@@ -1,14 +1,14 @@
-var svgWindow = document.getElementById("main");
-var svg = d3.select(svgContent);
-function redraw(){
-	var width = svgWindow.clientWidth;
-	var height = svgWindow.clientHeight;
-	svg
-	.attr("width", width)
-	 .attr("height", height);
-}
-redraw();
-window.addEventListener("resize", redraw);
+// var svgWindow = document.getElementById("main");
+// var svg = d3.select(svgContent);
+// function redraw(){
+// 	var width = svgWindow.clientWidth;
+// 	var height = svgWindow.clientHeight;
+// 	svg
+// 	.attr("width", width)
+// 	 .attr("height", height);
+// }
+// redraw();
+// window.addEventListener("resize", redraw);
 
 // Opera 8.0+
 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
