@@ -99,7 +99,7 @@ if(isFirefox == true){
 	// TweenLite.to(slideAudio, 1, {bottom:0})
 }
 if(isEdge == true){
-	TweenLite.to(slideAudio, 1, {bottom:-490})
+	// TweenLite.to(slideAudio, 1, {bottom:-490})
 }
 if(isChrome == true){
 	// TweenLite.to(slideAudio, 1, {bottom:-750})
