@@ -1,3 +1,24 @@
+slide = new XMLHttpRequest();
+slide.open("GET","slide5Svg.svg",false);
+slide.overrideMimeType("image/svg+xml");
+slide.send("");
+var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
+
+
+
+
+var svgWindow = document.getElementById("main");
+var svg = d3.select(svgContent);
+function redraw(){
+	var width = svgWindow.clientWidth;
+	var height = svgWindow.clientHeight;
+	svg
+	.attr("width", width)
+	 .attr("height", height);
+}
+redraw();
+window.addEventListener("resize", redraw);
+
 // Opera 8.0+
 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 
@@ -19,9 +40,6 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
 // Blink engine detection
 var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-
-
-console.log(isFirefox)
 
 var gArray = document.getElementsByTagName("g");
 var tArray = document.getElementsByTagName("text");
@@ -60,8 +78,7 @@ for (i=0; i<objectArray.length; i++) {
 var slideAudio = document.getElementById('music');
 slideAudio.src="slide5Audio.mp3"
 slideAudio.onloadeddata = function() {
-	slideTl.play();
-	playAudio();
+	
 };
 
 slideAudio.onplay = function() {
@@ -86,57 +103,267 @@ function playAudio(){
 
 if(isFirefox == true){
 	TweenLite.to(slideAudio, 1, {bottom:0})
+	window.removeEventListener("resize", redraw);
 }
 if(isEdge == true){
 	TweenLite.to(slideAudio, 1, {bottom:-490})
+	window.removeEventListener("resize", redraw);
 }
 if(isChrome == true){
 	TweenLite.to(slideAudio, 1, {bottom:-750})
+	window.removeEventListener("resize", redraw);
 }
+if(isOpera == true){
+	TweenLite.to(slideAudio, 1, {bottom:-750})
+	window.removeEventListener("resize", redraw);
+}
+if(isSafari == true){
+	TweenLite.to(slideAudio, 1, {bottom:-750})
+	window.removeEventListener("resize", redraw);
+}
+
 function pausePlayer(){
 	slideAudio.pause();
 }
 //End Audio
 
-// yesButton.setAttribute('onclick','slideAudio.play();');
-// yesButton.setAttribute('onmouseover','this.style.cursor = "pointer";');
-// noButton.setAttribute('onclick','yesClicked();');
-// noButton.setAttribute('onmouseover','this.style.cursor = "pointer";');
+var noPaths = document.getElementById("diagram1").getElementsByTagName("path");
+var noPathsLength = noPaths.length;
+for(i=0; i<noPathsLength; i++){
+	var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+	path.setAttribute('stroke','blue');
+	path.setAttribute('fill','none');
+	path.setAttribute('opacity',0);
+	path.setAttribute('id',noPaths[i].id + 'copy');
+	path.setAttribute('onclick','console.log(this.id);');
+	path.setAttribute('onmouseover','this.style.cursor = "default"; overWire(this);');
+	path.setAttribute('onmouseout','outWire(this);');
+	path.style['stroke-width']=1;
+	path.style['stroke-linecap']="round";
+	noPaths[i].style['stroke-linecap']="round";
+	path.setAttribute("d", noPaths[i].getAttribute("d"));
+	diagram1.appendChild(path);
+	path.style["stroke-width"]= 3;
+	path.setAttribute('touchmove','wireClicked(this);');	
+}
 
+// Start Meter Numbers
+var onesArray=[oneA,oneB,oneC,oneD,oneE,oneF,oneG];
+var tensArray=[tenA,tenB,tenC,tenD,tenE,tenF,tenG];
+var hunsArray=[hunA,hunB,hunC,hunD,hunE,hunF,hunG];
+var thousArray=[thouA,thouB,thouC,thouD,thouE,thouF,thouG];
 
-// function yesClicked(){
-// 	console.log("fired")
-// 	slideAudio.play();
-// }
+var onesZeroArray=[oneA,oneB,oneC,oneD,oneE,oneF];
+var onesOneArray=[oneB,oneC];
+var onesTwoArray=[oneA,oneB,oneD,oneE,oneG];
+var onesThreeArray=[oneA,oneB,oneC,oneD,oneG];
+var onesFourArray=[oneB,oneC,oneF,oneG];
+var onesFiveArray=[oneA,oneC,oneD,oneF,oneG];
+var onesSixArray=[oneA,oneC,oneD,oneE,oneF,oneG];
+var onesSevenArray=[oneA,oneB,oneC];
+var onesEightArray=[oneA,oneB,oneC,oneD,oneE,oneF,oneG];
+var onesNineArray=[oneA,oneB,oneC,oneD,oneF,oneG];
+
+var tensZeroArray=[tenA,tenB,tenC,tenD,tenE,tenF];
+var tensOneArray=[tenB,tenC];
+var tensTwoArray=[tenA,tenB,tenD,tenE,tenG];
+var tensThreeArray=[tenA,tenB,tenC,tenD,tenG];
+var tensFourArray=[tenB,tenC,tenF,tenG];
+var tensFiveArray=[tenA,tenC,tenD,tenF,tenG];
+var tensSixArray=[tenA,tenC,tenD,tenE,tenF,tenG];
+var tensSevenArray=[tenA,tenB,tenC];
+var tensEightArray=[tenA,tenB,tenC,tenD,tenE,tenF,tenG];
+var tensNineArray=[tenA,tenB,tenC,tenD,tenF,tenG];
+
+var hunsZeroArray=[hunA,hunB,hunC,hunD,hunE,hunF];
+var hunsOneArray=[hunB,hunC];
+var hunsTwoArray=[hunA,hunB,hunD,hunE,hunG];
+var hunsThreeArray=[hunA,hunB,hunC,hunD,hunG];
+var hunsFourArray=[hunB,hunC,hunF,hunG];
+var hunsFiveArray=[hunA,hunC,hunD,hunF,hunG];
+var hunsSixArray=[hunA,hunC,hunD,hunE,hunF,hunG];
+var hunsSevenArray=[hunA,hunB,hunC];
+var hunsEightArray=[hunA,hunB,hunC,hunD,hunE,hunF,hunG];
+var hunsNineArray=[hunA,hunB,hunC,hunD,hunF,hunG];
+
+var thousZeroArray=[thouA,thouB,thouC,thouD,thouE,thouF];
+var thousOneArray=[thouB,thouC];
+var thousTwoArray=[thouA,thouB,thouD,thouE,thouG];
+var thousThreeArray=[thouA,thouB,thouC,thouD,thouG];
+var thousFourArray=[thouB,thouC,thouF,thouG];
+var thousFiveArray=[thouA,thouC,thouD,thouF,thouG];
+var thousSixArray=[thouA,thouC,thouD,thouE,thouF,thouG];
+var thousSevenArray=[thouA,thouB,thouC];
+var thousEightArray=[thouA,thouB,thouC,thouD,thouE,thouF,thouG];
+var thousNineArray=[thouA,thouB,thouC,thouD,thouF,thouG];
+//End Meter Numbers
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-TweenMax.to([electronPath2], 0.25, {strokeDashoffset:"-=12", repeat:-1, ease:Linear.easeNone,yoyo:false})
-TweenMax.to([electronPath2], 0.25, {strokeDasharray:"2,10", ease:Linear.easeNone})
 
 
 slideTl
 
 
-.to([batteryCover],1, {autoAlpha:0},"+=2")
-// wire between pos and neg
-.staggerFromTo([wire1], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:10})
-.staggerFromTo([wire2], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone})
+// .staggerFromTo([path8300], 3, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:2})
+// .staggerFromTo([path5714,path5718], .1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+// .from([leftElectrons, leftHoles,rightHoles], 1, {autoAlpha:0})
+// .staggerFromTo([lightBulb], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:.5})
+// .staggerFromTo([path5728], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+// .staggerFromTo([path5734], .5, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
 
-//Hide wire between pos and neg
-.to([wire1,wire2], 1, {autoAlpha:0, delay:7})
-.staggerFromTo([wire2], .001, {drawSVG:'100% 0%', immediateRender:false}, {drawSVG: '0% 0%', ease: Power0.easeNone})
-.staggerFromTo([wire1], .001, {drawSVG:'100% 0%', immediateRender:false}, {drawSVG: '0% 0%', ease: Power0.easeNone})
+// .staggerFromTo([wire1,wire2], 1.5, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:3.5})
+// .staggerFromTo([path5465,path5467,path5469,path5471,path5473], .5, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:1})
+// .to([electronPath2], 0.5, {strokeDasharray:"2,12", ease:Linear.easeNone, strokeWidth:8, delay:-.5})
+// .to([electronPath2], 0.5, {strokeDashoffset:"-=14", repeat:15, ease:Linear.easeNone,yoyo:false})
+// .to([leftElectrons, leftHoles,rightHoles,electronPath2], 1, {autoAlpha:0})
 
-//Move electrons right
-.to(rightElectrons, 3, {x:"-=78", ease: Power0.easeNone},"+=0")
-.to(holes, 1, {stroke:"red"})
-.to(leftElectrons, 1, {fill:"#000000"},"-=1")
 
-// draw wire across battery
-.to([wire1,wire2], 1, {autoAlpha:1, delay:8})
-.staggerFromTo([wire1], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone})
-.staggerFromTo([wire2], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone})
-.from(electronPath2, 1, {autoAlpha:0})
+// //Morph to diagram style
+
+// .to(path8300, 1, {morphSVG:"#batterySymbol_drag"})
+// .to(path5714, 1, {morphSVG:"#path5712_drag", delay:-1})
+// .to(path5718, 1, {morphSVG:"#path9233-0-2_drag", delay:-1})
+// .to([twelveV_drag], 1, {autoAlpha:1, delay:-1})
+
+// .to(lightBulb, 1, {morphSVG:"#lightBulbFilament_drag", delay:-1})
+// .to([path5728, path5734,path5465,path5467,path5469,path5471,path5473], 1 ,{autoAlpha:0, delay:-1})
+
+// .to(wire1, 1, {morphSVG:"#path5745_drag", delay:-1})
+// .to(wire2, 1, {morphSVG:"#path5747_drag", delay:-1})
+
+
+
+// .to([dots_drag], 0, {autoAlpha:1, delay:0})
+// .to(pole_drag, 1, {autoAlpha:1, delay:0})
+// .to([path5882_drag], 0, {strokeDasharray:"2,8", ease:Linear.easeNone, strokeWidth:5, delay:6})
+// .to([path5882_drag], 0, {strokeDashoffset:"-=10", ease:Linear.easeNone,yoyo:false})
+// .to([lightBulbFilament2_drag], 0, {strokeDasharray:"2,8", ease:Linear.easeNone, strokeWidth:5, delay:0})
+// .to([lightBulbFilament2_drag], 0, {strokeDashoffset:"-=10", ease:Linear.easeNone,yoyo:false})
+// .to([path5899_drag], 0, {strokeDasharray:"2,8", ease:Linear.easeNone, strokeWidth:5, delay:0})
+// .to([path5899_drag], 0, {strokeDashoffset:"-=10", ease:Linear.easeNone,yoyo:false})
+// .to([path5882_drag,lightBulbFilament2_drag,path5899_drag], 0, {stroke:"red", delay:0})
+// .to([feExtendingFromBattery_drag,pole1Copy_drag], 0, {strokeDasharray:"2,8", ease:Linear.easeNone, strokeWidth:5, delay:0})
+// .to([feExtendingFromBattery_drag,pole1Copy_drag], 0, {strokeDashoffset:"-=10", ease:Linear.easeNone,yoyo:false})
+
+// .to([feExtendingFromBattery_drag,pole1Copy_drag], 1, {autoAlpha:1, delay:11})
+
+// .to([path5882_drag,lightBulbFilament2_drag,path5899_drag], 1, {autoAlpha:1, delay:19})
+// .to([path5882_drag,lightBulbFilament2_drag,path5899_drag], .75, {strokeWidth:8, delay:11})
+// .to([path5882_drag,lightBulbFilament2_drag,path5899_drag], .75, {strokeWidth:5})
+
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+// .to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray], 0, {fill:"black"})
+
+// .from(multimeterGroup_drag, 1, {autoAlpha:0, delay:10})
+// .to(blackLead, 1.5, {morphSVG:"#blackLeadPos1_drag",delay:1})
+// .to(redLead, 1.5, {morphSVG:"#redLeadPos1_drag"})
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+// .to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+
+
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:5})
+// .to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+// .to(redLead, 1.5, {morphSVG:"#redLeadPos2_drag",delay:-.5})
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+// .to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:10})
+// .to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+// .to(redLead, 1.5, {morphSVG:"#redLeadPos3_drag",delay:-.5})
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+// .to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:3})
+// .to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+// .to(redLead, 1.5, {morphSVG:"#redLeadPos4_drag",delay:-.5})
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+// .to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:2})
+// .to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+// .to(blackLead, 1.5, {morphSVG:"#blackLeadPos2_drag",delay:-.5})
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+// .to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+
+
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:7})
+// .to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+// .to(blackLead, 1.5, {morphSVG:"#blackLeadPos1_drag",delay:0})
+// .to(redLead, 1.5, {morphSVG:"#redLeadPos1_drag"})
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+// .to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+
+
+
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:13})
+// .to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+// .to(blackLead, 1.5, {morphSVG:"#blackLeadPos3_drag",delay:0})
+// .to(redLead, 1.5, {morphSVG:"#redLeadPos4_drag",delay:-1.5})
+
+
+// .to(blackLead, 1.5, {morphSVG:"#blackLeadPos1_drag",delay:2})
+// .to(redLead, 1.5, {morphSVG:"#redLeadPos1_drag",delay:-1.5})
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+// .to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+
+// .to([pole_drag,pole1Copy_drag], 1, {rotation:0,transformOrigin:"0 20",delay:1})
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+// .to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+
+// .to(path5882_drag, 1, {stroke:"black", delay:-.7})
+// .to(lightBulbFilament2_drag, 1, {stroke:"orange", delay:-1})
+
+
+// .to(blackLead, 1.5, {morphSVG:"#blackLeadPos3_drag",delay:14.5})
+// .to(redLead, 1.5, {morphSVG:"#redLeadPos4_drag",delay:-1})
+// .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+// .to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+
+
+
+
+// TweenMax.to([path5745_drag], .5, {strokeDasharray:"2,8", ease:Linear.easeNone, strokeWidth:3, delay:0})
+// TweenMax.to([path5745_drag], .5, {strokeDashoffset:"-=10", repeat:-1, ease:Linear.easeNone,yoyo:false})
+
+
+// TweenMax.to([pole1Copy_drag], .5, {strokeDasharray:"2,8", ease:Linear.easeNone, strokeWidth:3, delay:0})
+// TweenMax.to([pole1Copy_drag], .5, {strokeDashoffset:"-=10", repeat:-1, ease:Linear.easeNone,yoyo:false})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .to("#path9233-0", 1, {morphSVG:"#path9233-0-2"})
+
+
+// .to([batteryCover_drag],1, {autoAlpha:0})
+// // wire between pos and neg
+// .staggerFromTo([wire1], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:10})
+// .staggerFromTo([wire2], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone})
+
+// //Hide wire between pos and neg
+// .to([wire1,wire2], 1, {autoAlpha:0, delay:7})
+// .staggerFromTo([wire2], .001, {drawSVG:'100% 0%', immediateRender:false}, {drawSVG: '0% 0%', ease: Power0.easeNone})
+// .staggerFromTo([wire1], .001, {drawSVG:'100% 0%', immediateRender:false}, {drawSVG: '0% 0%', ease: Power0.easeNone})
+
+// //Move electrons right
+
+
+// // draw wire across battery
+// .to([wire1,wire2], 1, {autoAlpha:1, delay:8})
+// .staggerFromTo([wire1], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone})
+// .staggerFromTo([wire2], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone})
+
 
 
 

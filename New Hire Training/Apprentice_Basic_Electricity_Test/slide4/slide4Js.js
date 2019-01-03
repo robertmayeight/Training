@@ -179,8 +179,7 @@ var thousNineArray=[thouA,thouB,thouC,thouD,thouF,thouG];
 //End Meter Numbers
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-TweenMax.to([electronPath2], 0, {strokeDashoffset:"-=12", repeat:-1, ease:Linear.easeNone,yoyo:false});
-TweenMax.to([electronPath2], 0, {strokeDasharray:"2,10", ease:Linear.easeNone});
+
 TweenMax.to([electronPath2], 0, {strokeWidth:0});
 TweenMax.to([pole_drag,pole1Copy_drag], 1, {rotation:30,transformOrigin:"0 20"});
 // TweenLite.to("#path8300", 1, {morphSVG:"#path5632"})
@@ -189,10 +188,9 @@ TweenMax.to([pole_drag,pole1Copy_drag], 1, {rotation:30,transformOrigin:"0 20"})
 
 slideTl
 
-
 .staggerFromTo([path8300], 3, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:2})
 .staggerFromTo([path5714,path5718], .1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
-.from([leftElectrons, leftHoles,rightHoles], 1, {autoAlpha:0})
+.from([leftElectrons, leftHoles,rightHoles,batteryText_drag], 1, {autoAlpha:0})
 .staggerFromTo([lightBulb], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:.5})
 .staggerFromTo([path5728], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
 .staggerFromTo([path5734], .5, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
@@ -201,7 +199,7 @@ slideTl
 .staggerFromTo([path5465,path5467,path5469,path5471,path5473], .5, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:1})
 .to([electronPath2], 0.5, {strokeDasharray:"2,12", ease:Linear.easeNone, strokeWidth:8, delay:-.5})
 .to([electronPath2], 0.5, {strokeDashoffset:"-=14", repeat:15, ease:Linear.easeNone,yoyo:false})
-.to([leftElectrons, leftHoles,rightHoles,electronPath2], 1, {autoAlpha:0})
+.to([leftElectrons, leftHoles,rightHoles,electronPath2,batteryText_drag], 1, {autoAlpha:0})
 
 
 //Morph to diagram style
@@ -292,7 +290,12 @@ slideTl
 .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
 .to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
 
+//wire1 current flow
 .to([pole_drag,pole1Copy_drag], 1, {rotation:0,transformOrigin:"0 20",delay:1})
+.add(function(){TweenMax.to([feExtendingFromBattery_drag,pole1Copy_drag,path5882_drag,lightBulbFilament2_drag,path5899_drag], 0.5, {strokeDashoffset:"-=20", repeat:0, ease:Linear.easeNone,yoyo:false})})
+.add(function(){TweenMax.to([feExtendingFromBattery_drag,pole1Copy_drag,path5882_drag,lightBulbFilament2_drag,path5899_drag], 0.5, {strokeDashoffset:"-=20", repeat:-1, ease:Linear.easeNone,yoyo:false})})
+
+
 .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
 .to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
 
