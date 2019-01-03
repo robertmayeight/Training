@@ -179,9 +179,10 @@ var thousNineArray=[thouA,thouB,thouC,thouD,thouF,thouG];
 //End Meter Numbers
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-TweenMax.to([electronPath2], 0, {strokeDashoffset:"-=12", repeat:-1, ease:Linear.easeNone,yoyo:false})
-TweenMax.to([electronPath2], 0, {strokeDasharray:"2,10", ease:Linear.easeNone})
-TweenMax.to([electronPath2], 0, {strokeWidth:0})
+TweenMax.to([electronPath2], 0, {strokeDashoffset:"-=12", repeat:-1, ease:Linear.easeNone,yoyo:false});
+TweenMax.to([electronPath2], 0, {strokeDasharray:"2,10", ease:Linear.easeNone});
+TweenMax.to([electronPath2], 0, {strokeWidth:0});
+TweenMax.to([pole_drag,pole1Copy_drag], 1, {rotation:30,transformOrigin:"0 20"});
 // TweenLite.to("#path8300", 1, {morphSVG:"#path5632"})
 
 // TweenMax.to([slideAudio], 0.25, {hdi})
@@ -227,18 +228,21 @@ slideTl
 .to([path5899_drag], 0, {strokeDasharray:"2,8", ease:Linear.easeNone, strokeWidth:5, delay:0})
 .to([path5899_drag], 0, {strokeDashoffset:"-=10", ease:Linear.easeNone,yoyo:false})
 .to([path5882_drag,lightBulbFilament2_drag,path5899_drag], 0, {stroke:"red", delay:0})
-.to([feExtendingFromBattery_drag], 0, {strokeDasharray:"2,8", ease:Linear.easeNone, strokeWidth:5, delay:0})
-.to([feExtendingFromBattery_drag], 0, {strokeDashoffset:"-=10", ease:Linear.easeNone,yoyo:false})
+.to([feExtendingFromBattery_drag,pole1Copy_drag], 0, {strokeDasharray:"2,8", ease:Linear.easeNone, strokeWidth:5, delay:0})
+.to([feExtendingFromBattery_drag,pole1Copy_drag], 0, {strokeDashoffset:"-=10", ease:Linear.easeNone,yoyo:false})
 
-.to([feExtendingFromBattery_drag], 1, {autoAlpha:1, delay:17})
-.to([path5882_drag,lightBulbFilament2_drag,path5899_drag], 1, {autoAlpha:1, delay:20})
+.to([feExtendingFromBattery_drag,pole1Copy_drag], 1, {autoAlpha:1, delay:11})
+
+.to([path5882_drag,lightBulbFilament2_drag,path5899_drag], 1, {autoAlpha:1, delay:19})
+.to([path5882_drag,lightBulbFilament2_drag,path5899_drag], .75, {strokeWidth:8, delay:11})
+.to([path5882_drag,lightBulbFilament2_drag,path5899_drag], .75, {strokeWidth:5})
 
 .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
 .to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray], 0, {fill:"black"})
-.from(multimeterGroup_drag, 1, {autoAlpha:0, delay:14})
-.to(blackLead, 1.5, {morphSVG:"#blackLeadPos1_drag",delay:2})
-.to(redLead, 1.5, {morphSVG:"#redLeadPos1_drag"})
 
+.from(multimeterGroup_drag, 1, {autoAlpha:0, delay:10})
+.to(blackLead, 1.5, {morphSVG:"#blackLeadPos1_drag",delay:1})
+.to(redLead, 1.5, {morphSVG:"#redLeadPos1_drag"})
 .to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
 .to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
 
@@ -268,12 +272,38 @@ slideTl
 .to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
 
 
+.to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:7})
+.to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+.to(blackLead, 1.5, {morphSVG:"#blackLeadPos1_drag",delay:0})
+.to(redLead, 1.5, {morphSVG:"#redLeadPos1_drag"})
+.to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+.to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
 
 
 
+.to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:13})
+.to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+.to(blackLead, 1.5, {morphSVG:"#blackLeadPos3_drag",delay:0})
+.to(redLead, 1.5, {morphSVG:"#redLeadPos4_drag",delay:-1.5})
 
 
+.to(blackLead, 1.5, {morphSVG:"#blackLeadPos1_drag",delay:2})
+.to(redLead, 1.5, {morphSVG:"#redLeadPos1_drag",delay:-1.5})
+.to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+.to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
 
+.to([pole_drag,pole1Copy_drag], 1, {rotation:0,transformOrigin:"0 20",delay:1})
+.to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+.to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
+
+.to(path5882_drag, 1, {stroke:"black", delay:-.7})
+.to(lightBulbFilament2_drag, 1, {stroke:"orange", delay:-1})
+
+
+.to(blackLead, 1.5, {morphSVG:"#blackLeadPos3_drag",delay:14.5})
+.to(redLead, 1.5, {morphSVG:"#redLeadPos4_drag",delay:-1})
+.to([onesArray,tensArray,hunsArray,thousArray], 0, {fill:"#b3b3b3", delay:0})
+.to([thousOneArray,hunsTwoArray,tensZeroArray,onesZeroArray], .5, {fill:"black"})
 
 
 
