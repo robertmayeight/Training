@@ -310,7 +310,7 @@ slideTl
 //Current flow on
 .to([s1,s1copy],1,{rotation:0, transformOrigin:"0 20", delay:4})
 .to([diagram1AllPaths], 0, {strokeDasharray:"2,6", ease:Linear.easeNone, strokeWidth:3, stroke:"black", delay:-1})
-//.add(function(){TweenMax.to([diagram1AllPaths], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
+.add(function(){TweenMax.to([diagram1AllPaths], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
 .to([pos1copy,pos2copy], 0, {stroke:"red"})
 .to([r1copy], 0, {stroke:"orange"})
 .to([diagram1AllPaths], 0, {autoAlpha:1})
@@ -351,19 +351,19 @@ slideTl
 .to([onesArray,tensArray,hunsArray,thousArray], 0, {autoAlpha:0})
 .to([thousZeroArray,hunsFiveArray,tensZeroArray,onesZeroArray,dc_hide], 0, {autoAlpha:1})
 .to([gnd1copy,s1copy,gnd2copy,diagram2Wire1copy,diagram2Wire1copy,diagram2Wire1copy], 0, {strokeDasharray:"2,6", ease:Linear.easeNone, strokeWidth:3, stroke:"black", autoAlpha:1, delay:-.5})
-//.add(function(){TweenMax.to([gnd1copy,s1copy,gnd2copy,diagram2Wire1copy,diagram2Wire1copy,diagram2Wire1copy], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
+.add(function(){TweenMax.to([gnd1copy,s1copy,gnd2copy,diagram2Wire1copy,diagram2Wire1copy,diagram2Wire1copy], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
 
 //Resistors on
 .to([diagram2R2copy,diagram2R3copy], 0, {strokeDasharray:"2,6", ease:Linear.easeNone, strokeWidth:3, stroke:"orange", autoAlpha:1, delay:0})
-//.add(function(){TweenMax.to([diagram2R2copy,diagram2R3copy], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
+.add(function(){TweenMax.to([diagram2R2copy,diagram2R3copy], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
 
 //Middle wire on
 .to([diagram2Wire2copy], 0, {strokeDasharray:"2,6", ease:Linear.easeNone, strokeWidth:3, stroke:"#800000", autoAlpha:1, delay:-0.1})
-//.add(function(){TweenMax.to([diagram2Wire2copy], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
+.add(function(){TweenMax.to([diagram2Wire2copy], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
 
 //Remaining wires on
 .to([diagram2Wire3copy,pos1copy], 0, {strokeDasharray:"2,6", ease:Linear.easeNone, strokeWidth:3, stroke:"red", autoAlpha:1, delay:-0.1})
-//.add(function(){TweenMax.to([diagram2Wire3copy,pos1copy], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
+.add(function(){TweenMax.to([diagram2Wire3copy,pos1copy], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
 .to(currentFormula_hide, 1, {autoAlpha:1, delay:3})
 .to([volts1_hide,voltsCallout_hide], 1, {autoAlpha:1, delay:3})
 .to([resistance1_hide,r1Callout_hide], 1, {autoAlpha:1, delay:5})
