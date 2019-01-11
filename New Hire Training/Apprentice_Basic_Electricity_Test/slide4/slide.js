@@ -171,7 +171,6 @@ for (i=0; i<objectArray.length; i++) {
 	groupNameSplit = objectArray[i].id.split("_");
 	switch(groupNameSplit[1]) {
 		case "hide":
-		console.log(objectArray[i].id)
 		TweenMax.to(objectArray[i], 0, {autoAlpha:0})
 	}
 }

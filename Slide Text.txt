@@ -1,0 +1,48 @@
+Current flow in a circuit, is measured in amperes, or, amps, for short.
+The amount of current flow in a circuit, is determined by the amount of the supply voltage, or pushing force of the electrons; and how much the circuit retards the flow of electrons.
+
+For example, if the supply voltage were to be doubled, the amount of current flow in the circuit, would also be doubled; because there is more "pushing force", to make more free electrons move.
+
+Likewise, if the voltage supply were to be halved, the amount of current flow in the circuit, would also be halved; because there is less "pushing force", to move the electrons.
+
+If the voltage remained the same, but the resistance of the circuit were to be doubled, the amount of current flow in the circuit, would be cut in half; because it is twice as hard to move the electrons with the added resistance.
+
+Note the purple color of the electrons between the two lights.
+The reason for this, is because "that" wire is no longer at a positive potential, nor is it at a negative potential.
+It is somewhere in between the two. We will discuss this in more detail in a later section.
+
+The current flow in the circuit would be doubled.
+Because the parallel circuit, has created less resistance to the electron flow, by providing another path for electrons to go down.
+
+Note that the electron Flo splits Here: Half of the electrons will flow through the lower light circuit, and half will flow through the upper light circuit.
+The electrons come back together here: to form one path of flow back to the positive side of the baddery.
+
+Slide 6 -----------------------------------------------------------------
+
+The electrical resistance of an object, is a measure of its opposition to the flow of current in a circuit. 
+The amount of resistance an object has, is given in ohms, and is represented by the omega symbol.
+One ohm, is the amount of resistance required, to limit current flow, to one amp of current, when the applied voltage is one volt.
+
+The number of free electrons in the resistor, is what determines the amount of current flow.
+In this case, there are enough free electrons in the resistor to allow one amp of current flow.
+When the resistor resistance is changed to 2 ohms, the number of free electrons is cut in half, which in turn, cuts the circuit current in half.
+
+Even though there are plenty of free electrons in the wires;  the current of the entire circuit, will still be limited by the number of free electrons in the resistance of the circuit.
+The resistance of the circuit is more or less, the throttle for current flow.
+The hight the circuit resistance is, the lower the current flow will be in the circuit.
+And con versely, the lower the circuit resistance is, the higher the current flow will be in the circuit.
+
+Also note, if parallel resistance is added to the circuit, the resistance of the entire circuit will decrease.
+The added parallel resistance, provides an alternate path, that offers more free electrons to the entire circuit.
+
+The higher the circuit resistance is, the lower the current flow will be in the circuit.
+And con versely, the lower the circuit resistance is, the higher the current flow will be in the circuit.
+
+Slide7
+The circuit shown here is called a series circuit.
+All of the components are in line with one another.
+
+The characteristics of a series circuit are:
+1) Current flow is the same, in all parts of the circuit.
+2) Added resistance, decreases current flow.
+3) The sum of the voltage drops of the circuit, is equal to the supply voltage.

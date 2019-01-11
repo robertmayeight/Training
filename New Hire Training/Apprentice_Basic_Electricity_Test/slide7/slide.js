@@ -25,15 +25,18 @@ var isFirefox = typeof InstallTrigger !== 'undefined';
 var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 var isIE = /*@cc_on!@*/false || !!document.documentMode;
 var isEdge = !isIE && !!window.StyleMedia;
-var isChrome = !!window.chrome && !!window.chrome.webstore;
+var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 var isBlink = (isChrome || isOpera) && !!window.CSS;
 
+var audioLength;
 if(isFirefox == true){
 	TweenLite.to(slideAudio, 0, {bottom:0})
 	slideAudio.onloadeddata = function() {
 	slideAudio.play();
 	slideTl.play();
-	};
+	audioLength=slideAudio.duration;
+	correctTime();
+	}
 }
 if(isEdge == true){
 	TweenLite.to(slideAudio, 0, {bottom:-490})
@@ -43,7 +46,13 @@ if(isEdge == true){
 	};
 }
 if(isChrome == true){
-	TweenLite.to(slideAudio, 0, {bottom:-750})
+	TweenLite.to(slideAudio, 0, {bottom:-15})
+	TweenLite.to(slideAudio, 0, {className:"chromePlayerControls"})
+	TweenLite.to(slideAudio, 0, {bottom:0})
+	slideAudio.onloadeddata = function() {
+	audioLength=slideAudio.duration;
+	correctTime();
+		}
 }
 if(isOpera == true){
 	TweenLite.to(slideAudio, 0, {bottom:-750})
@@ -59,19 +68,22 @@ if(isSafari == true){
 	slideTl.play();
 	};
 }
+
 //End Browser Adjustments
 
 //Audio
 slideAudio.onplay = function() {
 	slideTl.play();
+	slideTl.time(slideAudio.currentTime);
 };
 
 slideAudio.onpause = function() {
 	slideTl.pause();
+	slideTl.time(slideAudio.currentTime);
 };
 
 slideAudio.onseeked = function() {
-	slideTl.time(slideAudio.currentTime);
+	// slideTl.time(slideAudio.currentTime);
 }
 
 slideAudio.ontimeupdate = function() {
@@ -80,64 +92,67 @@ slideAudio.ontimeupdate = function() {
 
 function playAudio(){
 	slideAudio.play();
+	slideTl.time(slideAudio.currentTime);
 }
 
 function pausePlayer(){
 	slideAudio.pause();
+	slideTl.time(slideAudio.currentTime);
 }
 //End Audio
 
 var slideTl = new TimelineMax({paused:true});
 
+
 // Start Meter Numbers
-var onesArray=[oneA,oneB,oneC,oneD,oneE,oneF,oneG];
-var tensArray=[tenA,tenB,tenC,tenD,tenE,tenF,tenG];
-var hunsArray=[hunA,hunB,hunC,hunD,hunE,hunF,hunG];
-var thousArray=[thouA,thouB,thouC,thouD,thouE,thouF,thouG];
+var onesArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide,oneG_hide];
+var tensArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenE_hide,tenF_hide,tenG_hide];
+var hunsArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunE_hide,hunF_hide,hunG_hide];
+var thousArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouE_hide,thouF_hide,thouG_hide];
 
-var onesZeroArray=[oneA,oneB,oneC,oneD,oneE,oneF];
-var onesOneArray=[oneB,oneC];
-var onesTwoArray=[oneA,oneB,oneD,oneE,oneG];
-var onesThreeArray=[oneA,oneB,oneC,oneD,oneG];
-var onesFourArray=[oneB,oneC,oneF,oneG];
-var onesFiveArray=[oneA,oneC,oneD,oneF,oneG];
-var onesSixArray=[oneA,oneC,oneD,oneE,oneF,oneG];
-var onesSevenArray=[oneA,oneB,oneC];
-var onesEightArray=[oneA,oneB,oneC,oneD,oneE,oneF,oneG];
-var onesNineArray=[oneA,oneB,oneC,oneD,oneF,oneG];
+var onesZeroArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide];
+var onesOneArray=[oneB_hide,oneC_hide];
+var onesTwoArray=[oneA_hide,oneB_hide,oneD_hide,oneE_hide,oneG_hide];
+var onesThreeArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneG_hide];
+var onesFourArray=[oneB_hide,oneC_hide,oneF_hide,oneG_hide];
+var onesFiveArray=[oneA_hide,oneC_hide,oneD_hide,oneF_hide,oneG_hide];
+var onesSixArray=[oneA_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide,oneG_hide];
+var onesSevenArray=[oneA_hide,oneB_hide,oneC_hide];
+var onesEightArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide,oneG_hide];
+var onesNineArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneF_hide,oneG_hide];
 
-var tensZeroArray=[tenA,tenB,tenC,tenD,tenE,tenF];
-var tensOneArray=[tenB,tenC];
-var tensTwoArray=[tenA,tenB,tenD,tenE,tenG];
-var tensThreeArray=[tenA,tenB,tenC,tenD,tenG];
-var tensFourArray=[tenB,tenC,tenF,tenG];
-var tensFiveArray=[tenA,tenC,tenD,tenF,tenG];
-var tensSixArray=[tenA,tenC,tenD,tenE,tenF,tenG];
-var tensSevenArray=[tenA,tenB,tenC];
-var tensEightArray=[tenA,tenB,tenC,tenD,tenE,tenF,tenG];
-var tensNineArray=[tenA,tenB,tenC,tenD,tenF,tenG];
+var tensZeroArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenE_hide,tenF_hide];
+var tensOneArray=[tenB_hide,tenC_hide];
+var tensTwoArray=[tenA_hide,tenB_hide,tenD_hide,tenE_hide,tenG_hide];
+var tensThreeArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenG_hide];
+var tensFourArray=[tenB_hide,tenC_hide,tenF_hide,tenG_hide];
+var tensFiveArray=[tenA_hide,tenC_hide,tenD_hide,tenF_hide,tenG_hide];
+var tensSixArray=[tenA_hide,tenC_hide,tenD_hide,tenE_hide,tenF_hide,tenG_hide];
+var tensSevenArray=[tenA_hide,tenB_hide,tenC_hide];
+var tensEightArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenE_hide,tenF_hide,tenG_hide];
+var tensNineArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenF_hide,tenG_hide];
 
-var hunsZeroArray=[hunA,hunB,hunC,hunD,hunE,hunF];
-var hunsOneArray=[hunB,hunC];
-var hunsTwoArray=[hunA,hunB,hunD,hunE,hunG];
-var hunsThreeArray=[hunA,hunB,hunC,hunD,hunG];
-var hunsFourArray=[hunB,hunC,hunF,hunG];
-var hunsFiveArray=[hunA,hunC,hunD,hunF,hunG];
-var hunsSixArray=[hunA,hunC,hunD,hunE,hunF,hunG];
-var hunsSevenArray=[hunA,hunB,hunC];
-var hunsEightArray=[hunA,hunB,hunC,hunD,hunE,hunF,hunG];
-var hunsNineArray=[hunA,hunB,hunC,hunD,hunF,hunG];
+var hunsZeroArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunE_hide,hunF_hide];
+var hunsOneArray=[hunB_hide,hunC_hide];
+var hunsTwoArray=[hunA_hide,hunB_hide,hunD_hide,hunE_hide,hunG_hide];
+var hunsThreeArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunG_hide];
+var hunsFourArray=[hunB_hide,hunC_hide,hunF_hide,hunG_hide];
+var hunsFiveArray=[hunA_hide,hunC_hide,hunD_hide,hunF_hide,hunG_hide];
+var hunsSixArray=[hunA_hide,hunC_hide,hunD_hide,hunE_hide,hunF_hide,hunG_hide];
+var hunsSevenArray=[hunA_hide,hunB_hide,hunC_hide];
+var hunsEightArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunE_hide,hunF_hide,hunG_hide];
+var hunsNineArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunF_hide,hunG_hide];
 
-var thousZeroArray=[thouA,thouB,thouC,thouD,thouE,thouF];
-var thousOneArray=[thouB,thouC];
-var thousTwoArray=[thouA,thouB,thouD,thouE,thouG];
-var thousThreeArray=[thouA,thouB,thouC,thouD,thouG];
-var thousFourArray=[thouB,thouC,thouF,thouG];
-var thousFiveArray=[thouA,thouC,thouD,thouF,thouG];
-var thousSixArray=[thouA,thouC,thouD,thouE,thouF,thouG];
-var thousSevenArray=[thouA,thouB,thouC];
-var thousEightArray=[thouA,thouB,thouC,thouD,thouE,thouF,thouG];
-var thousNineArray=[thouA,thouB,thouC,thouD,thouF,thouG];
+var thousZeroArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouE_hide,thouF_hide];
+var thousOneArray=[thouB_hide,thouC_hide];
+var thousTwoArray=[thouA_hide,thouB_hide,thouD_hide,thouE_hide,thouG_hide];
+var thousThreeArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouG_hide];
+var thousFourArray=[thouB_hide,thouC_hide,thouF_hide,thouG_hide];
+var thousFiveArray=[thouA_hide,thouC_hide,thouD_hide,thouF_hide,thouG_hide];
+var thousSixArray=[thouA_hide,thouC_hide,thouD_hide,thouE_hide,thouF_hide,thouG_hide];
+var thousSevenArray=[thouA_hide,thouB_hide,thouC_hide];
+var thousEightArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouE_hide,thouF_hide,thouG_hide];
+var thousNineArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouF_hide,thouG_hide];
 //End Meter Numbers
 
 //Hide Code
@@ -179,221 +194,308 @@ for (i=0; i<objectArray.length; i++) {
 }
 //End Hide Code
 
+//Make duplicate black copy
+var diagram1AllPaths = [];
 var groupPaths = document.getElementById("diagram1_hide").getElementsByTagName("path");
 var groupPathsLength = groupPaths.length;
 for(i=0; i<groupPathsLength; i++){
 	pathLastName = groupPaths[i].id.split("_")
 	if(groupPaths[i].parentNode.id == "diagram1_hide"){
 		var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-		path.setAttribute('stroke','red');
+		path.setAttribute('stroke','black');
 		path.setAttribute('fill','none');
 		path.setAttribute('id',groupPaths[i].id + 'copy');
 		path.style['stroke-width']=1;
 		path.style['stroke-linecap']="round";
-		path.style['stroke-linecap']="round";
 		path.setAttribute("d", groupPaths[i].getAttribute("d"));
 		diagram1_hide.appendChild(path);
 		if(pathLastName[1] == "current"){
-		path.setAttribute('opacity','0');
+			path.setAttribute('opacity','0');
+		}
+		if(pathLastName[1] == "noCurrent"){
+			path.setAttribute('opacity','0');
+		}
 	}
+	diagram1AllPaths.push(path)
+}
+//End make duplicate black copy
+
+// var diagram1AllPaths = [];
+var diagram3 = document.getElementById("diagram3_hide").getElementsByTagName("path");
+var diagram3Length=diagram3.length;
+
+for(i=0; i<diagram3Length; i++){
+	pathLastName = diagram3[i].id.split("_")
+	//Start current copies.
+	var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+	path.setAttribute('stroke','blue');
+	path.setAttribute('fill','none');
+	path.setAttribute('id',diagram3[i].id + 'Current');
+	path.style['stroke-width']=1;
+	path.style['stroke-linecap']="round";
+	path.setAttribute("d", diagram3[i].getAttribute("d"));
+	TweenMax.to(path,0,{autoAlpha:0});
+	if(pathLastName[1] != "noCurrent"){
+		TweenMax.to(path, 0, {strokeDasharray:"2,6", ease:Linear.easeNone, strokeWidth:2.5})
+		TweenMax.to([path], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})
 	}
-	
+	diagram3_hide.appendChild(path);
+	//Start trace copies.
+	var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+	path.setAttribute('stroke','red');
+	path.setAttribute('fill','none');
+	path.setAttribute('id',diagram3[i].id + 'Trace');
+	path.style['stroke-width']=3;
+	path.style['stroke-linecap']="round";
+	path.setAttribute("d", diagram3[i].getAttribute("d"));
+	diagram3_hide.appendChild(path);
+	TweenMax.to(path, 0, {drawSVG:'0% 0%'});		
 }
 
-// diagram1_hide.appendChild(coulomb_hide);
 
 
-var bigCurrentArray=[];
-noPaths = document.getElementById("bigCurrent_hide").getElementsByTagName("path");
-noPathsLength = noPaths.length;
-for(i=0; i<noPathsLength; i++){
-	noPaths[i].style['stroke-linecap']="round";
-	bigCurrentArray.push(noPaths[i])
-}
 
-var bigCurrent2Array=[];
-noPaths = document.getElementById("bigCurrent2_hide").getElementsByTagName("path");
-noPathsLength = noPaths.length;
-for(i=0; i<noPathsLength; i++){
-	noPaths[i].style['stroke-linecap']="round";
-	bigCurrent2Array.push(noPaths[i])
-}
-
-var bigCurrent3Array=[];
-noPaths = document.getElementById("bigCurrent3_hide").getElementsByTagName("path");
-noPathsLength = noPaths.length;
-for(i=0; i<noPathsLength; i++){
-	noPaths[i].style['stroke-linecap']="round";
-	bigCurrent3Array.push(noPaths[i])
-}
-
-var bigCurrentNegArray=[];
-noPaths = document.getElementById("bigCurrentNeg_hide").getElementsByTagName("path");
-noPathsLength = noPaths.length;
-for(i=0; i<noPathsLength; i++){
-	noPaths[i].style['stroke-linecap']="round";
-	bigCurrentNegArray.push(noPaths[i])
-}
-
-var bigCurrentPosArray=[];
-noPaths = document.getElementById("bigCurrentPos_hide").getElementsByTagName("path");
-noPathsLength = noPaths.length;
-for(i=0; i<noPathsLength; i++){
-	noPaths[i].style['stroke-linecap']="round";
-	bigCurrentPosArray.push(noPaths[i])
-}
+var diagram2Array = [diagram2Wire1,diagram2R2,diagram2Wire2,diagram2R3,diagram2Wire3,diagram2Wire1copy,diagram2R2copy,diagram2Wire2copy,diagram2R3copy,diagram2Wire3copy];
+TweenMax.to([diagram2Array], 0, {autoAlpha:0})
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var normalCurrent = 4;
-var doubleCurrent = 6;
-var halfCurrent = 2.5;
-
-var circuitComponents = [gnd1copy,s1copy,switched1copy,switched11copy,r1copy,switched2copy,switched3copy,lightBulb2a,lightBulb2b_currentcopy,switched3copy,parallel1_currentcopy,parallel2_currentcopy,lightBulb3b_currentcopy,switched22copy,r2copy,r3copy];
-
-TweenMax.to([r1copy,lightBulb2b_currentcopy,lightBulb3b_currentcopy],0,{stroke:"orange"})
-TweenMax.to([switched2copy,lightBulb2a,switched3copy,parallel2_currentcopy,switched22copy],0,{stroke:"red"})
 TweenMax.to([s1,s1copy],0,{rotation:20, transformOrigin:"0 20"})
-
+TweenMax.to([onesArray,tensArray,hunsArray,thousArray], 0, {autoAlpha:0})
 slideTl
-.to(headingText,1,{autoAlpha:0})
-.to(firstText1_hide,1,{autoAlpha:1, delay:3})
-.to(firstText2_hide,1,{autoAlpha:1, delay:4})
-.to([firstText1_hide,firstText2_hide],1,{autoAlpha:0, delay:3})
+.to(headingText,1,{autoAlpha:0, delay:1})
+.to(diagram1_hide,1,{autoAlpha:1, delay:0})
 
-//Show Current
-.to([bigCurrentArray], 0, {strokeDasharray:".5,3.5", ease:Linear.easeNone, strokeWidth:1.5, stroke:"black", delay:0})
-.add(function(){TweenMax.to([bigCurrentArray], 0.1, {strokeDashoffset:"-=4", repeat:-1, ease:Linear.easeNone,yoyo:false})})
-
-.to([bigCurrent2Array], 0, {strokeDasharray:".5,3.5", ease:Linear.easeNone, strokeWidth:1.5, stroke:"black", delay:0})
-.add(function(){TweenMax.to([bigCurrent2Array], 0.1, {strokeDashoffset:"-=4", repeat:-1, ease:Linear.easeNone,yoyo:false})})
-
-.to([bigCurrent3Array], 0, {strokeDasharray:".5,3.5", ease:Linear.easeNone, strokeWidth:1.5, stroke:"black", delay:0})
-.add(function(){TweenMax.to([bigCurrent3Array], 0.1, {strokeDashoffset:"-=4", repeat:-1, ease:Linear.easeNone,yoyo:false})})
-
-.to([bigCurrentNegArray], 0, {strokeDasharray:".5,3.5", ease:Linear.easeNone, strokeWidth:1.5, stroke:"black", delay:0})
-.add(function(){TweenMax.to([bigCurrentNegArray], 0.1, {strokeDashoffset:"-=4", repeat:-1, ease:Linear.easeNone,yoyo:false})})
-
-.to([bigCurrentPosArray], 0, {strokeDasharray:".5,3.5", ease:Linear.easeNone, strokeWidth:1.5, stroke:"black", delay:0})
-.add(function(){TweenMax.to([bigCurrentPosArray], 0.1, {strokeDashoffset:"-=4", repeat:-1, ease:Linear.easeNone,yoyo:false})})
-
-.to([voltageDot1_hide,voltageDot2_hide,bigCurrent_hide,bigCurrent2_hide,bigCurrent3_hide,bigCurrentNeg_hide,bigCurrentPos_hide,wireSkin_hide,resistorBody_hide],1,{autoAlpha:1, delay:0})
-.from([oneOhm_hide],1,{autoAlpha:0, delay:.5})
-.to(resistorCallout_hide, 1, {autoAlpha:1, delay:-1})
-
-.from([oneAmp_hide],1,{autoAlpha:0, delay:1})
-.to(resistorCallout_hide, 1, {autoAlpha:0, delay:-1})
-.from([oneVolt_hide],1,{autoAlpha:0, delay:1})
-.staggerFromTo([voltsArrow1, voltsArrow2], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
-.to([resistorPath1,resistorPath2,resistorPath3,resistorPath4,resistorPath5,resistorPath6,resistorPath7,resistorPath8],1,{stroke:"red",delay:1.5})
-.to([resistorPath1,resistorPath2,resistorPath3,resistorPath4,resistorPath5,resistorPath6,resistorPath7,resistorPath8],1,{stroke:"black",delay:8})
-
-// .to(resistorBody, 1,{scaleY:.5, transformOrigin:"100, 10"})
-
-.to(oneOhm_hide, 1, {autoAlpha:0, delay:3})
-.to(twoOhm_hide, 1, {autoAlpha:1, delay:-1})
-.to(oneAmp_hide, 1, {autoAlpha:0, delay:-1})
-.to(pointFiveAmp_hide, 1, {autoAlpha:1, delay:-1})
-.to(resistorBody_hide, 1, {scaleY:.5, transformOrigin:"50 0", delay:-1})
-.to(resistorBody_hide, 1, {strokeWidth:1, delay:-1})
-.to([resistorPath5,resistorPath6,resistorPath7,resistorPath8], 1,{autoAlpha:0, delay:-1})
-.add(function(){TweenMax.to([path659210,path659211,path659212,path6592123,path6592106,path6592113,path6592126,path65921260,path6592109,path6592112,path6592129,path65921294,path65928922,path6592707,path6592655,path65926556], 0.1, {strokeDashoffset:"-=4", repeat:0, ease:Linear.easeNone,yoyo:false, delay:-1})})
-.to([extraFreeElectonsCallout_hide,currentCallout3_hide], 1, {autoAlpha:1, delay:9})
-.to([extraFreeElectonsCallout_hide,currentCallout3_hide], 1, {autoAlpha:0, delay:8})
+//Trace entire diagram then hide
+.to([break1copy,gnd1copy,gnd2copy,gnd3copy,s1copy,r1copy,gnd3copy,pos1copy,pos2copy], 0, {stroke:"red", strokeWidth:3})
+.staggerFromTo([break1copy], .25, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+.staggerFromTo([gnd1copy], .75, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+.staggerFromTo([s1copy], .25, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+.staggerFromTo([gnd2copy], .75, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+.staggerFromTo([gnd3copy], .75, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+.staggerFromTo([r1copy], .25, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+.staggerFromTo([pos2copy], .5, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+.staggerFromTo([pos1copy], .75, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
 
 
+// Characteristics of series circuit
+.to(diagram1_hide, 1 , {autoAlpha:0, delay:.5})
+.to([firstText], 1 , {autoAlpha:1, delay:-1})
+.to([firstText1_hide], 1 , {autoAlpha:1, delay:0})
+.to(firstText2_hide, 1 , {autoAlpha:1, delay:1.5})
+.to(firstText3_hide, 1 , {autoAlpha:1, delay:2.5})
+.to(firstText4_hide, 1 , {autoAlpha:1, delay:3.15})
+.to([gnd1copy,gnd2copy,gnd3copy,s1copy,r1copy,gnd3copy,pos1copy,pos2copy,break1copy], 0, {autoAlpha:0, stroke:"black",delay:0})
 
-.to(resistorBody2_hide, 1, {autoAlpha:1, delay:6})
-.to(resistorBody2_hide, 1, {strokeWidth:1, delay:-1})
-.to(oneAmp_hide, 1, {autoAlpha:1, delay:-1})
-.to(pointFiveAmp_hide, 1, {autoAlpha:0, delay:-1})
-.to([resistorPath5,resistorPath6,resistorPath7,resistorPath8], 1,{autoAlpha:1, delay:-1})
-.from(secondTwoOhm_hide, 1, {autoAlpha:0, delay:-1})
-.add(function(){TweenMax.to([path659210,path659211,path659212,path6592123,path6592106,path6592113,path6592126,path65921260,path6592109,path6592112,path6592129,path65921294,path65928922,path6592707,path6592655,path65926556], 0.1, {strokeDashoffset:"-=4", repeat:-1, ease:Linear.easeNone,yoyo:false, delay:-2})})
+// Move and scale Characteristics to to left
+.to(firstText, 2 ,{scaleX:.35, scaleY:.35, x:425, y:-80, transformOrigin:"50 50", delay:4})
+.to(firstText2_hide, 0, {fill:"red"})
+.to(firstTextBorder_hide, 1, {autoAlpha:1})
+.to(diagram1_hide, 1 , {autoAlpha:1, delay:-1.5})
 
+//Show meter
+.to([onesArray,tensArray,hunsArray,thousArray], 0, {autoAlpha:-1})
+.to(multimeterGroup_hide, 1, {autoAlpha:1, delay:-1})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .to(multimeterGroup_hide, 1, {autoAlpha:1})
-// .to(meterKnob, 2, {rotation:180, transformOrigin:"29.5 29.5"})
+//Change meter to dc amps
+.to(meterKnob, 2, {rotation:180, transformOrigin:"29.5 29.5"})
+.to([onesArray,tensArray,hunsArray,thousArray], 0, {autoAlpha:0})
+.to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray,dc_hide], 0, {autoAlpha:1})
 
 
+//Move meter leads
+.to(blackLead, 1, {morphSVG:blackLead1_hide,delay:1.5})
+.to(redLead, 1, {morphSVG:redLead1_hide,delay:-1})
+.to([break1,break1copy],1, {autoAlpha:0,delay:-.5})
+
+//Current flow on
+.to([s1,s1copy],1,{rotation:0, transformOrigin:"0 20", delay:4})
+.to([diagram1AllPaths], 0, {strokeDasharray:"2,6", ease:Linear.easeNone, strokeWidth:3, stroke:"black", delay:-1})
+//.add(function(){TweenMax.to([diagram1AllPaths], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
+.to([pos1copy,pos2copy], 0, {stroke:"red"})
+.to([r1copy], 0, {stroke:"orange"})
+.to([diagram1AllPaths], 0, {autoAlpha:1})
+.to([break1,break1copy,batterySymbol_noCurrentcopy],0, {autoAlpha:0})
+
+
+.to([onesArray,tensArray,hunsArray,thousArray], 0, {autoAlpha:0})
+.to([thousOneArray,hunsZeroArray,tensZeroArray,onesZeroArray,dc_hide,twoDot_hide], 0, {autoAlpha:1})
+
+//Show current formula
+.to(currentFormula_hide, 1, {autoAlpha:1, delay:6})
+.to(currentText1_hide, 1, {autoAlpha:1, delay:5})
+.to(voltageText_hide, 1, {autoAlpha:1, delay:1.5})
+.to(resistanceText_hide, 1, {autoAlpha:1, delay:1.5})
+//Hide current formula
+.to([currentFormula_hide,currentText1_hide,voltageText_hide,resistanceText_hide], 1, {autoAlpha:0, delay:2})
+
+//Draw R1 callout
+.staggerFromTo([r1Callout], 2, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:10})
+//Hide R1 callout
+.to(r1Callout, 1, {autoAlpha:0, delay:2})
+
+//Open Switch, change to diagram 2
+
+
+.to([s1,s1copy],1,{rotation:20, transformOrigin:"0 20", delay:0})
+.to(diagram1AllPaths, .5, {autoAlpha:0, delay:-.5})
+.to([gnd3,gnd3copy,r1,r1copy,pos2,pos2copy,thirteenPointSixOhms1,r1Designator], 1, {autoAlpha:0, delay:0})
+.to([diagram2Array,diagram2Resistors_hide], 2, {autoAlpha:1, delay:0})
+.to([onesArray,tensArray,hunsArray,thousArray], 0, {autoAlpha:0})
+.to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray,dc_hide], 0, {autoAlpha:1})
+.to(firstText2_hide, 1, {fill:"black", delay:-1})
+.to(firstText3_hide, 1, {fill:"red", delay:-1})
+
+
+
+.to([s1,s1copy],1,{rotation:0, transformOrigin:"0 20", delay:2})
+.to([onesArray,tensArray,hunsArray,thousArray], 0, {autoAlpha:0})
+.to([thousZeroArray,hunsFiveArray,tensZeroArray,onesZeroArray,dc_hide], 0, {autoAlpha:1})
+.to([gnd1copy,s1copy,gnd2copy,diagram2Wire1copy,diagram2Wire1copy,diagram2Wire1copy], 0, {strokeDasharray:"2,6", ease:Linear.easeNone, strokeWidth:3, stroke:"black", autoAlpha:1, delay:-.5})
+//.add(function(){TweenMax.to([gnd1copy,s1copy,gnd2copy,diagram2Wire1copy,diagram2Wire1copy,diagram2Wire1copy], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
+
+//Resistors on
+.to([diagram2R2copy,diagram2R3copy], 0, {strokeDasharray:"2,6", ease:Linear.easeNone, strokeWidth:3, stroke:"orange", autoAlpha:1, delay:0})
+//.add(function(){TweenMax.to([diagram2R2copy,diagram2R3copy], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
+
+//Middle wire on
+.to([diagram2Wire2copy], 0, {strokeDasharray:"2,6", ease:Linear.easeNone, strokeWidth:3, stroke:"#800000", autoAlpha:1, delay:-0.1})
+//.add(function(){TweenMax.to([diagram2Wire2copy], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
+
+//Remaining wires on
+.to([diagram2Wire3copy,pos1copy], 0, {strokeDasharray:"2,6", ease:Linear.easeNone, strokeWidth:3, stroke:"red", autoAlpha:1, delay:-0.1})
+//.add(function(){TweenMax.to([diagram2Wire3copy,pos1copy], 0.1, {strokeDashoffset:"-=8", repeat:-1, ease:Linear.easeNone,yoyo:false})})
+.to(currentFormula_hide, 1, {autoAlpha:1, delay:3})
+.to([volts1_hide,voltsCallout_hide], 1, {autoAlpha:1, delay:3})
+.to([resistance1_hide,r1Callout_hide], 1, {autoAlpha:1, delay:5})
+.to(plus1_hide, 1, {autoAlpha:1, delay:0})
+.to([resistance2_hide,r2Callout_hide], 1, {autoAlpha:1, delay:0})
+.to([resistance1_hide,resistance2_hide,plus1_hide], 1, {autoAlpha:0, delay:1})
+.to(totalResistance2_hide, 1, {autoAlpha:1, delay:0})
+.staggerFromTo([path7126], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:4})
+.to([equals_hide,answer_hide], 1, {autoAlpha:1, delay:1})
+
+//Go to Sum of voltages.
+.to([r1Callout_hide,r2Callout_hide,voltsCallout_hide,currentFormula_hide,volts1_hide,path7126,totalResistance2_hide,equals_hide,answer_hide], 1, {autoAlpha:0, delay:2})
+.to(firstText3_hide, 1, {fill:"black", delay:0})
+.to(firstText4_hide, 1, {fill:"red", delay:-1})
+
+//Move meter leads
+.to(blackLead, 1, {morphSVG:blackLead})
+.to(redLead, 1, {morphSVG:redLead,delay:-1})
+
+//Meter to 0.
+.to([thousArray,hunsArray,tensArray,onesArray,oneDot_hide,twoDot_hide,threeDot_hide,fourDot_hide], 0, {autoAlpha:0})
+.to([thousZeroArray,hunsZeroArray,tensZeroArray,onesZeroArray,threeDot_hide], 0, {autoAlpha:1})
+.to([break1,break1copy],1, {autoAlpha:1})
+
+//Change diagrams.
+.to([diagram2R2,diagram2R2copy,diagram2R3,diagram2R3copy,diagram2Wire1,diagram2Wire1copy,diagram2Wire2,diagram2Wire2copy,diagram2Wire3,diagram2Wire3copy,diagram2Resistors_hide],1, {autoAlpha:0})
+.to([gnd3,gnd3copy,pos2,pos2copy,r1,r1copy,r1Designator],1, {autoAlpha:1,delay:-1})
+
+//Trace negative potential highlight.
+.staggerFromTo([negPotTrace], 3, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:12})
+.to(r1Neg_hide,1,{autoAlpha:1,delay:0})
+
+//Trace resistor.
+.staggerFromTo([r1Sec1], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:1})
+.staggerFromTo([r1Sec2], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+.staggerFromTo([r1Sec3], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+.staggerFromTo([r1Sec4], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+.staggerFromTo([r1Sec5], .5, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+.to(r1Pos_hide,1,{autoAlpha:1,delay:0})
+//Trace positive potential highlight.
+.staggerFromTo([posPotHighlight], 3, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:4})
+
+
+.to(r1VoltageDrop_hide,1,{autoAlpha:1,delay:5.5})
+
+
+.to(kirchoffsVoltageLaw_hide,1,{autoAlpha:1,delay:13})
+.to(kirchoffsVoltageLaw_hide,1,{autoAlpha:0,delay:20})
+.to(batteryVoltageText,1,{x:-87,y:-87,delay:2})
+.to(plusSymbol_hide,1,{autoAlpha:1,delay:1})
+.to([r1VoltageDrop_hide],1,{x:-10,y:170,delay:0})
+.to([negSymbol1_hide],1,{autoAlpha:1,delay:0})
+.to([equalsEquals_hide,equalsZero_hide],1,{autoAlpha:1,delay:0})
+
+
+
+
+//Show diagram3
+.to([diagram3_hide], 1, {autoAlpha:1, delay:3})
+
+//Turn current flow on.
+.to([diagram3Wire2Current,diagram3Wire1Current,diagram3S1Current],0,{autoAlpha:1,stroke:"black"})
+.to([diagram3R1Current,diagram3R2Current,diagram3R3Current],0,{autoAlpha:1,stroke:"orange"})
+.to([diagram3Wire3Current,diagram3Wire4Current,],0,{autoAlpha:1,stroke:"#800000"})
+.to([diagram3Wire5Current,diagram3Wire5],0,{autoAlpha:1,stroke:"red"})
+
+//Trace r1 to neg terminal of battery.
+.to([diagram3Wire2Trace,diagram3Wire1Trace,diagram3S1Trace],0,{stroke:"black"})
+.staggerFromTo([diagram3Wire2Trace], 1, {drawSVG:'100% 100%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:7.5})
+.staggerFromTo([diagram3S1Trace], .1, {drawSVG:'100% 100%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+.staggerFromTo([diagram3Wire1Trace], 1, {drawSVG:'100% 100%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+
+
+//Trace r3 to battery
+.staggerFromTo([diagram3Wire5Trace], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:7})
+.staggerFromTo([diagram3Wire5Trace], 1, {drawSVG:'0% 100%',immediateRender:false}, {drawSVG: '0% 0%', ease: Power0.easeNone, delay:7})
+
+//Trace r1 to r2
+.to([diagram3Wire3Trace,diagram3R1Trace],0,{stroke:"#800000"})
+.staggerFromTo([diagram3R1Trace], 2, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:2})
+.staggerFromTo([diagram3Wire3Trace], 4, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+
+//Trace r2 to r3
+.to([diagram3Wire4Trace,diagram3R2Trace],0,{stroke:"#aa0000"})
+.staggerFromTo([diagram3R2Trace], 2, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:9})
+.staggerFromTo([diagram3Wire4Trace], 4, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
+
+//Trace r3
+.to([diagram3R3Trace],0,{stroke:"#d10303"})
+.staggerFromTo([diagram3R3Trace], 2, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:3})
+
+//Trace r3 to battery
+.to([diagram3Wire5Trace],0,{stroke:"red"})
+.staggerFromTo([diagram3Wire5Trace], 2, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:1})
+
+//Show kirchoff calculation
+
+.to(v1_hide, 1, {autoAlpha:1, delay:11})
+.to(diagram3Plus_hide, 1, {autoAlpha:1, delay:1})
+.to(r1Volts_hide, 1, {autoAlpha:1, delay:1})
+.to(diagram3Plus2_hide, 1, {autoAlpha:1, delay:0})
+.to(r2Volts_hide, 1, {autoAlpha:1, delay:1})
+.to(diagram3Plus4_hide, 1, {autoAlpha:1, delay:1})
+.to(r3Volts_hide, 1, {autoAlpha:1, delay:0})
+.to(diagram3Equals_hide, 1, {autoAlpha:1, delay:0})
+.to(finalAnswer_hide, 1, {autoAlpha:1, delay:0})
+.to(finalAnswer_hide, 3.819999999999993, {autoAlpha:1, delay:0})
+
+
+
+function correctTime(){
+	var movieLength=slideTl.totalDuration();
+	// var timeCorrection=audioLength-movieLength;
+ //    slideTl.append(TweenMax.to (dummy,timeCorrection,{autoAlpha:0}))
+    console.log("Audio Length: " + Math.floor(audioLength / 60) + ":" + (audioLength % 60 ? audioLength % 60 : '00'))
+    console.log("Video Length: " + Math.floor(movieLength / 60) + ":" + (movieLength % 60 ? movieLength % 60 : '00'))
+    console.log(audioLength-movieLength)
+ //    console.log(timeCorrection)
+}
+
+
+// .staggerFromTo([strikeThru], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:2})
+// .to(negSymbol1_hide,1,{autoAlpha:1,delay:0})
+// .to([equalsZero_hide,equalsEquals_hide],1,{autoAlpha:1,delay:.9})
 
 
 
 
 
 
-
-
-
-// .to(diagram1_hide,1,{autoAlpha:1,delay:2})
-// .to([s1,s1copy], 1, {rotation:0,transformOrigin:"0 20",delay:1})
-// .to([circuitComponents], 1, {strokeDasharray:"2,8", ease:Linear.easeNone, strokeWidth:normalCurrent, delay:-1})
-// .add(function(){TweenMax.to([circuitComponents], 0.5, {strokeDashoffset:"-=20", repeat:-1, ease:Linear.easeNone,yoyo:false})})
-
-
-// .to([coulombArray], 0, {strokeDasharray:"1,4", ease:Linear.easeNone, strokeWidth:1.5, stroke:"black", delay:0})
-// .add(function(){TweenMax.to([coulombArray], 0.1, {strokeDashoffset:"-=5", repeat:-1, ease:Linear.easeNone,yoyo:false})})
-// .to(coulomb_hide,1,{autoAlpha:1, delay:4})
-// .to(coulomb_hide, 2, {scaleX:1, scaleY:1,transformOrigin:"50 25"})
-// .to(sixPointTwoFour_hide,1,{autoAlpha:1})
-// .to(coulomb_hide, 2, {scaleX:0, scaleY:0,transformOrigin:"50 25", delay:6})
-// .to([sixPointTwoFour_hide],1,{autoAlpha:0, delay:-2})
-
-
-// //24 volts large current
-// .to(twelveV, 1 ,{autoAlpha:0, delay:10})
-// .to(twentyFourV_hide, 1 ,{autoAlpha:1, delay:-1})
-// .to([circuitComponents], .1, {strokeWidth:doubleCurrent, delay:0})
-
-// //revert back to 12 volts and normal current
-// .to(twelveV, 1 ,{autoAlpha:1, delay:7})
-// .to(twentyFourV_hide, 1 ,{autoAlpha:0, delay:-1})
-// .to([circuitComponents], .1, {strokeWidth:normalCurrent, delay:0})
-
-// //6 volts small current
-// .to(twelveV, 1 ,{autoAlpha:0, delay:2})
-// .to(sixV_hide, 1 ,{autoAlpha:1, delay:-1})
-// .to([circuitComponents], .1, {strokeWidth:halfCurrent, delay:0})
-
-// //6 volts revert
-// .to(twelveV, 1 ,{autoAlpha:1, delay:6})
-// .to(sixV_hide, 1 ,{autoAlpha:0, delay:-1})
-// .to([circuitComponents], .1, {strokeWidth:normalCurrent, delay:0})
-
-// //add 2nd light bulb
-// .to([lightBulb2b_current,lightBulb2b_currentcopy,lightBulb2Shell_current], 1 ,{autoAlpha:1, delay:7})
-// .to([lightBulb2a,lightBulb2acopy], 1, {autoAlpha:0,delay:-1})
-// .to([switched2copy,switched22copy], 1, {stroke:"purple", delay:-1})
-
-// //Added resistance small current
-// .to([circuitComponents], .1, {strokeWidth:2, delay:0})
-// .to([switched2copy,switched22copy], .1, {strokeWidth:4, delay:8})
-// .to([switched2copy,switched22copy], .1, {strokeWidth:2, delay:14})
-
-// //Remove 2nd light bulb
-// .to([lightBulb2b_current,lightBulb2b_currentcopy,lightBulb2Shell_current], 1 ,{autoAlpha:0, delay:4})
-// .to([lightBulb2a,lightBulb2acopy], 1, {autoAlpha:1,delay:-1})
-// .to([switched2copy,switched22copy], 1, {stroke:"red", delay:-1})
-// .to([circuitComponents], .1, {strokeWidth:normalCurrent, delay:0})
-
-// //Move light to parallel with other light
-// .to(switched22copy,0,{stroke:"red"})
-// .to([switched11copy,r1copy,switched2copy,parallel1_currentcopy,lightBulb3b_currentcopy,parallel2_currentcopy], 0, {strokeWidth:halfCurrent, delay:0})
-// .to([lightBulb3b_current,lightBulb3b_currentcopy,lightBulb3Shell_current,lightBulb3Shell_currentcopy,parallel1_current,parallel1_currentcopy,parallel2_current,parallel2_currentcopy,parallel1_currentcopy,lightBulb3b_currentcopy,parallel2_currentcopy], 2, {autoAlpha:1, delay:0})
-
-// .from(path16175_hide, 1, {autoAlpha:0, delay:12})
-// .from(comeTogetherHere_hide, 1, {autoAlpha:0, delay:7.5})
+// var movieLength=slideTl.totalDuration();
+// function convert(movieLength) {
+//     console.log(Math.floor(movieLength / 60) + ":" + (movieLength % 60 ? movieLength % 60 : '00'))
+// }
+// convert(movieLength)
