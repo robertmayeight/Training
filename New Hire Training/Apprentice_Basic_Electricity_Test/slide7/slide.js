@@ -412,9 +412,9 @@ slideTl
 
 .to(kirchoffsVoltageLaw_hide,1,{autoAlpha:1,delay:13})
 .to(kirchoffsVoltageLaw_hide,1,{autoAlpha:0,delay:20})
-.to(batteryVoltageText,1,{x:-87,y:-87,delay:2})
+.to(batteryVoltageText,1,{x:-87,y:-87,delay:1})
 .to(plusSymbol_hide,1,{autoAlpha:1,delay:1})
-.to([r1VoltageDrop_hide],1,{x:-10,y:170,delay:0})
+.to([r1VoltageDrop_hide],1,{x:-10,y:172,delay:0})
 .to([negSymbol1_hide],1,{autoAlpha:1,delay:0})
 .to([equalsEquals_hide,equalsZero_hide],1,{autoAlpha:1,delay:0})
 
@@ -438,12 +438,12 @@ slideTl
 
 
 //Trace r3 to battery
-.staggerFromTo([diagram3Wire5Trace], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:7})
+.staggerFromTo([diagram3Wire5Trace], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:7.5})
 .staggerFromTo([diagram3Wire5Trace], 1, {drawSVG:'0% 100%',immediateRender:false}, {drawSVG: '0% 0%', ease: Power0.easeNone, delay:7})
 
 //Trace r1 to r2
 .to([diagram3Wire3Trace,diagram3R1Trace],0,{stroke:"#800000"})
-.staggerFromTo([diagram3R1Trace], 2, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:2})
+.staggerFromTo([diagram3R1Trace], 2, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:1})
 .staggerFromTo([diagram3Wire3Trace], 4, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
 
 //Trace r2 to r3
@@ -462,15 +462,14 @@ slideTl
 //Show kirchoff calculation
 
 .to(v1_hide, 1, {autoAlpha:1, delay:11})
-.to(diagram3Plus_hide, 1, {autoAlpha:1, delay:1})
+.to(diagram3Plus_hide, 1, {autoAlpha:1, delay:1.5})
 .to(r1Volts_hide, 1, {autoAlpha:1, delay:1})
-.to(diagram3Plus2_hide, 1, {autoAlpha:1, delay:0})
+.to(diagram3Plus2_hide, 1, {autoAlpha:1, delay:.5})
 .to(r2Volts_hide, 1, {autoAlpha:1, delay:1})
-.to(diagram3Plus4_hide, 1, {autoAlpha:1, delay:1})
+.to(diagram3Plus4_hide, 1, {autoAlpha:1, delay:.2})
 .to(r3Volts_hide, 1, {autoAlpha:1, delay:0})
 .to(diagram3Equals_hide, 1, {autoAlpha:1, delay:0})
-.to(finalAnswer_hide, 1, {autoAlpha:1, delay:0})
-.to(finalAnswer_hide, 3.819999999999993, {autoAlpha:1, delay:0})
+.to([finalAnswer_hide], 1, {autoAlpha:1, delay:0})
 
 
 
