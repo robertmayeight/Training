@@ -39,10 +39,147 @@ The higher the circuit resistance is, the lower the current flow will be in the 
 And con versely, the lower the circuit resistance is, the higher the current flow will be in the circuit.
 
 Slide7
-The circuit shown here is called a series circuit.
-All of the components are in line with one another.
+The circuit shown here is called a series circuit because all of the components, are in line with one another.
 
 The characteristics of a series circuit are:
 1) Current flow is the same, in all parts of the circuit.
-2) Added resistance, decreases current flow.
+2) Changes in resistance, changes current flow.
 3) The sum of the voltage drops of the circuit, is equal to the supply voltage.
+
+Current flow, in a DC circuit, has to be measured in line with the components.
+The circuit has to be broken, and the meter leads inserted in series with the components.
+
+In this circuit, the amp meter shows the current draw to be 1 amp.
+We know this is correct, because ohm's law states that the current draw in a circuit, is equal to the voltage, divided by the resistance.
+
+Eye, is equal to current.
+V, is equal to voltage.
+And R, is equal to resistance.
+
+No matter where the meter leads are placed in this circuit, the current draw will always be the same, because all of the components, are inline with one another.
+Since R one, is the only resistance in this circuit, the current flow is limited by the resistance, of that resistor.
+
+Even if two or more resistors, were added in series; the current flow will still be the same throughout the entire circuit.
+
+We can use ohms law, to calculate the circuit current.
+V, is equal to thirteen point six volts.
+R, is equal to the total resistance of the circuit - 13.6 ohms, plus 13.6 ohms, gives us 27.2 ohms, of total circuit resistance.
+13.6, divided by 27.2, is equal to .5 amps, which is what the meter is reading.
+
+As the current flows thu the resistor, the potential starts to change from a negative potential, to a positive potential.
+As the current exits the resistor, it is at 100% positive potential because it is connected directly to the positive terminal of the baddery.
+
+This means that all of the supplied voltage: 13.6 volts in this case, has been dropped across: R1.
+Note that the polarity of the voltage drop across are 1, is opposite from the polarity of the baddery.
+
+According to Kirchoff's voltage law: the algebraic sum, of all the voltages around any closed loop in a circuit, is equal to zero.
+
+When using Kirchoff's law, the voltage supplied by the power source, is considered to be a positive number, and the loads are considered to be negative numbers.
+This is because the voltage drops in a circuit, have the opposite polarity of the baddery.
+
+Now let's look at how potential, and voltage drop, operate in circuits with more than one resistor.
+In this circuit, the left side of R1, is directly connected to the negative side of the baddery.
+This puts the left side of R1, at the same negative potential as the negative side of the baddery. 
+The left side of R3, is directly connected to the positive side of the baddery, causing it to be at the same positive potential as the positive side of the baddery.
+
+As the current flows thru R 1, the potential starts to move toward a more positive potential.
+Note that the potential does not change as the current flows through the connecting wires.
+This is because the wires have very little resistance, and do not drop any voltage.
+As current passes thru R 2, the potential moves even more positive.
+Again note, the potential does not change as the current flows through the connecting wires.
+As the current flow flows through R 3, the potential moves even more positive.
+And now finally, as the current flow leaves  r 3, it is now at the same positive potential as the positive baddery terminal.
+
+Slide 8
+Voltage, current, resistance, and power, are all related to one another.
+If any one of these circuit parameters change, other parameters will be affected.
+Ohm's law, describes the relationship between these circuit parameters.
+This ohm's law chart is helpful in understanding this relationship.
+
+The chart is broken up into 4 sections.
+Section one gives the relationships as related to voltage.
+Section two is for resistance.
+Section three is for power.
+And section four is for current.
+
+In this circuit, the supply voltage is 13.6 volts D C.
+The total resistance of the circuit is:
+R 1, plus, R 2, plus, H 1.  (H1 is a heater).
+This makes the total resistance of the circuit: 25 ohms.
+
+The total current of the circuit is not given, nor is the total power, but we can calculate those values using ohm's law.
+
+We can use the "current section", of the ohms law chart, to calculate the total current of the circuit.
+Note that the current section of the chart, contains three formulas.
+This is because the current value can be obtained from different unknowns.
+In our case, the resistance and voltage are given to us, so we will use the formula that uses voltage and resistance, to calculate current draw.
+We see that I, (current), is equal to E, (voltage), divided by, R, (resistance).
+In this example, V, is equal to 13.6 volts, divided by 25 ohms.
+Which equals: point five four four amps.
+
+To calculate power, (also known as watts), we use the power section of the "ohms law chart".
+
+Note that the power section of the ohms law chart, contains three formulas also.
+Since we now know the voltage, current, and resistance of the circuit, we can use any of these formulas, to calculate power.
+Using the p, equals, I times E formula, we have, 13.6 volts, times .5 4 amps, equals 7.29 watts.
+
+Using current and voltage to calculate, we have:
+13.6 volts, times, point 5 4 4 amps, equals 7.39 watts.
+
+Using current and resistance we have:
+Point 5 4 4 amps squared, (which is, point 5 4 4 times point 5 4 4), times, 25 ohms, equals: 7.39 watts.
+
+Using voltage and resistance we have:
+13.6 volts squared, divided by 25 ohms, equals: 7.39 watts.
+
+To illustrate how voltage, current, resistance and power are affected by one another, let's change the baddery voltage, from 13.6 volts, to thirty volts.
+
+Slide 9
+This is a parallel circuit; because all of the components are in parallel with one another.
+As current flow leaves the baddery, it makes it's way around the entire circuit, in two independent circuits.
+The characteristics of a parallel circuit are:
+1) Circuits are made up of parallel branches.
+2) Current flow is dependant upon branch resistance.
+3) Voltage drop is the same across parallel branches.
+4), Added parallel resistance, decreases total resistance.
+
+The total current draw of this circuit, is equal to the sum of the current draw of each branch.
+Using ohm's law, thirteen point six volts, divided by, twenty ohms, equals, point 6 8 amps.
+
+The current draw of branch 2 is: thirteen point six volts, divided by, ten ohms, equals, one point 3 6 amps.
+This makes I T, equal to point 6 8 amps, plus, one point 3 6 amps.
+This gives us a total current draw of: 2 point 0 4 amps.
+
+Now let's see what happens when we change the resistance of one of the branches.
+
+Let's change r 2, in branch 2, to 20 ohms, and recalculate current draw for each branch.
+
+The resistance of branch 1 did not change, there fore, the calculation is the same as before.
+Note that even though the resistance of branch 2 was changed, it didn't have any effect on branch one's current.
+
+Now let's recalculate branch two's current draw.
+Thirteen point six volts, divided by, twenty ohms, equals point six eight amps.
+Note that the current draw, in branch two, is now different than it was, when it had the ten ohm resistor.
+Also note that the current draw, in branch two, is the same as the current draw in branch one.
+This is because both branches, have the same resistance.
+
+The total current draw for the circuit, is now point 6 8 amps, plus, point 6 8 amps, which is equal to, one point 3 6 amps.
+
+Now let's look at voltage drops across parallel circuits.
+
+The voltage drop across R 1, is 13.6 volts.
+This is because the black meter lead, is directly connected to the negative terminal of the baddery.
+And, the red lead, is directly connected to the positive terminal of the baddery.
+
+The same is true of R 2.
+The black meter lead at R 2, is directly connected to the negative side of the baddery.
+And, the red meter lead at R 2, is directly connected to the positive side.
+The voltage drop across parallel circuits, will always be the same in all branches, but, the current flow could be different, depending on whether the parallel resistances are the same, or not.
+
+
+////
+In other words, one, is divided by each resistor in the circuit.
+Those totals are added together, and one, is divided by that total.
+This gives the total resistance of the circuit.
+
+

@@ -430,3 +430,6 @@ slideTl
 //Slider excercise
 .to([path7233,path72335,calculations2iT_hide,calculations2rT_hide,calculations2Vcc_hide,calculations1vT_hide,calculations1rT_hide,calculations1rTAnswer_hide,calculations1iT_hide,calculations1point54Amps_hide,calculations1pT_hide,calculations7point39Watts_hide,chartI_hide,chartE_hide,chartR_hide,chartP_hide], 1, {autoAlpha:0, delay:4})
 .to(ohmsLawSliders_hide, 1, {autoAlpha:1})
+
+// .to(image7478, 5, {rotation:360})
+// to(image7478, 5, {rotation:360})
