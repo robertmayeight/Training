@@ -18,8 +18,7 @@ redraw();
 window.addEventListener("resize", redraw);
 
 //Browser Adjustments
-var slideAudio = document.getElementById('music');
-slideAudio.src="slide.mp3"
+
 
 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 var isFirefox = typeof InstallTrigger !== 'undefined';
@@ -29,7 +28,7 @@ var isEdge = !isIE && !!window.StyleMedia;
 var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-var audioLength;
+
 
 slideAudio.onloadeddata = function() {
 	TweenMax.to(pcSliderGroup_hide, 0, {autoAlpha:1})
