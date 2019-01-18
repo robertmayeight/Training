@@ -30,7 +30,10 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
 
 
 
-
+function audioLoaded() {
+	console.log("audio loaded")
+	slideTl.play();
+}
 
 // slideAudio.onloadeddata = function() {
 // 	audioLength=slideAudio.duration;
