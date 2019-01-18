@@ -26409,7 +26409,7 @@
      id="namedview4"
      showgrid="true"
      inkscape:zoom="1"
-     inkscape:cx="99.880891"
+     inkscape:cx="97.880891"
      inkscape:cy="230.04601"
      inkscape:window-x="-11"
      inkscape:window-y="69"
@@ -32618,7 +32618,7 @@
      inkscape:groupmode="layer"
      id="layer17"
      inkscape:label="Player Controls"><g
-       id="pcSliderGroup_hide"
+       id="pcSliderGroup"
        inkscape:label="#g7070"
        transform="translate(0,-3.0017414)"><rect
          inkscape:label="#rect7064"
