@@ -1,8 +1,8 @@
-slide = new XMLHttpRequest();
-slide.open("GET","slide.svg",false);
-slide.overrideMimeType("image/svg+xml");
-slide.send("");
-var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
+// slide = new XMLHttpRequest();
+// slide.open("GET","slide.svg",false);
+// slide.overrideMimeType("image/svg+xml");
+// slide.send("");
+// var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var svgWindow = document.getElementById("main");
@@ -30,78 +30,47 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 var isBlink = (isChrome || isOpera) && !!window.CSS;
 
 var audioLength;
-if(isFirefox == true){
-	TweenLite.to(slideAudio, 0, {bottom:0})
-	slideAudio.onloadeddata = function() {
-	slideAudio.play();
-	slideTl.play();
-	audioLength=slideAudio.duration;
-	}
-}
-if(isEdge == true){
-	TweenLite.to(slideAudio, 0, {bottom:-490})
-	slideAudio.onloadeddata = function() {
-	slideAudio.play();
-	slideTl.play();
-	};
-}
-if(isChrome == true){
-	TweenLite.to(slideAudio, 0, {bottom:-15})
-	TweenLite.to(slideAudio, 0, {className:"chromePlayerControls"})
-	TweenLite.to(slideAudio, 0, {bottom:0})
-	slideAudio.onloadeddata = function() {
-	audioLength=slideAudio.duration;
-	correctTime();
-		}
-}
-if(isOpera == true){
-	TweenLite.to(slideAudio, 0, {bottom:-750})
-	slideAudio.onloadeddata = function() {
-	slideAudio.play();
-	slideTl.play();
-	};
-}
-if(isSafari == true){
-	TweenLite.to(slideAudio, 0, {bottom:-750})
-	slideAudio.onloadeddata = function() {
-	slideAudio.play();
-	slideTl.play();
-	};
-}
+// if(isFirefox == true){
+// 	TweenLite.to(slideAudio, 0, {bottom:0})
+// 	slideAudio.onloadeddata = function() {
+// 	slideAudio.play();
+// 	slideTl.play();
+// 	audioLength=slideAudio.duration;
+// 	}
+// }
+// if(isEdge == true){
+// 	TweenLite.to(slideAudio, 0, {bottom:-490})
+// 	slideAudio.onloadeddata = function() {
+// 	slideAudio.play();
+// 	slideTl.play();
+// 	};
+// }
+// if(isChrome == true){
+// 	TweenLite.to(slideAudio, 0, {bottom:-15})
+// 	TweenLite.to(slideAudio, 0, {className:"chromePlayerControls"})
+// 	TweenLite.to(slideAudio, 0, {bottom:0})
+// 	slideAudio.onloadeddata = function() {
+// 	audioLength=slideAudio.duration;
+// 	correctTime();
+// 		}
+// }
+// if(isOpera == true){
+// 	TweenLite.to(slideAudio, 0, {bottom:-750})
+// 	slideAudio.onloadeddata = function() {
+// 	slideAudio.play();
+// 	slideTl.play();
+// 	};
+// }
+// if(isSafari == true){
+// 	TweenLite.to(slideAudio, 0, {bottom:-750})
+// 	slideAudio.onloadeddata = function() {
+// 	slideAudio.play();
+// 	slideTl.play();
+// 	};
+// }
 
-//End Browser Adjustments
 
-//Audio
-slideAudio.onplay = function() {
-	slideTl.play();
-	slideTl.time(slideAudio.currentTime);
-};
-
-slideAudio.onpause = function() {
-	slideTl.pause();
-	slideTl.time(slideAudio.currentTime);
-};
-
-slideAudio.onseeked = function() {
-	// slideTl.time(slideAudio.currentTime);
-}
-
-slideAudio.ontimeupdate = function() {
-	slideTl.time(slideAudio.currentTime);
-};
-
-function playAudio(){
-	slideAudio.play();
-	slideTl.time(slideAudio.currentTime);
-}
-
-function pausePlayer(){
-	slideAudio.pause();
-	slideTl.time(slideAudio.currentTime);
-}
-//End Audio
-
-var slideTl = new TimelineMax({paused:true});
+var slideTl = new TimelineMax({paused:true, onUpdate:updateSlider});
 
 
 // Start Meter Numbers
@@ -231,6 +200,42 @@ for(i=0; i<diag1Length; i++){
 	TweenMax.to(path, 0, {drawSVG:'0% 0%'});
 }
 
+var pcSliderContainerLength = pcSliderContainer.getTotalLength() - 23;
+var pcSliderKnobWidth = pcSliderKnob.getBBox();
+var computedBounds = pcSliderContainerLength + pcSliderKnobWidth;
+
+function updateSlider(){
+	var timePercent = slideTl.time()/slideTl.duration();
+	var knobPercent = timePercent*pcSliderContainerLength;
+	TweenMax.to(pcSliderKnob, 0, {x:knobPercent})
+}
+
+var pcSlider=Draggable.create(pcSliderKnob, {
+  type: "x",
+  bounds: "#pcSliderContainer",
+  onClick: function(){
+  	slideTl.pause();
+
+  },
+  onDrag: function() {
+  	var timePercent = slideTl.time()/slideTl.duration();
+	var knobPercent = pcSliderKnob._gsTransform.x/pcSliderContainerLength;
+  	slideTl.pause();
+  	slideTl.progress(knobPercent)
+  	slideAudio.pause();
+  	console.log(slideTl.time())
+  	slideAudio.currentTime=slideTl.time()
+  	// console.log(pcSliderContainerLength)
+  	// console.log(pcSliderKnob._gsTransform.x)
+  },
+  onDragEnd: function() {
+  	console.log(pcSliderKnob._gsTransform.x)
+    slideTl.play();
+    slideAudio.play();
+    isPlaying=true;
+  },
+});
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Current Diagram 1 Branch 1
@@ -295,7 +300,35 @@ var r2Slider=Draggable.create(r2SliderKnob, {
     TweenMax.to([sliderR2CO,sliderI2CO,sliderR2Text,sliderI2Text],0,{fill:"black"});
   },
 });
+pausePlayButton.addEventListener("click", function(){
+	
+  pausePlay();
+}); 
+var isPlaying = false;
 
+function pausePlay(){
+	if(isPlaying == false){
+		console.log("fired")
+		playPlayer();
+		isPlaying=true;
+		playIcon.style.opacity=0;
+		pauseIcon.style.opacity=1;
+
+	}else{
+		pausePlayer();
+		isPlaying=false;
+		playIcon.style.opacity=1;
+		pauseIcon.style.opacity=0;
+	}
+}
+function pausePlayer(){
+	slideTl.pause();
+	slideAudio.pause();
+}
+function playPlayer(){
+	slideTl.play();
+	slideAudio.play();
+}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
