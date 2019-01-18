@@ -17,68 +17,6 @@ function redraw(){
 redraw();
 window.addEventListener("resize", redraw);
 
-//Browser Adjustments
-
-
-var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-var isFirefox = typeof InstallTrigger !== 'undefined';
-var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-var isIE = /*@cc_on!@*/false || !!document.documentMode;
-var isEdge = !isIE && !!window.StyleMedia;
-var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
-var isBlink = (isChrome || isOpera) && !!window.CSS;
-
-
-
-function audioLoaded() {
-	console.log("audio loaded")
-	slideTl.play();
-}
-
-// slideAudio.onloadeddata = function() {
-// 	audioLength=slideAudio.duration;
-// 	correctTime();
-// 		}
-// if(isFirefox == true){
-// 	TweenLite.to(slideAudio, 0, {bottom:0})
-// 	slideAudio.onloadeddata = function() {
-// 	slideAudio.play();
-// 	slideTl.play();
-// 	audioLength=slideAudio.duration;
-// 	}
-// }
-// if(isEdge == true){
-// 	TweenLite.to(slideAudio, 0, {bottom:-490})
-// 	slideAudio.onloadeddata = function() {
-// 	slideAudio.play();
-// 	slideTl.play();
-// 	};
-// }
-// if(isChrome == true){
-// 	TweenLite.to(slideAudio, 0, {bottom:-15})
-// 	TweenLite.to(slideAudio, 0, {className:"chromePlayerControls"})
-// 	TweenLite.to(slideAudio, 0, {bottom:0})
-// 	slideAudio.onloadeddata = function() {
-// 	audioLength=slideAudio.duration;
-// 	correctTime();
-// 		}
-// }
-// if(isOpera == true){
-// 	TweenLite.to(slideAudio, 0, {bottom:-750})
-// 	slideAudio.onloadeddata = function() {
-// 	slideAudio.play();
-// 	slideTl.play();
-// 	};
-// }
-// if(isSafari == true){
-// 	TweenLite.to(slideAudio, 0, {bottom:-750})
-// 	slideAudio.onloadeddata = function() {
-// 	slideAudio.play();
-// 	slideTl.play();
-// 	};
-// }
-
-
 var slideTl = new TimelineMax({paused:true, onUpdate:updateSlider});
 
 
@@ -172,7 +110,6 @@ for (i=0; i<objectArray.length; i++) {
 }
 //End Hide Code
 
-
 var diag1 = document.getElementById("diag1_hide").getElementsByTagName("path");
 var diag1Length=diag1.length;
 var linesWithCurrentArray=[];
@@ -231,16 +168,16 @@ var pcSlider=Draggable.create(pcSliderKnob, {
 	var knobPercent = pcSliderKnob._gsTransform.x/pcSliderContainerLength;
   	slideTl.pause();
   	slideTl.progress(knobPercent)
-  	slideAudio.pause();
+  	slideAudio9.pause();
   	console.log(slideTl.time())
-  	slideAudio.currentTime=slideTl.time()
+  	slideAudio9.currentTime=slideTl.time()
   	// console.log(pcSliderContainerLength)
   	// console.log(pcSliderKnob._gsTransform.x)
   },
   onDragEnd: function() {
   	console.log(pcSliderKnob._gsTransform.x)
     slideTl.play();
-    slideAudio.play();
+    slideAudio9.play();
     isPlaying=true;
   },
 });
@@ -332,11 +269,11 @@ function pausePlay(){
 }
 function pausePlayer(){
 	slideTl.pause();
-	slideAudio.pause();
+	slideAudio9.pause();
 }
 function playPlayer(){
 	slideTl.play();
-	slideAudio.play();
+	slideAudio9.play();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
