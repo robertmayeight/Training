@@ -1,8 +1,8 @@
-// slide = new XMLHttpRequest();
-// slide.open("GET","slide.svg",false);
-// slide.overrideMimeType("image/svg+xml");
-// slide.send("");
-// var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
+slide = new XMLHttpRequest();
+slide.open("GET","slide.svg",false);
+slide.overrideMimeType("image/svg+xml");
+slide.send("");
+var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var svgWindow = document.getElementById("main");
@@ -30,9 +30,7 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
 
 
 
-slideAudio.onloadeddata = function() {
-	TweenMax.to(pcSliderGroup_hide, 0, {autoAlpha:1})
-}
+
 
 // slideAudio.onloadeddata = function() {
 // 	audioLength=slideAudio.duration;
