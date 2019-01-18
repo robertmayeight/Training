@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apprentice - Basic Electricity</title>
+  <meta charset="UTF-8">
+  <!DOCTYPE html>
+  <style type="text/css">
+  body {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    background: #262626;
+    overflow: hidden;
+  }
+  .mainWindow {
+    position: fixed;
+    left: 0%;
+    top: 0%
+    margin: auto;
+    padding:0;
+    width: 100%;
+    height:100vh;
+    overflow: hidden;
+  }
+
+    .playerControls {
+    position: absolute;
+    left: 0%;
+    bottom:0px;
+    margin: auto;
+    width: 100%;
+  }
+  .chromePlayerControls{
+     position: absolute;
+    left: 0px;
+    bottom:0px;
+    margin: auto;
+    width: 100%;
+  }
+
+  .slideHeading{
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    top: 20%
+    font-size: xx-large;
+  }
+
+</style>
+</head>
+<body>
+  <div id="main" class="mainWindow" style="align-content: center;">
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
@@ -26408,13 +26460,13 @@
      inkscape:window-height="1442"
      id="namedview4"
      showgrid="true"
-     inkscape:zoom="5.6568544"
-     inkscape:cx="30.17264"
-     inkscape:cy="-1.2548429"
+     inkscape:zoom="1"
+     inkscape:cx="99.880891"
+     inkscape:cy="230.04601"
      inkscape:window-x="-11"
      inkscape:window-y="69"
      inkscape:window-maximized="1"
-     inkscape:current-layer="pauseIcon"
+     inkscape:current-layer="layer17"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -32665,3 +32717,15 @@
            d="m 25.100664,522.67588 v 13.78859"
            id="path7078-9"
            inkscape:connector-curvature="0" /></g></g></g></svg>
+  </div>
+  <audio style="height:15px" id='music'   class="playerControls" ></audio>
+</body>
+<script src=JavaScripts/jquery.js></script>
+<script src="JavaScripts/d3.min.js"></script>
+<script src="JavaScripts/TweenMax.min.js"></script>
+<script src="JavaScripts/draggable.js"></script>
+<script src="JavaScripts/DrawSVGPlugin.min.js"></script>
+<script src="JavaScripts/MorphSVGPlugin.js"></script>
+<script src="slide.js"></script>
+</html>
+<!-- controls="controls" -->

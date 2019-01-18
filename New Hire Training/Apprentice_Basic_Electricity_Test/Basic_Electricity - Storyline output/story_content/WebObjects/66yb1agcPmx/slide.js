@@ -30,6 +30,15 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 var isBlink = (isChrome || isOpera) && !!window.CSS;
 
 var audioLength;
+
+slideAudio.onloadeddata = function() {
+	TweenMax.to(pcSliderGroup_hide, 0, {autoAlpha:1})
+}
+
+// slideAudio.onloadeddata = function() {
+// 	audioLength=slideAudio.duration;
+// 	correctTime();
+// 		}
 // if(isFirefox == true){
 // 	TweenLite.to(slideAudio, 0, {bottom:0})
 // 	slideAudio.onloadeddata = function() {
