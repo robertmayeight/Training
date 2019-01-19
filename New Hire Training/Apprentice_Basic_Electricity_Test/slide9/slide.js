@@ -125,17 +125,13 @@ if(isChrome == true){
 }
 if(isOpera == true){
 	TweenLite.to(slideAudio, 0, {bottom:-750})
-	slideAudio.onloadeddata = function() {
 	slideAudio.play();
 	slideTl.play();
-	};
 }
 if(isSafari == true){
 	TweenLite.to(slideAudio, 0, {bottom:-750})
-	slideAudio.onloadeddata = function() {
 	slideAudio.play();
 	slideTl.play();
-	};
 }
 
 //End Browser Adjustments
