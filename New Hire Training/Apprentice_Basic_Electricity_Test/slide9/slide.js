@@ -20,40 +20,7 @@ window.addEventListener("resize", redraw);
 
 var slideTl = new TimelineMax({paused:true});
 
-var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-var isFirefox = typeof InstallTrigger !== 'undefined';
-var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-var isIE = /*@cc_on!@*/false || !!document.documentMode;
-var isEdge = !isIE && !!window.StyleMedia;
-var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
-var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-//Browser Adjustments
-if(isFirefox == true){
-	console.log("isFirefox")
-	slideAudio.play();
-	slideTl.play();
-}
-if(isEdge == true){
-	console.log("isEdge")
-	TweenLite.to(slideAudio, 0, {bottom:-520})
-	slideAudio.play();
-	slideTl.play();
-}
-if(isChrome == true){
-	TweenLite.to(slideAudio, 0, {className:"chromePlayerControls"})
-}
-if(isOpera == true){
-	TweenLite.to(slideAudio, 0, {bottom:-750})
-	slideAudio.play();
-	slideTl.play();
-}
-if(isSafari == true){
-	TweenLite.to(slideAudio, 0, {bottom:-750})
-	slideAudio.play();
-	slideTl.play();
-}
-//End Browser Adjustments
 
 //Audio
 slideAudio.onplay = function() {

@@ -6,24 +6,43 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var bBox = svgContent.getBBox();
-console.log('XxY', bBox.x + 'x' + bBox.y);
-console.log('size', bBox.width + 'x' + bBox.height);
-
 var svgWindow = document.getElementById("main");
 var svg = d3.select(svgContent);
 function redraw(){
 	var width = svgWindow.clientWidth;
 	var height = svgWindow.clientHeight;
 	svg
-	.attr("width", width)
-	 .attr("height", height);
+		.attr("width", width)
+	 	.attr("height", height);
 }
 redraw();
 window.addEventListener("resize", redraw);
 
 var slideTl = new TimelineMax({paused:true});
 
+
+
+//Audio
+slideAudio.onplay = function() {
+	slideTl.play();
+	slideTl.time(slideAudio.currentTime);
+};
+
+slideAudio.onpause = function() {
+	slideTl.pause();
+	slideTl.time(slideAudio.currentTime);
+};
+
+slideAudio.ontimeupdate = function() {
+	slideTl.time(slideAudio.currentTime);
+};
+
+function pausePlayer(){
+	slideAudio.pause();
+	slideTl.time(slideAudio.currentTime);
+}
+//End Audio
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Hide Code
 var gArray = document.getElementsByTagName("g");
 var tArray = document.getElementsByTagName("text");
@@ -61,6 +80,7 @@ for (i=0; i<objectArray.length; i++) {
 }
 //End Hide Code
 
+//Code for each diagram with current and highlights
 var diag1 = document.getElementById("diag1_hide").getElementsByTagName("path");
 var diag1Length=diag1.length;
 var linesWithCurrentArray=[];
@@ -84,7 +104,6 @@ for(i=0; i<diag1Length; i++){
 	if(pathLastName[1] != "noCurrent"){
 		linesWithCurrentArray.push(path)
 	}
-	
 	//Start trace copies.
 	var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 	path.setAttribute('stroke','red');
@@ -96,75 +115,6 @@ for(i=0; i<diag1Length; i++){
 	diag1_hide.appendChild(path);
 	TweenMax.to(path, 0, {drawSVG:'0% 0%'});
 }
-
-
-var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-var isFirefox = typeof InstallTrigger !== 'undefined';
-var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-var isIE = /*@cc_on!@*/false || !!document.documentMode;
-var isEdge = !isIE && !!window.StyleMedia;
-var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
-var isBlink = (isChrome || isOpera) && !!window.CSS;
-
-var audioLength;
-if(isFirefox == true){
-	console.log("isFirefox")
-	slideAudio.play();
-	slideTl.play();
-}
-if(isEdge == true){
-	console.log("isEdge")
-	TweenLite.to(slideAudio, 0, {bottom:-520})
-	slideAudio.play();
-	slideTl.play();
-	// slideAudio.style.bottom="10px" 
-	// TweenLite.to(slideAudio, 0, {className:"chromePlayerControls"})
-}
-if(isChrome == true){
-	TweenLite.to(slideAudio, 0, {className:"chromePlayerControls"})
-}
-if(isOpera == true){
-	TweenLite.to(slideAudio, 0, {bottom:-750})
-	slideAudio.play();
-	slideTl.play();
-}
-if(isSafari == true){
-	TweenLite.to(slideAudio, 0, {bottom:-750})
-	slideAudio.play();
-	slideTl.play();
-}
-
-//End Browser Adjustments
-
-//Audio
-slideAudio.onplay = function() {
-	slideTl.play();
-	slideTl.time(slideAudio.currentTime);
-};
-
-slideAudio.onpause = function() {
-	slideTl.pause();
-	slideTl.time(slideAudio.currentTime);
-};
-
-slideAudio.onseeked = function() {
-	// slideTl.time(slideAudio.currentTime);
-}
-
-slideAudio.ontimeupdate = function() {
-	slideTl.time(slideAudio.currentTime);
-};
-
-function playAudio(){
-	slideAudio.play();
-	slideTl.time(slideAudio.currentTime);
-}
-
-function pausePlayer(){
-	slideAudio.pause();
-	slideTl.time(slideAudio.currentTime);
-}
-//End Audio
 
 // Start Meter Numbers
 var onesArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide,oneG_hide];

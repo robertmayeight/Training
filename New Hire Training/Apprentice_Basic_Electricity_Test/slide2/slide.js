@@ -20,46 +20,6 @@
 var slideAudio = document.getElementById('music');
 slideAudio.src="slide.mp3"
 
-var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-var isFirefox = typeof InstallTrigger !== 'undefined';
-var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-var isIE = /*@cc_on!@*/false || !!document.documentMode;
-var isEdge = !isIE && !!window.StyleMedia;
-var isChrome = !!window.chrome && !!window.chrome.webstore;
-var isBlink = (isChrome || isOpera) && !!window.CSS;
-
-// if(isFirefox == true){
-// 	TweenLite.to(slideAudio, 0, {bottom:0})
-// 	slideAudio.onloadeddata = function() {
-// 	slideAudio.play();
-// 	slideTl.play();
-// 	};
-// }
-// if(isEdge == true){
-// 	TweenLite.to(slideAudio, 0, {bottom:-490})
-// 	slideAudio.onloadeddata = function() {
-// 	slideAudio.play();
-// 	slideTl.play();
-// 	};
-// }
-// if(isChrome == true){
-// 	TweenLite.to(slideAudio, 0, {bottom:-750})
-// }
-// if(isOpera == true){
-// 	TweenLite.to(slideAudio, 0, {bottom:-750})
-// 	slideAudio.onloadeddata = function() {
-// 	slideAudio.play();
-// 	slideTl.play();
-// 	};
-// }
-// if(isSafari == true){
-// 	TweenLite.to(slideAudio, 0, {bottom:-750})
-// 	slideAudio.onloadeddata = function() {
-// 	slideAudio.play();
-// 	slideTl.play();
-// 	};
-// }
-//End Browser Adjustments
 
 //Audio
 slideAudio.onplay = function() {
