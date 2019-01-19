@@ -18,58 +18,54 @@ redraw();
 window.addEventListener("resize", redraw);
 
 var slideTl = new TimelineMax({paused:true, onUpdate:updateSlider});
+TweenMax.to(pauseIcon, 0, {autoAlpha:0})
+TweenMax.to(playIcon, 0, {autoAlpha:1})
+
+var slideAudio = document.createElement('audio');
+slideAudio.src = 'slide.mp3'
+slideAudio.addEventListener("click", function(){
+  document.getElementById("demo").innerHTML = "Hello World";
+}); 
+
+//Load Audio
+TweenMax.to(pcSliderGroup, 0, {autoAlpha:0})
+var slideAudio = document.createElement('audio');
+slideAudio.src = 'slide.mp3'
+slideAudio.onloadeddata = function(){TweenMax.to(pcSliderGroup, 0, {autoAlpha:1})}
+
+var isPlaying = false;
+
+function pausePlay(){
+	if(isPlaying == false){
+		playPlayer();
+		isPlaying=true;
+		TweenMax.to(pauseIcon, 0, {autoAlpha:1})
+		TweenMax.to(playIcon, 0, {autoAlpha:0})
+
+	}else{
+		pausePlayer();
+		isPlaying=false;
+		TweenMax.to(pauseIcon, 0, {autoAlpha:0})
+		TweenMax.to(playIcon, 0, {autoAlpha:1})
+	}
+}
 
 
-// Start Meter Numbers
-var onesArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide,oneG_hide];
-var tensArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenE_hide,tenF_hide,tenG_hide];
-var hunsArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunE_hide,hunF_hide,hunG_hide];
-var thousArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouE_hide,thouF_hide,thouG_hide];
 
-var onesZeroArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide];
-var onesOneArray=[oneB_hide,oneC_hide];
-var onesTwoArray=[oneA_hide,oneB_hide,oneD_hide,oneE_hide,oneG_hide];
-var onesThreeArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneG_hide];
-var onesFourArray=[oneB_hide,oneC_hide,oneF_hide,oneG_hide];
-var onesFiveArray=[oneA_hide,oneC_hide,oneD_hide,oneF_hide,oneG_hide];
-var onesSixArray=[oneA_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide,oneG_hide];
-var onesSevenArray=[oneA_hide,oneB_hide,oneC_hide];
-var onesEightArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide,oneG_hide];
-var onesNineArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneF_hide,oneG_hide];
+function myOnCanPlayFunction() { console.log('Can play'); }
+function myOnCanPlayThroughFunction() { console.log('Can play through'); }
+function myOnLoadedData() {TweenMax.to(pcSliderGroup, 0, {autoAlpha:1})}
 
-var tensZeroArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenE_hide,tenF_hide];
-var tensOneArray=[tenB_hide,tenC_hide];
-var tensTwoArray=[tenA_hide,tenB_hide,tenD_hide,tenE_hide,tenG_hide];
-var tensThreeArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenG_hide];
-var tensFourArray=[tenB_hide,tenC_hide,tenF_hide,tenG_hide];
-var tensFiveArray=[tenA_hide,tenC_hide,tenD_hide,tenF_hide,tenG_hide];
-var tensSixArray=[tenA_hide,tenC_hide,tenD_hide,tenE_hide,tenF_hide,tenG_hide];
-var tensSevenArray=[tenA_hide,tenB_hide,tenC_hide];
-var tensEightArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenE_hide,tenF_hide,tenG_hide];
-var tensNineArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenF_hide,tenG_hide];
+function pausePlayer(){
+	slideTl.pause();
+	slideAudio.pause();
+}
+function playPlayer(){
+	slideTl.play();
+	slideAudio.play();
+}
 
-var hunsZeroArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunE_hide,hunF_hide];
-var hunsOneArray=[hunB_hide,hunC_hide];
-var hunsTwoArray=[hunA_hide,hunB_hide,hunD_hide,hunE_hide,hunG_hide];
-var hunsThreeArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunG_hide];
-var hunsFourArray=[hunB_hide,hunC_hide,hunF_hide,hunG_hide];
-var hunsFiveArray=[hunA_hide,hunC_hide,hunD_hide,hunF_hide,hunG_hide];
-var hunsSixArray=[hunA_hide,hunC_hide,hunD_hide,hunE_hide,hunF_hide,hunG_hide];
-var hunsSevenArray=[hunA_hide,hunB_hide,hunC_hide];
-var hunsEightArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunE_hide,hunF_hide,hunG_hide];
-var hunsNineArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunF_hide,hunG_hide];
 
-var thousZeroArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouE_hide,thouF_hide];
-var thousOneArray=[thouB_hide,thouC_hide];
-var thousTwoArray=[thouA_hide,thouB_hide,thouD_hide,thouE_hide,thouG_hide];
-var thousThreeArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouG_hide];
-var thousFourArray=[thouB_hide,thouC_hide,thouF_hide,thouG_hide];
-var thousFiveArray=[thouA_hide,thouC_hide,thouD_hide,thouF_hide,thouG_hide];
-var thousSixArray=[thouA_hide,thouC_hide,thouD_hide,thouE_hide,thouF_hide,thouG_hide];
-var thousSevenArray=[thouA_hide,thouB_hide,thouC_hide];
-var thousEightArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouE_hide,thouF_hide,thouG_hide];
-var thousNineArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouF_hide,thouG_hide];
-//End Meter Numbers
 
 //Hide Code
 var gArray = document.getElementsByTagName("g");
@@ -78,8 +74,6 @@ var imageArray = document.getElementsByTagName("image");
 var pathArray = document.getElementsByTagName("path");
 var rectArray = document.getElementsByTagName("rect");
 var objectArray=[];
-
-
 
 for (i=0; i<gArray.length; i++) {
 	objectArray.push(gArray[i]);
@@ -109,6 +103,8 @@ for (i=0; i<objectArray.length; i++) {
 	}
 }
 //End Hide Code
+
+
 
 var diag1 = document.getElementById("diag1_hide").getElementsByTagName("path");
 var diag1Length=diag1.length;
@@ -168,20 +164,66 @@ var pcSlider=Draggable.create(pcSliderKnob, {
 	var knobPercent = pcSliderKnob._gsTransform.x/pcSliderContainerLength;
   	slideTl.pause();
   	slideTl.progress(knobPercent)
-  	slideAudio9.pause();
-  	console.log(slideTl.time())
-  	slideAudio9.currentTime=slideTl.time()
-  	// console.log(pcSliderContainerLength)
-  	// console.log(pcSliderKnob._gsTransform.x)
+  	slideAudio.pause();
+  	slideAudio.currentTime=slideTl.time();
   },
   onDragEnd: function() {
-  	console.log(pcSliderKnob._gsTransform.x)
     slideTl.play();
-    slideAudio9.play();
+    slideAudio.play();
     isPlaying=true;
   },
 });
 
+// Start Meter Numbers
+var onesArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide,oneG_hide];
+var tensArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenE_hide,tenF_hide,tenG_hide];
+var hunsArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunE_hide,hunF_hide,hunG_hide];
+var thousArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouE_hide,thouF_hide,thouG_hide];
+
+var onesZeroArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide];
+var onesOneArray=[oneB_hide,oneC_hide];
+var onesTwoArray=[oneA_hide,oneB_hide,oneD_hide,oneE_hide,oneG_hide];
+var onesThreeArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneG_hide];
+var onesFourArray=[oneB_hide,oneC_hide,oneF_hide,oneG_hide];
+var onesFiveArray=[oneA_hide,oneC_hide,oneD_hide,oneF_hide,oneG_hide];
+var onesSixArray=[oneA_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide,oneG_hide];
+var onesSevenArray=[oneA_hide,oneB_hide,oneC_hide];
+var onesEightArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide,oneG_hide];
+var onesNineArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneF_hide,oneG_hide];
+
+var tensZeroArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenE_hide,tenF_hide];
+var tensOneArray=[tenB_hide,tenC_hide];
+var tensTwoArray=[tenA_hide,tenB_hide,tenD_hide,tenE_hide,tenG_hide];
+var tensThreeArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenG_hide];
+var tensFourArray=[tenB_hide,tenC_hide,tenF_hide,tenG_hide];
+var tensFiveArray=[tenA_hide,tenC_hide,tenD_hide,tenF_hide,tenG_hide];
+var tensSixArray=[tenA_hide,tenC_hide,tenD_hide,tenE_hide,tenF_hide,tenG_hide];
+var tensSevenArray=[tenA_hide,tenB_hide,tenC_hide];
+var tensEightArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenE_hide,tenF_hide,tenG_hide];
+var tensNineArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenF_hide,tenG_hide];
+
+var hunsZeroArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunE_hide,hunF_hide];
+var hunsOneArray=[hunB_hide,hunC_hide];
+var hunsTwoArray=[hunA_hide,hunB_hide,hunD_hide,hunE_hide,hunG_hide];
+var hunsThreeArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunG_hide];
+var hunsFourArray=[hunB_hide,hunC_hide,hunF_hide,hunG_hide];
+var hunsFiveArray=[hunA_hide,hunC_hide,hunD_hide,hunF_hide,hunG_hide];
+var hunsSixArray=[hunA_hide,hunC_hide,hunD_hide,hunE_hide,hunF_hide,hunG_hide];
+var hunsSevenArray=[hunA_hide,hunB_hide,hunC_hide];
+var hunsEightArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunE_hide,hunF_hide,hunG_hide];
+var hunsNineArray=[hunA_hide,hunB_hide,hunC_hide,hunD_hide,hunF_hide,hunG_hide];
+
+var thousZeroArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouE_hide,thouF_hide];
+var thousOneArray=[thouB_hide,thouC_hide];
+var thousTwoArray=[thouA_hide,thouB_hide,thouD_hide,thouE_hide,thouG_hide];
+var thousThreeArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouG_hide];
+var thousFourArray=[thouB_hide,thouC_hide,thouF_hide,thouG_hide];
+var thousFiveArray=[thouA_hide,thouC_hide,thouD_hide,thouF_hide,thouG_hide];
+var thousSixArray=[thouA_hide,thouC_hide,thouD_hide,thouE_hide,thouF_hide,thouG_hide];
+var thousSevenArray=[thouA_hide,thouB_hide,thouC_hide];
+var thousEightArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouE_hide,thouF_hide,thouG_hide];
+var thousNineArray=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouF_hide,thouG_hide];
+//End Meter Numbers
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Current Diagram 1 Branch 1
@@ -220,9 +262,6 @@ var r1Slider=Draggable.create(r1SliderKnob, {
 	sliderRtText['innerText' in sliderRtText ? "innerText" : "textContent"] = (1/((1/(Math.abs(sliderR1Text.textContent)) + (1/(Math.abs(sliderR2Text.textContent)))))).toFixed(2);
 	
 	sliderItText['innerText' in sliderItText ? "innerText" : "textContent"] = (Math.abs(sliderI1Text.textContent) + (Math.abs(sliderI2Text.textContent))).toFixed(2);
-	// powerText['innerText' in powerText ? "innerText" : "textContent"] = (Math.abs(sliderIt.textContent)*Math.abs(sliderIt.textContent)/resistanceText.textContent).toFixed(2);
-	// console.log(currentText.textContent)
- //  	TweenMax.to([linesWithCurrentArray],0,{strokeWidth:currentText.textContent*3})
   },
   onDragEnd: function() {
     TweenMax.to([sliderR1CO,sliderI1CO,sliderR1Text,sliderI1CO,sliderI1Text],0,{fill:"black"});
@@ -238,43 +277,16 @@ var r2Slider=Draggable.create(r2SliderKnob, {
 	sliderRtText['innerText' in sliderRtText ? "innerText" : "textContent"] = (1/((1/(Math.abs(sliderR1Text.textContent)) + (1/(Math.abs(sliderR2Text.textContent)))))).toFixed(2);
 	sliderI2Text['innerText' in sliderI2Text ? "innerText" : "textContent"] = (13.6/sliderR2Text.textContent).toFixed(2);
 	sliderItText['innerText' in sliderItText ? "innerText" : "textContent"] = (Math.abs(sliderI1Text.textContent) + (Math.abs(sliderI2Text.textContent))) .toFixed(2);
-// 	if(currentText.textContent < 10){
-// 	TweenMax.to([linesWithCurrentArray],0,{strokeWidth:currentText.textContent*3})
-// }
   },
   onDragEnd: function() {
     TweenMax.to([sliderR2CO,sliderI2CO,sliderR2Text,sliderI2Text],0,{fill:"black"});
   },
 });
 pausePlayButton.addEventListener("click", function(){
-	
   pausePlay();
 }); 
-var isPlaying = false;
 
-function pausePlay(){
-	if(isPlaying == false){
-		console.log("fired")
-		playPlayer();
-		isPlaying=true;
-		playIcon.style.opacity=0;
-		pauseIcon.style.opacity=1;
 
-	}else{
-		pausePlayer();
-		isPlaying=false;
-		playIcon.style.opacity=1;
-		pauseIcon.style.opacity=0;
-	}
-}
-function pausePlayer(){
-	slideTl.pause();
-	slideAudio9.pause();
-}
-function playPlayer(){
-	slideTl.play();
-	slideAudio9.play();
-}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
