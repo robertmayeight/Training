@@ -6,21 +6,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var svgWindow = document.getElementById("main");
-var svg = d3.select(svgContent);
-function redraw(){
-	var width = svgWindow.clientWidth;
-	var height = svgWindow.clientHeight;
-	svg
-		.attr("width", width)
-	 	.attr("height", height);
-}
-redraw();
-window.addEventListener("resize", redraw);
-
 var slideTl = new TimelineMax({paused:true});
-
-
 
 //Audio
 slideAudio.onplay = function() {
@@ -42,7 +28,10 @@ function pausePlayer(){
 	slideTl.time(slideAudio.currentTime);
 }
 //End Audio
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 //Hide Code
 var gArray = document.getElementsByTagName("g");
 var tArray = document.getElementsByTagName("text");
@@ -231,8 +220,6 @@ function pausePlayer(){
 	slideAudio.pause();
 }
 
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 slideTl
@@ -291,7 +278,6 @@ slideTl
 .to(olt9_hide, 1, {autoAlpha:1, delay:0})
 .to(olt10_hide, 1, {autoAlpha:1, delay:3})
 
-
 //Hide olt calculations
 .to([olt1_hide,olt2_hide,olt3_hide,olt4_hide,olt5_hide,olt6_hide,olt7_hide,olt8_hide,olt9_hide,olt10_hide,oltline1,oltline2], 1, {autoAlpha:0, delay:2})
 
@@ -300,13 +286,10 @@ slideTl
 .to(diagram1R2Resistance, 1, {autoAlpha:0, delay:0})
 .to(olt1R2R_hide, 1, {autoAlpha:1, delay:-1})
 
-
 //Bring back r1 calculations
 .to([path6824Trace,diag1s2Trace,diag1r2Trace,diag1Wire2Trace,path6826Trace], 1, {autoAlpha:0, delay:1})
 .to([diag1Wire1Trace,diag1s1Trace,path7122Trace,diag1r1Trace,diag1Wire4Trace], 1, {autoAlpha:.5, delay:1})
 .to([olt1_hide,olt2_hide,olt3_hide,oltline1], 1, {autoAlpha:1, delay:3})
-
-
 
 //Recalculate r2
 .to([path6824Trace,diag1s2Trace,diag1r2Trace,diag1Wire2Trace,path6826Trace], 1, {autoAlpha:.5, delay:10})
@@ -325,7 +308,6 @@ slideTl
 .to([olt1_hide,olt2_hide,olt3_hide,oltline1,olt2T1_hide,olt2T2_hide,olt2T3_hide,olt2T4_hide,olt2T5_hide,olt2T6_hide,olt2T7_hide,olt2line1,ohmsLawChart_hide,path6824Trace,diag1s2Trace,diag1r2Trace,diag1Wire2Trace,path6826Trace], 1, {autoAlpha:0, delay:2})
 .to(openingText2_hide, 0, {fill:"black"})
 .to(openingText3_hide, 0, {fill:"red", delay:-1})
-
 
 //Hide ohms law and show meter
 .to(diag1_hide, 2, {x:100, transformOrigin:"50 50", delay:0})
@@ -437,7 +419,6 @@ slideTl
 .add(function(){pausePlayer()},"+=8")
 
 //Hide all and show summary
-// .to([diag1,diag1S2Dot2,diag1S1Dot1,path67e,path6q,parallelResistance8Formula_hide,parallelResistanceFormula_hide,diagram2_hide,diagram1r1Callout,diagramr1Resistance,diagram1r2Callout2,olt15OhmResistor_hide,diagram1B1V,plus1_hiderob,plus1_hiderob,ohmsLawSliders_hide,openingTextVoltage_hide,plus1_hiderob2], 1, {autoAlpha:0})
 .to(blank_hide, 1, {autoAlpha:1})
 .to(summaryText1_hide, 1, {autoAlpha:1, delay:3})
 .to(summaryText2_hide, 1, {autoAlpha:1, delay:4})

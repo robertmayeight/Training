@@ -1,76 +1,12 @@
-slide = new XMLHttpRequest();
-slide.open("GET","slide.svg",false);
-slide.overrideMimeType("image/svg+xml");
-slide.send("");
-var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
+// slide = new XMLHttpRequest();
+// slide.open("GET","slide.svg",false);
+// slide.overrideMimeType("image/svg+xml");
+// slide.send("");
+// var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var svgWindow = document.getElementById("main");
-var svg = d3.select(svgContent);
-function redraw(){
-	var width = svgWindow.clientWidth;
-	var height = svgWindow.clientHeight;
-	svg
-	.attr("width", width)
-	 .attr("height", height);
-}
-redraw();
-window.addEventListener("resize", redraw);
 
-//Browser Adjustments
-var slideAudio = document.getElementById('music');
-slideAudio.src="slide.mp3"
-
-var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-var isFirefox = typeof InstallTrigger !== 'undefined';
-var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-var isIE = /*@cc_on!@*/false || !!document.documentMode;
-var isEdge = !isIE && !!window.StyleMedia;
-var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
-var isBlink = (isChrome || isOpera) && !!window.CSS;
-
-var audioLength;
-if(isFirefox == true){
-	TweenLite.to(slideAudio, 0, {bottom:0})
-	slideAudio.onloadeddata = function() {
-	slideAudio.play();
-	slideTl.play();
-	audioLength=slideAudio.duration;
-	document.getElementById("rob").style.zIndex = "1000"; 
-	}
-}
-if(isEdge == true){
-	TweenLite.to(slideAudio, 0, {bottom:-490})
-	slideAudio.onloadeddata = function() {
-	slideAudio.play();
-	slideTl.play();
-	};
-}
-if(isChrome == true){
-	TweenLite.to(slideAudio, 0, {bottom:-15})
-	TweenLite.to(slideAudio, 0, {className:"chromePlayerControls"})
-	TweenLite.to(slideAudio, 0, {bottom:0})
-	slideAudio.onloadeddata = function() {
-	audioLength=slideAudio.duration;
-	correctTime();
-		}
-}
-if(isOpera == true){
-	TweenLite.to(slideAudio, 0, {bottom:-750})
-	slideAudio.onloadeddata = function() {
-	slideAudio.play();
-	slideTl.play();
-	};
-}
-if(isSafari == true){
-	TweenLite.to(slideAudio, 0, {bottom:-750})
-	slideAudio.onloadeddata = function() {
-	slideAudio.play();
-	slideTl.play();
-	};
-}
-
-//End Browser Adjustments
+var slideTl = new TimelineMax({paused:true});
 
 //Audio
 slideAudio.onplay = function() {
@@ -83,26 +19,15 @@ slideAudio.onpause = function() {
 	slideTl.time(slideAudio.currentTime);
 };
 
-slideAudio.onseeked = function() {
-	// slideTl.time(slideAudio.currentTime);
-}
-
 slideAudio.ontimeupdate = function() {
 	slideTl.time(slideAudio.currentTime);
 };
-
-function playAudio(){
-	slideAudio.play();
-	slideTl.time(slideAudio.currentTime);
-}
 
 function pausePlayer(){
 	slideAudio.pause();
 	slideTl.time(slideAudio.currentTime);
 }
 //End Audio
-
-var slideTl = new TimelineMax({paused:true});
 
 
 // Start Meter Numbers
@@ -430,3 +355,6 @@ slideTl
 //Slider excercise
 .to([path7233,path72335,calculations2iT_hide,calculations2rT_hide,calculations2Vcc_hide,calculations1vT_hide,calculations1rT_hide,calculations1rTAnswer_hide,calculations1iT_hide,calculations1point54Amps_hide,calculations1pT_hide,calculations7point39Watts_hide,chartI_hide,chartE_hide,chartR_hide,chartP_hide], 1, {autoAlpha:0, delay:4})
 .to(ohmsLawSliders_hide, 1, {autoAlpha:1})
+
+// .to(image7478, 5, {rotation:360})
+// to(image7478, 5, {rotation:360})
