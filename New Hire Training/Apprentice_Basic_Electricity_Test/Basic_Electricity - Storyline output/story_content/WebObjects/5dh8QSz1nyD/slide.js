@@ -145,6 +145,7 @@ slideAudio.ontimeupdate = function(){
 	var rob = timePercent*pcSliderContainerLength;
 	// var knobPercent = timePercent*pcSliderContainerLength;
 	TweenMax.to(pcSliderKnob, 0, {x:rob})
+	slideTl.currentTime=slideAudio.currentTime;
 }
 
 var pcSlider=Draggable.create(pcSliderKnob, {
