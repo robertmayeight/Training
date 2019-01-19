@@ -17,7 +17,7 @@ function redraw(){
 redraw();
 window.addEventListener("resize", redraw);
 
-var slideTl = new TimelineMax({paused:true, onUpdate:updateSlider});
+var slideTl = new TimelineMax({paused:true});
 TweenMax.to(pauseIcon, 0, {autoAlpha:0})
 TweenMax.to(playIcon, 0, {autoAlpha:1})
 
@@ -28,41 +28,25 @@ slideAudio.addEventListener("click", function(){
 }); 
 
 //Load Audio
-TweenMax.to(pcSliderGroup, 0, {autoAlpha:0})
-var slideAudio = document.createElement('audio');
-slideAudio.src = 'slide.mp3'
-slideAudio.oncanplaythrough = function(){TweenMax.to(pcSliderGroup, 0, {autoAlpha:1})}
+// TweenMax.to(pcSliderGroup, 0, {autoAlpha:0})
+
 
 var isPlaying = false;
 
 function pausePlay(){
 	if(isPlaying == false){
-		playPlayer();
+		slideAudio.play();
+		slideTl.play();
 		isPlaying=true;
 		TweenMax.to(pauseIcon, 0, {autoAlpha:1})
 		TweenMax.to(playIcon, 0, {autoAlpha:0})
 
 	}else{
-		pausePlayer();
+		slideAudio.pause();
 		isPlaying=false;
 		TweenMax.to(pauseIcon, 0, {autoAlpha:0})
 		TweenMax.to(playIcon, 0, {autoAlpha:1})
 	}
-}
-
-
-
-function myOnCanPlayFunction() { console.log('Can play'); }
-function myOnCanPlayThroughFunction() { console.log('Can play through'); }
-function myOnLoadedData() {TweenMax.to(pcSliderGroup, 0, {autoAlpha:1})}
-
-function pausePlayer(){
-	slideTl.pause();
-	slideAudio.pause();
-}
-function playPlayer(){
-	slideTl.play();
-	slideAudio.play();
 }
 
 
@@ -152,20 +136,32 @@ function updateSlider(){
 	TweenMax.to(pcSliderKnob, 0, {x:knobPercent})
 }
 
+var slideAudio = document.createElement('audio');
+slideAudio.src = 'slide.mp3'
+slideAudio.ontimeupdate = function(){
+	var knobPercent = pcSliderKnob._gsTransform.x/pcSliderContainerLength;
+	// slideTl.time(slideAudio.currentTime);
+	var timePercent = slideTl.time()/slideTl.duration();
+	var rob = timePercent*pcSliderContainerLength;
+	// var knobPercent = timePercent*pcSliderContainerLength;
+	TweenMax.to(pcSliderKnob, 0, {x:rob})
+}
+
 var pcSlider=Draggable.create(pcSliderKnob, {
   type: "x",
   bounds: "#pcSliderContainer",
   onClick: function(){
-  	slideTl.pause();
-
+  	// slideTl.pause();
+  	// slideAudio.pause();
   },
   onDrag: function() {
   	var timePercent = slideTl.time()/slideTl.duration();
 	var knobPercent = pcSliderKnob._gsTransform.x/pcSliderContainerLength;
   	slideTl.pause();
-  	slideTl.progress(knobPercent)
   	slideAudio.pause();
-  	slideAudio.currentTime=slideTl.time();
+  	slideTl.progress(knobPercent)
+  	slideAudio.currentTime = slideTl.time();
+  	updateSlider()
   },
   onDragEnd: function() {
     slideTl.play();
@@ -285,6 +281,11 @@ var r2Slider=Draggable.create(r2SliderKnob, {
 pausePlayButton.addEventListener("click", function(){
   pausePlay();
 }); 
+
+function pausePlayer(){
+	slideTl.pause();
+	slideAudio.pause();
+}
 
 
 
