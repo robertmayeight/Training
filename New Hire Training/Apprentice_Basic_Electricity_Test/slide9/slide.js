@@ -31,7 +31,7 @@ slideAudio.addEventListener("click", function(){
 TweenMax.to(pcSliderGroup, 0, {autoAlpha:0})
 var slideAudio = document.createElement('audio');
 slideAudio.src = 'slide.mp3'
-slideAudio.onloadeddata = function(){TweenMax.to(pcSliderGroup, 0, {autoAlpha:1})}
+slideAudio.oncanplaythrough = function(){TweenMax.to(pcSliderGroup, 0, {autoAlpha:1})}
 
 var isPlaying = false;
 
