@@ -1,10 +1,19 @@
-slide = new XMLHttpRequest();
-slide.open("GET","slide.svg",false);
-slide.overrideMimeType("image/svg+xml");
-slide.send("");
-var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
+// slide = new XMLHttpRequest();
+// slide.open("GET","slide.svg",false);
+// slide.overrideMimeType("image/svg+xml");
+// slide.send("");
+// var slide= document.getElementById("main").appendChild(slide.responseXML.documentElement);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var bBox = svgContent.getBBox();
+console.log('XxY', bBox.x + 'x' + bBox.y);
+console.log('size', bBox.width + 'x' + bBox.height);
+slideAudio.style.width = 50000;
+
+
+
+
 var svgWindow = document.getElementById("main");
 var svg = d3.select(svgContent);
 function redraw(){
@@ -93,11 +102,6 @@ for(i=0; i<diag1Length; i++){
 }
 
 
-
-// var slideAudio = document.createElement('audio');
-// var slideAudio = document.getElementsByTagName("audio")
-// slideAudio.src = 'slide.mp3'
-// slideAudio.setAttribute("controls","controls") 
 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 var isFirefox = typeof InstallTrigger !== 'undefined';
 var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
