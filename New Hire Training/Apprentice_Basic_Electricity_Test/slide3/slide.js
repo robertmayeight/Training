@@ -36,7 +36,7 @@ if(isFirefox == true){
 	};
 }
 if(isEdge == true){
-	TweenLite.to(slideAudio, 0, {bottom:-490})
+	TweenLite.to(slideAudio, 0, {bottom:-590})
 	slideAudio.onloadeddata = function() {
 	slideAudio.play();
 	slideTl.play();

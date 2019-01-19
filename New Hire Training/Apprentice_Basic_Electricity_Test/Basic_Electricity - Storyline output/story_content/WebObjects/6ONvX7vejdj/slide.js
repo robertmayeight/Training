@@ -9,10 +9,6 @@
 var bBox = svgContent.getBBox();
 console.log('XxY', bBox.x + 'x' + bBox.y);
 console.log('size', bBox.width + 'x' + bBox.height);
-slideAudio.style.width = 50000;
-
-
-
 
 var svgWindow = document.getElementById("main");
 var svg = d3.select(svgContent);
@@ -112,24 +108,20 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
 
 var audioLength;
 if(isFirefox == true){
+	console.log("isFirefox")
 	slideAudio.play();
 	slideTl.play();
 }
 if(isEdge == true){
-	TweenLite.to(slideAudio, 0, {bottom:-490})
-	slideAudio.onloadeddata = function() {
+	console.log("isEdge")
+	TweenLite.to(slideAudio, 0, {bottom:-520})
 	slideAudio.play();
 	slideTl.play();
-	};
+	// slideAudio.style.bottom="10px" 
+	// TweenLite.to(slideAudio, 0, {className:"chromePlayerControls"})
 }
 if(isChrome == true){
-	TweenLite.to(slideAudio, 0, {bottom:-15})
 	TweenLite.to(slideAudio, 0, {className:"chromePlayerControls"})
-	TweenLite.to(slideAudio, 0, {bottom:0})
-	slideAudio.onloadeddata = function() {
-	audioLength=slideAudio.duration;
-	correctTime();
-		}
 }
 if(isOpera == true){
 	TweenLite.to(slideAudio, 0, {bottom:-750})
