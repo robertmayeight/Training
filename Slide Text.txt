@@ -176,10 +176,37 @@ The black meter lead at R 2, is directly connected to the negative side of the b
 And, the red meter lead at R 2, is directly connected to the positive side.
 The voltage drop across parallel circuits, will always be the same in all branches, but, the current flow could be different, depending on whether the parallel resistances are the same, or not.
 
+Parallel resistance in a circuit, decreases the total resistance of that circuit.
+The total resistance of a parallel circuit, is given by this formula:
+R t, is equal to, one, divided by, one divided by, r 1, plus, one divided by, r 2, plus, one divided by, r 3, etcetra, for all the resistors in the parallel circuit.
 
-////
-In other words, one, is divided by each resistor in the circuit.
-Those totals are added together, and one, is divided by that total.
-This gives the total resistance of the circuit.
+Using this circuit to illustrate, first, we divide one, by r 1, twenty ohms.
+This is equal to, point 0 5 ohms.
+Next, we divide one, by r 2, twenty ohms.
+This is equal to, point 0 5 ohms.
+Next, we add the two values together.
+This is equal to .1 ohms.
+Next, we divide one, by point one ohms.
+This is equal to a total circuit resistance of ten ohms.
+
+When the resistance of parallel branches in a circuit are the same value, the combined, or total resistance of the branches, will be equal to half of the individual branch resistance.
+In our example here, each branch has a resistance of twenty ohms, there for, the combined or total resistance of the branches is ten ohms.
+
+This is what an equivalent series circuit would look like.
+
+If the resistance of the parallel branches are not the same value, the combined, or total resistance of the parallel branches, will always be, less than the lowest resistor of a branch.
+
+For example, if R 2 were to be changed to five ohms, the combined, or total resistance of the circuit, would be four ohms.
+
+Move the resistance sliders up and down, to see how different resistances, affect current flow.
+When you're done, press the play button to continue.
+
+The most important things to take away from the lesson are:
+1) Current flow in a parallel branch is not affected by other parallel branches.
+2) The voltage drop across parallel circuits will always be the same voltage.
+3) When parallel branch resistances are equal, the total resistance of the branches will be half of the resistance of the individual resistances.
+4) When parallel branch resistances are not equal, the total resistance of the branches will less than, the smallest branch resistance.
+
+
 
 
