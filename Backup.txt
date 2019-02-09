@@ -1,0 +1,22 @@
+Jonathan
+How many hours 1 4 hour session
+How many people 30
+Technical depth
+Product no
+For:home depot pro 
+
+[?1/?28/?2019 10:18 AM]  Hodges, Clarence (GE Appliances, Haier):  
+Basic Outline
+1. Safety
+2. Basic Operation
+3. Customer Education (Need to Know)
+4. Types of Products/Sub-Systems
+5. Technician Hazards/Injury Prevention
+6. Diagnostics/Common Problems
+7. Tools/NewFi 
+
+
+var vCC = 1;
+var dcGnd = .7;
+var twelvePointFive = .4;
+ 

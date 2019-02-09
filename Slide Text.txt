@@ -207,6 +207,69 @@ The most important things to take away from the lesson are:
 3) When parallel branch resistances are equal, the total resistance of the branches will be half of the resistance of the individual resistances.
 4) When parallel branch resistances are not equal, the total resistance of the branches will less than, the smallest branch resistance.
 
+Slide 10
+This circuit contains both series, and parallel circuits.
+As current leaves the baddery, it is in a series circuit, but when the current hits point a, the current flow splits into two branches.
+At point B, the current comes back together to form a series circuit again, and flows back to the baddery.
+
+Note the potentials in the circuit.
+The left side of R 1 and R 2, are at negative potential.
+This is because the left side of those resistors, is at the same point electrically, as the negative side of the baddery.
+The bottom side of  r 3 is at positive potential.
+Because the bottom side of r 3, is at the same point electrically, as the positive side of the baddery.
+The potential between the resistors is some where between negative and positive potential.
+
+In the circuit shown, we have two parallel ten ohm resistors, plus one ten ohm series resistor.
+One, divided by ten ohms, plus one divided by ten ohms, is equal to point two ohms.
+One, divided by point two ohms, is equal to, five ohms.
+This is the combined resistance of the two branches.
+Five ohms, plus, the series resistance of ten ohms, is equal to, fifteen ohms of total resistance.
+
+Now that total circuit resistance has been calculated, we can calculate total current.
+Using the ohms law chart for current, we have, i, is equal to, Voltage, divided by, resistance.
+In this circuit, we have, the baddery voltage of 24 volts, divided by the total circuit resistance of 15 ohms, is equal to one point 6 amps.
+
+////////This is because the black meter lead, is electrically the same point, as the positive terminal of the baddery.
+And, the red meter lead, is electrically the same point, as the negative terminal of the baddery.
+Note: The resistance of R 1, r 2, and R 3, are effictively seen as an electrical short to the volt meter.
+This is because there is no current flow in the circuit.
+No current flow means no voltage drop across the resistors, therefore it is as if those resistors weren't in the circuit.
+
+Now let's look at s 2.
+Since s 2, in the closed position, has no resistance, the voltage drop across the switch will be zero volts.
+When s 2 is opened, the voltage drop and potentials will not be the same as when s 1 was opened.
+Because s 2, is not in series with the battery.
+
+Now let's examine potentials.
+The black meter lead is directly connected to r 2, but there is no current flow through r2, so it is seen, as an electrical short to the volt meter.
+Continuing on, we come to r 3.
+
+Note that the trace color is purple.
+Purple is used because that section of the circuit, isn't at a negative potential, nor is it at a positive potential, it is somewhere in between.
+
+Since r3 is dropping some of the potential, the voltage drop across s 2, is twelve point five volts.
+One side of S 2 is directly connected to s 3, this means that the potential is the same at both points.
+
+The same is true of the other side of s 2.
+s 2 is directly connected to r 1 and r 3.
+All of these connected points are electrically at the same potential.
+
+And the remainder of the 24 volts (12.5 volts), is dropped across R 3.
+
+Since the r 1 circuit, is in parallel with the r 2 circuit., the voltage drop will be the same.
+This makes perfect sense, because the left side of s 2, is directly connected to the left side of r1.
+And, the right side of s 2 is directly connected to the right side of r 1.
+Therefore, the meter leads across s 2, is exactly the same point electrically, as the meter leads across r 1.
+R 3, has current flow and is therefore, not an electrical short to the meter.
+
+This means that r3 has dropped part of the positive potential of the battery.
+
+It is very important, that you understand how voltage potential works.
+Voltage potential must be fully understood, in order to make accurate volt meter readings.
+All of the black trace lines represent, full, 100% negative potential.
+The red trace lines represent 100% positive potential.
+The purple trace lines represent, a potential that is somewhere in between full positive and full negative potential.
+
 
 
 
