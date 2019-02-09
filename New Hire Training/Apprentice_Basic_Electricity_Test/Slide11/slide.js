@@ -599,7 +599,7 @@ updateRedLead();
 
 //Draggable Black Lead
 TweenMax.to(blackDot, 0, {opacity:.25})
-var selectedComponent;
+
 var blackDotPointX;
 var blackDotPointY;
 var blackLeadPot;
@@ -1066,15 +1066,15 @@ function moveSPST(element,rot){
 	redDotPointX = redDot.getBoundingClientRect().x - Diag1_hide._gsTransform.x + 120;
 	redDotPointY = redDot.getBoundingClientRect().y - Diag1_hide._gsTransform.y + 68;
 	    for(i=0; i<boxArray.length; i++){
-    		selectedComponent = document.getElementById(boxArrayIdsArray[i])
+    		redComponent = document.getElementById(boxArrayIdsArray[i])
     		if(redDotPointX > boxArray[i].x && redDotPointX < Math.abs(boxArray[i].x + boxArray[i].width) && redDotPointY > boxArray[i].y && redDotPointY < Math.abs(boxArray[i].y + boxArray[i].height)){
-    			// TweenMax.to(selectedComponent, 0, {opacity:.5})
+    			TweenMax.to(redComponent, 0, {opacity:1})
     			TweenMax.to(redDot, .5, {opacity:0})
-    			selectedComponentSplit = selectedComponent.id.split("Box")
-				redLeadPot = window[selectedComponentSplit[0]+"Pot"];
+    			redComponentSplit = redComponent.id.split("Box")
+				redLeadPot = window[redComponentSplit[0]+"Pot"];
     			break;
     		}else{
-    			TweenMax.to(selectedComponent, 0, {opacity:1})
+    			TweenMax.to(redComponent, 0, {opacity:0})
     			TweenMax.to(redDot, .5, {opacity:1})
     			redLeadPot = "string";
     		}
@@ -1082,16 +1082,16 @@ function moveSPST(element,rot){
 
 	blackDotPointX = blackDot.getBoundingClientRect().x - Diag1_hide._gsTransform.x + 120;
 	blackDotPointY = blackDot.getBoundingClientRect().y - Diag1_hide._gsTransform.y + 68;
-	    for(i=0; i<boxArray.length; i++){
-    		selectedComponent = document.getElementById(boxArrayIdsArray[i])
-    		if(blackDotPointX > boxArray[i].x && blackDotPointX < Math.abs(boxArray[i].x + boxArray[i].width) && blackDotPointY > boxArray[i].y && blackDotPointY < Math.abs(boxArray[i].y + boxArray[i].height)){
-    			// TweenMax.to(selectedComponent, 0, {opacity:.5})
+	    for(a=0; a<boxArray.length; a++){
+    		blackComponent = document.getElementById(boxArrayIdsArray[a])
+    		if(blackDotPointX > boxArray[a].x && blackDotPointX < Math.abs(boxArray[a].x + boxArray[a].width) && blackDotPointY > boxArray[a].y && blackDotPointY < Math.abs(boxArray[a].y + boxArray[a].height)){
+    			TweenMax.to(blackComponent, 0, {opacity:1})
     			TweenMax.to(blackDot, .5, {opacity:0})
-    			selectedComponentSplit = selectedComponent.id.split("Box")
-				blackLeadPot = window[selectedComponentSplit[0]+"Pot"];
+    			blackComponentSplit = blackComponent.id.split("Box")
+				blackLeadPot = window[blackComponentSplit[0]+"Pot"];
 				break;
     		}else{
-    			TweenMax.to(selectedComponent, 0, {opacity:1})
+    			TweenMax.to(blackComponent, 0, {opacity:0})
     			TweenMax.to(blackDot, .5, {opacity:1})
     			blackLeadPot = "string";
     		}
