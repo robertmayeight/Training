@@ -652,14 +652,14 @@ var blackDotDrag=Draggable.create(blackDot, {
 	    	for(i=0; i<boxArray.length; i++){
     			selectedComponent = document.getElementById(boxArrayIdsArray[i])
     			if(blackDotPointX > boxArray[i].x && blackDotPointX < Math.abs(boxArray[i].x + boxArray[i].width) && blackDotPointY > boxArray[i].y && blackDotPointY < Math.abs(boxArray[i].y + boxArray[i].height)){
-    				TweenMax.to(selectedComponent, 0, {opacity:.5})
-    				TweenMax.to(blackDot, .5, {opacity:1})
+    				// TweenMax.to(selectedComponent, 0, {opacity:.5})
+    				TweenMax.to(blackDot, .5, {opacity:0})
     				selectedComponentSplit = selectedComponent.id.split("Box")
 					blackLeadPot = window[selectedComponentSplit[0]+"Pot"];
 					break;
     			}else{
-    				TweenMax.to(selectedComponent, 0, {opacity:.5})
-    				TweenMax.to(blackDot, .5, {opacity:1})
+    				// TweenMax.to(selectedComponent, 0, {opacity:0})
+    				TweenMax.to(blackDot, .5, {opacity:.5})
     				blackLeadPot = "string";
     			}
     		}
