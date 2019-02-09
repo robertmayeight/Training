@@ -26533,7 +26533,7 @@
      inkscape:window-x="-11"
      inkscape:window-y="69"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svgContent"
+     inkscape:current-layer="Diag1_hide"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -27336,7 +27336,13 @@
    d="m 260.80418,53.114398 h 21.4375"
    id="Diag1S2"
    inkscape:connector-curvature="0"
-   inkscape:label="#path7082" /></g></g><g
+   inkscape:label="#path7082" /><path
+   style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.49987805;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+   d="m 54.50276,313.92575 h 81.80111 c 20.82392,0 37.5883,0.39265 37.5883,0.88037 v 145.05171 c 0,0.48773 -16.76438,0.88037 -37.5883,0.88037 H 54.50276 c -20.823918,0 -37.588299,-0.39264 -37.588299,-0.88037 V 314.80612 c 0,-0.48772 16.764381,-0.88037 37.588299,-0.88037 z"
+   id="rect12667" /><path
+   style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.49987805;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+   d="m 611.70292,-25.310829 h 76.14425 c 20.82392,0 37.5883,0.392646 37.5883,0.880372 V 167.65827 c 0,0.48773 -16.76438,0.88037 -37.5883,0.88037 h -76.14425 c -20.82391,0 -37.5883,-0.39264 -37.5883,-0.88037 V -24.430457 c 0,-0.487726 16.76439,-0.880372 37.5883,-0.880372 z"
+   id="rect12669" /></g></g><g
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="It"
