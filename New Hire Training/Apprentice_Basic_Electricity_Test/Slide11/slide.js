@@ -28,6 +28,14 @@ function pausePlayer(){
 	slideTl.pause();
 	slideAudio.pause();
 }
+function pauseAudio(){
+  slideAudio.pause();
+  slideAudio.currentTime = slideAudio.currentTime+.1
+}
+function playAudio(){
+  slideAudio.play();
+  slideAudio.currentTime = slideAudio.currentTime+.1  
+}
 //End Audio
 
 
@@ -146,8 +154,6 @@ TweenMax.to([Diag1S3,Diag1S3Current,Diag1S3Trace], 0, {transformOrigin:"0 0"})
 TweenMax.to(Diag1R3MultiColor, 0, {autoAlpha:0})
 TweenMax.to(Diag1R3MultiColor, 0, {strokeWidth:4});
 
-
-
 // Start Meter Numbers
 var onesArray=[oneA_hide,oneB_hide,oneC_hide,oneD_hide,oneE_hide,oneF_hide,oneG_hide];
 var tensArray=[tenA_hide,tenB_hide,tenC_hide,tenD_hide,tenE_hide,tenF_hide,tenG_hide];
@@ -199,9 +205,8 @@ var thous8Array=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouE_hide,thouF_hi
 var thous9Array=[thouA_hide,thouB_hide,thouC_hide,thouD_hide,thouF_hide,thouG_hide];
 //End Meter Numbers
 
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Current Diagram 1 Main N Current
 var Diag1MainCurrentArray = [Diag1Nw1Current,Diag1Nw2Current,Diag1S1Current,Diag1Nw3Current,Diag1Pw1Current,Diag1Pw2Current,Diag1R3Current,Diag1Pw3Current];
 TweenMax.to(Diag1MainCurrentArray, 0, {autoAlpha:1})
@@ -248,10 +253,7 @@ slideTl
 //Show point A
 .to(Slide1PointA_hide, 1, {autoAlpha:1})
 
-
-
-// // Current splits at parallel
-// .to([Diag1Branch1Nw1Trace,Diag1S2Trace,Diag1Branch1Nw2Trace,Diag1R1Trace,Diag1Branch1Pw1Trace,Diag1Branch2Nw1Trace,Diag1S3Trace,Diag1Branch2Nw2Trace,Diag1R2Trace,Diag1Pw3Trace], 0, {strokeWidth:2.5})
+// Current splits at parallel
 .staggerFromTo([Diag1Branch1Nw1Trace,Diag1Branch2Nw1Trace], 1.3, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
 .staggerFromTo([Diag1Branch2Nw2Trace], .7, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone})
 
@@ -267,9 +269,6 @@ slideTl
 .staggerFromTo([Diag1Branch1Nw3Trace,Diag1Branch2Nw4Trace], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
 .staggerFromTo([Diag1Branch2Nw5Trace], 1, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:0})
 .to(Slide1PointB_hide, 1, {autoAlpha:1, delay:0})
-
-
-
 
 // //Trace to positive side obattery
 .staggerFromTo([Diag1Pw3Trace], .5, {drawSVG:'0% 0%'}, {drawSVG: '0% 100%', ease: Power0.easeNone, delay:1})
@@ -549,26 +548,14 @@ function potToString(){
 
 
 
-function pauseAudio(){
-	slideAudio.pause();
-	slideAudio.currentTime = slideAudio.currentTime+.1
-}
-function playAudio(){
-	console.log("fired")
-	
-	slideAudio.play();
-	slideAudio.currentTime = slideAudio.currentTime+.1
-	
-}
+
 
 //Draggable Red Lead
 TweenMax.to(redDot, 0, {opacity:.25})
 var redDotPointX;
 var redDotPointY;
-var xComp = 4;
 var redLeadPot;
-var redDotBox = redDot.getBBox();
-var redDot2Box = redDot2.getBBox();
+
 var redDotDrag2=Draggable.create(redDot2, {});
 var redDotDrag=Draggable.create(redDot, {
 	type: "x,y",
@@ -584,6 +571,8 @@ var redDotDrag=Draggable.create(redDot, {
 });
 
 //Update red lead position ondrag.
+var redDotBox = redDot.getBBox();
+var redDot2Box = redDot2.getBBox();
 function updateRedLead() {
   var x1 = redDot._gsTransform.x+redDotBox.x+(redDotBox.width/2);
   var y1 = redDot._gsTransform.y+redDotBox.y+(redDotBox.width/2);
@@ -636,7 +625,7 @@ function updateBlackLead() {
 }
 updateBlackLead();
 
-//Update potentials and meter reading when switches are moved.
+//Move switches.
 function moveSPST(element,rot){
 	var elementCurrent = document .getElementById(element.id+"Current")
 	var elementTrace = document .getElementById(element.id+"Trace")
@@ -648,6 +637,7 @@ function moveSPST(element,rot){
 
 	
 	}
+	var xComp = 120;
 	var myVar = setInterval(myTimer, 100)
 	function myTimer(){
 		 //0
@@ -1063,8 +1053,10 @@ function moveSPST(element,rot){
 		TweenMax.to([Diag1R3,Diag1R3Current,Diag1R3Trace], 1, {stroke:"red"});
 		Diag1R3Pot = 24;
     }
-	redDotPointX = redDot.getBoundingClientRect().x - Diag1_hide._gsTransform.x + 120;
-	redDotPointY = redDot.getBoundingClientRect().y - Diag1_hide._gsTransform.y + 68;
+	// redDotPointX = redDot.getBoundingClientRect().x - Diag1_hide._gsTransform.x + 123 - (Diag1Nw2.getBoundingClientRect().width);
+	// redDotPointX = redDot.getBoundingClientRect().x - Diag1_hide._gsTransform.x + xComp;
+	redDotPointY = redDot.getBoundingClientRect().y + (redDot.getBoundingClientRect().width/2);
+	redDotPointX = redDot.getBoundingClientRect().x + (redDot.getBoundingClientRect().width/2);
 	    for(i=0; i<boxArray.length; i++){
     		redComponent = document.getElementById(boxArrayIdsArray[i])
     		if(redDotPointX > boxArray[i].x && redDotPointX < Math.abs(boxArray[i].x + boxArray[i].width) && redDotPointY > boxArray[i].y && redDotPointY < Math.abs(boxArray[i].y + boxArray[i].height)){
@@ -1080,18 +1072,18 @@ function moveSPST(element,rot){
     		}
     	}
 
-	blackDotPointX = blackDot.getBoundingClientRect().x - Diag1_hide._gsTransform.x + 120;
-	blackDotPointY = blackDot.getBoundingClientRect().y - Diag1_hide._gsTransform.y + 68;
+	blackDotPointY = blackDot.getBoundingClientRect().y + (blackDot.getBoundingClientRect().width/2);
+	blackDotPointX = blackDot.getBoundingClientRect().x + (blackDot.getBoundingClientRect().width/2);
 	    for(a=0; a<boxArray.length; a++){
     		blackComponent = document.getElementById(boxArrayIdsArray[a])
     		if(blackDotPointX > boxArray[a].x && blackDotPointX < Math.abs(boxArray[a].x + boxArray[a].width) && blackDotPointY > boxArray[a].y && blackDotPointY < Math.abs(boxArray[a].y + boxArray[a].height)){
-    			TweenMax.to(blackComponent, 0, {opacity:1})
+    			// TweenMax.to(blackComponent, 0, {opacity:1})
     			TweenMax.to(blackDot, .5, {opacity:0})
     			blackComponentSplit = blackComponent.id.split("Box")
 				blackLeadPot = window[blackComponentSplit[0]+"Pot"];
 				break;
     		}else{
-    			TweenMax.to(blackComponent, 0, {opacity:0})
+    			// TweenMax.to(blackComponent, 0, {opacity:0})
     			TweenMax.to(blackDot, .5, {opacity:1})
     			blackLeadPot = "string";
     		}
@@ -1154,13 +1146,30 @@ function redraw(){
 	svg
 		.attr("width", width)
 		.attr("height", height);
-	// boxArray = [];
-	// var boxIDLength = boxArrayIdsArray.length;
-	// for(var i=0; i<boxIDLength; i++){
-	// 	var box = document.getElementById(boxArrayIdsArray[i]);
-	// 	boxArray.push(box.getBoundingClientRect());
-	// }
-	// console.log(boxArray)
+	
 }
 redraw();
 window.addEventListener("resize", redraw);
+
+
+window.addEventListener('resize', function(){
+  if(screen.width === window.innerWidth){
+   console.log("Fullscreen")
+   xComp =124;
+  }else{
+  	console.log("Not Fullscreen")
+   xComp =120;
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
